@@ -144,6 +144,9 @@ task :new_page, :filename do |t, args|
       page.puts "sharing: true"
       page.puts "footer: true"
       page.puts "---"
+      page.puts "<!--- Text above this line will appear in the blog listing[index page] -->"
+      page.puts "<!-- more -->"
+      page.puts "<!--- Text below this line will not appear in the blog listing[index page] but will appear when the user is viewing the full post-->"
     end
   else
     puts "Syntax error: #{args.filename} contains unsupported characters"
