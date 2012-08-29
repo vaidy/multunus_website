@@ -1,0 +1,11 @@
+.rounded-corner-container{
+	background-color: #FFFFFF;
+}
+.rounded-corner-container,.rounded-corner-container article{
+	-webkit-border-radius: 6px;
+	-moz-border-radius: 6px;
+    border-radius: 6px;
+}
+.rounded-corner-container .row-fluid article.blog-post{
+	padding-left: 3%;
+}
