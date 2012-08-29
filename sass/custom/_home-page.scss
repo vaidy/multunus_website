@@ -1,0 +1,28 @@
+.logo{
+	text-align: center;
+}
+
+.two-images{
+	padding-top:4%;
+	padding-bottom:4%;
+}
+
+.first-image{
+	height:250px;
+	background-image:url('/images/webAndMobile1.jpg');
+	background-repeat:no-repeat;
+	background-color: #666666;
+	-webkit-border-radius: 2px;
+	-moz-border-radius: 2px;
+	border-radius: 2px;
+}
+
+.second-image{
+	height:250px;
+	background-image:url('/images/crafted.jpg');
+	background-repeat:no-repeat;
+	background-color: #666666;
+	-webkit-border-radius: 2px;
+	-moz-border-radius: 2px;
+	border-radius: 2px;
+}
