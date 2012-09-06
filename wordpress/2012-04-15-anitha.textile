@@ -1,0 +1,10 @@
+---
+layout: post
+title: Anitha
+---
+
+<a href="/wp-content/uploads/2012/04/anitha.jpg"><img src="/wp-content/uploads/2012/04/anitha-300x249.jpg" alt="" title="anitha" width="300" height="249" class="alignleft size-medium wp-image-304" /></a>An epitome of focussed attention, Anitha reminds us that it is indeed possible to get a lot done in an 8 hour day. Her passion for Agile Testing helps us to propagate Agile values throughout the organization.
+
+She has a strict schedule. This means the rest of us have to scamper to deliver releases on time for her to test.
+
+She’s also a quiet person. But this also means she can quietly eat your lunch – unless you’re careful. No pun intended, it’s happened already

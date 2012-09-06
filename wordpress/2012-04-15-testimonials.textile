@@ -1,0 +1,8 @@
+---
+layout: post
+title: Testimonials
+---
+
+p. [testimonialswidget_list]
+
+

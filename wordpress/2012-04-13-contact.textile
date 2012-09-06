@@ -1,0 +1,6 @@
+---
+layout: post
+title: Write To Us
+---
+
+[contact-form-7 id="64" title="Contact form 1"] 

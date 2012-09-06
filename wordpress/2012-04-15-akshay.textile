@@ -1,0 +1,19 @@
+---
+layout: post
+title: Akshay
+---
+
+<a href="/wp-content/uploads/2012/04/akshays.jpg"><img src="/wp-content/uploads/2012/04/akshays-295x300.jpg" alt="" title="akshays" width="295" height="300" class="alignleft size-medium wp-image-293" /></a>We’d probably need to write 5 long paragraphs on Akshay to describe everything he’s achieved in the short time he’s been working with us at Multunus. So we’ll use bullets instead to convey our message:
+<ul class=""list_near_image"">
+	<li>Super frequent (and consistent!) blogger [Check out <a href="http://akshayatmultunus.wordpress.com/">akshayatmultunus.wordpress.com</a>]</li>
+	<li>Customer Service Fanatic</li>
+	<li>He’ll be known as the one who turned down a “safe” and cosy job at a large company – just to work with us</li>
+	<li>Super fun to be with</li>
+	<li>Part of the Multunus Campus Interview team</li>
+</ul>
+If the above list seems long to you, here’s two more things to keep in mind about him:
+<ul>
+	<li>His dedication is unparalleled. We are ready to place a bet that you will not be able to find someone who’s more dedicated than Akshay.</li>
+	<li>If you wanted to understand what a passionate programmer is all about, your can either <a href="http://www.amazon.com/Passionate-Programmer-Remarkable-Development-Pragmatic/dp/1934356344">read the book</a> or just meet Akshay in person.</li>
+</ul>
+Want to learn more about Akshay? Then <a href="http://akshayatmultunus.wordpress.com/">check out his blog!</a>  Not only will you learn a lot more about Akshay, you’ll also learn a thing or two about Multunus.

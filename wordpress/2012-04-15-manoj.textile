@@ -1,0 +1,12 @@
+---
+layout: post
+title: Manoj
+---
+
+<a href="/wp-content/uploads/2012/04/manoj.jpg"><img src="/wp-content/uploads/2012/04/manoj-300x190.jpg" alt="" title="manoj" width="300" height="190" class="alignleft size-medium wp-image-337" /></a>Manoj is the UI guy of Multunus. He has been our key in fixing the CSS browser incompatibility issues. He pays the greatest attention to design details. If you are stuck on CSS issues, then he is the man to lean on.
+
+So that’s his speciality. But he’s also a great generalist. And a pragmatic one at that. He mentions the word “DRY Principle” atleast once a day  . He was also probably the easiest to infect with our TDD approach.
+
+He is trying to become multilingual and ofcourse his first target is Hindi, our National Language.
+
+And if a cricket match is on, then Manoj is the best person on the team to provide a running commentary.

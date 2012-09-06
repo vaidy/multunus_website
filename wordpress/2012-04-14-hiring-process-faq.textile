@@ -1,0 +1,39 @@
+---
+layout: post
+title: Hiring Process FAQ
+---
+
+If your question is not answered below or you’re impatient, feel free to reach out to us using the contact information given above.
+
+
+<a href="#id1">Q: What do you look for in candidates for your developer positions?</a>
+<a href="#id2">Q: How many rounds of interviews do you have?</a>
+<a href="#id3">Q: What are the steps in the hiring process?</a>
+<a href="#id4">Q: What languages am I allowed to use for the programming rounds?</a>
+<a href="#id5">Q: Will the in-person interview take a lot of time? </a>
+<a href="#id6">Q: I’ll probably not be able to come down to Bangalore for the in-person rounds. Can these be conducted remotely?</a>
+<a href="#id7">Q: I will need to travel a long way to Bangalore to attend the in-person round. Will you re-imburse the cost of my travel?</a>
+
+
+
+
+<b id="id1">Q: What do you look for in candidates for your developer positions?**
+A love for programming and a great attitude are the fundamental requirements. For details, please check the <a href="?page_id=111">Open Positions </a>page.
+
+<b id="id2">Q: How many rounds of interviews do you have?**
+Usually 4-5 rounds. But the interview process is agile in nature. What this means, is that we’ll have as many rounds as is required for us to make our decision. Generally though, 3-4 of our colleagues will interact with you – over phone calls, in-person conversations and a pair-programming assignment
+
+<b id="id3">Q: What are the steps in the hiring process?**
+We require all candidates to fill up our online forms. You can find them <a href="?page_id=111">here</a>. If we like your profile, one of our senior engineers will reach out to you by email or a phone call. Depending on the situation, we’ll either invite you over for a test at our office premises in Bangalore or have a preliminary discussion with you on phone. Assuming that step goes well, we’ll follow up with the next rounds quickly and if possible, try and complete the entire process in a day’s time.
+
+<b id="id4">Q: What languages am I allowed to use for the programming rounds?**
+We’re mostly language and platform agnostic in our approach to problem solving, at Multunus. Hence you get to pick the platform of your choice and we’ll set up a development environment according to your taste.
+
+<b id="id5">Q: Will the in-person interview take a lot of time?**
+Yes, please plan to spend 4-6 hours at our office on the day you’re invited to come over.
+
+<b id="id6">Q: I’ll probably not be able to come down to Bangalore for the in-person rounds. Can these be conducted remotely?**
+If you cannot make it in person for some reason, we’ll try and conduct these “personal” rounds via a Skype video call. But that would be an exception, rather than the rule.
+
+<b id="id7">Q: I will need to travel a long way to Bangalore to attend the in-person round. Will you re-imburse the cost of my travel?**
+Yes, sometimes we do. If you’d like us to re-imburse your travel expenses, please make sure to check with us first before planning your travel. Based on the specific situation, we’ll make a decision and let you know.

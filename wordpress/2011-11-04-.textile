@@ -1,0 +1,9 @@
+---
+layout: post
+title: Android tips to share
+---
+
+<ul>
+	<li>Share - customization</li>
+	<li>Capture images using Front/Back camera</li>
+</ul>

@@ -1,0 +1,24 @@
+---
+layout: post
+title: Faster Ruby 1.9.2 
+---
+
+<div>I recently read the 'Ruby Inside' blog on <a href="http://www.rubyinside.com/get-edge-ruby-faster-loading-ruby-1-9-2-now-4973.html" target="_blank">How To Get That EDge Ruby Faster-Loading-Hotness in Ruby 1.9.2</a>.</div>
+<div>I tried this out and its made our app faster by around 20%.</div>
+<div>Here are some of results:</div>
+<div>When I run a rake task</div>
+<div>
+<ul>
+	<li>Time taken without patch - 28.26 sec</li>
+	<li>Time taken with the patch - 22.84 sec</li>
+</ul>
+</div>
+<div>That's 19% faster</div>
+<div>When I run a spec</div>
+<div>
+<ul>
+	<li>Time taken without patch - 33.37</li>
+	<li>Time taken with the patch - 25.53</li>
+</ul>
+</div>
+<div>That's 23% faster!</div>

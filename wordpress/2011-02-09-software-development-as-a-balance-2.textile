@@ -1,0 +1,35 @@
+---
+layout: post
+title: Software Development as a balance
+---
+
+Why is delivering good software on a consistent basis hard? There are many existing answers to this question already. This is our version.
+
+A list of things good software should achieve:
+<ul>
+	<li>Should solve a real problem</li>
+	<li>Should be shipped and maintained within the budgeted cost and time</li>
+	<li>Should be easy to use</li>
+</ul>
+*Update: *We've now migrated to <a href="http://jamesshore.com/Agile-Book/why_agile.html">James Shore's definition</a>:
+<p style="padding-left: 30px;"><span style="font-family: verdana, 'trebuchet MS', helvetica, sans-serif; line-height: 16px; -webkit-border-horizontal-spacing: 2px; -webkit-border-vertical-spacing: 2px; font-size: small;">_"Success is usually defined as delivering on time, under budget, and as specified. That's a flawed definition. Many late projects are huge successes for their organizations, and many on-time projects don't deliver any value. Instead, think in terms of organizational, technical, and personal success."_</span>
+
+
+What it takes to build such software:
+<div id="_mcePaste">
+<ul>
+	<li>*Great code*: Easily Testable, Maintainable & Scalable code across ALL Tiers of the App</li>
+	<li>*Constant estimating and planning*: Has to be woven into the Iterative Release process</li>
+	<li>*Feedback Management*: Collection & Processing of Qualitative & Quantitative Feedback</li>
+	<li>*Continuous Improvement*: A team habit of proactively finding and fixing problems</li>
+	<li>*Good Infrastructure*: S/W & H/W tools to improve Team & Apps efficiency</li>
+	<li>*High Quality*: Focus on all <a href="http://onestepbacktwostepsforward.blogspot.com/2009/06/agile-testing-quadrants.html">4 Agile Testing</a> Quadrants</li>
+	<li>*Constant Communication*: Customer Collaboration & Team Interaction along with just enough Documentation</li>
+	<li>*Great Design*: Balancing Form with Function</li>
+	<li>*Constant UX Focus*: Focus on the user's interactive experience [along with focus on Copy] woven into the Iterative Release Process. This is covered by Quadrant 3 in the Agile Testing diagram linked to above - but I'm mentioning it separately because its usually happens to get less attention.</li>
+	<li>*Knowledgeable, Skilled and Motivated Team*: Important roles include Managers, Programmers, Testers, Analysts, Leads, Architects and Designers</li>
+</ul>
+</div>
+Our version of the software life-"cycle" :-) :
+
+[singlepic id=197 w=740 h=555 float=]

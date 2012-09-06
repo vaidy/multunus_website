@@ -1,0 +1,27 @@
+---
+layout: post
+title: Refer a friend & Earn Rs.10,000
+---
+
+p. **Thank you for taking the time to help us expand our team.**
+
+<br/>
+
+**Eligibility:** Open to EVERYONE. Yes, that means you as well!
+
+
+<ol >
+<li>Check out our Developer requirements <a href="?page_id=111">here</a></li>
+<li>Know a friend who’d be a good fit? Do the following:
+<ol>
+<li>Ask your friend to fill up the <a href="?page_id=50">online form for developers</a></li>
+<li>Send us an email at info@multunus.com with the Full Name and Email Address of your friend clearly stating that you’ve referred him/her</li>
+</ol>
+</li>
+<li>If your friend gets through the interview process and accepts our offer, you’ll be eligible for the referral bonus of Rs.10,000.  As soon as they complete **3 months of full time work** at Multunus.</li>
+</ol>
+p. <br/>
+
+**NOTE:** If multiple referrers exist for the same candidate, we’ll pay the first referrer.
+
+

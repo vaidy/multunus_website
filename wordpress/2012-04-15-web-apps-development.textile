@@ -1,0 +1,83 @@
+---
+layout: post
+title: What We Do
+---
+
+We’re a custom software development boutique. We build Web and Mobile applications that are inherently complex and risky.
+<p dir="ltr">Whether you’re a startup looking for a technology partner or an established business in need of specialized technical expertise, we can help you.
+
+
+<p dir="ltr">*Web Work Samples*
+
+
+<p style="padding-left: 30px;" dir="ltr"><a title="Chella Software" href="http://new.multunus.com/wordpress/?page_id=219">A Stock Trading system</a>
+
+
+<p style="padding-left: 30px;" dir="ltr"><a title="Excion Corporation" href="http://new.multunus.com/wordpress/?page_id=223">A RoI based Sales Quote Generator [for a Billion Dollar company]</a>
+
+
+<p style="padding-left: 30px;" dir="ltr"><a title="CalendarCruncher" href="http://new.multunus.com/wordpress/?page_id=231">A SaaS Calendaring system with an Awesome UI and a jaw-dropping list of features</a>.
+
+
+**Mobile Work Samples **
+<p style="padding-left: 30px;" dir="ltr"><a title="Image Distorter" href="http://new.multunus.com/wordpress/?page_id=255">An OpenGL ES based Facial Distortion Application</a>
+
+
+<p style="padding-left: 30px;" dir="ltr"><a title="Ape That Shape" href="http://new.multunus.com/wordpress/?page_id=252">An Accelerometer Based Game</a>
+
+
+<p style="padding-left: 30px;" dir="ltr"><a title="Hold That Thought" href="http://new.multunus.com/wordpress/?page_id=257">An Ambient Sound Recorder with a Unique Twist</a>
+
+
+<p dir="ltr">*Technology Summary*
+
+
+<p dir="ltr">We prefer using Ruby on Rails on the server side, but have done quite a bit of work on Java as well. We complement this with HTML5/CSS3, JQuery and Backbone.js on the client side.
+
+
+<p dir="ltr">On the mobile front, we build “purely” native iOS and Android applications. And cross-platform mobile applications using PhoneGap.
+
+
+<p dir="ltr">Finally, all of our code is test driven. Yes, that includes Javascript, iOS and Android native code too.
+
+
+** See More **
+<p dir="ltr">Keep reading to learn more about our Web and Mobile Work. Or better still, contact us to start a nice conversation.
+
+
+
+h1. Web Applications
+
+
+Our experience spans the following domains:
+<ul>
+	<li>Finance</li>
+	<li>Consumer</li>
+	<li>Education</li>
+	<li>Health</li>
+	<li>Local</li>
+	<li>Product Engineering</li>
+</ul>
+h2. Technologies
+
+
+h4. Ruby on Rails with JQuery
+
+
+We’ve been working with RoR from 2008. During this time, we’ve had the benefit of working with and seeing Rails evolve from version [2.x.x] to version[3.x.x]. We’ve also worked with *JRuby* extensively. *Our Testing Stack:*While we’ve done a fair bit of work using Cucumber, we prefer just sticking to RSpec for the most part. This combined with performance enhancement tools such as Spork - is now our bread and butter. For Javascript code, we write tests using Jasmine. And we use JSTestdriver to ensure they’re cross-browser platform compliant. Here’s a sample of the applications that we’ve built on RoR:
+<ul>
+	<li><a href="?page_id=231">CalendarCruncher.com</a>: An Online Calendaring Application that supports Bi-Directional Sync across multiple clients.</li>
+	<li><a href="?page_id=243">Publink</a>: A Location Aware platform</li>
+	<li><a href="?page_id=237">ElixirHealth.com</a>: A web application [with a Refinery CMS backend] that focuses on the "wellness", "consumer"and "e-commerce" aspects of the Health vertical.</li>
+</ul>
+h4. Spring and Hibernate
+
+
+Our experience with Spring and Hibernate goes back to 2002. And during this time, our team has built almost a dozen products on this framework. More recently we’ve worked with the augmented stack which includes tools such as Spring ROO. Our testing stack: Junit Here’s a sample of the applications that we’ve built with the above stack:
+<ul>
+<ul>
+	<li>An ETL [Extract, Transform, Load] system that processes a database of 200+ Million records containing financial data of companies across the world.</li>
+	<li>An online social shopping platform that aggregates data across hundreds of online retailers in the US.</li>
+</ul>
+</ul>
+Please <a href="?page_id=65">contact us</a> for more information about this.

@@ -1,0 +1,19 @@
+---
+layout: post
+title: Open source and being part of the community
+---
+
+Even though I've been using OSS for long time, I've not done gr8 contribution to OSS community. I was always hesitant to do that, don't know why. I agree with the point in this <a href="http://brandonhays.com/blog/2011/05/03/why-i-still-dont-contribute-to-open-source/">blog</a> i.e. _Open source is for people who are better at this than me_. But I was motivated when <a href="http://www.multunus.com/work/team/vaidy">Vaidy</a>, our founder, shared a <a href="http://railscasts.com/give_back">link</a> by Ryan Bates which talks about how to "give back" to community. The options he mentioned are:
+
+<span style="font-family: Verdana, Arial, Helvetica, san-serif"> </span>
+<div>
+<ul>
+	<li>_Making a donation_</li>
+	<li>_Fixing a bug_</li>
+	<li>_Adding documentation_</li>
+	<li>_Or simply thanking them_</li>
+</ul>
+</div>
+I felt this is a great way to get started and I decided to do at least one contribution. And I did couple of bug fixes bugs documentation changes. There were couple of tools which we've been using internally for some time, I converted those into Rubygems. But I am still not spending any contribution consistently to OSS. I believe that you need to consistently dedicate some time of yours to do that, which I feel is tough for me being a mother of two.
+
+Once in some forums where I've been part of, one person has put a question which he had created in SOF also, and suggested the group members either to use StackOverFlow for question answer and use the forum for question answer.  Even though I've been using it on a daily basis for fixing many of problems which I face, I've never tried answering any question or even voting up any question/answer.  I thought let me try out SOF and see whether I can answer the question. I was impressed with the simple and highly usability of the app. I felt Stackoverflow is a great tool for "Community tick", it might be because that it gives badges :)

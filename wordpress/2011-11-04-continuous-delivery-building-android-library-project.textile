@@ -1,0 +1,12 @@
+---
+layout: post
+title: Continuous Delivery: Building Android Library project
+---
+
+This post talks about how to build an Android Project using ant which depends on an Android Library project.
+<ul>
+	<li>Add default.properties in the library project and add <span style="font-family: Consolas, Monaco, 'Courier New', Courier, monospace; line-height: 18px;">android.library=true </span>in the same</li>
+	<li>Run the command in the main Android Project <span style="font-family: Consolas, Monaco, 'Courier New', Courier, monospace; line-height: 18px;">android update project --path . --library ../path-to-the-library/</span>*Note: This always has to be relative path.*</li>
+	<li>Now running <span style="font-family: Consolas, Monaco, 'Courier New', Courier, monospace; line-height: 18px;">ant release</span> should build the library project too.</li>
+</ul>
+*Note:* The android command mentioned in the second step adds an entry in the <span style="font-family: Consolas, Monaco, 'Courier New', Courier, monospace; line-height: 18px;">default.properties</span> file. If you need to override that in different environments, override that in the <span style="font-family: Consolas, Monaco, 'Courier New', Courier, monospace; line-height: 18px;">local.properties</span>. Even there, it has to be relative path, the absolute path will not work.
