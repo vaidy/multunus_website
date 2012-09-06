@@ -1,28 +1,84 @@
-.logo{
+.logo {
 	text-align: center;
 }
 
-.two-images{
-	padding-top:4%;
-	padding-bottom:4%;
+.two-images {
+	padding-top: 4%;
+	padding-bottom: 4%;
+	padding-left: 8.4%;
 }
 
-.first-image{
-	height:250px;
+.first-image, .second-image {
+	float: left;
+	width: 44.89%;
+	height: 32px;
+	margin-right: 4.3%;
+	background-repeat: no-repeat;
+	background-color: #666666;
+	-webkit-border-radius: 2px;
+	-moz-border-radius: 2px;
+	border-radius: 2px;
+	color: white;
+	font-size: 1.5em;
+	padding-top: 220px;
+	text-align: center;
+
+	@media screeen {
+		width: 100%;
+	}
+}
+
+.first-image {
 	background-image:url('/images/webAndMobile1.jpg');
-	background-repeat:no-repeat;
-	background-color: #666666;
-	-webkit-border-radius: 2px;
-	-moz-border-radius: 2px;
-	border-radius: 2px;
 }
 
-.second-image{
-	height:250px;
+.second-image {
 	background-image:url('/images/crafted.jpg');
-	background-repeat:no-repeat;
-	background-color: #666666;
-	-webkit-border-radius: 2px;
-	-moz-border-radius: 2px;
-	border-radius: 2px;
+}
+
+.about_us {
+	color: white;
+	line-height: 140%;
+	font-size: 1.6em;	
+	text-align: center;
+	a { 
+		color: white;
+		text-decoration: underline;
+	}
+}
+
+.testimonial-container {
+	background: #222 url("/images/mesh.png") repeat left top scroll;			
+	color: white;
+	padding-left: 8.4%;
+	padding-top: 5%;
+	text-align: center;
+}
+
+.we-love-working-with {
+	font-size: 3.4em;
+	line-height: 110%;
+	text-align: center;
+	margin-top: 82px;
+}
+
+.we-love-working-with img {
+	max-width: 90px;
+	margin: 20px;
+}
+
+.testimonial-icons {
+	font-size: 1.7em;
+}
+
+.testimonial-icons div{
+	margin-bottom: 40px;				
+}
+
+.testimonial-icons img {
+	margin: 2px;
+}
+
+.startups p, .smes_partners_big_fellows p {
+	margin-bottom: 20px;
 }
