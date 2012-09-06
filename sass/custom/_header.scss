@@ -15,10 +15,8 @@
 
 }
 
-
-
-.nav{
-	padding-left : 15%;
+.nav {
+	padding-left : 10.7%;
 }
 
 ul.nav li.dropdown:hover ul.dropdown-menu{
@@ -28,13 +26,16 @@ ul.nav li.dropdown:hover ul.dropdown-menu{
 a.menu:after, .dropdown-toggle:after {
   content: none;
 }
+
 .navbar .dropdown-menu {
  margin-top: 0px;
  padding: 0;
 }
+
 .dropdown-menu {
      background-color: #333;
 }    
+
 .dropdown-menu li a{
      color: white; 
      padding: 5px 8px;
@@ -42,6 +43,7 @@ a.menu:after, .dropdown-toggle:after {
      font-size: 12px;  
      border: 1px solid rgba(149,149,149,0.2);
 }
+
 .navbar .nav > li > .dropdown-menu::after {
         top: -8px;
         border-right: 10px solid transparent;
