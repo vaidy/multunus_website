@@ -1,0 +1,60 @@
+.modal {
+	position: absolute;
+	top: 90% !important;
+	width: 1041px; 
+    margin: -490px 0 0 -520px;
+	background: #222 url("/images/concrete.png") repeat left top scroll;
+
+	.dark-border {
+		border: 8px solid #505050;
+	}
+
+	.light-border {
+		border: 1px solid #898989;
+	}
+
+	.shadow {
+		-moz-box-shadow:    0px 0px 3px 4px #363636;;
+  		-webkit-box-shadow: 0px 0px 3px 4px #363636;
+	  	box-shadow:         0px 0px 3px 4px #363636;
+	}
+
+	blockquote {
+		border: none;
+	}
+
+	.close {
+		background: url(/images/controls.png) no-repeat -100px -25px;;
+		width: 23px;
+		height: 23px;
+		opacity: 1;
+	}
+	.close:hover {
+		background-position: -100px 0px;
+	}
+} 
+
+.modal-body {
+	border-radius: 0px 0px 3px 3px;	
+	border: 6px solid white;
+	font-size: 1.2em;
+	color: white;
+	a { 
+		color: white;
+		text-decoration: underline;
+	}
+}
+
+.modal-footer {
+	border-radius: 3px 3px 0px 0px;
+	padding: 5px 5px 5px 390px;
+	background-color: #E6E5E5;
+}
+
+.modal_title {
+	float: left;
+	color: #7C7C7C;
+	font-size: 1.4em;
+	font-weight: bold;	
+}
+
