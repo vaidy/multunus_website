@@ -1,5 +1,6 @@
 ---
-layout: post
+comments: true
+layout: true
 featured: true
 title: A sneak peek into Mobile App Opportunities in 2012
 wordpress_id: 2012

@@ -1,5 +1,6 @@
 ---
-layout: post
+comments: true
+layout: true
 title: Rails threadsafe and rake task
 wordpress_id: 954
 wordpress_url: http://www.multunus.com/?p=954

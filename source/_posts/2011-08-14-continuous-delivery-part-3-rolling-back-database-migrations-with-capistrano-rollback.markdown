@@ -1,5 +1,6 @@
 ---
-layout: post
+comments: true
+layout: true
 title: ! 'Continuous Delivery - Part 4: Rolling back database migrations with Capistrano
   rollback'
 wordpress_id: 1527

@@ -1,5 +1,6 @@
 ---
-layout: post
+comments: true
+layout: true
 title: Our talks at Droidcon 2011, Bangalore
 wordpress_id: 1988
 wordpress_url: http://www.multunus.com/?p=1988

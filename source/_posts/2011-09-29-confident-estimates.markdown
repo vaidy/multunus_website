@@ -1,5 +1,6 @@
 ---
-layout: post
+comments: true
+layout: true
 title: Confident Estimates
 wordpress_id: 1744
 wordpress_url: http://www.multunus.com/?p=1744

@@ -1,5 +1,6 @@
 ---
-layout: post
+comments: true
+layout: true
 title: ! 'Continuous Delivery of iOS apps using Jenkins and TestFlightApp '
 wordpress_id: 2289
 wordpress_url: http://www.multunus.com/?p=2114

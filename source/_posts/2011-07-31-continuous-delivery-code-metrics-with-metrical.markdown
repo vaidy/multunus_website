@@ -1,5 +1,6 @@
 ---
-layout: post
+comments: true
+layout: true
 title: ! 'Continuous Delivery - Part 2: Code metrics with metrical'
 wordpress_id: 1500
 wordpress_url: http://www.multunus.com/?p=1500

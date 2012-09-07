@@ -1,5 +1,6 @@
 ---
-layout: post
+comments: true
+layout: true
 title: Setup Test Load Balancer using Jenkins
 wordpress_id: 1673
 wordpress_url: http://www.multunus.com/?p=1673

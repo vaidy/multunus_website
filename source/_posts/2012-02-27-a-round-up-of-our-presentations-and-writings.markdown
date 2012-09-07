@@ -1,5 +1,6 @@
 ---
-layout: post
+comments: true
+layout: true
 title: A round up of our presentations and writings
 wordpress_id: 2045
 wordpress_url: http://www.multunus.com/?p=2045

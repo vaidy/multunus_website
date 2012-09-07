@@ -1,5 +1,6 @@
 ---
-layout: post
+comments: true
+layout: true
 featured: true
 title: Continuous Delivery for Android Apps - Part 1
 wordpress_id: 1705

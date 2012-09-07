@@ -1,5 +1,6 @@
 ---
-layout: post
+comments: true
+layout: true
 title: Blueprint - reverse engineering your server configuration
 wordpress_id: 1489
 wordpress_url: http://www.multunus.com/?p=1489

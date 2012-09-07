@@ -1,5 +1,6 @@
 ---
-layout: post
+comments: true
+layout: true
 title: HTML Fixtures with Jasmine and JSTestdriver
 wordpress_id: 1013
 wordpress_url: http://www.multunus.com/?p=1013

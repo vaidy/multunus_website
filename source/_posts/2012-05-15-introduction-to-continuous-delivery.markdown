@@ -1,5 +1,6 @@
 ---
-layout: post
+comments: true
+layout: true
 title: Introduction to Continuous Delivery
 wordpress_id: 2294
 wordpress_url: http://www.multunus.com/?p=2059

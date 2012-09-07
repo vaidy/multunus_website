@@ -1,5 +1,6 @@
 ---
-layout: post
+comments: true
+layout: true
 title: Productivity Enhancement Tools - MailCatcher, Vogue, SpriteCow and RailsWizard
 wordpress_id: 1450
 wordpress_url: http://www.multunus.com/?p=1450

@@ -1,5 +1,6 @@
 ---
-layout: post
+comments: true
+layout: true
 title: Avoiding the "crunch mode" in the last few weeks of a project
 wordpress_id: 1358
 wordpress_url: http://www.multunus.com/?p=1358

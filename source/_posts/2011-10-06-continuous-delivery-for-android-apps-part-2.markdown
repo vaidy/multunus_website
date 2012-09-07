@@ -1,5 +1,6 @@
 ---
-layout: post
+comments: true
+layout: true
 title: Continuous Delivery for Android Apps – Part 2
 wordpress_id: 1742
 wordpress_url: http://www.multunus.com/?p=1742

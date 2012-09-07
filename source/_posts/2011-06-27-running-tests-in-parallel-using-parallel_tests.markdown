@@ -1,5 +1,6 @@
 ---
-layout: post
+comments: true
+layout: true
 title: Running tests in parallel using parallel_tests
 wordpress_id: 1345
 wordpress_url: http://www.multunus.com/?p=1345

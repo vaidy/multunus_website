@@ -1,5 +1,6 @@
 ---
-layout: post
+comments: true
+layout: true
 title: Our experience with Comatose - the MicroCMS
 wordpress_id: 799
 wordpress_url: http://www.multunus.com/?p=799

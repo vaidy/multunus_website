@@ -1,5 +1,6 @@
 ---
-layout: post
+comments: true
+layout: true
 title: Venkat Subramaniam's talk on Code Quality
 wordpress_id: 1213
 wordpress_url: http://www.multunus.com/?p=1213
