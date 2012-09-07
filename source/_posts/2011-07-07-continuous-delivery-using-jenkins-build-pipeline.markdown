@@ -1,5 +1,6 @@
 ---
 layout: post
+featured: true
 title: ! 'Continuous Delivery - Part 1: Our Jenkins Build Pipeline setup'
 wordpress_id: 1417
 wordpress_url: http://www.multunus.com/?p=1417

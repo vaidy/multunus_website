@@ -1,5 +1,6 @@
 ---
 layout: post
+featured: true
 title: A Macro Level Perspective of Software Development
 wordpress_id: 953
 wordpress_url: http://www.multunus.com/?p=953
