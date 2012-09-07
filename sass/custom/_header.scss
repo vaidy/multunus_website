@@ -16,7 +16,7 @@
 }
 
 .nav {
-	padding-left : 10.7%;
+	padding-left : 6%;
 }
 
 ul.nav li.dropdown:hover ul.dropdown-menu{
@@ -49,4 +49,13 @@ a.menu:after, .dropdown-toggle:after {
         border-right: 10px solid transparent;
         border-bottom: 8px solid rgba(149,149,149,0.4);
         border-left: 10px solid transparent;        
+}
+
+.social-icons {
+  float: right;
+  margin-right: 7%;
+  div {
+    float: left;
+    margin: 10px;
+  }
 }

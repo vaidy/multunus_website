@@ -41,6 +41,7 @@
 	line-height: 140%;
 	font-size: 1.6em;	
 	text-align: center;
+	margin-bottom: 4.5%;
 	a { 
 		color: white;
 		text-decoration: underline;
@@ -48,23 +49,22 @@
 }
 
 .testimonial-container {
-	background: #222 url("/images/mesh.png") repeat left top scroll;			
 	color: white;
-	padding-left: 8.4%;
-	padding-top: 5%;
+	padding-left: 4.5%;
+	padding-top: 1.5%;
 	text-align: center;
 }
 
 .we-love-working-with {
 	font-size: 3.4em;
-	line-height: 110%;
+	line-height: 101%;
 	text-align: center;
 	margin-top: 82px;
 }
 
 .we-love-working-with img {
 	max-width: 90px;
-	margin: 20px;
+	margin: 18px;
 }
 
 .testimonial-icons {
@@ -72,7 +72,7 @@
 }
 
 .testimonial-icons div{
-	margin-bottom: 40px;				
+	margin-bottom: 55px;				
 }
 
 .testimonial-icons img {
@@ -81,4 +81,8 @@
 
 .startups p, .smes_partners_big_fellows p {
 	margin-bottom: 20px;
+}
+
+.mesh-background {
+	background: #222 url("/images/mesh.png") repeat left top scroll;			
 }
