@@ -1,0 +1,8 @@
+---
+layout: post
+title: Deployinator - Tool used by Etsy for easy deployment
+---
+
+It does not look like they've released all the features what they are using within Etsy. Its still premature
+
+But one advantage with this system is that it does not have any dependencies between stages, i.e. production deployment can be done without stage deployment

@@ -1,0 +1,22 @@
+---
+layout: post
+title: Creed.io
+---
+
+Creedio allows individuals and companies to share their values with like-minded peers. The idea is to create a network of people and companies who are connected through their shared values. The site launched into Public Beta in June 2012.
+
+
+<p class="project-screen-shot">
+<img src="/wp-content/uploads/screenshots/creedio_screenshot.png"/>
+
+
+
+
+
+*Technologies:* Rails 3.2.
+
+
+*Testing Frameworks:* Jasmine and JSTestDriver on the front end. RSpec at the backend.
+
+
+*Continuous Deployment Tools:* Jenkins CI, Jenkins Build Pipeline, Capistrano and Moonshine.

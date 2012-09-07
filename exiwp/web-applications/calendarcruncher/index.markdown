@@ -1,0 +1,33 @@
+---
+comments: true
+date: 2012-04-15 07:18:29
+layout: page
+slug: calendarcruncher
+title: CalendarCruncher
+wordpress_id: 231
+---
+
+[image]![CalendarCruncher](http://new.multunus.com/wordpress/wp-content/gallery/consumer/159__320x240_calendarcruncher.png)[/image]**CalendarCruncher.com** – This website provides a very rich online experience to create, manage, sync and share online calendars. This is a SaaS application. [Multiple videos here](http://www.calendarcruncher.com/tour)
+
+**Challenges faced:**
+
+
+
+	
+  * The calendaring domain is quite mature – there are multiple standards [CalDAV, iCal - including a section for Recurring Events] and many implementations. To make things more complicated, each implementation differs from others in one way or another. CalendarCruncher masks these differences and creates a seamless experience for the user.
+
+	
+  * The UI had to be almost completely Javascript driven – to create a user experience that is very similar to that of a native client such as Microsoft Outlook.
+
+	
+  * The application allows the user to sync with Google Calendar, Microsoft Outlook and Apple iCal – all from the same interface. Further the user is also allowed to change the external calendar they’ve synced their local calendar with – from say iCal to GCal. These features required us to build a platform that could talk to various calendaring systems using a common interface.
+
+	
+  * The application allows the user to sync with Google Calendar, Microsoft Outlook and Apple iCal – all from the same interface. Further the user is also allowed to change the external calendar they’ve synced their local calendar with – from say iCal to GCal. These features required us to build a platform that could talk to various calendaring systems using a common interface.
+
+	
+  * One component that we did not have suitable open source options for – was the Outlook plugin that had to be shipped with CalendarCruncher. So we built the plugin from scratch using C#. This is full fledged client that does bi-directional syncing of your Outlook calendar with that in CalendarCruncher – using the CalDAV protocol.
+
+
+
+**Technologies Used:** Ruby on Rails, JRuby, Java, Google Calendar API, C# .NET, DaviCal, Lucene, PHP, Glassfish, JQuery, Selenium, RSpec, Cucumber, CalDAV4J, RiCal

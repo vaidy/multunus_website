@@ -1,0 +1,10 @@
+---
+layout: post
+title: Excion Corporation
+---
+
+[image]<img class="ngg-singlepic ngg-left" src="http://new.multunus.com/wordpress/wp-content/gallery/finance/156__320x240_excion.png" alt="Excion" />[/image]We worked with Excion to build an online Quote Generator – which is being used by the Sales personnel of a **multi-billion dollar organization**, based out of Houston, Texas. We analyzed the existing offline solution – which had the benefits of low response times combined with a lot of flexibility for **complex financial calculations**.
+
+The challenge was to build an online version, that would retain the benefits of the existing offline solution. We researched various options, recommended the technology platform and then built the application. The new online version now boasts of response times that are comparable to what the Sales personnel were used to with the old spreadsheet based solution.
+
+**Technologies Used:** SmartGWT, Spring ROO, Hibernate, Maven

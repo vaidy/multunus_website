@@ -2,42 +2,6 @@
 // (c) Brandon Mathis // MIT License
 
 /* Sky Slavin, Ludopoli. MIT license.  * based on JavaScript Pretty Date * Copyright (c) 2008 John Resig (jquery.com) * Licensed under the MIT license.  */
-function prettyDate(time) {
-  if (navigator.appName === 'Microsoft Internet Explorer') {
-    return "<span>&infin;</span>"; // because IE date parsing isn't fun.
-  }
-  var say = {
-    just_now:    " now",
-    minute_ago:  "1 minute ago",
-    minutes_ago: " minutes ago",
-    hour_ago:    "1 hour ago",
-    hours_ago:   " hours ago",
-    yesterday:   "1 day ago",
-    days_ago:    " days ago",
-    last_week:   "1 week ago",
-    weeks_ago:   " weeks ago"
-  };
-
-  var current_date = new Date(),
-      current_date_time = current_date.getTime(),
-      current_date_full = current_date_time + (1 * 60000),
-      date = new Date(time),
-      diff = ((current_date_full - date.getTime()) / 1000),
-      day_diff = Math.floor(diff / 86400);
-
-  if (isNaN(day_diff) || day_diff < 0) { return "<span>&infin;</span>"; }
-
-  return day_diff === 0 && (
-    diff < 60 && say.just_now ||
-    diff < 120 && say.minute_ago ||
-    diff < 3600 && Math.floor(diff / 60) + say.minutes_ago ||
-    diff < 7200 && say.hour_ago ||
-    diff < 86400 && Math.floor(diff / 3600) + say.hours_ago) ||
-    day_diff === 1 && say.yesterday ||
-    day_diff < 7 && day_diff + say.days_ago ||
-    day_diff === 7 && say.last_week ||
-    day_diff > 7 && Math.ceil(day_diff / 7) + say.weeks_ago;
-}
 
 function linkifyTweet(text, url) {
   // Linkify urls, usernames, hashtags
@@ -59,13 +23,10 @@ function linkifyTweet(text, url) {
 
 function showTwitterFeed(tweets, twitter_user) {
   var timeline = document.getElementById('tweets'),
-      content = '<li class="nav-header">Latest Tweets</li>';
+      content = '<li class="nav-header">@'+twitter_user+'</li>';
 
   for (var t in tweets) {
     content += '<li>';
-    content += '<a href="http://twitter.com/'+twitter_user+'/status/'+tweets[t].id_str+'">';
-    content += prettyDate(tweets[t].created_at);
-    content += '</a>';
     content += '<p>';
     content += linkifyTweet(tweets[t].text.replace(/\n/g, '<br>'), tweets[t].entities.urls);
     content += '</p>';

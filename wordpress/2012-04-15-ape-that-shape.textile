@@ -1,0 +1,13 @@
+---
+layout: post
+title: Ape That Shape
+---
+
+<img src='http://new.multunus.com/wordpress/wp-content/gallery/games-mobile/apethatshape_game.png' alt='ApeThatShape' class='ngg-singlepic ngg-left' />Draw anything on the screen by just flexing your wrists! The built-in Shape Detector can recognize almost any shape.
+
+The game is a fun app that starts with simple shapes and then gradually moves on to more complex ones. The player is not allowed to touch the screen and has to draw the shapes entirely by tilting the phone.
+
+This application is also potentially useful to train children who need help with their motor skills.
+<a href="https://play.google.com/store/apps/details?id=com.multunus.apethatshape"><img src="http://new.multunus.com/wordpress/wp-content/uploads/2012/04/60_avail_market_logo2.png" alt="" title="60_avail_market_logo2" width="260" height="60" class="alignnone size-full wp-image-253" /></a>
+A demo video is shown below. Turn up the volume to enjoy!
+[iframe class="youtube-player" type="text/html" width="640" height="385" src="http://www.youtube.com/embed/TBmDKWywBvA" frameborder="0"] 

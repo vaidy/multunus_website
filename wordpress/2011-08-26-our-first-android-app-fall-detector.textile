@@ -1,0 +1,14 @@
+---
+layout: post
+title: Our first Android app: Fall Detector
+---
+
+Inspired by all the buzz around new smart phones in the  market and especially the Andriod phones, we wanted to work on this  amazing platform. So for a starter, we came up with an idea of building an Android application, Fall Detector.
+
+Fall detector app helps you to measure the credentials  of a free fall like height, velocity and time taken. We implemented this  application to check the accuracy at which these android phones can  provide data, how sensitive are the sensors on these phones. And the  result is here:
+
+<iframe width="600" height="360" src="http://www.youtube.com/embed/hovBI1-qrXI?rel=0" frameborder="0" allowfullscreen></iframe>
+
+Implementing Android phone applications is more fun as we can see the  application running right away. Testing these apps is really  challenging task. We had enough Android phones at our place to test and  more innovative ideas to test them. After this product we have plans of  doing brainstorming sessions on new product ideas and implementing them  in labs time* or our free time.
+
+*_ Labs time in our office is the time we spend on non client projects  after 6:30pm. We do learn, experiment and share about new technologies  to keep ourself updated and constantly improve. _
