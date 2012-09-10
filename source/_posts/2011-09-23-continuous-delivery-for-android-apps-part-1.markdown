@@ -7,6 +7,12 @@ wordpress_id: 1705
 wordpress_url: http://www.multunus.com/?p=1705
 date: 2011-09-23 11:15:50.000000000 +05:30
 author: Leena
+categories:
+- All Posts
+- Android
+- Continuous Delivery
+- Process
+- Technology
 ---
 <div>
 

@@ -6,6 +6,10 @@ wordpress_id: 1773
 wordpress_url: http://www.multunus.com/?p=1773
 date: 2011-10-07 15:35:45.000000000 +05:30
 author: Tamil
+categories:
+- All Posts
+- Android
+- Technology
 ---
 <em><strong>Note</strong>: This post assumes some basic knowledge in setting up an OpenGL app in Android. A basic example for rendering a texture on to a surface can be found <a href="http://developer.android.com/resources/samples/ApiDemos/src/com/example/android/apis/graphics/GLES20TriangleRenderer.html">here.</a> You can use this as the initial setup for trying out Shader language program listed in this post.</em>
 

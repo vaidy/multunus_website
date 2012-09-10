@@ -6,6 +6,11 @@ title: ! 'Continuous Delivery - Part 1: Our Jenkins Build Pipeline setup'
 wordpress_id: 1417
 wordpress_url: http://www.multunus.com/?p=1417
 date: 2011-07-07 14:28:55.000000000 +05:30
+categories:
+- All Posts
+- Continuous Delivery
+- Process
+- Technology
 ---
 As part of our journey towards implementing <a href="http://continuousdelivery.com/">Continous Delivery</a>, I've added the <a href="https://wiki.jenkins-ci.org/display/JENKINS/Build+Pipeline+Plugin">Build pipeline</a> for our continous integration server <a href="http://jenkins-ci.org/">Jenkins</a>.  There are quite a few resources available on the net on how to add the plugin and configure it. This blog is not about how to configure the plugin, but more on how I've configured it for one of our projects and issues I faced while doing the same.
 

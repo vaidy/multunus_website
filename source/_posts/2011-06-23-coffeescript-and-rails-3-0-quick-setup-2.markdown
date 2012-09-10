@@ -6,6 +6,10 @@ wordpress_id: 1304
 wordpress_url: http://www.multunus.com/?p=1304
 date: 2011-06-23 14:10:58.000000000 +05:30
 author: Manoj
+categories:
+- All Posts
+- Rails
+- Technology
 ---
 I have been hearing a lot about CoffeeScript nowadays as you must have as well. Yes, it is built into Rails 3.1 by default. However I'm still working on a Rails 3.0 project, where I'm thinking of starting to use CoffeeScript. So, this blog post concentrates on how to quickly setup CoffeeScript into your existing Rails 3.0 project. For more details refer to the links at the bottom of this post.
 

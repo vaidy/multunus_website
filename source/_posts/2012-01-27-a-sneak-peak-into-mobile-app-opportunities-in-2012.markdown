@@ -7,6 +7,9 @@ wordpress_id: 2012
 wordpress_url: http://www.multunus.com/?p=2012
 date: 2012-01-27 16:45:13.000000000 +05:30
 author: Vaidy
+categories:
+- All Posts
+- Android
 ---
 <div style="text-align: center;"><em>This article was originally written by me for <a href="http://yourstory.in/2011/12/a-sneak-peek-into-mobile-app-opportunities-in-2012/" target="_blank">yourstory.in</a>. But this version is more "complete" with all of the original links in place.</em></div>
 <div style="text-align: center;"><strong><img src="https://lh5.googleusercontent.com/fPMHVSttl3ew1PBhQoR8pWlEYnnwJNFroicMocnz8FO9kA0w6M2Om7T6BGDLKEZuGthb84bCI54sDOzRviRFJFiG0w8P8ihB7SpaUfLM_EwY0kyqefI" alt="" width="421px;" height="315px;" /></strong></div>

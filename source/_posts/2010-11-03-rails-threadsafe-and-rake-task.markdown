@@ -6,6 +6,9 @@ wordpress_id: 954
 wordpress_url: http://www.multunus.com/?p=954
 date: 2010-11-03 15:22:08.000000000 +05:30
 author: Leena
+categories:
+- All Posts
+- Rails
 ---
 We've got an application which uses JRuby + RoR deployed in Glassfish. We enabled <code><em>config.threadsafe!</em></code> in the production.rb file to support multithreaded environment.
 

@@ -6,6 +6,9 @@ wordpress_id: 684
 wordpress_url: http://www.multunus.com/?p=684
 date: 2010-01-29 10:55:05.000000000 +05:30
 author: Vaidy
+categories:
+- All Posts
+- Business
 ---
 <div>2009 was a year of many special events. We completed 2 years of operations last year. We moved to a new more spacious office. We created our first <a id="bgtx" title="product" href="http://alpha.userthoughts.com/" target="_blank">product</a>. We discovered our niche [more on this in the coming weeks].</div>
 <div>But those events are nothing more than punctuations in this journey we've embarked on. Its the learnings that we treasure and rely on, to propel us forward. So here's my list:</div>

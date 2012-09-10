@@ -6,6 +6,9 @@ wordpress_id: 1673
 wordpress_url: http://www.multunus.com/?p=1673
 date: 2011-09-23 09:40:07.000000000 +05:30
 author: KP
+categories:
+- All Posts
+- Continuous Delivery
 ---
 The main purpose of a test suite is to give fast feedback about the changes being made to the developer. Ideally the test suite should be really fast and should take no more than 10 mins to complete. But there are times when you end up with a test suit that takes 30 - 40 mins to complete. This can be really frustrating for the developers because they have to wait for 40 mins after checking in his changes to know if he broke something.
 

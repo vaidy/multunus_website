@@ -6,6 +6,10 @@ wordpress_id: 1345
 wordpress_url: http://www.multunus.com/?p=1345
 date: 2011-06-27 10:48:01.000000000 +05:30
 author: Leena
+categories:
+- All Posts
+- Rails
+- Technology
 ---
 One of the action items I had mentioned in <a href="http://www.multunus.com/2011/06/takeaways-from-ruby-conf-india-2011/">an earlier post</a>, was to setup the  infrastructure for running tests in parallel.
 

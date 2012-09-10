@@ -6,6 +6,9 @@ wordpress_id: 744
 wordpress_url: http://www.multunus.com/?p=744
 date: 2010-02-06 05:13:34.000000000 +05:30
 author: Leena
+categories:
+- All Posts
+- Technology
 ---
 <div><strong>One of the requirements we had was to sign the applet that we built for <a href="http://alpha.userthoughts.com">UserThoughts</a></strong><strong>. We had purchased Comodo's <a id="l5m3" title="code signing certificate" href="http://en.wikipedia.org/wiki/Code_signing">code signing certificate</a> from <a id="wp-h" title="KSoftware" href="https://secure.ksoftware.net/code_signing.html?gclid=CN-epdfskZ8CFVBd4wodTC6EIA">KSoftware</a>. When you download the certificate from their site, it automatically gets installed in IE. Follow these steps for converting it into format which you can use with the Java Jarsigner.</strong></div>
 <ol>

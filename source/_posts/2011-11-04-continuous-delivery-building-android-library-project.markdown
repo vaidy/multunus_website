@@ -6,6 +6,10 @@ wordpress_id: 1960
 wordpress_url: http://www.multunus.com/?p=1960
 date: 2011-11-04 14:55:20.000000000 +05:30
 author: Leena
+categories:
+- All Posts
+- Android
+- Continuous Delivery
 ---
 This post talks about how to build an Android Project using ant which depends on an Android Library project.
 <ul>

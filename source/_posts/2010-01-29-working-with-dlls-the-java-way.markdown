@@ -6,6 +6,9 @@ wordpress_id: 711
 wordpress_url: http://www.multunus.com/?p=711
 date: 2010-01-29 12:20:51.000000000 +05:30
 author: Jeevan
+categories:
+- All Posts
+- Technology
 ---
 We had a very simple requirement, to invoke my DLLs using Java code for couple of reasons:
 <ol>
