@@ -5,6 +5,7 @@ title: Continuous Delivery for Android Apps – Part 2
 wordpress_id: 1742
 wordpress_url: http://www.multunus.com/?p=1742
 date: 2011-10-06 06:51:57.000000000 +05:30
+author: Leena
 ---
 This post talks about how to run tests for the build setup as mentioned in <a href="/continuous-delivery-for-android-apps-part-1/">Part 1</a>.
 <h3><span style="text-decoration: underline;">Generate the build script for test</span></h3>

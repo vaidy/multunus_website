@@ -5,6 +5,7 @@ title: Introduction to Continuous Delivery
 wordpress_id: 2294
 wordpress_url: http://www.multunus.com/?p=2059
 date: 2012-05-15 14:49:16.000000000 +05:30
+author: Leena
 ---
 We've been doing Continuous Delivery for sometime and also been writing about how to implement the same. This post is about why Continuous Delivery is required and what problems does it solve.
 <h3><strong><span style="text-decoration: underline;">What is Continuous Delivery</span></strong></h3>

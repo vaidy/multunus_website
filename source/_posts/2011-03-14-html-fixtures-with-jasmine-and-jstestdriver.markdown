@@ -5,6 +5,7 @@ title: HTML Fixtures with Jasmine and JSTestdriver
 wordpress_id: 1013
 wordpress_url: http://www.multunus.com/?p=1013
 date: 2011-03-14 15:03:07.000000000 +05:30
+author: Leena
 ---
 Unit Testing Javascript is great using JSTestDriver and Jasmine, but maintaining HTML fixtures for the same is a pain. One of the approaches for fixing the same issue is by creating the HTML from the controller specs and loading the HTML using AJAX. This approach is mentioned <a href="http://pivotallabs.com/users/jb/blog/articles/1152">here</a>.
 

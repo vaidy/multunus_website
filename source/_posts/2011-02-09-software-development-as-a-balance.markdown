@@ -6,6 +6,7 @@ title: A Macro Level Perspective of Software Development
 wordpress_id: 953
 wordpress_url: http://www.multunus.com/?p=953
 date: 2011-02-09 00:17:24.000000000 +05:30
+author: Vaidy
 ---
 Why is delivering good software on a consistent basis hard? There are many existing answers to this question already. This is our version.
 

@@ -5,6 +5,7 @@ title: Issue while installing Java in EC2 Micro instance
 wordpress_id: 1409
 wordpress_url: http://www.multunus.com/?p=1409
 date: 2011-07-31 14:22:30.000000000 +05:30
+author: Leena
 ---
 When I tried to install Java in our <a href="http://aws.amazon.com/ec2/instance-types/">EC2 micro instance</a>, it stopped responding. There was no luck even after restarting the instance. I thought it might be a specific issue with that particular instance, so tried it again by bringing up a new micro instance and every time it was the same behaviour. I then googled and discovered it as a known <a href="https://bugs.launchpad.net/ubuntu/+source/linux/+bug/634487">issue</a> reported back in September 2010. The suggested workaround is:
 <ul>

@@ -5,6 +5,7 @@ title: Planning an Informative Workspace at our New Office
 wordpress_id: 1193
 wordpress_url: http://www.multunus.com/?p=1193
 date: 2011-04-26 15:08:43.000000000 +05:30
+author: Shakeeb
 ---
 <a rel="attachment wp-att-1279" href="http://www.multunus.com/2011/04/planning-an-informative-workspace-at-our-new-office/s1080013/"><img class="alignleft size-medium wp-image-1279" style="margin-top: 5px; margin-bottom: 5px; margin-left: 10px; margin-right: 10px;" title="New Office" src="http://www.multunus.com/wp-blog/wp-content/uploads/2011/04/S1080013-300x225.jpg" alt="" width="300" height="225" /></a>We're moving! We've been at the current premises for 2+ years now - and the time has come to move out of here - into an office that is a little more "formal".
 

@@ -5,6 +5,7 @@ title: Lessons from interview with Joel Spolsky
 wordpress_id: 1876
 wordpress_url: http://www.multunus.com/?p=1876
 date: 2011-10-17 00:30:36.000000000 +05:30
+author: Anitha
 ---
 <div class="zemanta-img" style="margin: 1em; display: block;">
 

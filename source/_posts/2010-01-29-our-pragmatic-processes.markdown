@@ -5,6 +5,7 @@ title: Our Pragmatic Processes
 wordpress_id: 703
 wordpress_url: http://www.multunus.com/?p=703
 date: 2010-01-29 12:02:22.000000000 +05:30
+author: Vaidy
 ---
 <div>One of the things we do is to create a culture of continuous improvement. To help ourselves stay on track and not lose sight of the forest for the trees, we do the following:</div>
 <div>

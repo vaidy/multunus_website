@@ -5,6 +5,7 @@ title: Using études to continually improve our development process
 wordpress_id: 1029
 wordpress_url: http://www.multunus.com/?p=1029
 date: 2011-03-15 10:12:59.000000000 +05:30
+author: Vaidy
 ---
 Agile development is an art. Unless each member on the team has the a-ha moment and actually 'gets' the <a href="http://agilemanifesto.org/">core values of the process</a> - the end result is nothing but a hodge-podge of buggy code delivered after a lot of unnecessary stress.
 

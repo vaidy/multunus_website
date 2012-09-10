@@ -5,6 +5,7 @@ title: Confident Estimates
 wordpress_id: 1744
 wordpress_url: http://www.multunus.com/?p=1744
 date: 2011-09-29 08:58:51.000000000 +05:30
+author: Manoj
 ---
 <div class="zemanta-img" style="margin: 1em; display: block;">
 

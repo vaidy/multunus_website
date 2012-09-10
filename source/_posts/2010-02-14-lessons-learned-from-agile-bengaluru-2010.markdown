@@ -5,6 +5,7 @@ title: Lessons learned from Agile Bengaluru 2010
 wordpress_id: 781
 wordpress_url: http://www.multunus.com/?p=781
 date: 2010-02-14 09:55:48.000000000 +05:30
+author: Leena
 ---
 It was a great feeling after attending the <a href="http://www.agileindia.org/agilebengaluru2010">Agile Bengaluru Conf 2010</a>. The theme for this Agile Conference was <strong>Post-Modern Agile</strong> i.e. what's next after Agile. Most of the sessions were talking mainly on what needs to be done to make a product a success. Just following agile practices will not make any product a success. The team needs to get out of their circle and think outside the coding level to understand their customers. The main takeaway points of the session are:
 <ul>

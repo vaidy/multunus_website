@@ -5,6 +5,7 @@ title: Avoiding the "crunch mode" in the last few weeks of a project
 wordpress_id: 1358
 wordpress_url: http://www.multunus.com/?p=1358
 date: 2011-06-29 11:19:52.000000000 +05:30
+author: Anitha
 ---
 We recently launched a product into production. It was a 4 month long project - with 5 full time members on the team. Right from the outset, one of things that we wanted to do, was to set and maintain a rhythm across the entire duration of the project. We set this rhythm to 1 week iterations - with a demo at the end of each iteration. Things went pretty well for most of the project. We had expected to have to hustle a little bit in the last couple of weeks - but in the end we actually ended up working much longer hours than the usual.
 
