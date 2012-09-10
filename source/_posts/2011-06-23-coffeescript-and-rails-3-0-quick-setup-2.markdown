@@ -1,6 +1,6 @@
 ---
 comments: true
-layout: true
+layout: post
 title: CoffeeScript and Rails 3.0 - Quick setup
 wordpress_id: 1304
 wordpress_url: http://www.multunus.com/?p=1304

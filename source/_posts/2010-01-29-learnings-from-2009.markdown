@@ -1,6 +1,6 @@
 ---
 comments: true
-layout: true
+layout: post
 title: ! 'Learnings from 2009 '
 wordpress_id: 684
 wordpress_url: http://www.multunus.com/?p=684

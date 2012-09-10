@@ -1,6 +1,6 @@
 ---
 comments: true
-layout: true
+layout: post
 title: ! 'Continuous Delivery - Part 3: Running custom rake tasks during deployment'
 wordpress_id: 1482
 wordpress_url: http://www.multunus.com/?p=1482

@@ -1,6 +1,6 @@
 ---
 comments: true
-layout: true
+layout: post
 title: Issue while installing Java in EC2 Micro instance
 wordpress_id: 1409
 wordpress_url: http://www.multunus.com/?p=1409

@@ -1,6 +1,6 @@
 ---
 comments: true
-layout: true
+layout: post
 featured: true
 title: A Macro Level Perspective of Software Development
 wordpress_id: 953

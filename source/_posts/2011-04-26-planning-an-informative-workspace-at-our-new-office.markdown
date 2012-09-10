@@ -1,6 +1,6 @@
 ---
 comments: true
-layout: true
+layout: post
 title: Planning an Informative Workspace at our New Office
 wordpress_id: 1193
 wordpress_url: http://www.multunus.com/?p=1193

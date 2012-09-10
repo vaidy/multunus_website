@@ -1,6 +1,6 @@
 ---
 comments: true
-layout: true
+layout: post
 title: Our Pragmatic Processes
 wordpress_id: 703
 wordpress_url: http://www.multunus.com/?p=703

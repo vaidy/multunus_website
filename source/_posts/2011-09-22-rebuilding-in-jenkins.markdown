@@ -1,6 +1,6 @@
 ---
 comments: true
-layout: true
+layout: post
 title: Rebuilding in Jenkins
 wordpress_id: 1719
 wordpress_url: http://www.multunus.com/?p=1719

@@ -1,6 +1,6 @@
 ---
 comments: true
-layout: true
+layout: post
 featured: true
 title: ! 'Continuous Delivery - Part 1: Our Jenkins Build Pipeline setup'
 wordpress_id: 1417

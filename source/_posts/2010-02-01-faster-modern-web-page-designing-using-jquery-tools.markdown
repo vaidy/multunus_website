@@ -1,6 +1,6 @@
 ---
 comments: true
-layout: true
+layout: post
 title: ! 'JQuery Tools: Smooth JS widgets'
 wordpress_id: 733
 wordpress_url: http://www.multunus.com/?p=733

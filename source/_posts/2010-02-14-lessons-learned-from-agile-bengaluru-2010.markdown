@@ -1,6 +1,6 @@
 ---
 comments: true
-layout: true
+layout: post
 title: Lessons learned from Agile Bengaluru 2010
 wordpress_id: 781
 wordpress_url: http://www.multunus.com/?p=781

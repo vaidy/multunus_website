@@ -1,6 +1,6 @@
 ---
 comments: true
-layout: true
+layout: post
 title: Software Development as a balance
 wordpress_id: 2290
 wordpress_url: http://www.multunus.com/?p=953

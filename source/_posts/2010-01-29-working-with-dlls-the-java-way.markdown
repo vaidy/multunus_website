@@ -1,6 +1,6 @@
 ---
 comments: true
-layout: true
+layout: post
 title: Working with DLLs, the Java way
 wordpress_id: 711
 wordpress_url: http://www.multunus.com/?p=711

@@ -1,6 +1,6 @@
 ---
 comments: true
-layout: true
+layout: post
 title: Simple Image Filter using OpenGL ES in Android
 wordpress_id: 1773
 wordpress_url: http://www.multunus.com/?p=1773

@@ -1,6 +1,6 @@
 ---
 comments: true
-layout: true
+layout: post
 title: Lessons from interview with Joel Spolsky
 wordpress_id: 1876
 wordpress_url: http://www.multunus.com/?p=1876

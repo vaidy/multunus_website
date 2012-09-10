@@ -1,6 +1,6 @@
 ---
 comments: true
-layout: true
+layout: post
 title: Configuring Hudson CI server behind firewall
 wordpress_id: 936
 wordpress_url: http://www.multunus.com/?p=936

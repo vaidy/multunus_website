@@ -1,6 +1,6 @@
 ---
 comments: true
-layout: true
+layout: post
 title: ! 'Continuous Delivery: Building Android Library project'
 wordpress_id: 1960
 wordpress_url: http://www.multunus.com/?p=1960

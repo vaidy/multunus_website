@@ -1,6 +1,6 @@
 ---
 comments: true
-layout: true
+layout: post
 title: Our new reading list
 wordpress_id: 763
 wordpress_url: http://www.multunus.com/?p=763
