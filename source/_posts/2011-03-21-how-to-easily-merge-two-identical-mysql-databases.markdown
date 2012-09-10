@@ -5,6 +5,9 @@ title: Script to merge two identical MySQL Databases
 wordpress_id: 1040
 wordpress_url: http://www.multunus.com/?p=1040
 date: 2011-03-21 07:43:51.000000000 +05:30
+author: Leena
+categories:
+- All Posts
 ---
 For one of the applications what we're working on, we had a requirement to merge two DBs which have the same structure.
 

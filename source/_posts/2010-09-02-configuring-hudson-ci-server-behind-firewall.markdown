@@ -5,6 +5,11 @@ title: Configuring Hudson CI server behind firewall
 wordpress_id: 936
 wordpress_url: http://www.multunus.com/?p=936
 date: 2010-09-02 14:44:17.000000000 +05:30
+author: Leena
+categories:
+- All Posts
+- Continuous Delivery
+- Technology
 ---
 When firewall was introduced within our local network, the Hudson server stopped working with the error:
 <pre>javax.jmdns.impl.tasks.Prober run

@@ -5,6 +5,11 @@ title: Our new reading list
 wordpress_id: 763
 wordpress_url: http://www.multunus.com/?p=763
 date: 2010-02-09 11:39:55.000000000 +05:30
+author: Vaidy
+categories:
+- All Posts
+- Business
+- Process
 ---
 As mentioned in an <a href="http://www.multunus.com/2010/01/our-pragmatic-processes/">earlier post</a>, our team shares what they learn on a daily basis in our morning stand-ups. Considering our primary focus as a company is lean product development, we felt we could be more aligned with our goals if each of us read books [or blogs] on related subjects. Here's the current list that we've come up with.
 <div><a href="http://www.amazon.com/Web-Analytics-Hour-Avinash-Kaushik/dp/0470130652" target="_blank">Web Analytics An Hour A Day</a></div>

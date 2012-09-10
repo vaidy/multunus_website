@@ -6,6 +6,11 @@ title: ! 'Continuous Delivery - Part 4: Rolling back database migrations with Ca
 wordpress_id: 1527
 wordpress_url: http://www.multunus.com/?p=1527
 date: 2011-08-14 08:22:40.000000000 +05:30
+author: Leena
+categories:
+- All Posts
+- Continuous Delivery
+- Process
 ---
 According to the book <a href="http://www.amazon.com/gp/product/0321601912?tag=contindelive-20">Continuous Delivery</a>, the database also should be under version control, and Rails allows us to achieve this with ActiveRecord Migrations. Even though <a class="zem_slink" title="Capistrano" rel="homepage" href="http://www.capify.org/">Capistrano</a> can run the migrations automatically with its <code>deploy</code> command, its <code>deploy:rollback</code> task does not rollback the DB migrations automatically.  I've created a small capistrano <a href="https://github.com/multunus/capistrano-db-rollback">recipe</a> which can take care of rolling back migrations.  The assumptions made are:
 <ul>

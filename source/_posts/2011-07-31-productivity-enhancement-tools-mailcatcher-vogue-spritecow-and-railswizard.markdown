@@ -5,6 +5,11 @@ title: Productivity Enhancement Tools - MailCatcher, Vogue, SpriteCow and RailsW
 wordpress_id: 1450
 wordpress_url: http://www.multunus.com/?p=1450
 date: 2011-07-31 15:03:40.000000000 +05:30
+author: KP
+categories:
+- All Posts
+- Rails
+- Technology
 ---
 <h2><a href="https://github.com/sj26/mailcatcher">MailCatcher</a></h2>
 A super simple SMTP server which catches any messages sent to it to display in a web interface. Configure the app to deliver to smtp://127.0.0.1:1025, then check out http://127.0.0.1:1080 to see all the mails being sent out of your application.

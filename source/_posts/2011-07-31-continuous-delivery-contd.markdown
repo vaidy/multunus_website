@@ -5,6 +5,12 @@ title: ! 'Continuous Delivery - Part 3: Running custom rake tasks during deploym
 wordpress_id: 1482
 wordpress_url: http://www.multunus.com/?p=1482
 date: 2011-07-31 15:50:54.000000000 +05:30
+author: Leena
+categories:
+- All Posts
+- Continuous Delivery
+- Process
+- Technology
 ---
 One problem we faced with the pipeline setup what I had mentioned in my <a href="http://www.multunus.com/2011/07/continuous-delivery-using-jenkins-build-pipeline/">first post</a> was that - it was not handling how to run the extra tasks that we need to do in some of the deployments. Some examples are:
 <ul>

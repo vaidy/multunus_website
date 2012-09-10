@@ -5,6 +5,12 @@ title: ! 'Continuous Delivery - Part 2: Code metrics with metrical'
 wordpress_id: 1500
 wordpress_url: http://www.multunus.com/?p=1500
 date: 2011-07-31 15:44:40.000000000 +05:30
+author: Leena
+categories:
+- All Posts
+- Continuous Delivery
+- Process
+- Technology
 ---
 <a href="http://iain.nl/easier-metricfu-with-metrical">Metrical</a> is for easier <a href="http://metric-fu.rubyforge.org/">metric_fu</a> setup. You can see the details on why and how <a href="http://iain.nl/easier-metricfu-with-metrical">here</a>. Its an awesome tool which allows us to easily use metric_fu without adding any dependency to the project code.
 

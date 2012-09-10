@@ -5,6 +5,10 @@ title: Our talks at Droidcon 2011, Bangalore
 wordpress_id: 1988
 wordpress_url: http://www.multunus.com/?p=1988
 date: 2011-12-02 15:37:00.000000000 +05:30
+author: Manoj
+categories:
+- All Posts
+- Android
 ---
 We spoke at Droidcon, Bangalore that happened on Nov 18th and 19th. We had two interesting talks on both days.
 <div style="float: left;">

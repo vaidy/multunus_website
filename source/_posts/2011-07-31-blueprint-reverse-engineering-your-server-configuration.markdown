@@ -5,6 +5,10 @@ title: Blueprint - reverse engineering your server configuration
 wordpress_id: 1489
 wordpress_url: http://www.multunus.com/?p=1489
 date: 2011-07-31 15:35:16.000000000 +05:30
+author: Leena
+categories:
+- All Posts
+- Continuous Delivery
 ---
 There are many tools like <a href="http://wiki.opscode.com/display/chef/Home">Chef</a>, <a href="http://projects.puppetlabs.com/projects/puppet">Puppet</a> etc. to manage the server configuration, but there are not many which do the reverse i.e. create a configuration from an existing server. <a href="https://github.com/devstructure/blueprint">Blueprint</a> does exactly the latter.
 

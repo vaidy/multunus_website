@@ -5,6 +5,11 @@ title: A round up of our presentations and writings
 wordpress_id: 2045
 wordpress_url: http://www.multunus.com/?p=2045
 date: 2012-02-27 23:59:30.000000000 +05:30
+author: Vaidy
+categories:
+- All Posts
+- Android
+- Continuous Delivery
 ---
 We started speaking at conferences last year. We've also been doing a fair bit of writing. This post rounds up what we've up to - along with links to our presentations and some of what we've written.
 

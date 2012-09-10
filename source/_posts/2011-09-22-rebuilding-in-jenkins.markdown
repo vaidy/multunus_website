@@ -5,6 +5,11 @@ title: Rebuilding in Jenkins
 wordpress_id: 1719
 wordpress_url: http://www.multunus.com/?p=1719
 date: 2011-09-22 14:32:49.000000000 +05:30
+author: Leena
+categories:
+- All Posts
+- Continuous Delivery
+- Process
 ---
 <div>
 
