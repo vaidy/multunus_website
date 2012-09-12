@@ -90,3 +90,25 @@
 .modal {
 	background: #222 url("/images/concrete.png") repeat left top scroll;
 } 
+
+.tumbler-feed {
+	 #tumblr_post {
+		overflow: hidden;
+		height: 300px;
+		color: #959595;
+	}
+	#after-tumblr-widget {
+		padding-left: 6%;
+	}	
+}
+
+.twitter-feed {
+	#tweets {
+		color: #959595;
+		li {
+			border-bottom: 1px dotted #444;
+			margin-bottom: 5px;
+		}
+	}
+}
+
