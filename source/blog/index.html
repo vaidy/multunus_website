@@ -2,23 +2,28 @@
 layout: default
 ---
 
-<div class="span9">
-  {% assign index = true %}
-  {% for post in paginator.posts %}
-  {% assign content = post.content %}
-    <article>
-      {% include article.html %}
-    </article>
-  {% endfor %}
-  <ul class="pager">
-    {% if paginator.next_page %}
-    <li class="previous"><a href="{{paginator.next_page}}">&larr; Older</a></li>
-    {% endif %}
-    {% if paginator.previous_page %}
-    <li class="next"><a href="{{paginator.previous_page}}">Newer &rarr;</a></li>
-    {% endif %}
-  </ul>
+<div class="container rounded-corner-container">
+  <div class="row-fluid">
+    <div class="span9 blog-posts">
+      {% assign index = true %}
+      {% for post in paginator.posts %}
+      {% assign content = post.content %}
+        <article>
+          {% include article.html %}
+        </article>
+      {% endfor %}
+      <ul class="pager">
+        {% if paginator.next_page %}
+        <li class="previous"><a href="{{paginator.next_page}}">&larr; Older</a></li>
+        {% endif %}
+        {% if paginator.previous_page %}
+        <li class="next"><a href="{{paginator.previous_page}}">Newer &rarr;</a></li>
+        {% endif %}
+      </ul>
+    </div>
+    <aside class="sidebar-nav span3">
+      {% include_array blog_index_asides %}
+    </aside>
+  </div>
 </div>
-<aside class="sidebar-nav span3">
-  {% include_array blog_index_asides %}
-</aside>
+
