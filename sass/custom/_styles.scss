@@ -2,10 +2,28 @@
 // Add styles here to make changes without digging in too much
 
 body {
+	background: #222 url("/images/concrete.png") repeat left top scroll;
 	padding-bottom: 0px;
 	font-family: $font-default;
-	background: #222 url("/images/concrete.png") repeat left top scroll;
 }
 
+.texture-background {
+	background: #222 url("/images/concrete.png") repeat left top scroll;
+	min-height: 552px;	
+}
 
+.mesh-background {
+	background: #222 url("/images/mesh.png") repeat left top scroll;	
+	min-height: 450px;
+}
 
+.relative {
+	position: relative;
+}
+
+.absolutes {
+	top: 60px;
+	left: 72px;
+	background: white;
+	border-radius: 6px;
+}
