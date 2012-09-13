@@ -1,101 +1,98 @@
 ---
-layout: home_page
+layout: default
 title: "index"
 sharing: true
 footer: true
 ---
 
-<div class="container">
+<div class="container-fluid">
+  <div class = "row-fluid logo">
+    <a href="#"><img src="images/g36891.png"></a>
+  </div>         
+  <div class = "row-fluid two-images">
+    <div class = "first-image">
+      <img src="/images/webAndMobile1.jpg">
+      <div>
+        Web and Mobile Applications...
+      </div>
+    </div>
+    <div class = "second-image">
+      <img src="/images/crafted.jpg">
+      <div>
+        ... Expertly Crafted, with Care.
+      </div>
+    </div>
+  </div>
+  <div class = 'row-fluid'>
+    <p class="about_us">We practice <a title="Extreme Programming" href="#homePageModal" data-toggle='modal' data-url='http://localhost:4000/xp-summary/' data-title="Extreme Programming">Extreme Programming</a> and <a title="Continuous Delivery" href="#homePageModal" data-toggle='modal' data-url='http://localhost:4000/cd-summary/' data-title="Continuous Delivery">Continuous Delivery</a> to rapidly ship quality software.<br /> Ruby on Rails and HTML5 are our technologies of choice.<br /> <a href="?page_id=65">Contact us</a> to find out more.
+    </p>
+  </div>
+</div>
+
+<div class="container-fluid mesh-background">
+  <div class = "row-fluid testimonial-container">
+    <div class="span3 we-love-working-with">
+      <div>We</div>
+      <div>
+        <img src="images/love-logo.resized.png" alt="Love" />
+      </div>
+      <div>
+        working
+      </div>
+      <div>
+        with
+      </div>
+    </div>
+    <div class = 'span9 testimonial-icons'>
+      <div class = 'startups'>
+        <p> Start Ups </p> 
+        <div>
+          <a title = 'Narrable' href="#homePageModal" data-toggle='modal' data-url='http://localhost:4000/narrable/' data-title="Narrable">
+            <img src = 'images/narrable_with_video.png' />
+          </a>
+          <a title = 'Cogknit' href="#homePageModal" data-toggle='modal' data-url='http://localhost:4000/cogknit/' data-title="CogKnit">
+            <img src = 'images/nimit_with_video.png' />
+          </a>
+          <a title = 'Creed.io' href="#homePageModal" data-toggle='modal' data-url='http://localhost:4000/creed-io/' data-title="Creed.io">
+            <img src = 'images/creed_io.png' />
+          </a>
+          <a title = 'Elixir Health' href="#homePageModal" data-toggle='modal' data-url='http://localhost:4000/elixir-health/' data-title="Elixir Health">
+            <img src = 'images/elixir_health.png' />
+          </a>
+        </div>
+      </div>        
+      <div class = 'smes_partners_big_fellows'>
+        <p> SMEs, Partners & Big Fellows </p> 
+        <div>
+          <a title = 'Market Enginuity' href="#homePageModal" data-toggle='modal' data-url='http://localhost:4000/market-enginuity/' data-title="Market Enginuity">
+            <img src = 'images/market_enginuity.png' />
+          </a>
+          <a title = 'Brightmonk Innovation' href="#homePageModal" data-toggle='modal' data-url='http://localhost:4000/brightmonk-innovation/' data-title="Brightmonk Innovation">
+            <img src = 'images/bright_monk_with_video.png' />
+          </a>
+          <a title = 'Sony' href="#homePageModal" data-toggle='modal' data-url='http://localhost:4000/sony/' data-title="Sony">
+            <img src = 'images/sony.png' />
+          </a>
+        </div>
+      </div>        
+    </div>
+  </div>
+</div>
+
+<div class="container-fluid mesh-background">
   <div class="row-fluid">
-    <div class = "container-fluid">
-      <div class = "row-fluid logo">
-        <a href="#"><img src="images/g36891.png"></a>
-      </div>         
-      <div class = "row two-images">
-        <div class = "first-image">Web and Mobile Applications...</div>
-        <div class = "second-image">... Expertly Crafted, with Care.</div>
+    <div class = "row-fluid testimonial-container">
+      <div class="span4 featured-posts">
+        {% include asides/featured_posts.html %}
       </div>
-      <div class = 'row-fluid'>
-        <p class="about_us">We practice <a title="Extreme Programming" href="#myModal" data-toggle='modal'>Extreme Programming</a> and <a title="Continuous Delivery" href="/cd-summary">Continuous Delivery</a> to rapidly ship quality software.<br /> Ruby on Rails and HTML5 are our technologies of choice.<br /> <a href="?page_id=65">Contact us</a> to find out more.
-        </p>
+      <div class="span4 tumbler-feed">
+        {% include asides/tumblr.html %}
       </div>
-    </div>
-  </div>
-</div>
-
-<div class='mesh-background'>
-  <div class="container">
-    <div class="row-fluid">
-      <div class = "container-fluid">
-        <div class = "row testimonial-container">
-          <div class="span3 we-love-working-with">
-            <div>We</div>
-            <div>
-              <img src="images/love-logo.resized.png" alt="Love" />
-            </div>
-            <div>
-              working
-            </div>
-            <div>
-              with
-            </div>
-          </div>
-          <div class = 'span9 testimonial-icons'>
-            <div class = 'startups'>
-              <p> Start Ups </p> 
-              <div>
-                <a title = 'Narrable'>
-                  <img src = 'images/narrable_with_video.png' />
-                </a>
-                <a title = 'Nimit'>
-                  <img src = 'images/nimit_with_video.png' />
-                </a>
-                <a title = 'Creed.io'>
-                  <img src = 'images/creed_io.png' />
-                </a>
-                <a title = 'Elixir Health'>
-                  <img src = 'images/elixir_health.png' />
-                </a>
-              </div>
-            </div>        
-            <div class = 'smes_partners_big_fellows'>
-              <p> SMEs, Partners & Big Fellows </p> 
-              <div>
-                <a title = 'Market Enginuity'>
-                  <img src = 'images/market_enginuity.png' />
-                </a>
-                <a title = 'Bright Monk'>
-                  <img src = 'images/bright_monk_with_video.png' />
-                </a>
-                <a title = 'Sony'>
-                  <img src = 'images/sony.png' />
-                </a>
-              </div>
-            </div>        
-          </div>
+      <div class="span4 twitter-feed">
+        {% include asides/twitter.html %}
         </div>
-      </div>
     </div>
   </div>
 </div>
 
-<div class='mesh-background'>
-  <div class="container">
-    <div class="row-fluid">
-      <div class = "container-fluid">
-        <div class = "row testimonial-container">
-          <div class="span4 featured-posts">
-            {% include asides/featured_posts.html %}
-          </div>
-          <div class="span4 tumbler-feed">
-            {% include asides/tumblr.html %}
-          </div>
-          <div class="span4 twitter-feed">
-            {% include asides/twitter.html %}
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-
+{% include modal.html %}

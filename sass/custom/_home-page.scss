@@ -5,7 +5,6 @@
 .two-images {
 	padding-top: 4%;
 	padding-bottom: 4%;
-	padding-left: 8.4%;
 }
 
 .first-image, .second-image {
@@ -20,20 +19,11 @@
 	border-radius: 2px;
 	color: white;
 	font-size: 1.5em;
-	padding-top: 220px;
 	text-align: center;
 
 	@media screeen {
 		width: 100%;
 	}
-}
-
-.first-image {
-	background-image:url('/images/webAndMobile1.jpg');
-}
-
-.second-image {
-	background-image:url('/images/crafted.jpg');
 }
 
 .about_us {
@@ -50,7 +40,6 @@
 
 .testimonial-container {
 	color: white;
-	padding-left: 4.5%;
 	padding-top: 1.5%;
 	text-align: center;
 }
@@ -83,10 +72,6 @@
 	margin-bottom: 20px;
 }
 
-.mesh-background {
-	background: #222 url("/images/mesh.png") repeat left top scroll;			
-}
-
 .modal {
 	background: #222 url("/images/concrete.png") repeat left top scroll;
 } 
@@ -111,4 +96,3 @@
 		}
 	}
 }
-
