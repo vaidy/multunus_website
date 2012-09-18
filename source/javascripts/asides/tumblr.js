@@ -9,7 +9,6 @@ function showTumblrPost(data, user) {
   var posts = data.posts;
   for (var i in posts) {
     var postType = posts[i].type;
-    console.log("postType "+postType);
     if(postType === "video"){
       content += posts[i]["video-player-250"];
     }
@@ -28,7 +27,7 @@ function showTumblrPost(data, user) {
 function getTumblrPost(user, count) {
   count = parseInt(count, 1);
   $.ajax({
-      url: "http://multunus.tumblr.com/api/read/json?start=0&num=1&callback=&id=29800350341"
+      url: "http://multunus.tumblr.com/api/read/json?start=0&num=1&callback="
       , dataType: 'jsonp'
     , error: function (err) { $('#tumblr li.loading').addClass('error').text("Twitter's busted"); }
     , success: function(data) { showTumblrPost(data, user); }
