@@ -41,3 +41,17 @@ body {
 		margin-right: -20px;
 	}
 }
+
+form {
+	input {
+		width: 40%;
+	}
+	textarea {
+		width: 60%;
+	}
+}
+
+.invalid {
+	color: rgb(231, 100, 100);
+	//border: 2px solid red;
+}
