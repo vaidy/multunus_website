@@ -1,7 +1,7 @@
 ---
 layout: default
-title: "people"
-date: 2012-08-29 18:09
+title: "location"
+date: 2012-09-18 11:44
 comments: true
 sharing: true
 footer: true

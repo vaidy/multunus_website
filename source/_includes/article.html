@@ -1,5 +1,5 @@
 {% unless page.no_header %}
-  <header class="page-header">
+  <header>
     {% if index %}
       <h1 class="entry-title"><a href="{{ root_url }}{{ post.url }}">{% if site.titlecase %}{{ post.title | titlecase }}{% else %}{{ post.title }}{% endif %}</a></h1>
     {% else %}
@@ -18,7 +18,7 @@
   </header>
 {% endunless %}
 {% if index %}
-  <div class="entry-content">{{ content | excerpt }}</div>
+  <div class="entry-content">{{ content | strip_html | truncatewords: 30 }}</div>
   {% capture excerpted %}{{ content | has_excerpt }}{% endcapture %}
 {% else %}
 <div class="entry-content">{{ content }}</div>

@@ -28,7 +28,16 @@ body {
 	border-radius: 6px;
 }
 
-.container-fluid {
-        padding-right: 200px;
-        padding-left: 200px;
+@media (min-width: 767px) {
+	.container-fluid {
+        padding-right: 165px;
+        padding-left: 165px;
+	}
+}
+
+@media (max-width: 767px) {
+	.navbar {
+		margin-left: -20px;
+		margin-right: -20px;
+	}
 }

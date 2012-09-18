@@ -47,6 +47,10 @@ titlecase: true       # Converts page and post titles to titlecase
 # To add custom asides, create files in /source/_includes/custom/asides/ and add them to the list like 'custom/asides/custom_aside_name.html'
 default_asides: [asides/featured_posts.html, asides/github.html, asides/twitter.html, asides/delicious.html, asides/pinboard.html, asides/googleplus.html,asides/tumblr.html]
 blog_index_asides: [custom/asides/category_list.html]
+what_we_do_asides: [custom/asides/what_we_do_list.html]
+why_us_asides: [custom/asides/why_us_list.html]
+careers_asides: [custom/asides/careers_list.html]
+about_list: [custom/asides/about_list.html]
 # Each layout uses the default asides, but they can have their own asides instead. Simply uncomment the lines below
 # and add an array with the asides you want to use.
 # blog_index_asides:

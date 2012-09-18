@@ -1,5 +1,5 @@
 ---
-layout: other_page
+layout: default
 title: "history"
 date: 2012-08-29 18:07
 comments: true
