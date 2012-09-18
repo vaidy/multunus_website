@@ -5,7 +5,7 @@
 
 function showTumblrPost(data, user) {
   var timeline = document.getElementById('tumblr_post'),
-  content = '<li class="nav-header">@'+data.tumblelog.title+'</li>';
+  content = '<li class="nav-header">'+data.tumblelog.title+'</li>';
   var posts = data.posts;
   for (var i in posts) {
     var postType = posts[i].type;
