@@ -1,0 +1,16 @@
+active: true
+bio: <p>Leena is Head of Engineering at Multunus. Her relentless drive to deliver high quality software in a
+ repeatable manner has resulted in us embracing Test Driven Development across our projects.
+  Her <a href="/wordpress/?author=3">blog posts</a> talk about many of the engineering initiatives
+   we've taken up at Multunus.</p><p>Leena brings to the table a unique blend of knowledge, 
+   skill, passion for the software craft, dedication, focus, great attitude and mature leadership.
+    There is one other thing that baffles us – how in the world she maintains her work-life balance.</p>
+    <p>If all that wasn't enough, here's more -  She's also a connoisseur of
+    <a href="http://en.wikipedia.org/wiki/Kathakali">Kathakali</a> 
+    and <a href="http://en.wikipedia.org/wiki/Carnatic_music">Carnatic Music</a>. </p>
+image:
+  url: /images/team/leena.jpg
+  thumb_url: /images/team/thumbs_leena.jpg
+layout: profile
+name: Leena
+type: employee

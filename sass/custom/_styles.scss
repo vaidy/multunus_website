@@ -78,8 +78,25 @@ form {
 	    margin-bottom: 8px;
 	    font-size: 0.85em;
 	    font-weight: bold;
+	    text-align: left;
 	    a {
 	       color: #959595 !important; 
 	    }
 	}
+}
+
+.team {
+	img {
+		width: 95%;
+		border: 1px solid darkGray;
+		padding: 2%;
+	}
+	p {
+		text-align: center;
+		padding: 4%;
+	}
+}
+
+.row-fluid [class*="span"]:nth-child(4n + 1) {
+	margin-left: 0;
 }

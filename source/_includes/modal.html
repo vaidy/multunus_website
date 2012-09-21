@@ -1,4 +1,4 @@
-<div class="modal fade" id="homePageModal" tabindex="-1" role="dialog" aria-labelledby="homePageModalLabel" aria-hidden="true" style="display: none">
+<div class="modal fade" id="defaultModal" tabindex="-1" role="dialog" aria-labelledby="defaultModalLabel" aria-hidden="true" style="display: none">
   <div class="light-border">
     <div class="dark-border">
       <div class="shadow">
@@ -19,16 +19,3 @@
     </div>
   </div>
 </div>
-
-<script type="text/javascript">
-  $('#homePageModal').on('show', function () {
-     var page_url = $(this).data('modal').options.url;
-     var modal_title = $(this).data('modal').options.title;
-
-     $(".modal_title").html(modal_title);
-
-     $.ajax(page_url).done(function(data) {
-        $(".modal-body").html(data);
-     });
-  });
-</script>

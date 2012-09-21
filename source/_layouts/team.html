@@ -1,0 +1,35 @@
+---
+layout: default
+title: Sample Team Layout
+---
+
+<div class="span12">
+    <h1>The Team</h1>
+    <div class="row-fluid team">
+      {% for person in page.team['employee'] %}
+        <div class="span3">
+          <a href="#defaultModal" data-toggle="modal" data-url="/team/{{ person[0] }}" data-title="{{ person[1].name }}" style="display: block;">
+            <img src="{{ person[1].image.thumb_url }}" title="{{ person[1].name }}" alt="{{ person[1].name }}"/>
+            <p>
+              {{ person[1].name }}
+            </p>
+          </a>
+        </div>
+      {% endfor %}
+    </div>
+</div>
+
+{% include modal.html %}
+
+<script type="text/javascript">
+  $('#defaultModal').on('show', function () {
+     var page_url = $(this).data('modal').options.url;
+     var modal_title = $(this).data('modal').options.title;
+
+     $(".modal_title").html(modal_title);
+
+     $.ajax(page_url).done(function(data) {
+        $(".modal-body").html(data);
+     });
+  });
+</script>
