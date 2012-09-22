@@ -1,30 +1,16 @@
 module Jekyll
   class TeamIndex < Page
-    def initialize(site, base, dir)
+    def initialize(site, base, dir,team_data)
       @site = site
       @base = base
       @dir  = dir
       @name = "index.html"
 
       self.read_yaml(File.join(base, '_layouts'), 'team.html')
-      self.data['team'] = self.get_team(site)
+      self.data['team'] = team_data
       self.process(@name)
     end
 
-    def get_team(site)
-      {}.tap do |team|
-        Dir['_team/*.yml'].each do |path|
-          name   = File.basename(path, '.yml')
-          config = YAML.load(File.read(File.join(@base, path)))
-          type   = config['type']
-
-          if config['active']
-            team[type] = {} if team[type].nil?
-            team[type][name] = config
-          end
-        end
-      end
-    end
   end
 
   class PersonIndex < Page
@@ -50,20 +36,22 @@ module Jekyll
 
     # Loops through the list of team pages and processes each one.
     def write_team(site)
-      if Dir.exists?('source/_team')
-        Dir.chdir('source/_team')
-        Dir["*.yml"].each do |path|
+      team_data = {}
+      Dir["source/_team/*.yml"].each do |path|
           name = File.basename(path, '.yml')
-          self.write_person_index(site, "_team/#{path}", name)
-        end
-
-        Dir.chdir(site.source)
-        self.write_team_index(site)
+          self.write_person_index(site, "_team/#{name}.yml", name)
+          config = YAML.load(File.read(path))
+          type   = config['type']
+          if config['active']
+            team_data[type] = {} if team_data[type].nil?
+            team_data[type][name] = config
+          end
       end
+      self.write_team_index(site,team_data)
     end
 
-    def write_team_index(site)
-      team = TeamIndex.new(site, site.source, "/team")
+    def write_team_index(site,team_data)
+      team = TeamIndex.new(site, site.source, "/team",team_data)
       team.render(site.layouts, site.site_payload)
       team.write(site.dest)
 
@@ -73,7 +61,6 @@ module Jekyll
 
     def write_person_index(site, path, name)
       person = PersonIndex.new(site, site.source, "/team/#{name}", path)
-
       if person.data['active']
         person.render(site.layouts, site.site_payload)
         person.write(site.dest)
