@@ -64,6 +64,16 @@ form {
 
 .main-content {
 	padding-bottom: 20px;
+	color: black;
+
+	a {
+		color: #DD0000;
+	}
+
+	p > iframe {
+		width: 77%;
+		height: 360px
+	}
 }
 
 .nav .nav-header {
@@ -96,11 +106,18 @@ form {
 	img {
 		width: 95%;
 		border: 1px solid darkGray;
-		padding: 2%;
+		padding: 4px;
 	}
+
+	img:hover {
+		border: 5px solid darkGray;
+		padding: 0;
+	}
+
 	p {
 		text-align: center;
-		padding: 4%;
+		padding: 2% 4% 4% 4%;
+		font-size: 1.2em;
 	}
 }
 
