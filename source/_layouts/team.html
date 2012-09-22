@@ -12,7 +12,7 @@ footer: true
     <div class="row-fluid team">
       {% for person in page.team['employee'] %}
         <div class="span3">
-          <a href="#defaultModal" data-toggle="modal" data-url="/team/{{ person[0] }}" data-title="{{ person[1].name }}" style="display: block;">
+          <a href="#defaultModal" data-toggle="modal" data-url="/about/people/{{ person[0] }}" data-title="{{ person[1].name }}" style="display: block;">
             <img src="{{ person[1].image.thumb_url }}" title="{{ person[1].name }}" alt="{{ person[1].name }}"/>
             <p>
               {{ person[1].name }}
