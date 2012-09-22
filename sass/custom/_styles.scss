@@ -14,7 +14,14 @@ body {
 
 .mesh-background {
 	background: #222 url("/images/mesh.png") repeat left top scroll;	
-	min-height: 450px;
+	min-height: 415px;
+}
+
+.dark-background {
+	background: #111111;
+	padding-top: 3.2%;
+	border-top: 4px solid #292929;
+	border-bottom: 4px solid #292929;
 }
 
 .relative {
@@ -99,4 +106,52 @@ form {
 
 .row-fluid [class*="span"]:nth-child(4n + 1) {
 	margin-left: 0;
+}
+
+
+@media (min-width: 980px) {
+	.navbar .nav > li > a, .copyright {
+		padding: 9.5px 10px 9.5px;
+	}
+}
+
+ul.nav li{
+	color: white;
+
+	a {
+		color: white !important;
+	}
+
+	a:hover {
+		color: #DD0000 !important;
+	}
+}
+ 
+.footer-navbar {
+	margin-bottom: 0;
+
+	.footer-container .nav{
+		li {
+			a:hover {
+				text-decoration: underline;
+			}
+		}
+	}
+}
+
+ul.dropdown-menu{
+	li{
+		a:hover {
+			color: white !important;
+			background-color: #222;
+		}	
+	} 	
+} 
+
+nav {
+	font-weight: bold;
+}
+
+ul.nav li.active > a {
+	color: #DD0000 !important;
 }

@@ -19,6 +19,8 @@ module Jekyll
       @base     = base
       @dir      = dir
       @name     = "index.html"
+      puts "\n\nbase #{@base}\n\n"
+      puts "\n\npath #{path}\n\n"
       self.data = YAML.load(File.read(File.join(@base, path)))
       self.data['title'] = "#{self.data['name']} | #{self.data['role']}"
 
@@ -51,7 +53,7 @@ module Jekyll
     end
 
     def write_team_index(site,team_data)
-      team = TeamIndex.new(site, site.source, "/team",team_data)
+      team = TeamIndex.new(site, site.source, "/people",team_data)
       team.render(site.layouts, site.site_payload)
       team.write(site.dest)
 
@@ -60,7 +62,7 @@ module Jekyll
     end
 
     def write_person_index(site, path, name)
-      person = PersonIndex.new(site, site.source, "/team/#{name}", path)
+      person = PersonIndex.new(site, site.source, "/people/#{name}", path)
       if person.data['active']
         person.render(site.layouts, site.site_payload)
         person.write(site.dest)

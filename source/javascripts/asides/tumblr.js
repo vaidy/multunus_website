@@ -5,7 +5,7 @@
 
 function showTumblrPost(data, user) {
   var timeline = document.getElementById('tumblr_post'),
-  content = '<li class="nav-header">'+data.tumblelog.title+'</li>';
+  content = '<div class="media">';
   var posts = data.posts;
   for (var i in posts) {
     var postType = posts[i].type;
@@ -15,6 +15,7 @@ function showTumblrPost(data, user) {
     else if(postType === "photo"){
       content += '<img src="'+posts[i]["photo-url-250"]+'">';
     }
+    content += '</div>';
     content += '<li>';
     content += '<p>';
     content += posts[i][postType+"-caption"];
