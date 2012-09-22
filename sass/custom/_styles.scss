@@ -155,3 +155,30 @@ nav {
 ul.nav li.active > a {
 	color: #DD0000 !important;
 }
+
+.sidebar-nav {
+	h3 {
+		margin-bottom: 9px;
+	}
+	ul {
+		margin: 0;
+		list-style: none;
+
+		li {
+			background-color: #999999;
+			margin-bottom: 3px;
+			padding: 9px 0 9px 9px;
+			font-size: 1.2em;
+			border-top-left-radius: 3px;
+			border-bottom-left-radius: 3px;
+		}
+
+		a {
+			color: white;
+		}
+
+		a:hover {
+			text-decoration: none;
+		}
+	}
+}
