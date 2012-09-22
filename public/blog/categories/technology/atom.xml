@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[Category: Technology | Multunus Software Pvt. Ltd.]]></title>
-  <link href="http://new.multunus.com//blog/categories/technology/atom.xml" rel="self"/>
-  <link href="http://new.multunus.com//"/>
-  <updated>2012-09-22T16:43:42+05:30</updated>
-  <id>http://new.multunus.com//</id>
+  <link href="http://www.multunus.com/blog/categories/technology/atom.xml" rel="self"/>
+  <link href="http://www.multunus.com/"/>
+  <updated>2012-09-22T16:55:45+05:30</updated>
+  <id>http://www.multunus.com/</id>
   <author>
     <name><![CDATA[Your Name]]></name>
     
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[Introduction to Continuous Delivery]]></title>
-    <link href="http://new.multunus.com//blog/2012/05/introduction-to-continuous-delivery/"/>
+    <link href="http://www.multunus.com/blog/2012/05/introduction-to-continuous-delivery/"/>
     <updated>2012-05-15T14:49:16+05:30</updated>
-    <id>http://new.multunus.com//blog/2012/05/introduction-to-continuous-delivery</id>
+    <id>http://www.multunus.com/blog/2012/05/introduction-to-continuous-delivery</id>
     <content type="html"><![CDATA[<p>We've been doing Continuous Delivery for sometime and also been writing about how to implement the same. This post is about why Continuous Delivery is required and what problems does it solve.</p>
 
 <h3><strong><span style="text-decoration: underline;">What is Continuous Delivery</span></strong></h3>
@@ -110,9 +110,9 @@ One of the key principle of Continuous Delivery is <strong>To </strong><strong>
   
   <entry>
     <title type="html"><![CDATA[Simple Image Filter using OpenGL ES in Android]]></title>
-    <link href="http://new.multunus.com//blog/2011/10/simple-image-filter-using-opengl-es-in-android/"/>
+    <link href="http://www.multunus.com/blog/2011/10/simple-image-filter-using-opengl-es-in-android/"/>
     <updated>2011-10-07T15:35:45+05:30</updated>
-    <id>http://new.multunus.com//blog/2011/10/simple-image-filter-using-opengl-es-in-android</id>
+    <id>http://www.multunus.com/blog/2011/10/simple-image-filter-using-opengl-es-in-android</id>
     <content type="html"><![CDATA[<p><em><strong>Note</strong>: This post assumes some basic knowledge in setting up an OpenGL app in Android. A basic example for rendering a texture on to a surface can be found <a href="http://developer.android.com/resources/samples/ApiDemos/src/com/example/android/apis/graphics/GLES20TriangleRenderer.html">here.</a> You can use this as the initial setup for trying out Shader language program listed in this post.</em></p>
 
 <p>OpenGL is widely adopted as the graphics API of choice for real-time interactive 3D graphics applications. OpenGL is easy to understand, but its simplicity and orthogonality enable many interesting possibilities. One such possibility is image processing.</p>
@@ -175,9 +175,9 @@ void main() {
   
   <entry>
     <title type="html"><![CDATA[Continuous Delivery for Android Apps - Part 1]]></title>
-    <link href="http://new.multunus.com//blog/2011/09/continuous-delivery-for-android-apps-part-1/"/>
+    <link href="http://www.multunus.com/blog/2011/09/continuous-delivery-for-android-apps-part-1/"/>
     <updated>2011-09-23T11:15:50+05:30</updated>
-    <id>http://new.multunus.com//blog/2011/09/continuous-delivery-for-android-apps-part-1</id>
+    <id>http://www.multunus.com/blog/2011/09/continuous-delivery-for-android-apps-part-1</id>
     <content type="html"><![CDATA[<div>
 
 We've set up our CI server for building android apps. We use Jenkins as our CI server, but the same steps can be applied to any CI server.
@@ -213,9 +213,9 @@ References: <a href="http://skaug.no/ingvald/2011/09/android-app-with-jenkins/"
   
   <entry>
     <title type="html"><![CDATA[Continuous Delivery - Part 3: Running custom rake tasks during deployment]]></title>
-    <link href="http://new.multunus.com//blog/2011/07/continuous-delivery-contd/"/>
+    <link href="http://www.multunus.com/blog/2011/07/continuous-delivery-contd/"/>
     <updated>2011-07-31T15:50:54+05:30</updated>
-    <id>http://new.multunus.com//blog/2011/07/continuous-delivery-contd</id>
+    <id>http://www.multunus.com/blog/2011/07/continuous-delivery-contd</id>
     <content type="html"><![CDATA[<p>One problem we faced with the pipeline setup what I had mentioned in my <a href="http://www.multunus.com/2011/07/continuous-delivery-using-jenkins-build-pipeline/">first post</a> was that - it was not handling how to run the extra tasks that we need to do in some of the deployments. Some examples are:</p>
 
 <ul>
@@ -246,9 +246,9 @@ References: <a href="http://skaug.no/ingvald/2011/09/android-app-with-jenkins/"
   
   <entry>
     <title type="html"><![CDATA[Continuous Delivery - Part 2: Code metrics with metrical]]></title>
-    <link href="http://new.multunus.com//blog/2011/07/continuous-delivery-code-metrics-with-metrical/"/>
+    <link href="http://www.multunus.com/blog/2011/07/continuous-delivery-code-metrics-with-metrical/"/>
     <updated>2011-07-31T15:44:40+05:30</updated>
-    <id>http://new.multunus.com//blog/2011/07/continuous-delivery-code-metrics-with-metrical</id>
+    <id>http://www.multunus.com/blog/2011/07/continuous-delivery-code-metrics-with-metrical</id>
     <content type="html"><![CDATA[<p><a href="http://iain.nl/easier-metricfu-with-metrical">Metrical</a> is for easier <a href="http://metric-fu.rubyforge.org/">metric_fu</a> setup. You can see the details on why and how <a href="http://iain.nl/easier-metricfu-with-metrical">here</a>. Its an awesome tool which allows us to easily use metric_fu without adding any dependency to the project code.</p>
 
 <p>The steps I followed for setting it up in our Jenkins server are:</p>
