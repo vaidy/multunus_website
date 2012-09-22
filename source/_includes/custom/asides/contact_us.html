@@ -1,7 +1,5 @@
-<section class="well">
-  <h1>Contact Us</h1>
-  <ul>
-  	<li class="page_item"><a href="/contact-us/write-to-us">Write To Us</a></li>
-  	<li class="page_item"><a href="/contact-us/location">Location</a></li>
-  </ul>
-</section>
+<h3>Contact Us</h3>
+<ul>
+	<li {% if page.title == "contact" %} class="active page_item" {% endif %} class="page_item"><a href="/contact-us/contact">Write To Us</a></li>
+	<li {% if page.title == "location" %} class="active page_item" {% endif %} class="page_item"><a href="/contact-us/location">Location</a></li>
+</ul>  

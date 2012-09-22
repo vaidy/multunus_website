@@ -1,12 +1,18 @@
 ---
-layout: page
+layout: default
 footer: false
+title: "blog"
 ---
 
-<div id="blog-archives" class="category">
+<div id="blog-archives" class="category span9">
+	<h1>Category Archives: {{ page.category }}</h1>
 {% for post in site.categories[page.category] %}
 <article>
   {% include archive_post.html %}
 </article>
 {% endfor %}
 </div>
+
+<div class="sidebar-nav span3">
+  {% include_array blog_index_asides %}
+</div> 
