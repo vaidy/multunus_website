@@ -1,0 +1,503 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>Continuous Delivery - Part 1: Our Jenkins Build Pipeline setup - Multunus Software Pvt. Ltd.</title>
+  <meta name="author" content="Your Name">
+
+  
+  <meta name="description" content="As part of our journey towards implementing Continous Delivery, I&#8217;ve added the Build pipeline for our continous integration server Jenkins.   &hellip;">
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://new.multunus.com//blog/2011/07/continuous-delivery-using-jenkins-build-pipeline">
+  <link href="/favicon.png" rel="icon">
+  <link href="/stylesheets/bootstrap/bootstrap.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <link href="/stylesheets/bootstrap/responsive.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <link href="/stylesheets/syntax/syntax.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" type="text/css" href="/stylesheets/screen.css">
+  <style type="text/css">
+    body {
+        }
+    h1 {
+      margin-bottom: 15px;
+    }
+    img {
+      max-width: 100%;
+    }
+    .sharing, .meta, .pager {
+      margin: 20px 0px 20px 0px;
+    }
+    
+  </style>
+  <script src="/javascripts/libs/jquery.js"></script>
+  <script src="/javascripts/libs/modernizr-2.0.js"></script>
+  <script src="/javascripts/libs/bootstrap.js"></script>
+  <script src="/javascripts/octopress.js" type="text/javascript"></script>
+  <link href="/atom.xml" rel="alternate" title="Multunus Software Pvt. Ltd." type="application/atom+xml">
+  <!-- jQuery Form Plugin -->
+<script src="http://malsup.github.com/jquery.form.js"></script>
+<!-- jQuery Form Validation Plugin -->
+<script src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.9/jquery.validate.min.js"></script> 
+<script src="/javascripts/google_form.js"></script>
+  <link href='http://fonts.googleapis.com/css?family=Bitter:400,700,400italic&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+<!-- jQuery -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+<script type="text/javascript">
+    // Avoid conflict with ender.js.
+    jQuery.noConflict();
+</script>
+<!-- jQuery Form Plugin -->
+<script src="http://malsup.github.com/jquery.form.js"></script>
+<!-- jQuery Form Validation Plugin -->
+<script src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.9/jquery.validate.min.js"></script> 
+<script src="/javascripts/google_form.js"></script>
+  
+
+</head>
+
+<body   >
+  <nav role="navigation"><div class="navbar subnav">
+  <div class="container-fluid">
+      <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </a>        
+
+      <div class="nav-collapse top-bar">
+        <ul class="nav">
+  
+    <li><a class="small-logo" href="/"><img src='/images/logo_small.png' /></a></li>  
+  
+	<li  ><a href="/">Home</a></li>	
+  <li  ><a href="/what-we-do">What We Do</a></li>
+  <li  ><a href="/why-us">Why Us?</a></li>
+  <li  ><a href="/careers-multunus">Careers</a></li>
+  <li  class="dropdown">
+    <a href="/about/history">About</a>
+    <ul class="dropdown-menu">
+      <li><a href="/about/history">History</a></li>
+      <li><a href="/about/people">People</a></li>
+    </ul>
+  </li>
+  <li ><a href="/blog">Our Blog</a></li>
+  <li  class="dropdown">
+      <a href="/contact-us/contact">Contact</a>
+      <ul class="dropdown-menu">
+        <li><a href="/contact-us/contact">Write to Us</a></li>
+        <li><a href="/contact-us/location">Location</a></li>
+      </ul>
+  </li>
+</ul>
+<ul class="nav social-icons pull-right">
+  <li id="facebook"> 
+    <a href="https://www.facebook.com/multunus" title="facebook">
+      <img src="/images/facebook_white_icon.png" alt="facebook" />
+    </a>
+  </li> 
+  <li id="twitter"> 
+    <a href="http://twitter.com/multunus" title="twitter">
+      <img src="/images/twitter_white_icon.png" alt="twitter" />
+    </a>
+  </li>   
+
+</ul>
+
+      </div>
+    </div>
+</div>
+</nav>
+  <div class="container-fluid main-content">
+    <div class="row-fluid">
+      <article class="hentry span9 blog-post" role="article">
+  
+  <header>
+    
+      <h1 class="entry-title">Continuous Delivery - Part 1: Our Jenkins Build Pipeline Setup</h1>
+    
+    
+      <p class="meta">
+        
+  
+
+<span class="byline author vcard">Posted by <span class="fn">Your Name</span></span>
+
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2011-07-07T14:28:55+05:30" pubdate data-updated="true">Jul 7<span>th</span>, 2011</time>
+        
+
+<span class="categories">
+  
+    <a class='category' href='/blog/categories/all-posts/'>All Posts</a>, <a class='category' href='/blog/categories/continuous-delivery/'>Continuous Delivery</a>, <a class='category' href='/blog/categories/process/'>Process</a>, <a class='category' href='/blog/categories/technology/'>Technology</a>
+  
+</span>
+
+
+        
+      </p>
+    
+  </header>
+
+
+<div class="entry-content"><p>As part of our journey towards implementing <a href="http://continuousdelivery.com/">Continous Delivery</a>, I&#8217;ve added the <a href="https://wiki.jenkins-ci.org/display/JENKINS/Build+Pipeline+Plugin">Build pipeline</a> for our continous integration server <a href="http://jenkins-ci.org/">Jenkins</a>.  There are quite a few resources available on the net on how to add the plugin and configure it. This blog is not about how to configure the plugin, but more on how I&#8217;ve configured it for one of our projects and issues I faced while doing the same.</p>
+
+<p>The pipeline we have now is very simple. They are:</p>
+
+<ul>
+    <li>Run all the RSpec tests</li>
+    <li>Run the Javascript Unit tests</li>
+    <li>Deploy to staging</li>
+    <li>Deploy to production</li>
+</ul>
+
+
+<p><strong>The problems we had with our earlier approach, and how the current approach solved those problems:</strong></p>
+
+<p>What we had in the past was, simple scripts with the above items. We had a job for running the tests. If the build was successful, we would run <a href="https://github.com/capistrano/capistrano">capistrano</a> scripts to deploy to staging and once the customer gave the thumbs up, we&#8217;d push it to production.  There are a series of steps that we had to do for each deployment. For eg:  for staging deployment:</p>
+
+<ul>
+    <li>Merge the &#8220;staging&#8221; branch with master</li>
+    <li>Run the cap script</li>
+    <li>Tag the build</li>
+</ul>
+
+
+<p>And almost similar steps needed to be followed for production deployment also. The usual problems that we used to face are:</p>
+
+<ul>
+    <li>There is no way we knew what deployment was done on a certain day for what</li>
+    <li>All staging updates would not get pushed to production, so it was a tough task to identify which tag to merge when we were finally ready for a production update</li>
+</ul>
+
+
+<p>With the current approach, the advantages are:</p>
+
+<ul>
+    <li>Its a one click deployment, so rare chance of making any kind of mistake</li>
+    <li>We can clearly see when a feature has been moved to staging, and whether it has been pushed to production or not</li>
+    <li>Anyone can do deployment as it is just a click of a button. We may even be able to teach the client how to do this.</li>
+</ul>
+
+
+<p>One of the major problems I had faced in the earlier &#8220;manual&#8221; system - was the inability to pass parameters between builds. For example, once the app would be moved to staging, a tag is created and when its ready to be pushed to production, we&#8217;d have to merge that particular tag to production and then push it.</p>
+
+<p>To achieve the above I used the &#8220;parameterized build&#8221; option. In Jenkins, the parameters get converted to Environment Variables and got passed to the downstream job. This is how you can set the parameterized build:</p>
+
+<p style="text-align: left;">[singlepic id=184 w=620 h=300 float=center]</p>
+
+
+<p>When you fire the build, it prompts for the value of the TAG parameter. Once entered this would be available as an Environment variable for this job and all its downstream jobs.</p>
+
+<p>For eg: in the pipeline, the downstream project is &#8220;Stage deploy&#8221;, and it will know the value for TAG and uses that value to create a tag in Git after successful deployment.</p>
+
+<p>When it is ready for production deployment it merges with the same tag and deploys to production. In the latest version of the plugin, moving to the next step is <strong>not</strong> triggered automatically and you can retry the failed ones. The following is a sample pipeline dashboard view:</p>
+
+<p>[singlepic id=183 w=620 h=300 float=center]</p>
+
+<p><strong>Note:</strong> Capturing the parameter will happen <strong>only</strong> for the first job. So, if the parameterized job is <em>not</em> the first one in the pipeline, the capture of the parameter will not happen.</p>
+
+<p>So we&#8217;ve reached the &#8220;one click deployment stage&#8221; with this. But we&#8217;ve still got the following pending tasks - based on what&#8217;s mention in the book  <a href="http://www.informit.com/store/product.aspx?isbn=0321601912">Continuous Delivery</a>:</p>
+
+<ul>
+    <li>Rolling back the bad builds</li>
+    <li>Add non-functional tests to the pipeline i.e. performance and security tests</li>
+    <li>Feature flags</li>
+    <li>Zero downtime deployment</li>
+    <li>Canary Releases (Something on the lines of A/B testing)</li>
+</ul>
+
+
+<p>Continued..</p>
+
+<ul>
+    <li><a title="Continuous Delivery – Part 2: Code metrics with metrical" href="http://www.multunus.com/2011/07/continuous-delivery-code-metrics-with-metrical/">Continuous Delivery – Part 2: Code metrics with metrical</a></li>
+    <li><a title="Continuous Delivery – Part 3: Running custom rake tasks during deployment" href="http://www.multunus.com/2011/07/continuous-delivery-contd/">Continuous Delivery – Part 3: Running custom rake tasks during deployment</a></li>
+    <li><a title="Continuous Delivery – Part 4: Rolling back database migrations with Capistrano rollback" href="http://www.multunus.com/2011/08/continuous-delivery-part-3-rolling-back-database-migrations-with-capistrano-rollback/">Continuous Delivery – Part 4: Rolling back database migrations with Capistrano rollback</a></li>
+</ul>
+
+
+<p>References:</p>
+
+<ul>
+    <li><a href="http://weblogs.java.net/blog/johnsmart/archive/2011/03/10/build-pipelines-jenkinshudson">http://weblogs.java.net/blog/johnsmart/archive/2011/03/10/build-pipelines-jenkinshudson</a></li>
+    <li><a href="http://continuousdelivery.com/patterns">http://continuousdelivery.com/patterns</a></li>
+    <li><a href="http://www.quora.com/How-does-Etsy-manage-development-and-operations" target="_blank">http://www.quora.com/How-does-Etsy-manage-development-and-operations</a></li>
+</ul>
+
+</div>
+
+
+  <footer>
+    
+      <div class="sharing">
+  
+  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://new.multunus.com//blog/2011/07/continuous-delivery-using-jenkins-build-pipeline/" data-via="multunus" data-counturl="http://new.multunus.com//blog/2011/07/continuous-delivery-using-jenkins-build-pipeline/" >Tweet</a>
+  
+  
+  
+    <div class="fb-like" data-send="true" data-width="450" data-show-faces="false"></div>
+  
+</div>
+
+    
+    
+    <section>
+      <h1>Comments</h1>
+      <div id="disqus_thread" aria-live="polite"><noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+    </section>
+    
+    <ul class="pager">
+      
+      <li class="previous"><a class="basic-alignment left"
+        href="/blog/2011/06/avoiding-the-crunch-mode-in-the-last-few-weeks-of-a-project/" title="Previous Post:
+        Avoiding the "crunch mode" in the last few weeks of a project">&laquo; Avoiding the "crunch mode" in the last few weeks of a project</a></li>
+      
+      <li><a href="/blog/archives">Blog Archives</a></li>
+      
+      <li class="next"><a class="basic-alignment right" href="/blog/2011/07/issue-while-installing-java-in-ec2-micro-instance/"
+        title="Next Post: Issue while installing Java in EC2 Micro instance">Issue while installing Java in EC2 Micro instance
+        &raquo;</a></li>
+      
+    </ul>
+  </footer>
+  
+
+<script type="text/javascript">
+      var disqus_shortname = 'multunus';
+      
+        
+        // var disqus_developer = 1;
+        var disqus_identifier = 'http://new.multunus.com//blog/2011/07/continuous-delivery-using-jenkins-build-pipeline/';
+        var disqus_url = 'http://new.multunus.com//blog/2011/07/continuous-delivery-using-jenkins-build-pipeline/';
+        var disqus_script = 'embed.js';
+      
+    (function () {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = 'http://' + disqus_shortname + '.disqus.com/' + disqus_script;
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    }());
+</script>
+
+
+
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) {return;}
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#appId=212934732101925&xfbml=1";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+
+
+
+
+  <script type="text/javascript">
+    (function(){
+      var twitterWidgets = document.createElement('script');
+      twitterWidgets.type = 'text/javascript';
+      twitterWidgets.async = true;
+      twitterWidgets.src = 'http://platform.twitter.com/widgets.js';
+      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
+    })();
+  </script>
+
+
+
+
+
+</article>
+
+<aside class="sidebar-nav span3">
+  <section class="well">
+  <h1>Categories</h1>
+    <ul id="category-list"><li><a href='/blog/categories/all-posts'>All Posts</a></li><li><a href='/blog/categories/android'>Android</a></li><li><a href='/blog/categories/business'>Business</a></li><li><a href='/blog/categories/continuous-delivery'>Continuous Delivery</a></li><li><a href='/blog/categories/process'>Process</a></li><li><a href='/blog/categories/rails'>Rails</a></li><li><a href='/blog/categories/technology'>Technology</a></li></ul>
+</section>
+
+</aside> 
+    </div>
+  </div>
+  <div class="container-fluid dark-background">
+      <div class="row-fluid">
+        <div class="span4 featured-posts">
+          <div class="header">Featured Posts</div>
+<ul id="featured-posts">
+  
+    
+  
+    
+  
+    
+  
+    
+      <li class="post">
+        <a href="/blog/2012/01/a-sneak-peak-into-mobile-app-opportunities-in-2012/">A sneak peek into Mobile App Opportunities in 2012</a>
+      </li>
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+      <li class="post">
+        <a href="/blog/2011/09/continuous-delivery-for-android-apps-part-1/">Continuous Delivery for Android Apps - Part 1</a>
+      </li>
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+      <li class="post">
+        <a href="/blog/2011/07/continuous-delivery-using-jenkins-build-pipeline/">Continuous Delivery - Part 1: Our Jenkins Build Pipeline setup</a>
+      </li>
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+      <li class="post">
+        <a href="/blog/2011/02/software-development-as-a-balance/">A Macro Level Perspective of Software Development</a>
+      </li>
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+</ul>
+
+        </div>
+        <div class="span4 tumblr-feed">
+          <div class="header">Our Daily Voice</div>
+<ul id="tumblr_post">
+  <li class="loading">Fetching...</li>
+</ul>
+<div id="continue-reading"><a href="http://multunus.tumblr.com/">Continue reading at our tumblog</a></div>
+<script type="text/javascript">
+  $(document).ready(function(){
+    getTumblrPost("multunus", 1);
+  });
+</script>
+<script src="/javascripts/asides/tumblr.js" type="text/javascript"> </script>
+
+        </div>
+        <div class="span4 twitter-feed">
+          
+  <div class='header'>@multunus</div>
+  <ul id="tweets">
+    <li class="loading">Status updating...</li>
+  </ul>
+  <script type="text/javascript">
+    $(document).ready(function(){
+      getTwitterFeed("multunus", 5, false);
+    });
+  </script>
+  <script src="/javascripts/asides/twitter.js" type="text/javascript"> </script>
+
+
+        </div>         
+      </div>
+    </div>
+  <footer role="contentinfo" class="page-footer">
+<div class = "navbar footer-navbar">
+  <div class = "container-fluid">
+    <div class="nav-collapse footer-container">
+      <ul class="nav"><li class="copyright">&copy;2012 Copyright by Multunus Software Private Limited.</li></ul>
+
+<ul class="nav pull-right">
+  <li><a href="/">Home</a></li>	
+  <li><a href="/what-we-do">What We Do</a></li>
+  <li><a href="/why-us">Why Us?</a></li>
+  <li><a href="/careers-multunus">Careers</a></li>
+  <li><a href="/about">About</a></li>
+  <li><a href="/blog">Our Blog</a></li>
+  <li><a href="/contact">Contact</a></li>
+</ul>
+
+    </div>
+  </div>
+</div>
+</footer>
+</body>
+</html>
