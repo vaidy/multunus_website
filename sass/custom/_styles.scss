@@ -66,9 +66,12 @@ form {
 	padding-bottom: 20px;
 	color: black;
 
-	a {
-		color: #DD0000;
+	p, ul, .span9, .team {
+		a {
+			color: #DD0000;
+		}
 	}
+	
 
 	p > iframe {
 		width: 77%;
@@ -207,4 +210,15 @@ ul.nav li.active > a {
 
 .fb-like-box {
 	margin-top: 60px;
+}
+
+.entry-title {
+	a {
+		color: black !important;
+	}
+
+	a:hover {
+		text-decoration: none;
+		color: #DD0000 !important; 
+	}
 }
