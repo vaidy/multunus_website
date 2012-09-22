@@ -33,6 +33,8 @@ module Jekyll
       @base     = base
       @dir      = dir
       @name     = "index.html"
+      puts "\n\nbase #{@base}\n\n"
+      puts "\n\npath #{path}\n\n"
       self.data = YAML.load(File.read(File.join(@base, path)))
       self.data['title'] = "#{self.data['name']} | #{self.data['role']}"
 
@@ -50,8 +52,8 @@ module Jekyll
 
     # Loops through the list of team pages and processes each one.
     def write_team(site)
-      if Dir.exists?('source/_team')
-        Dir.chdir('source/_team')
+      if Dir.exists?('_team')
+        Dir.chdir('_team')
         Dir["*.yml"].each do |path|
           name = File.basename(path, '.yml')
           self.write_person_index(site, "_team/#{path}", name)

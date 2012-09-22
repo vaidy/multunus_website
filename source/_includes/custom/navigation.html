@@ -1,20 +1,23 @@
 <ul class="nav">
-	<li class="active"><a href="{{ root_url }}/">Home</a></li>	
-  <li><a href="{{ root_url }}/what-we-do">What We Do</a></li>
-  <li><a href="{{ root_url }}/why-us">Why Us?</a></li>
-  <li><a href="{{ root_url }}/careers">Careers</a></li>
-  <li class="dropdown">
+  {% if page.title != "index" %}
+    <li><a class="small-logo" href="{{ root_url }}/"><img src='/images/logo_small.png' /></a></li>  
+  {% endif %}
+	<li {% if page.title == "index" %} class="active" {% endif %} ><a href="{{ root_url }}/">Home</a></li>	
+  <li {% if page.title == "what-we-do" %} class="active" {% endif %} ><a href="{{ root_url }}/what-we-do">What We Do</a></li>
+  <li {% if page.title == "why-us" %} class="active" {% endif %} ><a href="{{ root_url }}/why-us">Why Us?</a></li>
+  <li {% if page.title == "careers" %} class="active" {% endif %} ><a href="{{ root_url }}/careers-multunus">Careers</a></li>
+  <li {% if page.title == "history" or page.title == "people" %} class="active dropdown" {% endif %} class="dropdown">
     <a href="{{ root_url }}/about/history">About</a>
     <ul class="dropdown-menu">
       <li><a href="{{ root_url }}/about/history">History</a></li>
       <li><a href="{{ root_url }}/about/people">People</a></li>
     </ul>
   </li>
-  <li><a href="{{ root_url }}/blog">Our Blog</a></li>
-  <li class="dropdown">
-      <a href="{{ root_url }}/contact-us/write-to-us">Contact</a>
+  <li {% if page.title == "blog" %} class="active" {% endif %}><a href="{{ root_url }}/blog">Our Blog</a></li>
+  <li {% if page.title == "contact" or page.title == "location" %} class="active dropdown" {% endif %} class="dropdown">
+      <a href="{{ root_url }}/contact-us/contact">Contact</a>
       <ul class="dropdown-menu">
-        <li><a href="{{ root_url }}/contact-us/write-to-us">Write to Us</a></li>
+        <li><a href="{{ root_url }}/contact-us/contact">Write to Us</a></li>
         <li><a href="{{ root_url }}/contact-us/location">Location</a></li>
       </ul>
   </li>
