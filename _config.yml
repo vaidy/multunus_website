@@ -2,7 +2,7 @@
 #      Main Configs       #
 # ----------------------- #
 
-url: http://multunus.com.com
+url: http://www.multunus.com
 title: Multunus Software Pvt. Ltd.
 subtitle: A blogging framework for hackers.
 author: Your Name
@@ -81,7 +81,7 @@ tumblr_user: multunus
 tumblr_post_count: 1
 
 # Google +1
-google_plus_one: true
+google_plus_one: false
 google_plus_one_size: medium
 
 # Google Plus Profile
@@ -99,6 +99,7 @@ delicious_count: 3
 
 # Disqus Comments
 disqus_short_name: multunus
+disqus_developer: true
 disqus_show_comment_count: false
 
 # Google Analytics
