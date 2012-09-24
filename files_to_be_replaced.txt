@@ -1,3 +1,4 @@
+source/careers-multunus/index.html
 source/_posts/2011-07-31-continuous-delivery-contd.markdown
 source/_posts/2011-07-31-productivity-enhancement-tools-mailcatcher-vogue-spritecow-and-railswizard.markdown
 source/_posts/2010-02-01-faster-modern-web-page-designing-using-jquery-tools.markdown
@@ -40,5 +41,4 @@ source/_posts/2010-01-29-learnings-from-2009.markdown
 source/_posts/2010-01-29-working-with-dlls-the-java-way.markdown
 source/_posts/2011-08-14-continuous-delivery-part-3-rolling-back-database-migrations-with-capistrano-rollback.markdown
 source/_posts/2010-02-23-our-experience-with-comatose-the-microcms.markdown
-source/contact-us/contact/index.html
-source/careers-multunus/index.html
+
