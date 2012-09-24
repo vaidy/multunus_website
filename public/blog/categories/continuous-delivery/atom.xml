@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[Category: Continuous Delivery | Multunus Software Pvt. Ltd.]]></title>
-  <link href="http://new.multunus.com//blog/categories/continuous-delivery/atom.xml" rel="self"/>
-  <link href="http://new.multunus.com//"/>
-  <updated>2012-09-24T13:38:47+05:30</updated>
-  <id>http://new.multunus.com//</id>
+  <link href="http://www.multunus.com//blog/categories/continuous-delivery/atom.xml" rel="self"/>
+  <link href="http://www.multunus.com//"/>
+  <updated>2012-09-24T14:10:01+05:30</updated>
+  <id>http://www.multunus.com//</id>
   <author>
     <name><![CDATA[Your Name]]></name>
     
@@ -15,10 +15,10 @@
   
   <entry>
     <title type="html"><![CDATA[Continuous Delivery of iOS apps using Jenkins and TestFlightApp ]]></title>
-    <link href="http://new.multunus.com//blog/2012/05/continuous-delivery-of-ios-apps-using-jenkins-and-testflightapp/"/>
+    <link href="http://www.multunus.com//blog/2012/05/continuous-delivery-of-ios-apps-using-jenkins-and-testflightapp/"/>
     <updated>2012-05-21T11:03:21+05:30</updated>
-    <id>http://new.multunus.com//blog/2012/05/continuous-delivery-of-ios-apps-using-jenkins-and-testflightapp</id>
-    <content type="html"><![CDATA[<p>As mentioned in <a href="http://new.multunus.com//blog/categories/continuous-delivery/">earlier posts</a> we've been doing Continuous Delivery for both Webapps and Android apps for quite sometime. This post is about setting up Continuous Delivery for iOS apps using Jenkins and <a href="http://testflightapp.com" target="_blank">TestFlightApp</a>. TestFlightApp is a free service which helps to do closed beta testing without putting into AppStore. Using their APIs, the process of delivering new versions of the app can be automated.</p>
+    <id>http://www.multunus.com//blog/2012/05/continuous-delivery-of-ios-apps-using-jenkins-and-testflightapp</id>
+    <content type="html"><![CDATA[<p>As mentioned in <a href="http://www.multunus.com//blog/categories/continuous-delivery/">earlier posts</a> we've been doing Continuous Delivery for both Webapps and Android apps for quite sometime. This post is about setting up Continuous Delivery for iOS apps using Jenkins and <a href="http://testflightapp.com" target="_blank">TestFlightApp</a>. TestFlightApp is a free service which helps to do closed beta testing without putting into AppStore. Using their APIs, the process of delivering new versions of the app can be automated.</p>
 
 <!-- more -->
 
@@ -69,9 +69,9 @@
   
   <entry>
     <title type="html"><![CDATA[Introduction to Continuous Delivery]]></title>
-    <link href="http://new.multunus.com//blog/2012/05/introduction-to-continuous-delivery/"/>
+    <link href="http://www.multunus.com//blog/2012/05/introduction-to-continuous-delivery/"/>
     <updated>2012-05-15T14:49:16+05:30</updated>
-    <id>http://new.multunus.com//blog/2012/05/introduction-to-continuous-delivery</id>
+    <id>http://www.multunus.com//blog/2012/05/introduction-to-continuous-delivery</id>
     <content type="html"><![CDATA[<p>We've been doing Continuous Delivery for sometime and also been writing about how to implement the same. This post is about why Continuous Delivery is required and what problems does it solve.</p>
 
 <h3><strong><span style="text-decoration: underline;">What is Continuous Delivery</span></strong></h3>
@@ -164,9 +164,9 @@ One of the key principle of Continuous Delivery is <strong>To </strong><strong>
   
   <entry>
     <title type="html"><![CDATA[A round up of our presentations and writings]]></title>
-    <link href="http://new.multunus.com//blog/2012/02/a-round-up-of-our-presentations-and-writings/"/>
+    <link href="http://www.multunus.com//blog/2012/02/a-round-up-of-our-presentations-and-writings/"/>
     <updated>2012-02-27T23:59:30+05:30</updated>
-    <id>http://new.multunus.com//blog/2012/02/a-round-up-of-our-presentations-and-writings</id>
+    <id>http://www.multunus.com//blog/2012/02/a-round-up-of-our-presentations-and-writings</id>
     <content type="html"><![CDATA[<p>We started speaking at conferences last year. We've also been doing a fair bit of writing. This post rounds up what we've up to - along with links to our presentations and some of what we've written.</p>
 
 <!-- more -->
@@ -186,11 +186,11 @@ One of the key principle of Continuous Delivery is <strong>To </strong><strong>
 
 <p><strong>Agile India 2012</strong>: Leena and I spoke there on "Continuous Delivery for a Song". Here's the link to the <a href="http://submit2012india.agilealliance.org/node/8894">original proposal</a>. And here's the <a href="https://docs.google.com/a/multunus.com/present/view?id=0AQj1177vtu0MZHRoM2dmN180NzRneGp2bXRndw">link to the presentation</a>. It was a live demo - and by the comments we got from our audience, we think it went off fairly well.</p>
 
-<p><img class="aligncenter size-medium" title="Agile India 2012 Talk" src="http://new.multunus.com//images/DSC_7209-300x201.jpg" alt="" width="300" height="201" /></p>
+<p><img class="aligncenter size-medium" title="Agile India 2012 Talk" src="http://www.multunus.com//images/DSC_7209-300x201.jpg" alt="" width="300" height="201" /></p>
 
 <p><strong>Recent Writing: </strong>An article I wrote for YourStory.in was published late last year. It was titled "<a href="http://yourstory.in/2011/12/a-sneak-peek-into-mobile-app-opportunities-in-2012/">Mobile App Opportunities in 2012</a>".</p>
 
-<p><strong>Blogging:</strong> Leena has written a lot of articles on Continuous Delivery <a href="http://new.multunus.com//blog/categories/continuous-delivery/">on this blog itself</a>. And Akshay <a href="http://akshayatmultunus.wordpress.com/">has been writing regularly</a> since he joined us last year.</p>
+<p><strong>Blogging:</strong> Leena has written a lot of articles on Continuous Delivery <a href="http://www.multunus.com//blog/categories/continuous-delivery/">on this blog itself</a>. And Akshay <a href="http://akshayatmultunus.wordpress.com/">has been writing regularly</a> since he joined us last year.</p>
 
 <p>I hope you found this round up useful. I expect the Agile India organizers to upload videos of the all the talks soon. Once that happens, I'll update this post with the link to the video of our talk there.</p>
 ]]></content>
@@ -198,9 +198,9 @@ One of the key principle of Continuous Delivery is <strong>To </strong><strong>
   
   <entry>
     <title type="html"><![CDATA[Continuous Delivery: Building Android Library project]]></title>
-    <link href="http://new.multunus.com//blog/2011/11/continuous-delivery-building-android-library-project/"/>
+    <link href="http://www.multunus.com//blog/2011/11/continuous-delivery-building-android-library-project/"/>
     <updated>2011-11-04T14:55:20+05:30</updated>
-    <id>http://new.multunus.com//blog/2011/11/continuous-delivery-building-android-library-project</id>
+    <id>http://www.multunus.com//blog/2011/11/continuous-delivery-building-android-library-project</id>
     <content type="html"><![CDATA[<p>This post talks about how to build an Android Project using ant which depends on an Android Library project.</p>
 
 <ul>
@@ -216,10 +216,10 @@ One of the key principle of Continuous Delivery is <strong>To </strong><strong>
   
   <entry>
     <title type="html"><![CDATA[Continuous Delivery for Android Apps – Part 2]]></title>
-    <link href="http://new.multunus.com//blog/2011/10/continuous-delivery-for-android-apps-part-2/"/>
+    <link href="http://www.multunus.com//blog/2011/10/continuous-delivery-for-android-apps-part-2/"/>
     <updated>2011-10-06T06:51:57+05:30</updated>
-    <id>http://new.multunus.com//blog/2011/10/continuous-delivery-for-android-apps-part-2</id>
-    <content type="html"><![CDATA[<p>This post talks about how to run tests for the build setup as mentioned in <a href="http://new.multunus.com//continuous-delivery-for-android-apps-part-1/">Part 1</a>.</p>
+    <id>http://www.multunus.com//blog/2011/10/continuous-delivery-for-android-apps-part-2</id>
+    <content type="html"><![CDATA[<p>This post talks about how to run tests for the build setup as mentioned in <a href="http://www.multunus.com//continuous-delivery-for-android-apps-part-1/">Part 1</a>.</p>
 
 <h3><span style="text-decoration: underline;">Generate the build script for test</span></h3>
 
