@@ -2,18 +2,14 @@
 comments: true
 layout: post
 title: Lessons from interview with Joel Spolsky
-wordpress_id: 1876
-wordpress_url: http://www.multunus.com/?p=1876
 date: 2011-10-17 00:30:36.000000000 +05:30
 author: Anitha
 categories:
 - All Posts
 ---
-<div class="zemanta-img" style="margin: 1em; display: block;">
 
-[caption id="" align="alignright" width="300" caption="Image via Wikipedia"]<a href="http://commons.wikipedia.org/wiki/File:PivotLaunching3S.jpg"><img title="USS Pivot launched at the Gulf Shipbuilding Co..." src="http://upload.wikimedia.org/wikipedia/commons/thumb/9/9d/PivotLaunching3S.jpg/300px-PivotLaunching3S.jpg" alt="USS Pivot launched at the Gulf Shipbuilding Co..." width="300" height="241" /></a>[/caption]
+<a href="http://commons.wikipedia.org/wiki/File:PivotLaunching3S.jpg"><img title="USS Pivot launched at the Gulf Shipbuilding Co..." src="http://upload.wikimedia.org/wikipedia/commons/thumb/9/9d/PivotLaunching3S.jpg/300px-PivotLaunching3S.jpg" alt="USS Pivot launched at the Gulf Shipbuilding Co..." width="300" height="241" /></a>
 
-</div>
 <p style="text-align: center;" dir="ltr"></p>
 <p dir="ltr">A couple of days back I watched an interview with Joel Splosky on <a href="http://mixergy.com/trello-joel-spolsky-interview/">Mixergy.com</a>. <a title="Joel Spolsky" rel="homepage" href="http://www.joelonsoftware.com/AboutMe.html">Joel Spolsky</a> recently launched a new product “Trello”, an online collaboration tool. In this interview he explains a few strategies/tips that went into building and launching a new product based on his experience.</p>
 

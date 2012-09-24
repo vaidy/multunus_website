@@ -2,8 +2,6 @@
 comments: true
 layout: post
 title: Confident Estimates
-wordpress_id: 1744
-wordpress_url: http://www.multunus.com/?p=1744
 date: 2011-09-29 08:58:51.000000000 +05:30
 author: Manoj
 categories:
@@ -12,7 +10,7 @@ categories:
 ---
 <div class="zemanta-img" style="margin: 1em; display: block;">
 
-[caption id="" align="alignright" width="300" caption="Image via Wikipedia"]<a href="http://commons.wikipedia.org/wiki/File:Goudargues.JPG"><img title="Goudargues" src="http://upload.wikimedia.org/wikipedia/commons/thumb/4/4b/Goudargues.JPG/300px-Goudargues.JPG" alt="Goudargues" width="300" height="200" /></a>[/caption]
+<a href="http://commons.wikipedia.org/wiki/File:Goudargues.JPG"><img title="Goudargues" src="http://upload.wikimedia.org/wikipedia/commons/thumb/4/4b/Goudargues.JPG/300px-Goudargues.JPG" alt="Goudargues" width="300" height="200" /></a>
 
 </div>
 We constantly try to provide accurate estimates that we can defend with confidence. But there are situations where we end up making mistakes. And this post describes one such situation.

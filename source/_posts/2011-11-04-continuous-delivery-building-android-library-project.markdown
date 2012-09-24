@@ -2,8 +2,6 @@
 comments: true
 layout: post
 title: ! 'Continuous Delivery: Building Android Library project'
-wordpress_id: 1960
-wordpress_url: http://www.multunus.com/?p=1960
 date: 2011-11-04 14:55:20.000000000 +05:30
 author: Leena
 categories:

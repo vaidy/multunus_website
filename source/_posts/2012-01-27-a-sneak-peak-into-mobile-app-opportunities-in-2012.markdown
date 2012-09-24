@@ -3,8 +3,6 @@ comments: true
 layout: post
 featured: true
 title: A sneak peek into Mobile App Opportunities in 2012
-wordpress_id: 2012
-wordpress_url: http://www.multunus.com/?p=2012
 date: 2012-01-27 16:45:13.000000000 +05:30
 author: Vaidy
 categories:

@@ -3,8 +3,6 @@ comments: true
 layout: post
 featured: true
 title: A Macro Level Perspective of Software Development
-wordpress_id: 953
-wordpress_url: http://www.multunus.com/?p=953
 date: 2011-02-09 00:17:24.000000000 +05:30
 author: Vaidy
 categories:
@@ -37,4 +35,4 @@ What it takes to build such software:
 </ul>
 </div>
 Our version of the software life-"cycle" :-) :
-<a href="http://new.multunus.com/wordpress/wp-content/uploads/2011/02/CopyofBalancedswdevelopment.png"><img src="http://new.multunus.com/wordpress/wp-content/uploads/2011/02/CopyofBalancedswdevelopment-e1334671302237.png" alt="" title="CopyofBalancedswdevelopment" width="500" height="452" class="alignnone size-full wp-image-2162" /></a>
+<img src="/images/CopyofBalancedswdevelopment-e1334671302237.png" alt="Balanced Software Development" title="Balancedswdevelopment" width="500" height="452" class="alignnone size-full" />

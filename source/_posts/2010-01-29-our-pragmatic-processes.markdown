@@ -2,8 +2,6 @@
 comments: true
 layout: post
 title: Our Pragmatic Processes
-wordpress_id: 703
-wordpress_url: http://www.multunus.com/?p=703
 date: 2010-01-29 12:02:22.000000000 +05:30
 author: Vaidy
 categories:

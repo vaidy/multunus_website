@@ -2,15 +2,13 @@
 comments: true
 layout: post
 title: Venkat Subramaniam's talk on Code Quality
-wordpress_id: 1213
-wordpress_url: http://www.multunus.com/?p=1213
 date: 2011-04-21 09:47:11.000000000 +05:30
 author: Shakeeb
 categories:
 - All Posts
 - Process
 ---
-<a rel="attachment wp-att-1217" href="http://www.multunus.com/2011/04/venkat-subramaniam-code-quality/venkat_at_yahoo/"><img class="alignright size-medium wp-image-1217" title="Venkat_at_yahoo" src="http://www.multunus.com/wp-blog/wp-content/uploads/2011/04/Venkat_at_yahoo-300x224.jpg" alt="" width="300" height="224" /></a>We attended <a href="http://http://www.agiledeveloper.com/presentations/caring_about_code_quality.pdf">Venkat Subramaniam's talk on Code Quality</a> at Yahoo India a couple of days back.
+<img class="alignright size-medium wp-image-1217" title="Venkat_at_yahoo" src="/images/Venkat_at_yahoo-300x224.jpg" alt="" width="300" height="224" />We attended <a href="http://http://www.agiledeveloper.com/presentations/caring_about_code_quality.pdf">Venkat Subramaniam's talk on Code Quality</a> at Yahoo India a couple of days back.
 
 Venkat is the founder of Agile Developer and the author of several books. Consultant and Adjunct Professor are some of the other hats he wears. It was an inspiring experience. While we were reassured that our current practices are on the right track during most of the talk, there were a some things which caused us to rethink the way we do things.
 <h3><strong>Why do we need Code Quality?</strong></h3>

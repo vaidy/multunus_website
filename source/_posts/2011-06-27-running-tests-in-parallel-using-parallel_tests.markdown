@@ -2,8 +2,6 @@
 comments: true
 layout: post
 title: Running tests in parallel using parallel_tests
-wordpress_id: 1345
-wordpress_url: http://www.multunus.com/?p=1345
 date: 2011-06-27 10:48:01.000000000 +05:30
 author: Leena
 categories:
@@ -11,7 +9,7 @@ categories:
 - Rails
 - Technology
 ---
-One of the action items I had mentioned in <a href="http://www.multunus.com/2011/06/takeaways-from-ruby-conf-india-2011/">an earlier post</a>, was to setup the  infrastructure for running tests in parallel.
+One of the action items I had mentioned in <a href="/blog/2011/06/takeaways-from-ruby-conf-india-2011/">an earlier post</a>, was to setup the  infrastructure for running tests in parallel.
 
 I tried <a href="http://test-load-balancer.github.com/">TLB</a>, but stopped on it because it required cluster setup for our CI server i.e. hudson. I was looking for something which was even simpler than TLB, and tried <a href="https://github.com/ngauthier/hydra">Hydra</a>, but could not setup it successfully. Thankfully though, the Hydra committer  <a href="https://github.com/ngauthier/hydra/issues/48">suggested</a> that I try out  <a href="https://github.com/grosser/parallel_tests">parallel_tests</a> - as hydra is not currently being maintained.
 
@@ -43,4 +41,4 @@ The feature, I feel, missing in parallel_tests compared to TLB is the logic it u
 <pre>"2 processes for 162 specs, 81 specs per process"</pre>
 But parallel_tests by default spawns multiple processes depending upon the "core" i.e. on a dual core it starts 2 processes unless you mention otherwise.
 
-<strong>Update: </strong>We've fixed the 20 failures mentioned above. Those started coming all of a sudden, and how we have fixed the same can be found <a href="http://www.multunus.com/2011/06/rspec-issue-with-include-helper-in-spec/">here</a>.
+<strong>Update: </strong>We've fixed the 20 failures mentioned above. Those started coming all of a sudden, and how we have fixed the same can be found <a href="/blog/2011/06/rspec-issue-with-include-helper-in-spec/">here</a>.

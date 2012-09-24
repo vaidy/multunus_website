@@ -2,8 +2,6 @@
 comments: true
 layout: post
 title: ! 'JQuery Tools: Smooth JS widgets'
-wordpress_id: 733
-wordpress_url: http://www.multunus.com/?p=733
 date: 2010-02-01 05:50:24.000000000 +05:30
 author: Manoj
 categories:

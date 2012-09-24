@@ -2,8 +2,6 @@
 comments: true
 layout: post
 title: Simple Image Filter using OpenGL ES in Android
-wordpress_id: 1773
-wordpress_url: http://www.multunus.com/?p=1773
 date: 2011-10-07 15:35:45.000000000 +05:30
 author: Tamil
 categories:
@@ -21,7 +19,7 @@ Using "OpenGL" for Image Processing enables us to completely utilize the power o
 
 In this post we will be discussing how to use OpenGL Shader Language to manipulate pixels and create Image filter effects.
 
-<a rel="attachment wp-att-1851" href="http://www.multunus.com/2011/10/simple-image-filter-using-opengl-es-in-android/combined/"><img class="aligncenter size-medium wp-image-1851" src="http://www.multunus.com/wp-blog/wp-content/uploads/2011/10/combined-300x250.png" alt="" width="300" height="250" /></a>
+<img class="aligncenter size-medium wp-image-1851" src="/images/combined-300x250.png" alt="" width="300" height="250" />
 
 As with any OpenGL app, we will start with setting up the view.
 

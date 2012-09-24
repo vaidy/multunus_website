@@ -2,8 +2,6 @@
 comments: true
 layout: post
 title: Software Development as a balance
-wordpress_id: 2290
-wordpress_url: http://www.multunus.com/?p=953
 date: 2011-02-09 00:17:24.000000000 +05:30
 author: Vaidy
 categories:

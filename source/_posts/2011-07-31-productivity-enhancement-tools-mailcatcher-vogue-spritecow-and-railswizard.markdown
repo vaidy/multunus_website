@@ -2,8 +2,6 @@
 comments: true
 layout: post
 title: Productivity Enhancement Tools - MailCatcher, Vogue, SpriteCow and RailsWizard
-wordpress_id: 1450
-wordpress_url: http://www.multunus.com/?p=1450
 date: 2011-07-31 15:03:40.000000000 +05:30
 author: KP
 categories:
@@ -39,7 +37,7 @@ Helps you get the background-position, width and height of sprits within a sprit
 This tools works really well with sprite-sheets which has a transparent background [which is usually the case].
 <div><strong>Rating: </strong>Useful</div>
 <div><strong> </strong></div>
-<a rel="attachment wp-att-1458" href="http://www.multunus.com/2011/07/productivity-enhancement-tools-mailcatcher-vogue-spritecow-and-railswizard/sprite-cow/"><img class="size-medium wp-image-1458 alignnone" src="http://www.multunus.com/wp-blog/wp-content/uploads/2011/07/sprite-cow-300x187.png" alt="" width="300" height="187" /></a>
+<a rel="attachment wp-att-1458" href="/blog/2011/07/productivity-enhancement-tools-mailcatcher-vogue-spritecow-and-railswizard/sprite-cow/"><img class="size-medium wp-image-1458 alignnone" src="/images/2011/07/sprite-cow-300x187.png" alt="" width="300" height="187" /></a>
 <h2><a href="http://railswizard.org/">RailsWizard</a></h2>
 Rails Wizard is a tool from Intridea which makes it easy to create application templates just by specifying the gems that you want to use.  It is available as a webapp as well as as stand alone tool.
 

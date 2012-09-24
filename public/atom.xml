@@ -4,7 +4,7 @@
   <title><![CDATA[Multunus Software Pvt. Ltd.]]></title>
   <link href="http://new.multunus.com//atom.xml" rel="self"/>
   <link href="http://new.multunus.com//"/>
-  <updated>2012-09-24T11:58:33+05:30</updated>
+  <updated>2012-09-24T13:38:47+05:30</updated>
   <id>http://new.multunus.com//</id>
   <author>
     <name><![CDATA[Your Name]]></name>
@@ -18,7 +18,7 @@
     <link href="http://new.multunus.com//blog/2012/05/continuous-delivery-of-ios-apps-using-jenkins-and-testflightapp/"/>
     <updated>2012-05-21T11:03:21+05:30</updated>
     <id>http://new.multunus.com//blog/2012/05/continuous-delivery-of-ios-apps-using-jenkins-and-testflightapp</id>
-    <content type="html"><![CDATA[<p>As mentioned in <a href="http://www.multunus.com/blog/all/continuous-delivery/">earlier posts</a> we&#8217;ve been doing Continuous Delivery for both Webapps and Android apps for quite sometime. This post is about setting up Continuous Delivery for iOS apps using Jenkins and <a href="http://testflightapp.com" target="_blank">TestFlightApp</a>. TestFlightApp is a free service which helps to do closed beta testing without putting into AppStore. Using their APIs, the process of delivering new versions of the app can be automated.</p>
+    <content type="html"><![CDATA[<p>As mentioned in <a href="http://new.multunus.com//blog/categories/continuous-delivery/">earlier posts</a> we&#8217;ve been doing Continuous Delivery for both Webapps and Android apps for quite sometime. This post is about setting up Continuous Delivery for iOS apps using Jenkins and <a href="http://testflightapp.com" target="_blank">TestFlightApp</a>. TestFlightApp is a free service which helps to do closed beta testing without putting into AppStore. Using their APIs, the process of delivering new versions of the app can be automated.</p>
 
 <!-- more -->
 
@@ -186,11 +186,11 @@ One of the key principle of Continuous Delivery is <strong>To </strong><strong>
 
 <p><strong>Agile India 2012</strong>: Leena and I spoke there on &#8220;Continuous Delivery for a Song&#8221;. Here&#8217;s the link to the <a href="http://submit2012india.agilealliance.org/node/8894">original proposal</a>. And here&#8217;s the <a href="https://docs.google.com/a/multunus.com/present/view?id=0AQj1177vtu0MZHRoM2dmN180NzRneGp2bXRndw">link to the presentation</a>. It was a live demo - and by the comments we got from our audience, we think it went off fairly well.</p>
 
-<p><a rel="attachment wp-att-2056" href="http://www.multunus.com/2012/02/a-round-up-of-our-presentations-and-writings/dsc_7209/"><img class="aligncenter size-medium wp-image-2056" title="Agile India 2012 Talk" src="http://www.multunus.com/wp-blog/wp-content/uploads/2012/02/DSC_7209-300x201.jpg" alt="" width="300" height="201" /></a></p>
+<p><img class="aligncenter size-medium" title="Agile India 2012 Talk" src="http://new.multunus.com//images/DSC_7209-300x201.jpg" alt="" width="300" height="201" /></p>
 
 <p><strong>Recent Writing: </strong>An article I wrote for YourStory.in was published late last year. It was titled &#8221;<a href="http://yourstory.in/2011/12/a-sneak-peek-into-mobile-app-opportunities-in-2012/">Mobile App Opportunities in 2012</a>&#8221;.</p>
 
-<p><strong>Blogging:</strong> Leena has written a lot of articles on Continuous Delivery <a href="http://www.multunus.com/blog/all/continuous-delivery/">on this blog itself</a>. And Akshay <a href="http://akshayatmultunus.wordpress.com/">has been writing regularly</a> since he joined us last year.</p>
+<p><strong>Blogging:</strong> Leena has written a lot of articles on Continuous Delivery <a href="http://new.multunus.com//blog/categories/continuous-delivery/">on this blog itself</a>. And Akshay <a href="http://akshayatmultunus.wordpress.com/">has been writing regularly</a> since he joined us last year.</p>
 
 <p>I hope you found this round up useful. I expect the Agile India organizers to upload videos of the all the talks soon. Once that happens, I&#8217;ll update this post with the link to the video of our talk there.</p>
 ]]></content>
@@ -427,14 +427,14 @@ One of the key principle of Continuous Delivery is <strong>To </strong><strong>
 <h3><a href="http://funnel.hasgeek.com/droidcon/83-continuous-delivery-for-an-android-application" target="_new">1. Continuous Delivery for an Android application</a></h3>
 <!-- more -->
 
-<img style="margin: 0px 12px;" src="http://new.multunus.com//wp-blog/wp-content/uploads/2011/12/vaidy-leena.png" alt="" align="left" /><span>This talk was on First day of the Droidcon conference given by <a href="http://www.multunus.com/work/team/vaidy">Vaidy</a> and <a href="http://www.multunus.com/work/team/leena">Leena</a>. In this talk, we spoke on what the first step towards moving to a CD setup is. Specifically demonstrated setting up a Push Button deployment system using Ant and Jenkins. <a href="http://funnel.hasgeek.com/droidcon/83-continuous-delivery-for-an-android-application">More details here</a>. </span>
+<img style="margin: 0px 12px;" src="http://new.multunus.com//wp-blog/wp-content/uploads/2011/12/vaidy-leena.png" alt="" align="left" /><span>This talk was on First day of the Droidcon conference given by Vaidy and Leena. In this talk, we spoke on what the first step towards moving to a CD setup is. Specifically demonstrated setting up a Push Button deployment system using Ant and Jenkins. <a href="http://funnel.hasgeek.com/droidcon/83-continuous-delivery-for-an-android-application">More details here</a>. </span>
 
 </div>
 
 
 <div style="float: left; margin-top: 24px;">
 <h3><a href="http://funnel.hasgeek.com/droidcon/94-introduction-to-opengl-in-android" target="_new">2. Introduction to OpenGL in Android</a></h3>
-<img style="margin: 0px 12px;" src="http://new.multunus.com//wp-blog/wp-content/uploads/2011/12/tamil-and-kp.png" alt="" align="left" />This talk was on Second day of the Droidcon given by <a href="http://www.multunus.com/work/team/tamil">Tamil </a>and <a href="http://www.multunus.com/work/team/krishnaprasad">KP</a>. The objective of talk was to have people get started with OpenGL programming which can seem to be a little heavy but it need not be. The talk started with a brief introduction to OpenGL and then had quick step-by-step tutorial demonstration. <a href="http://funnel.hasgeek.com/droidcon/94-introduction-to-opengl-in-android">More details here</a>.
+<img style="margin: 0px 12px;" src="http://new.multunus.com//wp-blog/wp-content/uploads/2011/12/tamil-and-kp.png" alt="" align="left" />This talk was on Second day of the Droidcon given by Tamil KP. The objective of talk was to have people get started with OpenGL programming which can seem to be a little heavy but it need not be. The talk started with a brief introduction to OpenGL and then had quick step-by-step tutorial demonstration. <a href="http://funnel.hasgeek.com/droidcon/94-introduction-to-opengl-in-android">More details here</a>.
 
 </div>
 
@@ -464,12 +464,7 @@ One of the key principle of Continuous Delivery is <strong>To </strong><strong>
     <link href="http://new.multunus.com//blog/2011/10/lessons-from-interview-with-joel-spolsky/"/>
     <updated>2011-10-17T00:30:36+05:30</updated>
     <id>http://new.multunus.com//blog/2011/10/lessons-from-interview-with-joel-spolsky</id>
-    <content type="html"><![CDATA[<div class="zemanta-img" style="margin: 1em; display: block;">
-
-[caption id=&#8221;&#8221; align=&#8221;alignright&#8221; width=&#8221;300&#8221; caption=&#8221;Image via Wikipedia&#8221;]<a href="http://commons.wikipedia.org/wiki/File:PivotLaunching3S.jpg"><img title="USS Pivot launched at the Gulf Shipbuilding Co..." src="http://upload.wikimedia.org/wikipedia/commons/thumb/9/9d/PivotLaunching3S.jpg/300px-PivotLaunching3S.jpg" alt="USS Pivot launched at the Gulf Shipbuilding Co..." width="300" height="241" /></a>[/caption]
-
-</div>
-
+    <content type="html"><![CDATA[<p><a href="http://commons.wikipedia.org/wiki/File:PivotLaunching3S.jpg"><img title="USS Pivot launched at the Gulf Shipbuilding Co..." src="http://upload.wikimedia.org/wikipedia/commons/thumb/9/9d/PivotLaunching3S.jpg/300px-PivotLaunching3S.jpg" alt="USS Pivot launched at the Gulf Shipbuilding Co..." width="300" height="241" /></a></p>
 
 <p style="text-align: center;" dir="ltr"></p>
 
@@ -601,7 +596,7 @@ One of the key principle of Continuous Delivery is <strong>To </strong><strong>
 
 <p>In this post we will be discussing how to use OpenGL Shader Language to manipulate pixels and create Image filter effects.</p>
 
-<p><a rel="attachment wp-att-1851" href="http://www.multunus.com/2011/10/simple-image-filter-using-opengl-es-in-android/combined/"><img class="aligncenter size-medium wp-image-1851" src="http://www.multunus.com/wp-blog/wp-content/uploads/2011/10/combined-300x250.png" alt="" width="300" height="250" /></a></p>
+<p><img class="aligncenter size-medium wp-image-1851" src="http://new.multunus.com//images/combined-300x250.png" alt="" width="300" height="250" /></p>
 
 <p>As with any OpenGL app, we will start with setting up the view.</p>
 
@@ -714,7 +709,7 @@ description="Runs tests from the package defined in test.package property"&gt;
     <id>http://new.multunus.com//blog/2011/09/confident-estimates</id>
     <content type="html"><![CDATA[<div class="zemanta-img" style="margin: 1em; display: block;">
 
-[caption id=&#8221;&#8221; align=&#8221;alignright&#8221; width=&#8221;300&#8221; caption=&#8221;Image via Wikipedia&#8221;]<a href="http://commons.wikipedia.org/wiki/File:Goudargues.JPG"><img title="Goudargues" src="http://upload.wikimedia.org/wikipedia/commons/thumb/4/4b/Goudargues.JPG/300px-Goudargues.JPG" alt="Goudargues" width="300" height="200" /></a>[/caption]
+<a href="http://commons.wikipedia.org/wiki/File:Goudargues.JPG"><img title="Goudargues" src="http://upload.wikimedia.org/wikipedia/commons/thumb/4/4b/Goudargues.JPG/300px-Goudargues.JPG" alt="Goudargues" width="300" height="200" /></a>
 
 </div>
 
@@ -848,11 +843,11 @@ References: <a href="http://skaug.no/ingvald/2011/09/android-app-with-jenkins/"
     <id>http://new.multunus.com//blog/2011/09/rebuilding-in-jenkins</id>
     <content type="html"><![CDATA[<div>
 
-One option that might be required after setting up a <a href="http://continuousdelivery.in/2011/08/continuous-delivery-setup-jenkins-build-pipeline-setup/">build pipeline</a> is the provision to redeploy an earlier version by click of a button. This can become handy when we find a bug in the production and want to see when the bug got introduced. For that we will have to redeploy the earlier version to the staging/UAT environment and test the same.
+One option that might be required after setting up a <a href="http://new.multunus.com//blog/2011/08/continuous-delivery-setup-jenkins-build-pipeline-setup/">build pipeline</a> is the provision to redeploy an earlier version by click of a button. This can become handy when we find a bug in the production and want to see when the bug got introduced. For that we will have to redeploy the earlier version to the staging/UAT environment and test the same.
 
 Jenkins by default does not allow to rerun any of the earlier jobs. But you can achieve this by the <a href="https://wiki.jenkins-ci.org/display/JENKINS/Rebuild+Plugin">Rebuild</a> plugin. It allows you to rebuild any job provided its parameterized build. It also allows you override the parameters. It will show the &#8220;Rebuild&#8221; button at the left side as shown below when you go to a specific build page:
 
-<a rel="attachment wp-att-1814" href="http://www.multunus.com/?attachment_id=1814"><img src="http://continuousdelivery.in/wp-blog/wp-content/uploads/2011/09/rebuild.png" alt="" width="156" height="247" /></a>
+<img src="http://new.multunus.com//images/rebuild.png" alt="" width="156" height="247" />
 
 This is not a replacement for revert build, because it does not take care of reverting DB. But this can be extended to do the same.
 
@@ -881,14 +876,13 @@ Note: It will show the Rebuild button only for those builds which occurred afte
 <p>Continued..</p>
 
 <ul>
-    <li><a title="Continuous Delivery – Part 1: Our Jenkins Build Pipeline setup" href="http://www.multunus.com/2011/07/continuous-delivery-using-jenkins-build-pipeline/">Continuous Delivery – Part 1: Our Jenkins Build Pipeline setup</a></li>
-    <li><a title="Continuous Delivery – Part 2: Code metrics with metrical" href="http://www.multunus.com/2011/07/continuous-delivery-code-metrics-with-metrical/">Continuous Delivery – Part 2: Code metrics with metrical</a></li>
-    <li><a title="Continuous Delivery – Part 3: Running custom rake tasks during deployment" href="http://www.multunus.com/2011/07/continuous-delivery-contd/">Continuous Delivery – Part 3: Running custom rake tasks during deployment</a></li>
+    <li><a title="Continuous Delivery – Part 1: Our Jenkins Build Pipeline setup" href="http://new.multunus.com//blog/2011/07/continuous-delivery-using-jenkins-build-pipeline/">Continuous Delivery – Part 1: Our Jenkins Build Pipeline setup</a></li>
+    <li><a title="Continuous Delivery – Part 2: Code metrics with metrical" href="http://new.multunus.com//blog/2011/07/continuous-delivery-code-metrics-with-metrical/">Continuous Delivery – Part 2: Code metrics with metrical</a></li>
+    <li><a title="Continuous Delivery – Part 3: Running custom rake tasks during deployment" href="http://new.multunus.com//blog/2011/07/continuous-delivery-contd/">Continuous Delivery – Part 3: Running custom rake tasks during deployment</a></li>
 </ul>
 
 
-<div class="zemanta-pixie" style="margin-top: 10px; height: 15px;"><a class="zemanta-pixie-a" title="Enhanced by Zemanta" href="http://www.zemanta.com/"><img class="zemanta-pixie-img" style="border: none; float: right;" src="http://img.zemanta.com/zemified_e.png?x-id=37c95294-b89a-4f0c-91c2-51a1717f4ba4" alt="Enhanced by Zemanta" /></a></div>
-
+<p></div></p>
 ]]></content>
   </entry>
   
@@ -897,7 +891,7 @@ Note: It will show the Rebuild button only for those builds which occurred afte
     <link href="http://new.multunus.com//blog/2011/07/continuous-delivery-contd/"/>
     <updated>2011-07-31T15:50:54+05:30</updated>
     <id>http://new.multunus.com//blog/2011/07/continuous-delivery-contd</id>
-    <content type="html"><![CDATA[<p>One problem we faced with the pipeline setup what I had mentioned in my <a href="http://www.multunus.com/2011/07/continuous-delivery-using-jenkins-build-pipeline/">first post</a> was that - it was not handling how to run the extra tasks that we need to do in some of the deployments. Some examples are:</p>
+    <content type="html"><![CDATA[<p>One problem we faced with the pipeline setup what I had mentioned in my <a href="http://new.multunus.com//blog/2011/07/continuous-delivery-using-jenkins-build-pipeline/">first post</a> was that - it was not handling how to run the extra tasks that we need to do in some of the deployments. Some examples are:</p>
 
 <ul>
     <li>Reindex the solr/lucene indexes if any new field has been added to the index</li>
@@ -914,9 +908,9 @@ Note: It will show the Rebuild button only for those builds which occurred afte
 <p>Continued..</p>
 
 <ul>
-    <li><a title="Continuous Delivery – Part 1: Our Jenkins Build Pipeline setup" href="http://www.multunus.com/2011/07/continuous-delivery-using-jenkins-build-pipeline/">Continuous Delivery – Part 1: Our Jenkins Build Pipeline setup</a></li>
-    <li><a title="Continuous Delivery – Part 2: Code metrics with metrical" href="http://www.multunus.com/2011/07/continuous-delivery-code-metrics-with-metrical/">Continuous Delivery – Part 2: Code metrics with metrical</a></li>
-    <li><a title="Continuous Delivery – Part 4: Rolling back database migrations with Capistrano rollback" href="http://www.multunus.com/2011/08/continuous-delivery-part-3-rolling-back-database-migrations-with-capistrano-rollback/">Continuous Delivery – Part 4: Rolling back database migrations with Capistrano rollback</a></li>
+    <li><a title="Continuous Delivery – Part 1: Our Jenkins Build Pipeline setup" href="http://new.multunus.com//blog/2011/07/continuous-delivery-using-jenkins-build-pipeline/">Continuous Delivery – Part 1: Our Jenkins Build Pipeline setup</a></li>
+    <li><a title="Continuous Delivery – Part 2: Code metrics with metrical" href="http://new.multunus.com//blog/2011/07/continuous-delivery-code-metrics-with-metrical/">Continuous Delivery – Part 2: Code metrics with metrical</a></li>
+    <li><a title="Continuous Delivery – Part 4: Rolling back database migrations with Capistrano rollback" href="http://new.multunus.com//blog/2011/08/continuous-delivery-part-3-rolling-back-database-migrations-with-capistrano-rollback/">Continuous Delivery – Part 4: Rolling back database migrations with Capistrano rollback</a></li>
 </ul>
 
 
@@ -965,9 +959,9 @@ MetricFu::Configuration.run do |config|</p>
 <p>Continued..</p>
 
 <ul>
-    <li><a title="Continuous Delivery – Part 1: Our Jenkins Build Pipeline setup" href="http://www.multunus.com/2011/07/continuous-delivery-using-jenkins-build-pipeline/">Continuous Delivery – Part 1: Our Jenkins Build Pipeline setup</a></li>
-    <li><a title="Continuous Delivery – Part 3: Running custom rake tasks during deployment" href="http://www.multunus.com/2011/07/continuous-delivery-contd/">Continuous Delivery – Part 3: Running custom rake tasks during deployment</a></li>
-    <li><a title="Continuous Delivery – Part 4: Rolling back database migrations with Capistrano rollback" href="http://www.multunus.com/2011/08/continuous-delivery-part-3-rolling-back-database-migrations-with-capistrano-rollback/">Continuous Delivery – Part 4: Rolling back database migrations with Capistrano rollback</a></li>
+    <li><a title="Continuous Delivery – Part 1: Our Jenkins Build Pipeline setup" href="http://new.multunus.com//blog/2011/07/continuous-delivery-using-jenkins-build-pipeline/">Continuous Delivery – Part 1: Our Jenkins Build Pipeline setup</a></li>
+    <li><a title="Continuous Delivery – Part 3: Running custom rake tasks during deployment" href="http://new.multunus.com//blog/2011/07/continuous-delivery-contd/">Continuous Delivery – Part 3: Running custom rake tasks during deployment</a></li>
+    <li><a title="Continuous Delivery – Part 4: Rolling back database migrations with Capistrano rollback" href="http://new.multunus.com//blog/2011/08/continuous-delivery-part-3-rolling-back-database-migrations-with-capistrano-rollback/">Continuous Delivery – Part 4: Rolling back database migrations with Capistrano rollback</a></li>
 </ul>
 
 ]]></content>
@@ -1045,7 +1039,7 @@ MetricFu::Configuration.run do |config|</p>
 <div><strong> </strong></div>
 
 
-<p><a rel="attachment wp-att-1458" href="http://www.multunus.com/2011/07/productivity-enhancement-tools-mailcatcher-vogue-spritecow-and-railswizard/sprite-cow/"><img class="size-medium wp-image-1458 alignnone" src="http://www.multunus.com/wp-blog/wp-content/uploads/2011/07/sprite-cow-300x187.png" alt="" width="300" height="187" /></a></p>
+<p><a rel="attachment wp-att-1458" href="http://new.multunus.com//blog/2011/07/productivity-enhancement-tools-mailcatcher-vogue-spritecow-and-railswizard/sprite-cow/"><img class="size-medium wp-image-1458 alignnone" src="http://new.multunus.com//images/2011/07/sprite-cow-300x187.png" alt="" width="300" height="187" /></a></p>
 
 <h2><a href="http://railswizard.org/">RailsWizard</a></h2>
 
@@ -1171,9 +1165,9 @@ sudo nice --adjustment=19 apt-get install -y sun-java6-jre
 <p>Continued..</p>
 
 <ul>
-    <li><a title="Continuous Delivery – Part 2: Code metrics with metrical" href="http://www.multunus.com/2011/07/continuous-delivery-code-metrics-with-metrical/">Continuous Delivery – Part 2: Code metrics with metrical</a></li>
-    <li><a title="Continuous Delivery – Part 3: Running custom rake tasks during deployment" href="http://www.multunus.com/2011/07/continuous-delivery-contd/">Continuous Delivery – Part 3: Running custom rake tasks during deployment</a></li>
-    <li><a title="Continuous Delivery – Part 4: Rolling back database migrations with Capistrano rollback" href="http://www.multunus.com/2011/08/continuous-delivery-part-3-rolling-back-database-migrations-with-capistrano-rollback/">Continuous Delivery – Part 4: Rolling back database migrations with Capistrano rollback</a></li>
+    <li><a title="Continuous Delivery – Part 2: Code metrics with metrical" href="http://new.multunus.com//blog/2011/07/continuous-delivery-code-metrics-with-metrical/">Continuous Delivery – Part 2: Code metrics with metrical</a></li>
+    <li><a title="Continuous Delivery – Part 3: Running custom rake tasks during deployment" href="http://new.multunus.com//blog/2011/07/continuous-delivery-contd/">Continuous Delivery – Part 3: Running custom rake tasks during deployment</a></li>
+    <li><a title="Continuous Delivery – Part 4: Rolling back database migrations with Capistrano rollback" href="http://new.multunus.com//blog/2011/08/continuous-delivery-part-3-rolling-back-database-migrations-with-capistrano-rollback/">Continuous Delivery – Part 4: Rolling back database migrations with Capistrano rollback</a></li>
 </ul>
 
 

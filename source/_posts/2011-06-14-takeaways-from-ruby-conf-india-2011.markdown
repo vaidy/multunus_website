@@ -2,8 +2,6 @@
 comments: true
 layout: post
 title: Takeaways from Ruby Conf India 2011
-wordpress_id: 1290
-wordpress_url: http://www.multunus.com/?p=1290
 date: 2011-06-14 13:58:56.000000000 +05:30
 author: Leena
 categories:

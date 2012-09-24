@@ -2,8 +2,6 @@
 comments: true
 layout: post
 title: ! 'Learnings from 2009 '
-wordpress_id: 684
-wordpress_url: http://www.multunus.com/?p=684
 date: 2010-01-29 10:55:05.000000000 +05:30
 author: Vaidy
 categories:

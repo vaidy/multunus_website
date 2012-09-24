@@ -2,15 +2,13 @@
 comments: true
 layout: post
 title: ! 'Continuous Delivery of iOS apps using Jenkins and TestFlightApp '
-wordpress_id: 2289
-wordpress_url: http://www.multunus.com/?p=2114
 date: 2012-05-21 11:03:21.000000000 +05:30
 author: Leena
 categories:
 - All Posts
 - Continuous Delivery
 ---
-As mentioned in <a href="http://www.multunus.com/blog/all/continuous-delivery/">earlier posts</a> we've been doing Continuous Delivery for both Webapps and Android apps for quite sometime. This post is about setting up Continuous Delivery for iOS apps using Jenkins and <a href="http://testflightapp.com" target="_blank">TestFlightApp</a>. TestFlightApp is a free service which helps to do closed beta testing without putting into AppStore. Using their APIs, the process of delivering new versions of the app can be automated.
+As mentioned in <a href="/blog/categories/continuous-delivery/">earlier posts</a> we've been doing Continuous Delivery for both Webapps and Android apps for quite sometime. This post is about setting up Continuous Delivery for iOS apps using Jenkins and <a href="http://testflightapp.com" target="_blank">TestFlightApp</a>. TestFlightApp is a free service which helps to do closed beta testing without putting into AppStore. Using their APIs, the process of delivering new versions of the app can be automated.
 
 <!-- more -->
 

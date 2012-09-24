@@ -2,8 +2,6 @@
 comments: true
 layout: post
 title: Continuous Delivery for Android Apps – Part 2
-wordpress_id: 1742
-wordpress_url: http://www.multunus.com/?p=1742
 date: 2011-10-06 06:51:57.000000000 +05:30
 author: Leena
 categories:

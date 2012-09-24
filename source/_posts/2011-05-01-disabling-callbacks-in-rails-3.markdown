@@ -2,8 +2,6 @@
 comments: true
 layout: post
 title: Disabling callbacks in Rails 3
-wordpress_id: 1266
-wordpress_url: http://www.multunus.com/?p=1266
 date: 2011-05-01 02:10:17.000000000 +05:30
 author: Leena
 categories:

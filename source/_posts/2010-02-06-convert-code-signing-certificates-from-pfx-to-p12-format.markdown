@@ -2,8 +2,6 @@
 comments: true
 layout: post
 title: Convert code signing certificates from "pfx" to "p12" format
-wordpress_id: 744
-wordpress_url: http://www.multunus.com/?p=744
 date: 2010-02-06 05:13:34.000000000 +05:30
 author: Leena
 categories:

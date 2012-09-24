@@ -2,8 +2,6 @@
 comments: true
 layout: post
 title: Our experience with Comatose - the MicroCMS
-wordpress_id: 799
-wordpress_url: http://www.multunus.com/?p=799
 date: 2010-02-23 13:46:44.000000000 +05:30
 author: Vaidy
 categories:

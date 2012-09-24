@@ -2,8 +2,6 @@
 comments: true
 layout: post
 title: Script to merge two identical MySQL Databases
-wordpress_id: 1040
-wordpress_url: http://www.multunus.com/?p=1040
 date: 2011-03-21 07:43:51.000000000 +05:30
 author: Leena
 categories:

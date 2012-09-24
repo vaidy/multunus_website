@@ -2,8 +2,6 @@
 comments: true
 layout: post
 title: A round up of our presentations and writings
-wordpress_id: 2045
-wordpress_url: http://www.multunus.com/?p=2045
 date: 2012-02-27 23:59:30.000000000 +05:30
 author: Vaidy
 categories:
@@ -26,10 +24,10 @@ We started speaking at conferences last year. We've also been doing a fair bit o
 </ul>
 <strong>Agile India 2012</strong>: Leena and I spoke there on "Continuous Delivery for a Song". Here's the link to the <a href="http://submit2012india.agilealliance.org/node/8894">original proposal</a>. And here's the <a href="https://docs.google.com/a/multunus.com/present/view?id=0AQj1177vtu0MZHRoM2dmN180NzRneGp2bXRndw">link to the presentation</a>. It was a live demo - and by the comments we got from our audience, we think it went off fairly well.
 
-<a rel="attachment wp-att-2056" href="http://www.multunus.com/2012/02/a-round-up-of-our-presentations-and-writings/dsc_7209/"><img class="aligncenter size-medium wp-image-2056" title="Agile India 2012 Talk" src="http://www.multunus.com/wp-blog/wp-content/uploads/2012/02/DSC_7209-300x201.jpg" alt="" width="300" height="201" /></a>
+<img class="aligncenter size-medium" title="Agile India 2012 Talk" src="/images/DSC_7209-300x201.jpg" alt="" width="300" height="201" />
 
 <strong>Recent Writing: </strong>An article I wrote for YourStory.in was published late last year. It was titled "<a href="http://yourstory.in/2011/12/a-sneak-peek-into-mobile-app-opportunities-in-2012/">Mobile App Opportunities in 2012</a>".
 
-<strong>Blogging:</strong> Leena has written a lot of articles on Continuous Delivery <a href="http://www.multunus.com/blog/all/continuous-delivery/">on this blog itself</a>. And Akshay <a href="http://akshayatmultunus.wordpress.com/">has been writing regularly</a> since he joined us last year.
+<strong>Blogging:</strong> Leena has written a lot of articles on Continuous Delivery <a href="/blog/categories/continuous-delivery/">on this blog itself</a>. And Akshay <a href="http://akshayatmultunus.wordpress.com/">has been writing regularly</a> since he joined us last year.
 
 I hope you found this round up useful. I expect the Agile India organizers to upload videos of the all the talks soon. Once that happens, I'll update this post with the link to the video of our talk there.

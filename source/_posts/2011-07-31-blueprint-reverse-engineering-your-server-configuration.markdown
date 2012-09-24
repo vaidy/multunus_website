@@ -2,8 +2,6 @@
 comments: true
 layout: post
 title: Blueprint - reverse engineering your server configuration
-wordpress_id: 1489
-wordpress_url: http://www.multunus.com/?p=1489
 date: 2011-07-31 15:35:16.000000000 +05:30
 author: Leena
 categories:

@@ -2,8 +2,6 @@
 comments: true
 layout: post
 title: Setup Test Load Balancer using Jenkins
-wordpress_id: 1673
-wordpress_url: http://www.multunus.com/?p=1673
 date: 2011-09-23 09:40:07.000000000 +05:30
 author: KP
 categories:

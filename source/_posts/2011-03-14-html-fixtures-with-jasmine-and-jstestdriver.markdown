@@ -2,8 +2,6 @@
 comments: true
 layout: post
 title: HTML Fixtures with Jasmine and JSTestdriver
-wordpress_id: 1013
-wordpress_url: http://www.multunus.com/?p=1013
 date: 2011-03-14 15:03:07.000000000 +05:30
 author: Leena
 categories:

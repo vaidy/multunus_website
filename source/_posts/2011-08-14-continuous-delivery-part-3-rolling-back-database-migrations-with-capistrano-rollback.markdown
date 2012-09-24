@@ -3,8 +3,6 @@ comments: true
 layout: post
 title: ! 'Continuous Delivery - Part 4: Rolling back database migrations with Capistrano
   rollback'
-wordpress_id: 1527
-wordpress_url: http://www.multunus.com/?p=1527
 date: 2011-08-14 08:22:40.000000000 +05:30
 author: Leena
 categories:
@@ -21,8 +19,8 @@ The script is very simple, it extracts the version from the <code>schema.rb</cod
 
 Continued..
 <ul>
-	<li><a title="Continuous Delivery – Part 1: Our Jenkins Build Pipeline setup" href="http://www.multunus.com/2011/07/continuous-delivery-using-jenkins-build-pipeline/">Continuous Delivery – Part 1: Our Jenkins Build Pipeline setup</a></li>
-	<li><a title="Continuous Delivery – Part 2: Code metrics with metrical" href="http://www.multunus.com/2011/07/continuous-delivery-code-metrics-with-metrical/">Continuous Delivery – Part 2: Code metrics with metrical</a></li>
-	<li><a title="Continuous Delivery – Part 3: Running custom rake tasks during deployment" href="http://www.multunus.com/2011/07/continuous-delivery-contd/">Continuous Delivery – Part 3: Running custom rake tasks during deployment</a></li>
+	<li><a title="Continuous Delivery – Part 1: Our Jenkins Build Pipeline setup" href="/blog/2011/07/continuous-delivery-using-jenkins-build-pipeline/">Continuous Delivery – Part 1: Our Jenkins Build Pipeline setup</a></li>
+	<li><a title="Continuous Delivery – Part 2: Code metrics with metrical" href="/blog/2011/07/continuous-delivery-code-metrics-with-metrical/">Continuous Delivery – Part 2: Code metrics with metrical</a></li>
+	<li><a title="Continuous Delivery – Part 3: Running custom rake tasks during deployment" href="/blog/2011/07/continuous-delivery-contd/">Continuous Delivery – Part 3: Running custom rake tasks during deployment</a></li>
 </ul>
-<div class="zemanta-pixie" style="margin-top: 10px; height: 15px;"><a class="zemanta-pixie-a" title="Enhanced by Zemanta" href="http://www.zemanta.com/"><img class="zemanta-pixie-img" style="border: none; float: right;" src="http://img.zemanta.com/zemified_e.png?x-id=37c95294-b89a-4f0c-91c2-51a1717f4ba4" alt="Enhanced by Zemanta" /></a></div>
+</div>

@@ -2,8 +2,6 @@
 comments: true
 layout: post
 title: ! 'Continuous Delivery - Part 2: Code metrics with metrical'
-wordpress_id: 1500
-wordpress_url: http://www.multunus.com/?p=1500
 date: 2011-07-31 15:44:40.000000000 +05:30
 author: Leena
 categories:
@@ -40,7 +38,7 @@ For test coverage I've used <a href="https://github.com/colszowka/simplecov">Sim
 
 Continued..
 <ul>
-	<li><a title="Continuous Delivery – Part 1: Our Jenkins Build Pipeline setup" href="http://www.multunus.com/2011/07/continuous-delivery-using-jenkins-build-pipeline/">Continuous Delivery – Part 1: Our Jenkins Build Pipeline setup</a></li>
-	<li><a title="Continuous Delivery – Part 3: Running custom rake tasks during deployment" href="http://www.multunus.com/2011/07/continuous-delivery-contd/">Continuous Delivery – Part 3: Running custom rake tasks during deployment</a></li>
-	<li><a title="Continuous Delivery – Part 4: Rolling back database migrations with Capistrano rollback" href="http://www.multunus.com/2011/08/continuous-delivery-part-3-rolling-back-database-migrations-with-capistrano-rollback/">Continuous Delivery – Part 4: Rolling back database migrations with Capistrano rollback</a></li>
+	<li><a title="Continuous Delivery – Part 1: Our Jenkins Build Pipeline setup" href="/blog/2011/07/continuous-delivery-using-jenkins-build-pipeline/">Continuous Delivery – Part 1: Our Jenkins Build Pipeline setup</a></li>
+	<li><a title="Continuous Delivery – Part 3: Running custom rake tasks during deployment" href="/blog/2011/07/continuous-delivery-contd/">Continuous Delivery – Part 3: Running custom rake tasks during deployment</a></li>
+	<li><a title="Continuous Delivery – Part 4: Rolling back database migrations with Capistrano rollback" href="/blog/2011/08/continuous-delivery-part-3-rolling-back-database-migrations-with-capistrano-rollback/">Continuous Delivery – Part 4: Rolling back database migrations with Capistrano rollback</a></li>
 </ul>

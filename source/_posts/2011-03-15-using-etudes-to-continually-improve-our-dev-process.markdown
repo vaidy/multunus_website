@@ -2,8 +2,6 @@
 comments: true
 layout: post
 title: Using études to continually improve our development process
-wordpress_id: 1029
-wordpress_url: http://www.multunus.com/?p=1029
 date: 2011-03-15 10:12:59.000000000 +05:30
 author: Vaidy
 categories:

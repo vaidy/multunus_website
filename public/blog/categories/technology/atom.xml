@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Technology | Multunus Software Pvt. Ltd.]]></title>
   <link href="http://new.multunus.com//blog/categories/technology/atom.xml" rel="self"/>
   <link href="http://new.multunus.com//"/>
-  <updated>2012-09-24T11:58:33+05:30</updated>
+  <updated>2012-09-24T13:38:47+05:30</updated>
   <id>http://new.multunus.com//</id>
   <author>
     <name><![CDATA[Your Name]]></name>
@@ -124,7 +124,7 @@ One of the key principle of Continuous Delivery is <strong>To </strong><strong>
 
 <p>In this post we will be discussing how to use OpenGL Shader Language to manipulate pixels and create Image filter effects.</p>
 
-<p><a rel="attachment wp-att-1851" href="http://www.multunus.com/2011/10/simple-image-filter-using-opengl-es-in-android/combined/"><img class="aligncenter size-medium wp-image-1851" src="http://www.multunus.com/wp-blog/wp-content/uploads/2011/10/combined-300x250.png" alt="" width="300" height="250" /></a></p>
+<p><img class="aligncenter size-medium wp-image-1851" src="http://new.multunus.com//images/combined-300x250.png" alt="" width="300" height="250" /></p>
 
 <p>As with any OpenGL app, we will start with setting up the view.</p>
 
@@ -216,7 +216,7 @@ References: <a href="http://skaug.no/ingvald/2011/09/android-app-with-jenkins/"
     <link href="http://new.multunus.com//blog/2011/07/continuous-delivery-contd/"/>
     <updated>2011-07-31T15:50:54+05:30</updated>
     <id>http://new.multunus.com//blog/2011/07/continuous-delivery-contd</id>
-    <content type="html"><![CDATA[<p>One problem we faced with the pipeline setup what I had mentioned in my <a href="http://www.multunus.com/2011/07/continuous-delivery-using-jenkins-build-pipeline/">first post</a> was that - it was not handling how to run the extra tasks that we need to do in some of the deployments. Some examples are:</p>
+    <content type="html"><![CDATA[<p>One problem we faced with the pipeline setup what I had mentioned in my <a href="http://new.multunus.com//blog/2011/07/continuous-delivery-using-jenkins-build-pipeline/">first post</a> was that - it was not handling how to run the extra tasks that we need to do in some of the deployments. Some examples are:</p>
 
 <ul>
     <li>Reindex the solr/lucene indexes if any new field has been added to the index</li>
@@ -233,9 +233,9 @@ References: <a href="http://skaug.no/ingvald/2011/09/android-app-with-jenkins/"
 <p>Continued..</p>
 
 <ul>
-    <li><a title="Continuous Delivery – Part 1: Our Jenkins Build Pipeline setup" href="http://www.multunus.com/2011/07/continuous-delivery-using-jenkins-build-pipeline/">Continuous Delivery – Part 1: Our Jenkins Build Pipeline setup</a></li>
-    <li><a title="Continuous Delivery – Part 2: Code metrics with metrical" href="http://www.multunus.com/2011/07/continuous-delivery-code-metrics-with-metrical/">Continuous Delivery – Part 2: Code metrics with metrical</a></li>
-    <li><a title="Continuous Delivery – Part 4: Rolling back database migrations with Capistrano rollback" href="http://www.multunus.com/2011/08/continuous-delivery-part-3-rolling-back-database-migrations-with-capistrano-rollback/">Continuous Delivery – Part 4: Rolling back database migrations with Capistrano rollback</a></li>
+    <li><a title="Continuous Delivery – Part 1: Our Jenkins Build Pipeline setup" href="http://new.multunus.com//blog/2011/07/continuous-delivery-using-jenkins-build-pipeline/">Continuous Delivery – Part 1: Our Jenkins Build Pipeline setup</a></li>
+    <li><a title="Continuous Delivery – Part 2: Code metrics with metrical" href="http://new.multunus.com//blog/2011/07/continuous-delivery-code-metrics-with-metrical/">Continuous Delivery – Part 2: Code metrics with metrical</a></li>
+    <li><a title="Continuous Delivery – Part 4: Rolling back database migrations with Capistrano rollback" href="http://new.multunus.com//blog/2011/08/continuous-delivery-part-3-rolling-back-database-migrations-with-capistrano-rollback/">Continuous Delivery – Part 4: Rolling back database migrations with Capistrano rollback</a></li>
 </ul>
 
 
@@ -284,9 +284,9 @@ MetricFu::Configuration.run do |config|</p>
 <p>Continued..</p>
 
 <ul>
-    <li><a title="Continuous Delivery – Part 1: Our Jenkins Build Pipeline setup" href="http://www.multunus.com/2011/07/continuous-delivery-using-jenkins-build-pipeline/">Continuous Delivery – Part 1: Our Jenkins Build Pipeline setup</a></li>
-    <li><a title="Continuous Delivery – Part 3: Running custom rake tasks during deployment" href="http://www.multunus.com/2011/07/continuous-delivery-contd/">Continuous Delivery – Part 3: Running custom rake tasks during deployment</a></li>
-    <li><a title="Continuous Delivery – Part 4: Rolling back database migrations with Capistrano rollback" href="http://www.multunus.com/2011/08/continuous-delivery-part-3-rolling-back-database-migrations-with-capistrano-rollback/">Continuous Delivery – Part 4: Rolling back database migrations with Capistrano rollback</a></li>
+    <li><a title="Continuous Delivery – Part 1: Our Jenkins Build Pipeline setup" href="http://new.multunus.com//blog/2011/07/continuous-delivery-using-jenkins-build-pipeline/">Continuous Delivery – Part 1: Our Jenkins Build Pipeline setup</a></li>
+    <li><a title="Continuous Delivery – Part 3: Running custom rake tasks during deployment" href="http://new.multunus.com//blog/2011/07/continuous-delivery-contd/">Continuous Delivery – Part 3: Running custom rake tasks during deployment</a></li>
+    <li><a title="Continuous Delivery – Part 4: Rolling back database migrations with Capistrano rollback" href="http://new.multunus.com//blog/2011/08/continuous-delivery-part-3-rolling-back-database-migrations-with-capistrano-rollback/">Continuous Delivery – Part 4: Rolling back database migrations with Capistrano rollback</a></li>
 </ul>
 
 ]]></content>

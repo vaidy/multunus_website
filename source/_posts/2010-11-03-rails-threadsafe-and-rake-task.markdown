@@ -2,8 +2,6 @@
 comments: true
 layout: post
 title: Rails threadsafe and rake task
-wordpress_id: 954
-wordpress_url: http://www.multunus.com/?p=954
 date: 2010-11-03 15:22:08.000000000 +05:30
 author: Leena
 categories:

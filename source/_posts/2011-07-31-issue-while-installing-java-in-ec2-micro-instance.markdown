@@ -2,8 +2,6 @@
 comments: true
 layout: post
 title: Issue while installing Java in EC2 Micro instance
-wordpress_id: 1409
-wordpress_url: http://www.multunus.com/?p=1409
 date: 2011-07-31 14:22:30.000000000 +05:30
 author: Leena
 categories:

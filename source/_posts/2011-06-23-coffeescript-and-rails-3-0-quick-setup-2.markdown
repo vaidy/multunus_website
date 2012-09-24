@@ -2,8 +2,6 @@
 comments: true
 layout: post
 title: CoffeeScript and Rails 3.0 - Quick setup
-wordpress_id: 1304
-wordpress_url: http://www.multunus.com/?p=1304
 date: 2011-06-23 14:10:58.000000000 +05:30
 author: Manoj
 categories:
