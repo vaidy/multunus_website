@@ -34,5 +34,5 @@ What it takes to build such software:
 </ul>
 </div>
 Our version of the software life-"cycle" :-) :
+<img src="/images/CopyofBalancedswdevelopment-e1334671302237.png" alt="Balanced Software Development" title="Balancedswdevelopment" width="500" height="452" class="alignnone size-full" />
 
-[singlepic id=197 w=740 h=555 float=]

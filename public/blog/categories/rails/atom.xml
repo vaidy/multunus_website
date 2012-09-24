@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Rails | Multunus Software Pvt. Ltd.]]></title>
   <link href="http://www.multunus.com//blog/categories/rails/atom.xml" rel="self"/>
   <link href="http://www.multunus.com//"/>
-  <updated>2012-09-24T14:10:01+05:30</updated>
+  <updated>2012-09-24T15:05:09+05:30</updated>
   <id>http://www.multunus.com//</id>
   <author>
     <name><![CDATA[Your Name]]></name>
@@ -59,7 +59,7 @@
 <div><strong> </strong></div>
 
 
-<p><a rel="attachment wp-att-1458" href="http://www.multunus.com//blog/2011/07/productivity-enhancement-tools-mailcatcher-vogue-spritecow-and-railswizard/sprite-cow/"><img class="size-medium wp-image-1458 alignnone" src="http://www.multunus.com//images/2011/07/sprite-cow-300x187.png" alt="" width="300" height="187" /></a></p>
+<p><img class="size-medium wp-image-1458 alignnone" src="http://www.multunus.com//images/sprite-cow-300x187.png" alt="" width="300" height="187" /></p>
 
 <h2><a href="http://railswizard.org/">RailsWizard</a></h2>
 
@@ -70,7 +70,7 @@
 
 <p><strong>Rating</strong>: Moderately useful</p>
 
-<p><a rel="attachment wp-att-1456" href="http://www.multunus.com/2011/07/productivity-enhancement-tools-mailcatcher-vogue-spritecow-and-railswizard/rails-wizard/"><img src="http://www.multunus.com/wp-blog/wp-content/uploads/2011/07/rails-wizard-300x187.png" alt="" width="300" height="187" /></a></p>
+<p><img src="http://www.multunus.com//images/rails-wizard-300x187.png" alt="" width="300" height="187" /></a></p>
 ]]></content>
   </entry>
   
@@ -119,8 +119,6 @@ sys 0m14.269s</pre>
 
 
 <p>But parallel_tests by default spawns multiple processes depending upon the "core" i.e. on a dual core it starts 2 processes unless you mention otherwise.</p>
-
-<p><strong>Update: </strong>We've fixed the 20 failures mentioned above. Those started coming all of a sudden, and how we have fixed the same can be found <a href="http://www.multunus.com//blog/2011/06/rspec-issue-with-include-helper-in-spec/">here</a>.</p>
 ]]></content>
   </entry>
   
@@ -131,57 +129,69 @@ sys 0m14.269s</pre>
     <id>http://www.multunus.com//blog/2011/06/coffeescript-and-rails-3-0-quick-setup-2</id>
     <content type="html"><![CDATA[<p>I have been hearing a lot about CoffeeScript nowadays as you must have as well. Yes, it is built into Rails 3.1 by default. However I'm still working on a Rails 3.0 project, where I'm thinking of starting to use CoffeeScript. So, this blog post concentrates on how to quickly setup CoffeeScript into your existing Rails 3.0 project. For more details refer to the links at the bottom of this post.</p>
 
-<p><strong>Step 1:</strong> Add these to Gemfile
-[sourcecode language="ruby"]
-gem 'therubyracer', :require =&gt; false
+<p><strong>Step 1:</strong> Add these to Gemfile</p>
+
+<p><code>
+gem 'therubyracer', :require =&amp;gt; false
 gem 'barista'
-[/sourcecode]
-'barista' gem takes care of installing coffee-script gem and its dependencies. 'therubyracer' is the javascript engine for ruby.</p>
+</code></p>
 
-<p><strong>Step 2:</strong> Run Bundle Install to install coffee-script gem and other required gems
-[sourcecode language="shell"]
+<p>'barista' gem takes care of installing coffee-script gem and its dependencies. 'therubyracer' is the javascript engine for ruby.</p>
+
+<p><strong>Step 2:</strong> Run Bundle Install to install coffee-script gem and other required gems</p>
+
+<p><code>
 bundle install
-[/sourcecode]</p>
+</code></p>
 
-<p><strong>Step 3:</strong> Generate Barista initializer file config/initializers/barista_config.rb
-[sourcecode language="shell"]
+<p><strong>Step 3:</strong> Generate Barista initializer file config/initializers/barista_config.rb</p>
+
+<p><code>
 rails generate barista:install
-[/sourcecode]</p>
+</code></p>
 
 <p><strong>Step 4(optional): </strong>Lets  configure barista to compile all coffeescript code into public/javascripts/coffeescripts/ folder (this is optional, if not configured compiled code will be placed under public/javascripts folder)</p>
 
-<p>config/initializers/barista_config.rb, line 7.
-[sourcecode language="ruby"]</p>
+<p>config/initializers/barista_config.rb, line 7.</p>
+
+<p>```</p>
 
 <h1>Change the output root, causing Barista to compile into public/coffeescripts</h1>
 
 <p>c.output_root = Rails.root.join(&quot;public&quot;, &quot;javascripts&quot;, &quot;coffeescripts&quot;)
-[/sourcecode]</p>
+```</p>
 
 <p><strong>Step 5:</strong> Create a folder 'coffeescripts' under app/ to have all your coffeescripts. All file names should end with .coffee
-Example: app/coffeescripts/user.coffee
-[sourcecode language="ruby"]
-jQuery -&gt;
- $('form').validate()
-[/sourcecode]</p>
+Example: app/coffeescripts/user.coffee</p>
 
-<p><strong>Step 6:</strong> Above code will be complied to JS file under public/javascripts/coffeescripts/user.js. Example code:
-[sourcecode language="javascript"]
+<p><code>
+jQuery -&amp;gt;
+ $('form').validate()
+</code></p>
+
+<p><strong>Step 6:</strong> Above code will be complied to JS file under public/javascripts/coffeescripts/user.js. Example code:</p>
+
+<p>```
  /<em> DO NOT MODIFY. This file was compiled Thu, 23 Jun 2011 07:13:34 GMT from
  * /home/manoj/my_rails_app/app/coffeescripts/user.coffee
  </em>/
  (function() {
- jQuery(function() {
- return $('form').validate();
- });
- }).call(this);
-[/sourcecode]</p>
+  jQuery(function() {</p>
 
-<p><strong>Step 7:</strong> Include these coffeescript js files in your view/layouts using include tag.
-[sourcecode language="ruby"]
-&lt;%= javascript_include_tag 'application', 'coffeescripts/user' %&gt;
-[/sourcecode]
-And you're done with setup. As the complied code is neat JS code, your page should continue to work fine :) Going forward you can start using CoffeeScript for writing JS code.</p>
+<pre><code>return $('form').validate();
+</code></pre>
+
+<p>  });
+}).call(this);
+```</p>
+
+<p><strong>Step 7:</strong> Include these coffeescript js files in your view/layouts using include tag.</p>
+
+<p><code>
+&lt;%= javascript_include_tag 'application', 'coffeescripts/user'&gt;
+</code></p>
+
+<p>And you're done with setup. As the complied code is neat JS code, your page should continue to work fine :) Going forward you can start using CoffeeScript for writing JS code.</p>
 
 <p>For deployment we can use the <code>barista:brew</code> rake task in the Capistrano script using an "after" hook</p>
 

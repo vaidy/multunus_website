@@ -40,15 +40,12 @@ With the current approach, the advantages are:
 </ul>
 One of the major problems I had faced in the earlier "manual" system - was the inability to pass parameters between builds. For example, once the app would be moved to staging, a tag is created and when its ready to be pushed to production, we'd have to merge that particular tag to production and then push it.
 
-To achieve the above I used the "parameterized build" option. In Jenkins, the parameters get converted to Environment Variables and got passed to the downstream job. This is how you can set the parameterized build:
-<p style="text-align: left;">[singlepic id=184 w=620 h=300 float=center]</p>
-When you fire the build, it prompts for the value of the TAG parameter. Once entered this would be available as an Environment variable for this job and all its downstream jobs.
+To achieve the above I used the "parameterized build" option. In Jenkins, the parameters get converted to Environment Variables and got passed to the downstream job.
+When you fire the build, it prompts for the value of the parameter. Once entered this would be available as an Environment variable for this job and all its downstream jobs.
 
 For eg: in the pipeline, the downstream project is "Stage deploy", and it will know the value for TAG and uses that value to create a tag in Git after successful deployment.
 
-When it is ready for production deployment it merges with the same tag and deploys to production. In the latest version of the plugin, moving to the next step is <strong>not</strong> triggered automatically and you can retry the failed ones. The following is a sample pipeline dashboard view:
-
-[singlepic id=183 w=620 h=300 float=center]
+When it is ready for production deployment it merges with the same tag and deploys to production. In the latest version of the plugin, moving to the next step is <strong>not</strong> triggered automatically and you can retry the failed ones.
 
 <strong>Note:</strong> Capturing the parameter will happen <strong>only</strong> for the first job. So, if the parameterized job is <em>not</em> the first one in the pipeline, the capture of the parameter will not happen.
 

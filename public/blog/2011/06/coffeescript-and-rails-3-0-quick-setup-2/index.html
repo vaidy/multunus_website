@@ -161,57 +161,74 @@
 
 <div class="entry-content"><p>I have been hearing a lot about CoffeeScript nowadays as you must have as well. Yes, it is built into Rails 3.1 by default. However I&#8217;m still working on a Rails 3.0 project, where I&#8217;m thinking of starting to use CoffeeScript. So, this blog post concentrates on how to quickly setup CoffeeScript into your existing Rails 3.0 project. For more details refer to the links at the bottom of this post.</p>
 
-<p><strong>Step 1:</strong> Add these to Gemfile
-[sourcecode language=&#8221;ruby&#8221;]
-gem &#8216;therubyracer&#8217;, :require =&gt; false
-gem &#8216;barista&#8217;
-[/sourcecode]
-&#8216;barista&#8217; gem takes care of installing coffee-script gem and its dependencies. &#8216;therubyracer&#8217; is the javascript engine for ruby.</p>
+<p><strong>Step 1:</strong> Add these to Gemfile</p>
 
-<p><strong>Step 2:</strong> Run Bundle Install to install coffee-script gem and other required gems
-[sourcecode language=&#8221;shell&#8221;]
-bundle install
-[/sourcecode]</p>
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>gem 'therubyracer', :require =&gt; false
+</span><span class='line'>gem 'barista'</span></code></pre></td></tr></table></div></figure>
 
-<p><strong>Step 3:</strong> Generate Barista initializer file config/initializers/barista_config.rb
-[sourcecode language=&#8221;shell&#8221;]
-rails generate barista:install
-[/sourcecode]</p>
+
+<p>&#8216;barista&#8217; gem takes care of installing coffee-script gem and its dependencies. &#8216;therubyracer&#8217; is the javascript engine for ruby.</p>
+
+<p><strong>Step 2:</strong> Run Bundle Install to install coffee-script gem and other required gems</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>bundle install</span></code></pre></td></tr></table></div></figure>
+
+
+<p><strong>Step 3:</strong> Generate Barista initializer file config/initializers/barista_config.rb</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>rails generate barista:install</span></code></pre></td></tr></table></div></figure>
+
 
 <p><strong>Step 4(optional): </strong>Lets  configure barista to compile all coffeescript code into public/javascripts/coffeescripts/ folder (this is optional, if not configured compiled code will be placed under public/javascripts folder)</p>
 
-<p>config/initializers/barista_config.rb, line 7.
-[sourcecode language=&#8221;ruby&#8221;]</p>
+<p>config/initializers/barista_config.rb, line 7.</p>
 
-<h1>Change the output root, causing Barista to compile into public/coffeescripts</h1>
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'># Change the output root, causing Barista to compile into public/coffeescripts
+</span><span class='line'>c.output_root = Rails.root.join(&quot;public&quot;, &quot;javascripts&quot;, &quot;coffeescripts&quot;)</span></code></pre></td></tr></table></div></figure>
 
-<p>c.output_root = Rails.root.join(&quot;public&quot;, &quot;javascripts&quot;, &quot;coffeescripts&quot;)
-[/sourcecode]</p>
 
 <p><strong>Step 5:</strong> Create a folder &#8216;coffeescripts&#8217; under app/ to have all your coffeescripts. All file names should end with .coffee
-Example: app/coffeescripts/user.coffee
-[sourcecode language=&#8221;ruby&#8221;]
-jQuery -&gt;
- $(&#8216;form&#8217;).validate()
-[/sourcecode]</p>
+Example: app/coffeescripts/user.coffee</p>
 
-<p><strong>Step 6:</strong> Above code will be complied to JS file under public/javascripts/coffeescripts/user.js. Example code:
-[sourcecode language=&#8221;javascript&#8221;]
- /<em> DO NOT MODIFY. This file was compiled Thu, 23 Jun 2011 07:13:34 GMT from
- * /home/manoj/my_rails_app/app/coffeescripts/user.coffee
- </em>/
- (function() {
- jQuery(function() {
- return $(&#8216;form&#8217;).validate();
- });
- }).call(this);
-[/sourcecode]</p>
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>jQuery -&gt;
+</span><span class='line'> $('form').validate()</span></code></pre></td></tr></table></div></figure>
 
-<p><strong>Step 7:</strong> Include these coffeescript js files in your view/layouts using include tag.
-[sourcecode language=&#8221;ruby&#8221;]
-&lt;%= javascript_include_tag &#8216;application&#8217;, &#8216;coffeescripts/user&#8217; %&gt;
-[/sourcecode]
-And you&#8217;re done with setup. As the complied code is neat JS code, your page should continue to work fine :) Going forward you can start using CoffeeScript for writing JS code.</p>
+
+<p><strong>Step 6:</strong> Above code will be complied to JS file under public/javascripts/coffeescripts/user.js. Example code:</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'> /* DO NOT MODIFY. This file was compiled Thu, 23 Jun 2011 07:13:34 GMT from
+</span><span class='line'> * /home/manoj/my_rails_app/app/coffeescripts/user.coffee
+</span><span class='line'> */
+</span><span class='line'> (function() {
+</span><span class='line'>  jQuery(function() {
+</span><span class='line'>    return $('form').validate();
+</span><span class='line'>  });
+</span><span class='line'>}).call(this);</span></code></pre></td></tr></table></div></figure>
+
+
+<p><strong>Step 7:</strong> Include these coffeescript js files in your view/layouts using include tag.</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>&lt;%= javascript_include_tag 'application', 'coffeescripts/user'&gt;</span></code></pre></td></tr></table></div></figure>
+
+
+<p>And you&#8217;re done with setup. As the complied code is neat JS code, your page should continue to work fine :) Going forward you can start using CoffeeScript for writing JS code.</p>
 
 <p>For deployment we can use the <code>barista:brew</code> rake task in the Capistrano script using an &#8220;after&#8221; hook</p>
 

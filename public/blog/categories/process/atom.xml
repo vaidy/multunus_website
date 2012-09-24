@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Process | Multunus Software Pvt. Ltd.]]></title>
   <link href="http://www.multunus.com//blog/categories/process/atom.xml" rel="self"/>
   <link href="http://www.multunus.com//"/>
-  <updated>2012-09-24T14:10:01+05:30</updated>
+  <updated>2012-09-24T15:05:09+05:30</updated>
   <id>http://www.multunus.com//</id>
   <author>
     <name><![CDATA[Your Name]]></name>
@@ -113,7 +113,7 @@ One of the key principle of Continuous Delivery is <strong>To </strong><strong>
     <link href="http://www.multunus.com//blog/2011/10/continuous-delivery-for-android-apps-part-2/"/>
     <updated>2011-10-06T06:51:57+05:30</updated>
     <id>http://www.multunus.com//blog/2011/10/continuous-delivery-for-android-apps-part-2</id>
-    <content type="html"><![CDATA[<p>This post talks about how to run tests for the build setup as mentioned in <a href="http://www.multunus.com//continuous-delivery-for-android-apps-part-1/">Part 1</a>.</p>
+    <content type="html"><![CDATA[<p>This post talks about how to run tests for the build setup as mentioned in <a href="http://www.multunus.com//blog/2011/09/continuous-delivery-for-android-apps-part-1/">Part 1</a>.</p>
 
 <h3><span style="text-decoration: underline;">Generate the build script for test</span></h3>
 
@@ -159,9 +159,6 @@ description="Runs tests from the package defined in test.package property"&gt;
 <p>You can change the ant commands to <span style="font-family: Consolas, Monaco, 'Courier New', Courier, monospace; line-height: 18px;">clean run-tests release </span>in Jenkins to run the tests as part of packaging.</p>
 
 <p>Next I will be writing about how to start emulator from Jenkins while running the tests.</p>
-
-<div class="zemanta-pixie" style="margin-top: 10px; height: 15px;"><a class="zemanta-pixie-a" title="Enhanced by Zemanta" href="http://www.zemanta.com/"><img class="zemanta-pixie-img" style="border: none; float: right;" src="http://img.zemanta.com/zemified_e.png?x-id=96462303-c79f-4147-ace0-66d89521eb71" alt="Enhanced by Zemanta" /></a></div>
-
 ]]></content>
   </entry>
   
@@ -211,9 +208,6 @@ description="Runs tests from the package defined in test.package property"&gt;
 
 <p><span style="color: #008000;"><strong>
 </strong></span></p>
-
-<div class="zemanta-pixie" style="margin-top: 10px; height: 15px;"><a class="zemanta-pixie-a" title="Enhanced by Zemanta" href="http://www.zemanta.com/"><img class="zemanta-pixie-img" style="border: none; float: right;" src="http://img.zemanta.com/zemified_e.png?x-id=b68198f2-3678-4b4b-af9e-0948f94e83f5" alt="Enhanced by Zemanta" /></a></div>
-
 ]]></content>
   </entry>
   
@@ -262,7 +256,7 @@ References: <a href="http://skaug.no/ingvald/2011/09/android-app-with-jenkins/"
     <id>http://www.multunus.com//blog/2011/09/rebuilding-in-jenkins</id>
     <content type="html"><![CDATA[<div>
 
-One option that might be required after setting up a <a href="http://www.multunus.com//blog/2011/08/continuous-delivery-setup-jenkins-build-pipeline-setup/">build pipeline</a> is the provision to redeploy an earlier version by click of a button. This can become handy when we find a bug in the production and want to see when the bug got introduced. For that we will have to redeploy the earlier version to the staging/UAT environment and test the same.
+One option that might be required after setting up a <a href="http://www.multunus.com//blog/2011/07/continuous-delivery-using-jenkins-build-pipeline/">build pipeline</a> is the provision to redeploy an earlier version by click of a button. This can become handy when we find a bug in the production and want to see when the bug got introduced. For that we will have to redeploy the earlier version to the staging/UAT environment and test the same.
 
 Jenkins by default does not allow to rerun any of the earlier jobs. But you can achieve this by the <a href="https://wiki.jenkins-ci.org/display/JENKINS/Rebuild+Plugin">Rebuild</a> plugin. It allows you to rebuild any job provided its parameterized build. It also allows you override the parameters. It will show the "Rebuild" button at the left side as shown below when you go to a specific build page:
 

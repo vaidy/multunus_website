@@ -18,7 +18,8 @@ But I could not make it work with JSTestDriver as the server was not able to fin
 
 Create a file fixture_generator.rb and save it in spec/support directory. The contents of the file is as follows:
 <pre><code>
-[sourcecode language="ruby"]
+
+```
 RSpec::Rails::ControllerExampleGroup.class_eval do
 
   # Saves the markup to a fixture file using the given name
@@ -60,12 +61,12 @@ RSpec::Rails::ControllerExampleGroup.class_eval do
     markup.gsub('&lt;body', '&lt;div').gsub('&lt;/body&gt;', '&lt;/div&gt;')
   end
 end
-[/sourcecode]
+```
 
  </code></pre>
 Call the save_fixture within the controller spec as follows:
 <pre><code>
-[sourcecode language="ruby"]
+```
 describe 'Sign up' do
     it &quot;should show the signup form&quot; do
       get :new
@@ -73,7 +74,7 @@ describe 'Sign up' do
       save_fixture(html_for('body'), 'Signup')
     end
 end
-[/sourcecode]
+```
 
  </code></pre>
 The above will create a file Signup.js in the path <code>spec/javascripts/helpers</code>
@@ -84,7 +85,7 @@ For this the spec/javascripts/helpers should be added to the load path for JSTD 
 
 Then call the method within the test.
 
-[sourcecode language="ruby"]
+```
 describe('Validate registration form', function () {
 
   beforeEach(function () {
@@ -100,7 +101,7 @@ describe('Validate registration form', function () {
       expect($('.status').first().text()).toMatch('Please enter your name')
   });
 });
-[/sourcecode]
+```
 
 Thats all. In this way it is assured that the HTML is consistent with the actual view. The only thing that needs to be taken care is to make sure that the controller spec should be run whenever there is a change in the DOM, so that it is available to JS unit tests.
 

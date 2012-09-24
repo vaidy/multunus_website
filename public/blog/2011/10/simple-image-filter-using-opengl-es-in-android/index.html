@@ -181,16 +181,25 @@ We will be concentrating on Vertex and Fragment processing phases in OpenGL pipe
 
 <p><strong>Vertex shader</strong></p>
 
-<p>[sourcecode language=&#8221;c&#8221;]
-uniform mat4 uMVPMatrix;
-attribute vec4 aPosition;
-attribute vec2 aTextureCoord;
-varying vec2 vTextureCoord;
-void main() {
-  gl_Position = uMVPMatrix * aPosition
-  vTextureCoord = aTextureCoord
-}
-[/sourcecode]</p>
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>uniform mat4 uMVPMatrix;
+</span><span class='line'>attribute vec4 aPosition;
+</span><span class='line'>attribute vec2 aTextureCoord;
+</span><span class='line'>varying vec2 vTextureCoord;
+</span><span class='line'>void main() {
+</span><span class='line'>  gl_Position = uMVPMatrix * aPosition
+</span><span class='line'>  vTextureCoord = aTextureCoord
+</span><span class='line'>}</span></code></pre></td></tr></table></div></figure>
+
+
+
 
 <p dir="ltr">The Vertex shader is executed for each vertex that is to be drawn. Here, we are drawing a square and mapping the texture on to that.</p>
 
@@ -199,16 +208,23 @@ void main() {
 
 <p><strong>Fragment Shader</strong></p>
 
-<p>[sourcecode language=&#8221;c&#8221;]
-precision mediump float;
-varying vec2 vTextureCoord;
-uniform sampler2D sTexture;
-void main() {
-   vec2 cen = vec2(0.5,0.5) - vTextureCoord.xy;
-   vec2 mcen = -0.07<em>log(length(cen))</em>normalize(cen);
-   gl_FragColor = texture2D(sTexture, vTextureCoord.xy-mcen);
-}
-[/sourcecode]</p>
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>precision mediump float;
+</span><span class='line'>varying vec2 vTextureCoord;
+</span><span class='line'>uniform sampler2D sTexture;
+</span><span class='line'>void main() {
+</span><span class='line'>   vec2 cen = vec2(0.5,0.5) - vTextureCoord.xy;
+</span><span class='line'>   vec2 mcen = -0.07*log(length(cen))*normalize(cen);
+</span><span class='line'>   gl_FragColor = texture2D(sTexture, vTextureCoord.xy-mcen);
+</span><span class='line'>}</span></code></pre></td></tr></table></div></figure>
+
 
 <p dir="ltr"></p>
 

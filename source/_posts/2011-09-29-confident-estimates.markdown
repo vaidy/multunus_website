@@ -40,4 +40,4 @@ If you're curious on what the client's reaction was, when we sent across the rev
 
 <span style="color: #008000;"><strong>
 </strong></span>
-<div class="zemanta-pixie" style="margin-top: 10px; height: 15px;"><a class="zemanta-pixie-a" title="Enhanced by Zemanta" href="http://www.zemanta.com/"><img class="zemanta-pixie-img" style="border: none; float: right;" src="http://img.zemanta.com/zemified_e.png?x-id=b68198f2-3678-4b4b-af9e-0948f94e83f5" alt="Enhanced by Zemanta" /></a></div>
+

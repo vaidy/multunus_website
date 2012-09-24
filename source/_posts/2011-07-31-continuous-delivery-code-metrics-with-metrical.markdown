@@ -23,7 +23,7 @@ As I mentioned above, tools such as flay and flog, which comes as part of metric
 
 <span style="font-family: Consolas, Monaco, 'Courier New', Courier, monospace; line-height: 18px;"> </span>
 
-[sourcecode language="ruby"]
+```
 MetricFu::Configuration.run do |config|
         config.code_dirs = ['app', 'lib']
         config.syntax_highlighting = false
@@ -32,7 +32,7 @@ MetricFu::Configuration.run do |config|
         config.rcov[:test_files] = ['spec/**/*_spec.rb']
         config.rcov[:rcov_opts] &lt;&lt; &quot;-Ispec&quot; # Needed to find spec_helper
 end
-[/sourcecode]
+```
 
 For test coverage I've used <a href="https://github.com/colszowka/simplecov">Simplecov</a> which is easy to setup. It will generate the coverage report whenever you run the tests. This also generated html report which can be integrated easily into Jenkins. As mentioned <a href="https://github.com/colszowka/simplecov/issues/42">here</a> in the issue list, it does not generate the report when you are running with <a href="https://github.com/timcharper/spork/wiki">spork</a>.
 

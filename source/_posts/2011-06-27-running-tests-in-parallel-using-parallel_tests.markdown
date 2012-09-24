@@ -41,4 +41,4 @@ The feature, I feel, missing in parallel_tests compared to TLB is the logic it u
 <pre>"2 processes for 162 specs, 81 specs per process"</pre>
 But parallel_tests by default spawns multiple processes depending upon the "core" i.e. on a dual core it starts 2 processes unless you mention otherwise.
 
-<strong>Update: </strong>We've fixed the 20 failures mentioned above. Those started coming all of a sudden, and how we have fixed the same can be found <a href="/blog/2011/06/rspec-issue-with-include-helper-in-spec/">here</a>.
+

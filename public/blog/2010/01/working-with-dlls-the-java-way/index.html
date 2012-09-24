@@ -189,30 +189,44 @@
 
 <p>Following is the TimerState VB class. In this class, we have an event <em>UpdateTime</em> which raises an event when to notify updated time.</p>
 
-<p>[vb]
- ﻿&lt;Microsoft.VisualBasic.ComClass()&gt; Public Class TimerState</p>
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>
+</span><span class='line'>    Public Event UpdateTime(ByVal Jump As Double)
+</span><span class='line'>
+</span><span class='line'>    Public Sub TimerTask(ByVal Duration As Double)
+</span><span class='line'>        Dim Start As Double
+</span><span class='line'>        Dim Second As Double
+</span><span class='line'>        Dim SoFar As Double
+</span><span class='line'>
+</span><span class='line'>        Start = Timer
+</span><span class='line'>        SoFar = Start
+</span><span class='line'>        Do While Timer &lt; Start + Duration
+</span><span class='line'>            If Timer - SoFar &gt;= 0.1 Then
+</span><span class='line'>                SoFar = SoFar + 0.1
+</span><span class='line'>                RaiseEvent UpdateTime(Timer - Start)
+</span><span class='line'>            End If
+</span><span class='line'>        Loop
+</span><span class='line'>    End Sub
+</span><span class='line'>End Class
+</span></code></pre></td></tr></table></div></figure>
 
-<pre><code>Public Event UpdateTime(ByVal Jump As Double)
-
-Public Sub TimerTask(ByVal Duration As Double)
-    Dim Start As Double
-    Dim Second As Double
-    Dim SoFar As Double
-
-    Start = Timer
-    SoFar = Start
-    Do While Timer &amp;lt; Start + Duration
-        If Timer - SoFar &amp;gt;= 0.1 Then
-            SoFar = SoFar + 0.1
-            RaiseEvent UpdateTime(Timer - Start)
-        End If
-    Loop
-End Sub
-</code></pre>
-
-<p>End Class</p>
-
-<p>[/vb]</p>
 
 <p>We want to use this logic in the Scriptom code and do something whenever a UpdateTime event is raised. Here are the steps:</p>
 
@@ -226,24 +240,35 @@ End Sub
 
 <p>Following is the sample code for invoking</p>
 
-<p>[vb]
-import org.codehaus.groovy.scriptom.ActiveXObject // Imports the ActiveX object class which holds the reference to the class in DLL</p>
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>import org.codehaus.groovy.scriptom.ActiveXObject // Imports the ActiveX object class which holds the reference to the class in DLL
+</span><span class='line'>
+</span><span class='line'>def timer = new ActiveXObject(&quot;TestDLL.TimerState&quot;) // Looks for the meta data in the registry with &quot;TestDLL.TimerState&quot; name and creates a reference to that class
+</span><span class='line'>
+</span><span class='line'>def time = 1.00
+</span><span class='line'>
+</span><span class='line'>timer.events.UpdateTime = { variants -&gt; // event registration for UpdateTime event in the VB class. Variants holds the data passed from the event. In this case, it is Jump value.
+</span><span class='line'>    println &quot;UpdateTime: &quot; + variants[0] // We're just printing the upated time
+</span><span class='line'>}
+</span><span class='line'>
+</span><span class='line'>timer.TimerTask(time) // starting the timer task in TimerState class
+</span><span class='line'>while(true) { // keeping itself alive to respond when timer events are raised
+</span><span class='line'>}</span></code></pre></td></tr></table></div></figure>
 
-<p>def timer = new ActiveXObject(&quot;TestDLL.TimerState&quot;) // Looks for the meta data in the registry with &quot;TestDLL.TimerState&quot; name and creates a reference to that class</p>
 
-<p>def time = 1.00</p>
 
-<p>timer.events.UpdateTime = { variants -&gt; // event registration for UpdateTime event in the VB class. Variants holds the data passed from the event. In this case, it is Jump value.</p>
-
-<pre><code>println &amp;quot;UpdateTime: &amp;quot; + variants[0] // We're just printing the upated time
-</code></pre>
-
-<p>}</p>
-
-<p>timer.TimerTask(time) // starting the timer task in TimerState class
-while(true) { // keeping itself alive to respond when timer events are raised
-}
-[/vb]</p>
 
 <div style="text-align: left;">Please refer <a id="hzki" title="COM Data Types in Scriptom" href="http://groovy.codehaus.org/COM+Data+Types+in+Scriptom">COM Data Types in Scriptom</a> for the .NET data types supported in Scriptom.</div>
 
@@ -253,26 +278,40 @@ In the next post, we&#8217;ll discuss about JNBridge, a comercial solution.</spa
 
 <div id="_mcePaste" style="overflow: hidden; position: absolute; left: -10000px; top: 694px; width: 1px; height: 1px;">
 
-﻿&lt;Microsoft.VisualBasic.ComClass()&gt; Public Class TimerState
-
-Public Event UpdateTime(ByVal Jump As Double)
-
-Public Sub TimerTask(ByVal Duration As Double)
-Dim Start As Double
-Dim Second As Double
-Dim SoFar As Double
-
-Start = Timer
-SoFar = Start
-Do While Timer &lt; Start + Duration
-If Timer - SoFar &gt;= 0.1 Then
-SoFar = SoFar + 0.1
-RaiseEvent UpdateTime(Timer - Start)
-End If
-Loop
-End Sub
-End Class
-
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>Public Event UpdateTime(ByVal Jump As Double)
+</span><span class='line'>
+</span><span class='line'>Public Sub TimerTask(ByVal Duration As Double)
+</span><span class='line'>Dim Start As Double
+</span><span class='line'>Dim Second As Double
+</span><span class='line'>Dim SoFar As Double
+</span><span class='line'>
+</span><span class='line'>Start = Timer
+</span><span class='line'>SoFar = Start
+</span><span class='line'>Do While Timer &lt; Start + Duration
+</span><span class='line'>If Timer - SoFar &gt;= 0.1 Then
+</span><span class='line'>SoFar = SoFar + 0.1
+</span><span class='line'>RaiseEvent UpdateTime(Timer - Start)
+</span><span class='line'>End If
+</span><span class='line'>Loop
+</span><span class='line'>End Sub
+</span><span class='line'>End Class</span></code></pre></td></tr></table></div></figure>
 </div>
 
 </div>

@@ -65,4 +65,4 @@ categories:
 <p dir="ltr">Also, Pivotal Tracker was launched for free initially and later the pricing was included for their product.</p>
 <p dir="ltr">Learning and following what great teams have done is a good way to reduce risk of failure and increase odds of getting it right the first time. Or at least the second :)</p>
 
-<div class="zemanta-pixie" style="margin-top: 10px; height: 15px;"><a class="zemanta-pixie-a" title="Enhanced by Zemanta" href="http://www.zemanta.com/"><img class="zemanta-pixie-img" style="border: none; float: right;" src="http://img.zemanta.com/zemified_e.png?x-id=dc8693de-42c6-42c8-9357-4a0607a2e696" alt="Enhanced by Zemanta" /></a></div>
+

@@ -37,7 +37,7 @@ Helps you get the background-position, width and height of sprits within a sprit
 This tools works really well with sprite-sheets which has a transparent background [which is usually the case].
 <div><strong>Rating: </strong>Useful</div>
 <div><strong> </strong></div>
-<a rel="attachment wp-att-1458" href="/blog/2011/07/productivity-enhancement-tools-mailcatcher-vogue-spritecow-and-railswizard/sprite-cow/"><img class="size-medium wp-image-1458 alignnone" src="/images/2011/07/sprite-cow-300x187.png" alt="" width="300" height="187" /></a>
+<img class="size-medium wp-image-1458 alignnone" src="/images/sprite-cow-300x187.png" alt="" width="300" height="187" />
 <h2><a href="http://railswizard.org/">RailsWizard</a></h2>
 Rails Wizard is a tool from Intridea which makes it easy to create application templates just by specifying the gems that you want to use.  It is available as a webapp as well as as stand alone tool.
 
@@ -45,4 +45,4 @@ Because of an incompatibility with the latest mysql2 gem and rails (3.0.x) thi
 
 <strong>Rating</strong>: Moderately useful
 
-<a rel="attachment wp-att-1456" href="http://www.multunus.com/2011/07/productivity-enhancement-tools-mailcatcher-vogue-spritecow-and-railswizard/rails-wizard/"><img src="http://www.multunus.com/wp-blog/wp-content/uploads/2011/07/rails-wizard-300x187.png" alt="" width="300" height="187" /></a>
+<img src="/images/rails-wizard-300x187.png" alt="" width="300" height="187" /></a>

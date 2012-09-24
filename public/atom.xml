@@ -4,7 +4,7 @@
   <title><![CDATA[Multunus Software Pvt. Ltd.]]></title>
   <link href="http://www.multunus.com//atom.xml" rel="self"/>
   <link href="http://www.multunus.com//"/>
-  <updated>2012-09-24T14:10:01+05:30</updated>
+  <updated>2012-09-24T15:05:09+05:30</updated>
   <id>http://www.multunus.com//</id>
   <author>
     <name><![CDATA[Your Name]]></name>
@@ -427,14 +427,14 @@ One of the key principle of Continuous Delivery is <strong>To </strong><strong>
 <h3><a href="http://funnel.hasgeek.com/droidcon/83-continuous-delivery-for-an-android-application" target="_new">1. Continuous Delivery for an Android application</a></h3>
 <!-- more -->
 
-<img style="margin: 0px 12px;" src="http://www.multunus.com//wp-blog/wp-content/uploads/2011/12/vaidy-leena.png" alt="" align="left" /><span>This talk was on First day of the Droidcon conference given by Vaidy and Leena. In this talk, we spoke on what the first step towards moving to a CD setup is. Specifically demonstrated setting up a Push Button deployment system using Ant and Jenkins. <a href="http://funnel.hasgeek.com/droidcon/83-continuous-delivery-for-an-android-application">More details here</a>. </span>
+<img style="margin: 0px 12px;" src="http://www.multunus.com//images/vaidy-leena.png" alt="" align="left" /><span>This talk was on First day of the Droidcon conference given by Vaidy and Leena. In this talk, we spoke on what the first step towards moving to a CD setup is. Specifically demonstrated setting up a Push Button deployment system using Ant and Jenkins. <a href="http://funnel.hasgeek.com/droidcon/83-continuous-delivery-for-an-android-application">More details here</a>. </span>
 
 </div>
 
 
 <div style="float: left; margin-top: 24px;">
 <h3><a href="http://funnel.hasgeek.com/droidcon/94-introduction-to-opengl-in-android" target="_new">2. Introduction to OpenGL in Android</a></h3>
-<img style="margin: 0px 12px;" src="http://www.multunus.com//wp-blog/wp-content/uploads/2011/12/tamil-and-kp.png" alt="" align="left" />This talk was on Second day of the Droidcon given by Tamil KP. The objective of talk was to have people get started with OpenGL programming which can seem to be a little heavy but it need not be. The talk started with a brief introduction to OpenGL and then had quick step-by-step tutorial demonstration. <a href="http://funnel.hasgeek.com/droidcon/94-introduction-to-opengl-in-android">More details here</a>.
+<img style="margin: 0px 12px;" src="http://www.multunus.com//images/tamil-and-kp.png" alt="" align="left" />This talk was on Second day of the Droidcon given by Tamil KP. The objective of talk was to have people get started with OpenGL programming which can seem to be a little heavy but it need not be. The talk started with a brief introduction to OpenGL and then had quick step-by-step tutorial demonstration. <a href="http://funnel.hasgeek.com/droidcon/94-introduction-to-opengl-in-android">More details here</a>.
 
 </div>
 
@@ -574,9 +574,6 @@ One of the key principle of Continuous Delivery is <strong>To </strong><strong>
 
 
 
-
-<div class="zemanta-pixie" style="margin-top: 10px; height: 15px;"><a class="zemanta-pixie-a" title="Enhanced by Zemanta" href="http://www.zemanta.com/"><img class="zemanta-pixie-img" style="border: none; float: right;" src="http://img.zemanta.com/zemified_e.png?x-id=dc8693de-42c6-42c8-9357-4a0607a2e696" alt="Enhanced by Zemanta" /></a></div>
-
 ]]></content>
   </entry>
   
@@ -607,16 +604,25 @@ We will be concentrating on Vertex and Fragment processing phases in OpenGL pipe
 
 <p><strong>Vertex shader</strong></p>
 
-<p>[sourcecode language=&#8221;c&#8221;]
-uniform mat4 uMVPMatrix;
-attribute vec4 aPosition;
-attribute vec2 aTextureCoord;
-varying vec2 vTextureCoord;
-void main() {
-  gl_Position = uMVPMatrix * aPosition
-  vTextureCoord = aTextureCoord
-}
-[/sourcecode]</p>
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>uniform mat4 uMVPMatrix;
+</span><span class='line'>attribute vec4 aPosition;
+</span><span class='line'>attribute vec2 aTextureCoord;
+</span><span class='line'>varying vec2 vTextureCoord;
+</span><span class='line'>void main() {
+</span><span class='line'>  gl_Position = uMVPMatrix * aPosition
+</span><span class='line'>  vTextureCoord = aTextureCoord
+</span><span class='line'>}</span></code></pre></td></tr></table></div></figure>
+
+
+
 
 <p dir="ltr">The Vertex shader is executed for each vertex that is to be drawn. Here, we are drawing a square and mapping the texture on to that.</p>
 
@@ -625,16 +631,23 @@ void main() {
 
 <p><strong>Fragment Shader</strong></p>
 
-<p>[sourcecode language=&#8221;c&#8221;]
-precision mediump float;
-varying vec2 vTextureCoord;
-uniform sampler2D sTexture;
-void main() {
-   vec2 cen = vec2(0.5,0.5) - vTextureCoord.xy;
-   vec2 mcen = -0.07<em>log(length(cen))</em>normalize(cen);
-   gl_FragColor = texture2D(sTexture, vTextureCoord.xy-mcen);
-}
-[/sourcecode]</p>
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>precision mediump float;
+</span><span class='line'>varying vec2 vTextureCoord;
+</span><span class='line'>uniform sampler2D sTexture;
+</span><span class='line'>void main() {
+</span><span class='line'>   vec2 cen = vec2(0.5,0.5) - vTextureCoord.xy;
+</span><span class='line'>   vec2 mcen = -0.07*log(length(cen))*normalize(cen);
+</span><span class='line'>   gl_FragColor = texture2D(sTexture, vTextureCoord.xy-mcen);
+</span><span class='line'>}</span></code></pre></td></tr></table></div></figure>
+
 
 <p dir="ltr"></p>
 
@@ -650,7 +663,7 @@ void main() {
     <link href="http://www.multunus.com//blog/2011/10/continuous-delivery-for-android-apps-part-2/"/>
     <updated>2011-10-06T06:51:57+05:30</updated>
     <id>http://www.multunus.com//blog/2011/10/continuous-delivery-for-android-apps-part-2</id>
-    <content type="html"><![CDATA[<p>This post talks about how to run tests for the build setup as mentioned in <a href="http://www.multunus.com//continuous-delivery-for-android-apps-part-1/">Part 1</a>.</p>
+    <content type="html"><![CDATA[<p>This post talks about how to run tests for the build setup as mentioned in <a href="http://www.multunus.com//blog/2011/09/continuous-delivery-for-android-apps-part-1/">Part 1</a>.</p>
 
 <h3><span style="text-decoration: underline;">Generate the build script for test</span></h3>
 
@@ -696,9 +709,6 @@ description="Runs tests from the package defined in test.package property"&gt;
 <p>You can change the ant commands to <span style="font-family: Consolas, Monaco, 'Courier New', Courier, monospace; line-height: 18px;">clean run-tests release </span>in Jenkins to run the tests as part of packaging.</p>
 
 <p>Next I will be writing about how to start emulator from Jenkins while running the tests.</p>
-
-<div class="zemanta-pixie" style="margin-top: 10px; height: 15px;"><a class="zemanta-pixie-a" title="Enhanced by Zemanta" href="http://www.zemanta.com/"><img class="zemanta-pixie-img" style="border: none; float: right;" src="http://img.zemanta.com/zemified_e.png?x-id=96462303-c79f-4147-ace0-66d89521eb71" alt="Enhanced by Zemanta" /></a></div>
-
 ]]></content>
   </entry>
   
@@ -748,9 +758,6 @@ description="Runs tests from the package defined in test.package property"&gt;
 
 <p><span style="color: #008000;"><strong>
 </strong></span></p>
-
-<div class="zemanta-pixie" style="margin-top: 10px; height: 15px;"><a class="zemanta-pixie-a" title="Enhanced by Zemanta" href="http://www.zemanta.com/"><img class="zemanta-pixie-img" style="border: none; float: right;" src="http://img.zemanta.com/zemified_e.png?x-id=b68198f2-3678-4b4b-af9e-0948f94e83f5" alt="Enhanced by Zemanta" /></a></div>
-
 ]]></content>
   </entry>
   
@@ -843,7 +850,7 @@ References: <a href="http://skaug.no/ingvald/2011/09/android-app-with-jenkins/"
     <id>http://www.multunus.com//blog/2011/09/rebuilding-in-jenkins</id>
     <content type="html"><![CDATA[<div>
 
-One option that might be required after setting up a <a href="http://www.multunus.com//blog/2011/08/continuous-delivery-setup-jenkins-build-pipeline-setup/">build pipeline</a> is the provision to redeploy an earlier version by click of a button. This can become handy when we find a bug in the production and want to see when the bug got introduced. For that we will have to redeploy the earlier version to the staging/UAT environment and test the same.
+One option that might be required after setting up a <a href="http://www.multunus.com//blog/2011/07/continuous-delivery-using-jenkins-build-pipeline/">build pipeline</a> is the provision to redeploy an earlier version by click of a button. This can become handy when we find a bug in the production and want to see when the bug got introduced. For that we will have to redeploy the earlier version to the staging/UAT environment and test the same.
 
 Jenkins by default does not allow to rerun any of the earlier jobs. But you can achieve this by the <a href="https://wiki.jenkins-ci.org/display/JENKINS/Rebuild+Plugin">Rebuild</a> plugin. It allows you to rebuild any job provided its parameterized build. It also allows you override the parameters. It will show the &#8220;Rebuild&#8221; button at the left side as shown below when you go to a specific build page:
 
@@ -914,7 +921,6 @@ Note: It will show the Rebuild button only for those builds which occurred afte
 </ul>
 
 
-<div class="zemanta-pixie" style="margin-top: 10px; height: 15px;"><a class="zemanta-pixie-a" title="Enhanced by Zemanta" href="http://www.zemanta.com/"><img class="zemanta-pixie-img" style="border: none; float: right;" src="http://img.zemanta.com/zemified_e.png?x-id=0a6adeff-692b-401b-9726-093189c9c0b1" alt="Enhanced by Zemanta" /></a></div>
 
 ]]></content>
   </entry>
@@ -940,19 +946,23 @@ Note: It will show the Rebuild button only for those builds which occurred afte
 
 <p><span style="font-family: Consolas, Monaco, 'Courier New', Courier, monospace; line-height: 18px;"> </span></p>
 
-<p>[sourcecode language=&#8221;ruby&#8221;]
-MetricFu::Configuration.run do |config|</p>
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>MetricFu::Configuration.run do |config|
+</span><span class='line'>        config.code_dirs = ['app', 'lib']
+</span><span class='line'>        config.syntax_highlighting = false
+</span><span class='line'>        config.metrics  = [:churn,:reek,:roodi,:hotspots,:rails_best_practices]
+</span><span class='line'>        config.graphs   = [:reek, :roodi, :rails_best_practices]
+</span><span class='line'>        config.rcov[:test_files] = ['spec/**/*_spec.rb']
+</span><span class='line'>        config.rcov[:rcov_opts] &lt;&lt; &quot;-Ispec&quot; # Needed to find spec_helper
+</span><span class='line'>end</span></code></pre></td></tr></table></div></figure>
 
-<pre><code>    config.code_dirs = ['app', 'lib']
-    config.syntax_highlighting = false
-    config.metrics  = [:churn,:reek,:roodi,:hotspots,:rails_best_practices]
-    config.graphs   = [:reek, :roodi, :rails_best_practices]
-    config.rcov[:test_files] = ['spec/**/*_spec.rb']
-    config.rcov[:rcov_opts] &amp;lt;&amp;lt; &amp;quot;-Ispec&amp;quot; # Needed to find spec_helper
-</code></pre>
-
-<p>end
-[/sourcecode]</p>
 
 <p>For test coverage I&#8217;ve used <a href="https://github.com/colszowka/simplecov">Simplecov</a> which is easy to setup. It will generate the coverage report whenever you run the tests. This also generated html report which can be integrated easily into Jenkins. As mentioned <a href="https://github.com/colszowka/simplecov/issues/42">here</a> in the issue list, it does not generate the report when you are running with <a href="https://github.com/timcharper/spork/wiki">spork</a>.</p>
 
@@ -1039,7 +1049,7 @@ MetricFu::Configuration.run do |config|</p>
 <div><strong> </strong></div>
 
 
-<p><a rel="attachment wp-att-1458" href="http://www.multunus.com//blog/2011/07/productivity-enhancement-tools-mailcatcher-vogue-spritecow-and-railswizard/sprite-cow/"><img class="size-medium wp-image-1458 alignnone" src="http://www.multunus.com//images/2011/07/sprite-cow-300x187.png" alt="" width="300" height="187" /></a></p>
+<p><img class="size-medium wp-image-1458 alignnone" src="http://www.multunus.com//images/sprite-cow-300x187.png" alt="" width="300" height="187" /></p>
 
 <h2><a href="http://railswizard.org/">RailsWizard</a></h2>
 
@@ -1050,7 +1060,7 @@ MetricFu::Configuration.run do |config|</p>
 
 <p><strong>Rating</strong>: Moderately useful</p>
 
-<p><a rel="attachment wp-att-1456" href="http://www.multunus.com/2011/07/productivity-enhancement-tools-mailcatcher-vogue-spritecow-and-railswizard/rails-wizard/"><img src="http://www.multunus.com/wp-blog/wp-content/uploads/2011/07/rails-wizard-300x187.png" alt="" width="300" height="187" /></a></p>
+<p><img src="http://www.multunus.com//images/rails-wizard-300x187.png" alt="" width="300" height="187" /></a></p>
 ]]></content>
   </entry>
   
@@ -1136,18 +1146,12 @@ sudo nice --adjustment=19 apt-get install -y sun-java6-jre
 
 <p>One of the major problems I had faced in the earlier &#8220;manual&#8221; system - was the inability to pass parameters between builds. For example, once the app would be moved to staging, a tag is created and when its ready to be pushed to production, we&#8217;d have to merge that particular tag to production and then push it.</p>
 
-<p>To achieve the above I used the &#8220;parameterized build&#8221; option. In Jenkins, the parameters get converted to Environment Variables and got passed to the downstream job. This is how you can set the parameterized build:</p>
-
-<p style="text-align: left;">[singlepic id=184 w=620 h=300 float=center]</p>
-
-
-<p>When you fire the build, it prompts for the value of the TAG parameter. Once entered this would be available as an Environment variable for this job and all its downstream jobs.</p>
+<p>To achieve the above I used the &#8220;parameterized build&#8221; option. In Jenkins, the parameters get converted to Environment Variables and got passed to the downstream job.
+When you fire the build, it prompts for the value of the parameter. Once entered this would be available as an Environment variable for this job and all its downstream jobs.</p>
 
 <p>For eg: in the pipeline, the downstream project is &#8220;Stage deploy&#8221;, and it will know the value for TAG and uses that value to create a tag in Git after successful deployment.</p>
 
-<p>When it is ready for production deployment it merges with the same tag and deploys to production. In the latest version of the plugin, moving to the next step is <strong>not</strong> triggered automatically and you can retry the failed ones. The following is a sample pipeline dashboard view:</p>
-
-<p>[singlepic id=183 w=620 h=300 float=center]</p>
+<p>When it is ready for production deployment it merges with the same tag and deploys to production. In the latest version of the plugin, moving to the next step is <strong>not</strong> triggered automatically and you can retry the failed ones.</p>
 
 <p><strong>Note:</strong> Capturing the parameter will happen <strong>only</strong> for the first job. So, if the parameterized job is <em>not</em> the first one in the pipeline, the capture of the parameter will not happen.</p>
 

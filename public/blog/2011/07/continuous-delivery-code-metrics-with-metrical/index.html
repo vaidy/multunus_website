@@ -175,19 +175,23 @@
 
 <p><span style="font-family: Consolas, Monaco, 'Courier New', Courier, monospace; line-height: 18px;"> </span></p>
 
-<p>[sourcecode language=&#8221;ruby&#8221;]
-MetricFu::Configuration.run do |config|</p>
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>MetricFu::Configuration.run do |config|
+</span><span class='line'>        config.code_dirs = ['app', 'lib']
+</span><span class='line'>        config.syntax_highlighting = false
+</span><span class='line'>        config.metrics  = [:churn,:reek,:roodi,:hotspots,:rails_best_practices]
+</span><span class='line'>        config.graphs   = [:reek, :roodi, :rails_best_practices]
+</span><span class='line'>        config.rcov[:test_files] = ['spec/**/*_spec.rb']
+</span><span class='line'>        config.rcov[:rcov_opts] &lt;&lt; &quot;-Ispec&quot; # Needed to find spec_helper
+</span><span class='line'>end</span></code></pre></td></tr></table></div></figure>
 
-<pre><code>    config.code_dirs = ['app', 'lib']
-    config.syntax_highlighting = false
-    config.metrics  = [:churn,:reek,:roodi,:hotspots,:rails_best_practices]
-    config.graphs   = [:reek, :roodi, :rails_best_practices]
-    config.rcov[:test_files] = ['spec/**/*_spec.rb']
-    config.rcov[:rcov_opts] &amp;lt;&amp;lt; &amp;quot;-Ispec&amp;quot; # Needed to find spec_helper
-</code></pre>
-
-<p>end
-[/sourcecode]</p>
 
 <p>For test coverage I&#8217;ve used <a href="https://github.com/colszowka/simplecov">Simplecov</a> which is easy to setup. It will generate the coverage report whenever you run the tests. This also generated html report which can be integrated easily into Jenkins. As mentioned <a href="https://github.com/colszowka/simplecov/issues/42">here</a> in the issue list, it does not generate the report when you are running with <a href="https://github.com/timcharper/spork/wiki">spork</a>.</p>
 

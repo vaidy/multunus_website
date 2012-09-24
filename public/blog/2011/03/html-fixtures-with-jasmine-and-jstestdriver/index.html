@@ -170,49 +170,89 @@
 <p>Create a file fixture_generator.rb and save it in spec/support directory. The contents of the file is as follows:</p>
 
 <pre><code>
-[sourcecode language="ruby"]
-RSpec::Rails::ControllerExampleGroup.class_eval do
 
-  # Saves the markup to a fixture file using the given name
-  def save_fixture(markup, name)
-    fixture_path = File.join(Rails.root.to_s, 'spec/javascripts/helpers')
-    Dir.mkdir(fixture_path) unless File.exists?(fixture_path)
-
-    fixture_file = File.join(fixture_path, &amp;quot;#{name}.js&amp;quot;)
-
-    fixture_function = 'function load#{name}Fixture(){
-  /*:DOC +='+markup+'*/
-    }'
-    File.open(fixture_file, 'w') do |file|
-      file.puts(fixture_function)
-    end
-  end
-
-  # From the controller spec response body, extracts html identified
-  # by the css selector.
-  def html_for(selector)
-    doc = Nokogiri::HTML(response.body)
-
-    #remove_third_party_scripts(doc)
-    content = doc.css(selector).first.to_s
-
-    convert_body_tag_to_div(content)
-  end
-
-  # Recommended that you add all body-level third party scripts inside a div called #third-party-scripts
-  # so that they can be removed during testing.
-  def remove_third_party_scripts(doc)
-    scripts = doc.at('#third-party-scripts')
-    scripts.remove if scripts
-  end
-
-  # Here we convert the body tag to a div so that we can load it into
-  # the document running js specs without embedding a  within a body.
-  def convert_body_tag_to_div(markup)
-    markup.gsub('&lt;body', '&lt;div').gsub('&lt;/body&gt;', '&lt;/div&gt;')
-  end
-end
-[/sourcecode]
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+<span class='line-number'>21</span>
+<span class='line-number'>22</span>
+<span class='line-number'>23</span>
+<span class='line-number'>24</span>
+<span class='line-number'>25</span>
+<span class='line-number'>26</span>
+<span class='line-number'>27</span>
+<span class='line-number'>28</span>
+<span class='line-number'>29</span>
+<span class='line-number'>30</span>
+<span class='line-number'>31</span>
+<span class='line-number'>32</span>
+<span class='line-number'>33</span>
+<span class='line-number'>34</span>
+<span class='line-number'>35</span>
+<span class='line-number'>36</span>
+<span class='line-number'>37</span>
+<span class='line-number'>38</span>
+<span class='line-number'>39</span>
+<span class='line-number'>40</span>
+<span class='line-number'>41</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>RSpec::Rails::ControllerExampleGroup.class_eval do
+</span><span class='line'>
+</span><span class='line'>  # Saves the markup to a fixture file using the given name
+</span><span class='line'>  def save_fixture(markup, name)
+</span><span class='line'>    fixture_path = File.join(Rails.root.to_s, 'spec/javascripts/helpers')
+</span><span class='line'>    Dir.mkdir(fixture_path) unless File.exists?(fixture_path)
+</span><span class='line'>
+</span><span class='line'>    fixture_file = File.join(fixture_path, &amp;quot;#{name}.js&amp;quot;)
+</span><span class='line'>
+</span><span class='line'>    fixture_function = 'function load#{name}Fixture(){
+</span><span class='line'>  /*:DOC +='+markup+'*/
+</span><span class='line'>    }'
+</span><span class='line'>    File.open(fixture_file, 'w') do |file|
+</span><span class='line'>      file.puts(fixture_function)
+</span><span class='line'>    end
+</span><span class='line'>  end
+</span><span class='line'>
+</span><span class='line'>  # From the controller spec response body, extracts html identified
+</span><span class='line'>  # by the css selector.
+</span><span class='line'>  def html_for(selector)
+</span><span class='line'>    doc = Nokogiri::HTML(response.body)
+</span><span class='line'>
+</span><span class='line'>    #remove_third_party_scripts(doc)
+</span><span class='line'>    content = doc.css(selector).first.to_s
+</span><span class='line'>
+</span><span class='line'>    convert_body_tag_to_div(content)
+</span><span class='line'>  end
+</span><span class='line'>
+</span><span class='line'>  # Recommended that you add all body-level third party scripts inside a div called #third-party-scripts
+</span><span class='line'>  # so that they can be removed during testing.
+</span><span class='line'>  def remove_third_party_scripts(doc)
+</span><span class='line'>    scripts = doc.at('#third-party-scripts')
+</span><span class='line'>    scripts.remove if scripts
+</span><span class='line'>  end
+</span><span class='line'>
+</span><span class='line'>  # Here we convert the body tag to a div so that we can load it into
+</span><span class='line'>  # the document running js specs without embedding a  within a body.
+</span><span class='line'>  def convert_body_tag_to_div(markup)
+</span><span class='line'>    markup.gsub('&lt;body', '&lt;div').gsub('&lt;/body&gt;', '&lt;/div&gt;')
+</span><span class='line'>  end
+</span><span class='line'>end</span></code></pre></td></tr></table></div></figure>
 
  </code></pre>
 
@@ -220,15 +260,20 @@ end
 <p>Call the save_fixture within the controller spec as follows:</p>
 
 <pre><code>
-[sourcecode language="ruby"]
-describe 'Sign up' do
-    it &quot;should show the signup form&quot; do
-      get :new
-      response.should render_template('new')
-      save_fixture(html_for('body'), 'Signup')
-    end
-end
-[/sourcecode]
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>describe 'Sign up' do
+</span><span class='line'>    it &quot;should show the signup form&quot; do
+</span><span class='line'>      get :new
+</span><span class='line'>      response.should render_template('new')
+</span><span class='line'>      save_fixture(html_for('body'), 'Signup')
+</span><span class='line'>    end
+</span><span class='line'>end</span></code></pre></td></tr></table></div></figure>
 
  </code></pre>
 
@@ -241,29 +286,37 @@ end
 
 <p>Then call the method within the test.</p>
 
-<p>[sourcecode language=&#8221;ruby&#8221;]
-describe(&#8216;Validate registration form&#8217;, function () {</p>
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>describe('Validate registration form', function () {
+</span><span class='line'>
+</span><span class='line'>  beforeEach(function () {
+</span><span class='line'>    $(this).ready(function () {
+</span><span class='line'>      loadSignupFixture()
+</span><span class='line'>    });
+</span><span class='line'>  });
+</span><span class='line'>
+</span><span class='line'>  it('should validate the form ', function () {
+</span><span class='line'>      form = $('#user-registration-form')
+</span><span class='line'>      bindValidationForRegistrationForm()
+</span><span class='line'>      form.submit()
+</span><span class='line'>      expect($('.status').first().text()).toMatch('Please enter your name')
+</span><span class='line'>  });
+</span><span class='line'>});</span></code></pre></td></tr></table></div></figure>
 
-<p>  beforeEach(function () {</p>
-
-<pre><code>$(this).ready(function () {
-  loadSignupFixture()
-});
-</code></pre>
-
-<p>  });</p>
-
-<p>  it(&#8216;should validate the form &#8216;, function () {</p>
-
-<pre><code>  form = $('#user-registration-form')
-  bindValidationForRegistrationForm()
-  form.submit()
-  expect($('.status').first().text()).toMatch('Please enter your name')
-</code></pre>
-
-<p>  });
-});
-[/sourcecode]</p>
 
 <p>Thats all. In this way it is assured that the HTML is consistent with the actual view. The only thing that needs to be taken care is to make sure that the controller spec should be run whenever there is a change in the DOM, so that it is available to JS unit tests.</p>
 </div>

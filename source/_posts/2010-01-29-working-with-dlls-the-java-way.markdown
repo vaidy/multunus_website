@@ -32,8 +32,7 @@ Assume that we have a VB class named TimerState in the TestDLL VB.NET project, e
 
 Following is the TimerState VB class. In this class, we have an event <em>UpdateTime</em> which raises an event when to notify updated time.
 
-[vb]
- ﻿&lt;Microsoft.VisualBasic.ComClass()&gt; Public Class TimerState
+```
 
     Public Event UpdateTime(ByVal Jump As Double)
 
@@ -53,7 +52,7 @@ Following is the TimerState VB class. In this class, we have an event <em>Update
     End Sub
 End Class
 
-[/vb]
+```
 
 We want to use this logic in the Scriptom code and do something whenever a UpdateTime event is raised. Here are the steps:
 <ol>
@@ -64,7 +63,7 @@ We want to use this logic in the Scriptom code and do something whenever a Updat
 </ol>
 Following is the sample code for invoking
 
-[vb]
+```
 import org.codehaus.groovy.scriptom.ActiveXObject // Imports the ActiveX object class which holds the reference to the class in DLL
 
 def timer = new ActiveXObject(&quot;TestDLL.TimerState&quot;) // Looks for the meta data in the registry with &quot;TestDLL.TimerState&quot; name and creates a reference to that class
@@ -78,14 +77,14 @@ timer.events.UpdateTime = { variants -&gt; // event registration for UpdateTime 
 timer.TimerTask(time) // starting the timer task in TimerState class
 while(true) { // keeping itself alive to respond when timer events are raised
 }
-[/vb]
+```
+
 <div style="text-align: left;">Please refer <a id="hzki" title="COM Data Types in Scriptom" href="http://groovy.codehaus.org/COM+Data+Types+in+Scriptom">COM Data Types in Scriptom</a> for the .NET data types supported in Scriptom.</div>
 <strong><span style="font-weight: normal;">
 In the next post, we'll discuss about JNBridge, a comercial solution.</span></strong>
 <div id="_mcePaste" style="overflow: hidden; position: absolute; left: -10000px; top: 694px; width: 1px; height: 1px;">
 
-﻿&lt;Microsoft.VisualBasic.ComClass()&gt; Public Class TimerState
-
+```
 Public Event UpdateTime(ByVal Jump As Double)
 
 Public Sub TimerTask(ByVal Duration As Double)
@@ -103,5 +102,5 @@ End If
 Loop
 End Sub
 End Class
-
+```
 </div>

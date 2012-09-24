@@ -10,7 +10,7 @@ categories:
 - Continuous Delivery
 - Process
 ---
-This post talks about how to run tests for the build setup as mentioned in <a href="/continuous-delivery-for-android-apps-part-1/">Part 1</a>.
+This post talks about how to run tests for the build setup as mentioned in <a href="/blog/2011/09/continuous-delivery-for-android-apps-part-1/">Part 1</a>.
 <h3><span style="text-decoration: underline;">Generate the build script for test</span></h3>
 The suggested practice is to have 2 separate projects for android, one the source and the other for the tests. The following command will generate a build.xml for the test project. Replace the  with the path of the source path.
 
@@ -49,4 +49,4 @@ description="Runs tests from the package defined in test.package property"&gt;
 You can change the ant commands to <span style="font-family: Consolas, Monaco, 'Courier New', Courier, monospace; line-height: 18px;">clean run-tests release </span>in Jenkins to run the tests as part of packaging.
 
 Next I will be writing about how to start emulator from Jenkins while running the tests.
-<div class="zemanta-pixie" style="margin-top: 10px; height: 15px;"><a class="zemanta-pixie-a" title="Enhanced by Zemanta" href="http://www.zemanta.com/"><img class="zemanta-pixie-img" style="border: none; float: right;" src="http://img.zemanta.com/zemified_e.png?x-id=96462303-c79f-4147-ace0-66d89521eb71" alt="Enhanced by Zemanta" /></a></div>
+

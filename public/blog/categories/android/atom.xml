@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Android | Multunus Software Pvt. Ltd.]]></title>
   <link href="http://www.multunus.com//blog/categories/android/atom.xml" rel="self"/>
   <link href="http://www.multunus.com//"/>
-  <updated>2012-09-24T14:10:01+05:30</updated>
+  <updated>2012-09-24T15:05:09+05:30</updated>
   <id>http://www.multunus.com//</id>
   <author>
     <name><![CDATA[Your Name]]></name>
@@ -278,14 +278,14 @@
 <h3><a href="http://funnel.hasgeek.com/droidcon/83-continuous-delivery-for-an-android-application" target="_new">1. Continuous Delivery for an Android application</a></h3>
 <!-- more -->
 
-<img style="margin: 0px 12px;" src="http://www.multunus.com//wp-blog/wp-content/uploads/2011/12/vaidy-leena.png" alt="" align="left" /><span>This talk was on First day of the Droidcon conference given by Vaidy and Leena. In this talk, we spoke on what the first step towards moving to a CD setup is. Specifically demonstrated setting up a Push Button deployment system using Ant and Jenkins. <a href="http://funnel.hasgeek.com/droidcon/83-continuous-delivery-for-an-android-application">More details here</a>. </span>
+<img style="margin: 0px 12px;" src="http://www.multunus.com//images/vaidy-leena.png" alt="" align="left" /><span>This talk was on First day of the Droidcon conference given by Vaidy and Leena. In this talk, we spoke on what the first step towards moving to a CD setup is. Specifically demonstrated setting up a Push Button deployment system using Ant and Jenkins. <a href="http://funnel.hasgeek.com/droidcon/83-continuous-delivery-for-an-android-application">More details here</a>. </span>
 
 </div>
 
 
 <div style="float: left; margin-top: 24px;">
 <h3><a href="http://funnel.hasgeek.com/droidcon/94-introduction-to-opengl-in-android" target="_new">2. Introduction to OpenGL in Android</a></h3>
-<img style="margin: 0px 12px;" src="http://www.multunus.com//wp-blog/wp-content/uploads/2011/12/tamil-and-kp.png" alt="" align="left" />This talk was on Second day of the Droidcon given by Tamil KP. The objective of talk was to have people get started with OpenGL programming which can seem to be a little heavy but it need not be. The talk started with a brief introduction to OpenGL and then had quick step-by-step tutorial demonstration. <a href="http://funnel.hasgeek.com/droidcon/94-introduction-to-opengl-in-android">More details here</a>.
+<img style="margin: 0px 12px;" src="http://www.multunus.com//images/tamil-and-kp.png" alt="" align="left" />This talk was on Second day of the Droidcon given by Tamil KP. The objective of talk was to have people get started with OpenGL programming which can seem to be a little heavy but it need not be. The talk started with a brief introduction to OpenGL and then had quick step-by-step tutorial demonstration. <a href="http://funnel.hasgeek.com/droidcon/94-introduction-to-opengl-in-android">More details here</a>.
 
 </div>
 
@@ -337,7 +337,7 @@ We will be concentrating on Vertex and Fragment processing phases in OpenGL pipe
 
 <p><strong>Vertex shader</strong></p>
 
-<p>[sourcecode language="c"]
+<p><code>
 uniform mat4 uMVPMatrix;
 attribute vec4 aPosition;
 attribute vec2 aTextureCoord;
@@ -346,25 +346,24 @@ void main() {
   gl_Position = uMVPMatrix * aPosition
   vTextureCoord = aTextureCoord
 }
-[/sourcecode]</p>
+</code></p>
 
 <p dir="ltr">The Vertex shader is executed for each vertex that is to be drawn. Here, we are drawing a square and mapping the texture on to that.</p>
 
 
 <p>This calculates the transformed coordinates of the square by multiplying the given coordinates with <a href="http://en.wikibooks.org/wiki/OpenGL_Programming/3D/Matrices" target="_blank">MVPMatrix</a> [ MVP -  Model * View * Projection ]. Other than this we are also storing corresponding texture co-ordinates in variable '<em>vTextureCoords'</em> so that it is available in the fragment shader.</p>
 
-<p><strong>Fragment Shader</strong></p>
-
-<p>[sourcecode language="c"]
+<p><strong>Fragment Shader</strong>
+<code>
 precision mediump float;
 varying vec2 vTextureCoord;
 uniform sampler2D sTexture;
 void main() {
    vec2 cen = vec2(0.5,0.5) - vTextureCoord.xy;
-   vec2 mcen = -0.07<em>log(length(cen))</em>normalize(cen);
+   vec2 mcen = -0.07*log(length(cen))*normalize(cen);
    gl_FragColor = texture2D(sTexture, vTextureCoord.xy-mcen);
 }
-[/sourcecode]</p>
+</code></p>
 
 <p dir="ltr"></p>
 
