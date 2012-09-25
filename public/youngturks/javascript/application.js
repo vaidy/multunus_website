@@ -10,7 +10,7 @@ unselectAllTurks = function() {
 showTimeline = function() {
 	var self = $(this);
 	var name = self.attr("name");
-	var timeline = $("#" + name);
+	var timeline = $("#" + name + "-timeline");
 
 	$(".sub-title").hide();
 	
