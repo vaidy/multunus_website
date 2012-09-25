@@ -25,13 +25,20 @@ showTimeline = function() {
 
 
 connectTimeline = function(source, target) {
+
+	var docWidth = document.width;
+
+	var somevar = docWidth/8380.8933;
+
+	console.log(somevar);
+
 	var turk = jsPlumb.addEndpoint(source,{
 		anchor: "BottomCenter",
 		endpoint: "Blank"
 	}),
 		
 	timeline = jsPlumb.addEndpoint(target,{
-		anchor: [0.1612,0,0,-1],
+		anchor: [0.11785,0,0,-1],
 		endpoint: "Blank"
 	});
 

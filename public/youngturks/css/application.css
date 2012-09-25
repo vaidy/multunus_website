@@ -4,7 +4,8 @@ body {
 	background: #282828 !important; 
 	font-family: arial, verdana, tahoma;
   min-height: 900px;
-  width: 1351px;
+  width: 1200px;
+  margin: auto;
 }
 
 .header{
@@ -202,7 +203,7 @@ body {
 
 .the-turks {
   margin-top: 2%;
-  margin-bottom: 4.5%;
+  margin-bottom: 6%;
 }
 
 .the-turks .turk:hover{
