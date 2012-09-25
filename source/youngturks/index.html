@@ -432,7 +432,7 @@
 				var url = window.location.href;
 				var turkNameFromUrl = url.substr(window.location.href.lastIndexOf('#') + 1);
 
-				$('.turk img, .title-line').load(function(){
+				$(".turk img, .title-line, #" + turkNameFromUrl + "-timeline").load(function(){
 					$(".turk[name='" + turkNameFromUrl + "']").click();
 				});					
 			});
