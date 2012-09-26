@@ -5,8 +5,8 @@ selectATurk = function() {
 
 	$(this).children().find('img').addClass('color selected');
 
-	resetTwitterShareButton(selectedTurk.attr('name'));
-	resetFBLikeButton(selectedTurk.attr('name'));
+	//resetTwitterShareButton(selectedTurk.attr('name'));
+	//resetFBLikeButton(selectedTurk.attr('name'));
 };
 
 resetFBLikeButton = function(turkName) {

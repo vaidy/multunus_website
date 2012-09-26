@@ -281,7 +281,7 @@ img.color {
 .share-buttons {
   position: absolute;
   top: 32%;
-  right: 16.5%;
+  right: 2.5%;
 }
 
 .timelines {
@@ -291,4 +291,8 @@ img.color {
 .fb_iframe_widget span {
   vertical-align: baseline !important;
   margin-right: 15px;
+}
+
+.IN-widget {
+  margin-left: 20px;
 }
