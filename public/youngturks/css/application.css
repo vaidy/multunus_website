@@ -9,8 +9,8 @@ body {
 }
 
 .header{
-  background-color:#343131;
   text-align: center;
+  position: relative;
  }
  
 .header img{
@@ -276,4 +276,10 @@ img.color {
 
 #you-timeline .turk-name {
   float: none;
+}
+
+.addthis_toolbox {
+  position: absolute;
+  top: 32%;
+  right: -7%;
 }
