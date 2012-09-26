@@ -11,7 +11,6 @@ selectATurk = function() {
 
 resetFBLikeButton = function(turkName) {
 	FB.XFBML.parse();
-	alert("Done");
 }
 
 resetTwitterShareButton = function(turkName) {
