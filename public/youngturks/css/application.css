@@ -278,12 +278,17 @@ img.color {
   float: none;
 }
 
-.addthis_toolbox {
+.share-buttons {
   position: absolute;
   top: 32%;
-  right: -1.4%
+  right: 16.5%;
 }
 
 .timelines {
   margin-bottom: 30px;
+}
+
+.fb_iframe_widget span {
+  vertical-align: baseline !important;
+  margin-right: 15px;
 }

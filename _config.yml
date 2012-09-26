@@ -81,7 +81,7 @@ tumblr_user: multunus
 tumblr_post_count: 1
 
 # Google +1
-google_plus_one: false
+google_plus_one: true
 google_plus_one_size: medium
 
 # Google Plus Profile

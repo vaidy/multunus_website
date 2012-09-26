@@ -1,3 +1,6 @@
+---
+---
+
 <!DOCTYPE html>
 <html>
 
@@ -14,10 +17,6 @@
 		<script type="text/javascript" src = "/youngturks/javascript/application.js" ></script>
 		<script type="text/javascript" src = "/youngturks/javascript/bootstrap.js" ></script>
 		<script type="text/javascript" src = "/youngturks/javascript/timeliner.min.js" ></script>
-		<script type="text/javascript">
-			var addthis_config = {"data_track_addressbar":true};
-		</script>
-		<script type="text/javascript" src="http://s7.addthis.com/js/300/addthis_widget.js#pubid=ra-50629ba006a77f6d"></script>
 	</head>
 
 	<body>
@@ -25,10 +24,8 @@
 			<a href="http://www.multunus.com">
 				<img src="/images/g36891.png" alt="multunus" />		
 			</a>
-			<div class="addthis_toolbox addthis_default_style ">
-				<a class="addthis_button_google_plusone" g:plusone:size="medium"></a> 
-				<a class="addthis_button_facebook_like" fb:like:layout="button_count"></a>
-				<a class="addthis_button_tweet" tw:count="none"></a>
+			<div class="share-buttons">
+				{% include post/sharing.html %}
 			</div>
 		</div>
 
@@ -774,8 +771,9 @@
 					</div>
 					<br class="clear">
 				</div><!-- /#timelineContainer -->
-
 			</div>
+
+			{% include after_footer.html %}
 		</div>					
 
 		<script>

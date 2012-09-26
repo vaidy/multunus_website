@@ -5,7 +5,7 @@ selectATurk = function() {
 };
 
 updateShareUrl = function(turkName) {
-	$('.addthis_button_tweet').attr('tw:url',window.location.origin + window.location.pathname + '#' + turkName);
+	$('.twitter-share-button').attr('tw:url',window.location.origin + window.location.pathname + '#' + turkName);
 }
 
 unselectAllTurks = function() {
