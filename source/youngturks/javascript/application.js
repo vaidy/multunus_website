@@ -1,7 +1,12 @@
 selectATurk = function() {
 	unselectAllTurks();
 	$(this).children().find('img').addClass('color selected');
+	updateShareUrl($(this).attr('name'));
 };
+
+updateShareUrl = function(turkName) {
+	$('.addthis_button_tweet').attr('tw:url',window.location.origin + window.location.pathname + '#' + turkName);
+}
 
 unselectAllTurks = function() {
 	$(".turk img").removeClass('color selected');
