@@ -1,6 +1,6 @@
 selectATurk = function() {
 	unselectAllTurks();
-	$(this).children('img').addClass('color selected');
+	$(this).children().find('img').addClass('color selected');
 };
 
 unselectAllTurks = function() {
@@ -27,10 +27,6 @@ showTimeline = function() {
 connectTimeline = function(source, target) {
 
 	var docWidth = document.width;
-
-	var somevar = docWidth/8380.8933;
-
-	console.log(somevar);
 
 	var turk = jsPlumb.addEndpoint(source,{
 		anchor: "BottomCenter",
