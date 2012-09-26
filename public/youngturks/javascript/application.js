@@ -1,11 +1,26 @@
 selectATurk = function() {
+	var selectedTurk = $(this);
+
 	unselectAllTurks();
+
 	$(this).children().find('img').addClass('color selected');
-	updateShareUrl($(this).attr('name'));
+
+	resetTwitterShareButton(selectedTurk.attr('name'));
+	resetFBLikeButton(selectedTurk.attr('name'));
 };
 
-updateShareUrl = function(turkName) {
-	$('.twitter-share-button').attr('tw:url',window.location.origin + window.location.pathname + '#' + turkName);
+resetFBLikeButton = function(turkName) {
+	FB.XFBML.parse();
+	alert("Done");
+}
+
+resetTwitterShareButton = function(turkName) {
+	var dataUrl = window.location.origin + window.location.pathname + '#' + turkName;
+	var tweetLink = "<a href='http://twitter.com/share' class='twitter-share-button' data-count='none'></a>"
+	$('.sharing .twitter-share-button').remove();
+	$('.sharing').append(tweetLink);
+	$('.sharing .twitter-share-button').attr('data-url',dataUrl);
+	twttr.widgets.load();
 }
 
 unselectAllTurks = function() {
