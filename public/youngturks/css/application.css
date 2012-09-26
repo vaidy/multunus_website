@@ -39,7 +39,6 @@ body {
   line-height: 2em;
   margin-top: 1%;
   text-align: left;
-  padding-left: 2%;
 }
 
 .sub-title {
@@ -48,6 +47,7 @@ body {
 
 .call-to-action span {
   margin-right: 1%;
+  padding-left: 2%;
 }
 
 .call-to-action a{
@@ -282,4 +282,8 @@ img.color {
   position: absolute;
   top: 32%;
   right: -1.4%
+}
+
+.timelines {
+  margin-bottom: 30px;
 }
