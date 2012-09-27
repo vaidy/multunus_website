@@ -1,11 +1,26 @@
 .modal {
-	position: fixed;
-	top: 90% !important;
-	//width: 77%; 
-    //margin: -80% 0 0 -38.5%;
-    width: 1041px; 
-    margin: -490px 0 0 -520px;
 	background: #222 url("/images/concrete.png") repeat left top scroll;
+	position: fixed; 
+
+
+	@media (max-width: 480px) {
+		top: 4%; 
+	}
+	
+	@media (max-width: 767px) {
+		top: auto !important; 
+		right: 3%; 
+		left: 3%; 
+		bottom: 3%; 
+		width: auto; 
+		margin: 0; 
+	}
+
+	@media (min-width: 768px) {
+		width: 77%;
+		left: 11.5%;
+		margin-left: auto;
+	}
 
 	.dark-border {
 		border: 8px solid #505050;
@@ -55,6 +70,11 @@
 	color: white;
 	padding: 30px 120px 20px 120px;
 	text-align: justify;
+
+	@media (max-width: 979px) {
+		padding: 15px;
+	}
+
 	a { 
 		color: white;
 		text-decoration: underline;

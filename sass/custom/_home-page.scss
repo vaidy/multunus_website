@@ -5,6 +5,8 @@
 .two-images {
 	padding-top: 4%;
 	padding-bottom: 1%;
+	width: 97%;
+	margin: auto;
 
 	.image-text {
 		padding: 10px;
@@ -173,16 +175,25 @@
 } 
 
 .featured-posts {
-	ali {
+	position: relative;
+
+	li {
 		content: "";
 		border-color: transparent transparent transparent #D00;
 		border-style: solid;
 		border-width: 6px 0px 6px 6px;
-		position: absolute;
+		position: relative;
 		top: 4px;
 		left: 0px;
 		height: 0;
-		width: 0;
+		//width: 0;
+		padding-left: 2%;
+		margin-bottom: 25px;
+
+		a {
+			position: relative;
+			top: -10px;
+		}
 	}
 }
 

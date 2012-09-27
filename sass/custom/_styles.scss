@@ -35,10 +35,12 @@ body {
 	border-radius: 6px;
 }
 
-@media (min-width: 767px) {
+@media (min-width: 980px) {
 	.container-fluid {
-        padding-right: 165px;
-        padding-left: 165px;
+        //padding-right: 165px;
+        //padding-left: 165px;
+        padding-right: 12%;
+        padding-left: 12%;
 	}
 }
 
