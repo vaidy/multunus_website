@@ -1,10 +1,11 @@
-<div class="well">
-{% capture category %}{{ post.categories | size }}{% endcapture %}
-<h2><a href="{{ root_url }}{{ post.url }}">{{post.title}}</a></h2>
-<time datetime="{{ post.date | datetime | date_to_xmlschema }}" pubdate>{{ post.date | date: "<span class='month'>%b</span> <span class='day'>%d</span> <span class='year'>%Y</span>"}}</time>
-{% if category != '0' %}
-<footer>
-  <span class="categories">Posted in {{ post.categories | category_links }}</span>
-</footer>
-{% endif %}
-</div>
+<header>{% capture category %}{{ post.categories | size }}{% endcapture %}
+	<h1 class="entry-title"><a href="{{ root_url }}{{ post.url }}">{{post.title}}</a></h1>
+	<p class="meta">
+  	{% include post/author.html %}
+  	{% include post/date.html %}{{ time }}
+  	{% include post/categories.html %}
+  	{% if site.disqus_short_name and page.comments != false and site.disqus_show_comment_count == true %} | <a href="{% if index %}{{ root_url }}{{ post.url }}{% endif %}#disqus_thread">Comments</a>
+  	{% endif %}
+	</p>
+</header>
+<div class="entry-content">{{ post.content | strip_html | truncatewords: 30 }}</div>
