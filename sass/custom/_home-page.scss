@@ -5,7 +5,7 @@
 .two-images {
 	padding-top: 4%;
 	padding-bottom: 1%;
-	width: 97%;
+	width: 95%;
 	margin: auto;
 
 	.image-text {
@@ -14,10 +14,6 @@
 		font-size: 1.4em;
 		font-weight: bold;
 		text-align: center;
-	}
-
-	.second-image {
-		float: right !important;
 	}
 }
 
@@ -29,7 +25,10 @@
 	border-radius: 2px;
 	overflow: hidden;
 	margin-bottom: 4%;
-	max-width: 478px;
+
+	img {
+		width: 100%;
+	}
 }
 
 .about_us {
