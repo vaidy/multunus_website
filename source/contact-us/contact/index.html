@@ -8,9 +8,13 @@ footer: true
 ---
 <div class="span9">
 	<script type=”text/javascript”>var submitted=false;</script>
+	<iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" onload="if(submitted) {window.location='whateveryourredirectis.html';}"></iframe>
 
 	<h1>Write To Us</h1>
-	<form action="https://docs.google.com/a/multunus.com/spreadsheet/formResponse?formkey=dDV6dTFGTXpVVDh0a0YxZGFpVEkxMlE6MQ&amp;ifq" method="POST" id="sss-form">
+	<div class="notification success" style="display:none;">
+		Thank You. We got your message.
+	</div>
+	<form action="https://docs.google.com/a/multunus.com/spreadsheet/formResponse?formkey=dDV6dTFGTXpVVDh0a0YxZGFpVEkxMlE6MQ&amp;ifq" method="POST" target="hidden_iframe" id="ss-form">
 		<br>
 		<div class="errorbox-good">
 			<div class="ss-form-entry">
@@ -88,6 +92,11 @@ footer: true
 	    		    }
 	    		}
 	    	});
+
+	    	$("#hidden_iframe").load(function (){
+	    		$('#ss-form input').val('');
+	    		$('.notification').slideDown('slow');
+			});
 	    });
 	</script>
 </div>

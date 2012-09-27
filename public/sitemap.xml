@@ -256,7 +256,7 @@
     </url>
     <url>
         <loc>http://multunus.herokuapp.com/contact-us/contact/</loc>
-        <lastmod>2012-09-25T18:10:00+05:30</lastmod>
+        <lastmod>2012-09-27T17:51:58+05:30</lastmod>
     </url>
     <url>
         <loc>http://multunus.herokuapp.com/contact-us/location/</loc>
@@ -269,6 +269,10 @@
     <url>
         <loc>http://multunus.herokuapp.com/careers-multunus/</loc>
         <lastmod>2012-09-25T18:10:00+05:30</lastmod>
+    </url>
+    <url>
+        <loc>http://multunus.herokuapp.com/career/</loc>
+        <lastmod>2012-09-27T18:05:54+05:30</lastmod>
     </url>
     <url>
         <loc>http://multunus.herokuapp.com/why-us/</loc>

@@ -61,8 +61,12 @@ form {
 	}
 }
 
-.invalid {
-	color: rgb(231, 100, 100);
+.invalid, .failure {
+	color: #BD3939;
+}
+
+.success {
+	color: green;
 }
 
 .main-content {
