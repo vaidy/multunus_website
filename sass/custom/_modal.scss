@@ -1,3 +1,22 @@
+.team-modal-container {
+	.modal {
+		background: white;
+
+		@media (min-width: 768px) {
+			width: 65%;
+			left: 17.5%;
+			margin-left: auto;
+		}
+
+		.modal-body {
+			font-size: 1.1em;
+			color: black;
+			padding: 15px 60px 10px 60px;
+		}
+	}
+}
+
+
 .modal {
 	background: #222 url("/images/concrete.png") repeat left top scroll;
 	position: fixed; 

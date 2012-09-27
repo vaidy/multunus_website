@@ -1,17 +1,14 @@
-<div id="profile" class="row">
-  <div class="span4">
+<h1>
+  {{ page.name }}
+</h1>
+<div id="profile" class="row-fluid">
+  <div class="span4 profile-photo">
     {% if page.image %}
-      <div id="profile-photo">
-        <img src="{{ page.image.url }}" title="{{ page.image.title }}" alt="{{ page.image.alt }}" width="200" height="200" />
-      </div>
+      <img src="{{ page.image.url }}" title="{{ page.image.title }}" alt="{{ page.image.alt }}" />
     {% endif %}
   </div>
 
-  <div class="span11">
-    <h1>
-      {{ page.name }}
-      <small>{{ page.role }}</small>
-    </h1>
+  <div class="profile-bio">
 
     {{ page.bio }}
 

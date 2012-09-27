@@ -5,6 +5,7 @@ body {
 	background: #222 url("/images/concrete.png") repeat left top scroll;
 	padding-bottom: 0px;
 	font-family: $font-default;
+	line-height: 20px;
 }
 
 .texture-background {
@@ -223,4 +224,8 @@ ul.nav li.active > a {
 		text-decoration: none;
 		color: #DD0000 !important; 
 	}
+}
+
+.profile-photo {
+	margin: 0 30px 20px 0;
 }
