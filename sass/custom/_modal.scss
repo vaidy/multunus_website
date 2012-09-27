@@ -2,11 +2,6 @@
 	background: #222 url("/images/concrete.png") repeat left top scroll;
 	position: fixed; 
 
-
-	@media (max-width: 480px) {
-		top: 4%; 
-	}
-	
 	@media (max-width: 767px) {
 		top: auto !important; 
 		right: 3%; 
@@ -14,6 +9,10 @@
 		bottom: 3%; 
 		width: auto; 
 		margin: 0; 
+	}
+
+	@media (max-width: 480px) {
+		top: 4% !important; 
 	}
 
 	@media (min-width: 768px) {
