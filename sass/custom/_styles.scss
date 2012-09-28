@@ -6,6 +6,7 @@ body {
 	padding-bottom: 0px;
 	font-family: $font-default;
 	line-height: 20px;
+	font-size: 16px;
 }
 
 .texture-background {
@@ -292,3 +293,6 @@ ul.nav li.active > a {
   	}
 }
 
+.navbar .nav {
+	font-size: 0.9em;
+}
