@@ -119,47 +119,38 @@
   <div class="container-fluid main-content">
     <div class="row-fluid">
       <article class="hentry span9 blog-post" role="article">
-  
-  <header>
+  <div class="row-fluid">
+  <div class="span2 date-container">
     
-      <h1 class="entry-title">Rails Threadsafe and Rake Task</h1>
+
+
+
+
+
+
+
+
+  
+
+
+<div datetime="2010-11-03T15:22:08+05:30" pubdate data-updated="true"><div class='day'>03</div><div class='month-year'><div class='month'>November</div><div class='year'>2010</div></div></div>
+  </div>
+  <div class="span10">
     
+      <header>
+        <h2 class="entry-title">Rails Threadsafe and Rake Task</h2>
+        <p class="meta">
+          
+  
+
+<div class="byline author vcard"><strong>Posted by: </strong><span class="fn">Leena</span></div>
+
+        </p>
+      </header>
     
-      <p class="meta">
-        
-  
+  </div>
 
-<span class="byline author vcard">Posted by <span class="fn">Leena</span></span>
-
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2010-11-03T15:22:08+05:30" pubdate data-updated="true">Nov 3<span>rd</span>, 2010</time>
-        
-
-<span class="categories">
-  
-    <a class='category' href='/blog/categories/all-posts/'>All Posts</a>, <a class='category' href='/blog/categories/rails/'>Rails</a>
-  
-</span>
-
-
-        
-      </p>
-    
-  </header>
-
-
-<div class="entry-content"><p>We&#8217;ve got an application which uses JRuby + RoR deployed in Glassfish. We enabled <code><em>config.threadsafe!</em></code> in the production.rb file to support multithreaded environment.</p>
+  <div class="entry-content"><p>We&#8217;ve got an application which uses JRuby + RoR deployed in Glassfish. We enabled <code><em>config.threadsafe!</em></code> in the production.rb file to support multithreaded environment.</p>
 
 <p>The server was working fine, but the rake tasks started failing because of a class loading issue. The immediate fix we had was to disable threadsafe for rake tasks and enable it when the server is started. This is not a scalable solution and when we started looking further into it, we found that the following change in the rails initializer should resolve the issue:</p>
 
@@ -174,8 +165,22 @@
 
 <p><a href="http://groups.google.com/group/rubyonrails-core/browse_thread/thread/b13dbe0b8f12b7dc">http://groups.google.com/group/rubyonrails-core/browse_thread/thread/b13dbe0b8f12b7dc</a></p>
 </div>
+  
+    <p class="meta">
+      
+
+<div class="categories">
+	<strong>Filed in: </strong> 
+  
+    <a class='category' href='/blog/categories/all-posts/'>All Posts</a>, <a class='category' href='/blog/categories/rails/'>Rails</a>
+  
+</div>
 
 
+      
+    </p>
+  
+</div>
   <footer>
     
       <div class="sharing">
@@ -208,12 +213,6 @@
       <li class="previous"><a class="basic-alignment left"
         href="/blog/2010/09/configuring-hudson-ci-server-behind-firewall/" title="Previous Post:
         Configuring Hudson CI server behind firewall">&laquo; Configuring Hudson CI server behind firewall</a></li>
-      
-      <li><a href="/blog/archives">Blog Archives</a></li>
-      
-      <li class="next"><a class="basic-alignment right" href="/blog/2011/02/software-development-as-a-balance/"
-        title="Next Post: A Macro Level Perspective of Software Development">A Macro Level Perspective of Software Development
-        &raquo;</a></li>
       
     </ul>
   </footer>

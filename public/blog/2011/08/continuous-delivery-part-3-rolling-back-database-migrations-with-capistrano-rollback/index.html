@@ -119,47 +119,38 @@
   <div class="container-fluid main-content">
     <div class="row-fluid">
       <article class="hentry span9 blog-post" role="article">
-  
-  <header>
+  <div class="row-fluid">
+  <div class="span2 date-container">
     
-      <h1 class="entry-title">Continuous Delivery - Part 4: Rolling Back Database Migrations With Capistrano Rollback</h1>
+
+
+
+
+
+
+
+
+  
+
+
+<div datetime="2011-08-14T08:22:40+05:30" pubdate data-updated="true"><div class='day'>14</div><div class='month-year'><div class='month'>August</div><div class='year'>2011</div></div></div>
+  </div>
+  <div class="span10">
     
+      <header>
+        <h2 class="entry-title">Continuous Delivery - Part 4: Rolling Back Database Migrations With Capistrano Rollback</h2>
+        <p class="meta">
+          
+  
+
+<div class="byline author vcard"><strong>Posted by: </strong><span class="fn">Leena</span></div>
+
+        </p>
+      </header>
     
-      <p class="meta">
-        
-  
+  </div>
 
-<span class="byline author vcard">Posted by <span class="fn">Leena</span></span>
-
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2011-08-14T08:22:40+05:30" pubdate data-updated="true">Aug 14<span>th</span>, 2011</time>
-        
-
-<span class="categories">
-  
-    <a class='category' href='/blog/categories/all-posts/'>All Posts</a>, <a class='category' href='/blog/categories/continuous-delivery/'>Continuous Delivery</a>, <a class='category' href='/blog/categories/process/'>Process</a>
-  
-</span>
-
-
-        
-      </p>
-    
-  </header>
-
-
-<div class="entry-content"><p>According to the book <a href="http://www.amazon.com/gp/product/0321601912?tag=contindelive-20">Continuous Delivery</a>, the database also should be under version control, and Rails allows us to achieve this with ActiveRecord Migrations. Even though <a class="zem_slink" title="Capistrano" rel="homepage" href="http://www.capify.org/">Capistrano</a> can run the migrations automatically with its <code>deploy</code> command, its <code>deploy:rollback</code> task does not rollback the DB migrations automatically.  I&#8217;ve created a small capistrano <a href="https://github.com/multunus/capistrano-db-rollback">recipe</a> which can take care of rolling back migrations.  The assumptions made are:</p>
+  <div class="entry-content"><p>According to the book <a href="http://www.amazon.com/gp/product/0321601912?tag=contindelive-20">Continuous Delivery</a>, the database also should be under version control, and Rails allows us to achieve this with ActiveRecord Migrations. Even though <a class="zem_slink" title="Capistrano" rel="homepage" href="http://www.capify.org/">Capistrano</a> can run the migrations automatically with its <code>deploy</code> command, its <code>deploy:rollback</code> task does not rollback the DB migrations automatically.  I&#8217;ve created a small capistrano <a href="https://github.com/multunus/capistrano-db-rollback">recipe</a> which can take care of rolling back migrations.  The assumptions made are:</p>
 
 <ul>
     <li>All the migrations have the <code>down</code> method defined properly. You can check for this by running <code>rake db:migrate:redo</code></li>
@@ -180,8 +171,22 @@
 
 <p></div></p>
 </div>
+  
+    <p class="meta">
+      
+
+<div class="categories">
+	<strong>Filed in: </strong> 
+  
+    <a class='category' href='/blog/categories/all-posts/'>All Posts</a>, <a class='category' href='/blog/categories/continuous-delivery/'>Continuous Delivery</a>, <a class='category' href='/blog/categories/process/'>Process</a>
+  
+</div>
 
 
+      
+    </p>
+  
+</div>
   <footer>
     
       <div class="sharing">
@@ -214,12 +219,6 @@
       <li class="previous"><a class="basic-alignment left"
         href="/blog/2011/07/continuous-delivery-contd/" title="Previous Post:
         Continuous Delivery - Part 3: Running custom rake tasks during deployment">&laquo; Continuous Delivery - Part 3: Running custom rake tasks during deployment</a></li>
-      
-      <li><a href="/blog/archives">Blog Archives</a></li>
-      
-      <li class="next"><a class="basic-alignment right" href="/blog/2011/09/rebuilding-in-jenkins/"
-        title="Next Post: Rebuilding in Jenkins">Rebuilding in Jenkins
-        &raquo;</a></li>
       
     </ul>
   </footer>

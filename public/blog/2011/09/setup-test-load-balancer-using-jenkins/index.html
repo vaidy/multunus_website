@@ -119,47 +119,38 @@
   <div class="container-fluid main-content">
     <div class="row-fluid">
       <article class="hentry span9 blog-post" role="article">
-  
-  <header>
+  <div class="row-fluid">
+  <div class="span2 date-container">
     
-      <h1 class="entry-title">Setup Test Load Balancer Using Jenkins</h1>
+
+
+
+
+
+
+
+
+  
+
+
+<div datetime="2011-09-23T09:40:07+05:30" pubdate data-updated="true"><div class='day'>23</div><div class='month-year'><div class='month'>September</div><div class='year'>2011</div></div></div>
+  </div>
+  <div class="span10">
     
+      <header>
+        <h2 class="entry-title">Setup Test Load Balancer Using Jenkins</h2>
+        <p class="meta">
+          
+  
+
+<div class="byline author vcard"><strong>Posted by: </strong><span class="fn">KP</span></div>
+
+        </p>
+      </header>
     
-      <p class="meta">
-        
-  
+  </div>
 
-<span class="byline author vcard">Posted by <span class="fn">KP</span></span>
-
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2011-09-23T09:40:07+05:30" pubdate data-updated="true">Sep 23<span>rd</span>, 2011</time>
-        
-
-<span class="categories">
-  
-    <a class='category' href='/blog/categories/all-posts/'>All Posts</a>, <a class='category' href='/blog/categories/continuous-delivery/'>Continuous Delivery</a>
-  
-</span>
-
-
-        
-      </p>
-    
-  </header>
-
-
-<div class="entry-content"><p>The main purpose of a test suite is to give fast feedback about the changes being made to the developer. Ideally the test suite should be really fast and should take no more than 10 mins to complete. But there are times when you end up with a test suit that takes 30 - 40 mins to complete. This can be really frustrating for the developers because they have to wait for 40 mins after checking in his changes to know if he broke something.</p>
+  <div class="entry-content"><p>The main purpose of a test suite is to give fast feedback about the changes being made to the developer. Ideally the test suite should be really fast and should take no more than 10 mins to complete. But there are times when you end up with a test suit that takes 30 - 40 mins to complete. This can be really frustrating for the developers because they have to wait for 40 mins after checking in his changes to know if he broke something.</p>
 
 <p>For this problem there are two possible solutions. Take some time from your project schedule to rewrite some part of your test suite. Although this is the ideal solution to the problem, this might not always be an option for you because of delivery deadlines. The other alternative is to throw more hardware at the problem and this is where <a href="http://test-load-balancer.github.com/">TLB </a>comes in to picture.</p>
 
@@ -196,8 +187,22 @@
 
 <p>Create as many copies of the existing job as the number of partitions that you want to run. Additionally you can name each of these jobs as &lt;job-name-n&gt; where n refers to the partition which this job is going to run. Create an dummy job and configure the post build task so that all the partitioned jobs will be triggered simultaneously.</p>
 </div>
+  
+    <p class="meta">
+      
+
+<div class="categories">
+	<strong>Filed in: </strong> 
+  
+    <a class='category' href='/blog/categories/all-posts/'>All Posts</a>, <a class='category' href='/blog/categories/continuous-delivery/'>Continuous Delivery</a>
+  
+</div>
 
 
+      
+    </p>
+  
+</div>
   <footer>
     
       <div class="sharing">
@@ -230,12 +235,6 @@
       <li class="previous"><a class="basic-alignment left"
         href="/blog/2011/09/rebuilding-in-jenkins/" title="Previous Post:
         Rebuilding in Jenkins">&laquo; Rebuilding in Jenkins</a></li>
-      
-      <li><a href="/blog/archives">Blog Archives</a></li>
-      
-      <li class="next"><a class="basic-alignment right" href="/blog/2011/09/continuous-delivery-for-android-apps-part-1/"
-        title="Next Post: Continuous Delivery for Android Apps - Part 1">Continuous Delivery for Android Apps - Part 1
-        &raquo;</a></li>
       
     </ul>
   </footer>

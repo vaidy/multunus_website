@@ -119,47 +119,38 @@
   <div class="container-fluid main-content">
     <div class="row-fluid">
       <article class="hentry span9 blog-post" role="article">
-  
-  <header>
+  <div class="row-fluid">
+  <div class="span2 date-container">
     
-      <h1 class="entry-title">Disabling Callbacks in Rails 3</h1>
+
+
+
+
+
+
+
+
+  
+
+
+<div datetime="2011-05-01T02:10:17+05:30" pubdate data-updated="true"><div class='day'>01</div><div class='month-year'><div class='month'>May</div><div class='year'>2011</div></div></div>
+  </div>
+  <div class="span10">
     
+      <header>
+        <h2 class="entry-title">Disabling Callbacks in Rails 3</h2>
+        <p class="meta">
+          
+  
+
+<div class="byline author vcard"><strong>Posted by: </strong><span class="fn">Leena</span></div>
+
+        </p>
+      </header>
     
-      <p class="meta">
-        
-  
+  </div>
 
-<span class="byline author vcard">Posted by <span class="fn">Leena</span></span>
-
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2011-05-01T02:10:17+05:30" pubdate data-updated="true">May 1<span>st</span>, 2011</time>
-        
-
-<span class="categories">
-  
-    <a class='category' href='/blog/categories/all-posts/'>All Posts</a>, <a class='category' href='/blog/categories/rails/'>Rails</a>, <a class='category' href='/blog/categories/technology/'>Technology</a>
-  
-</span>
-
-
-        
-      </p>
-    
-  </header>
-
-
-<div class="entry-content"><p>It is common requirement to disable the callbacks like <code>after_save</code>, <code>after_create </code>etc while importing/migrating data. One way to avoid this is by directly importing the data into DB using a command like <code>mysqlimport</code>. But by doing that, the Rails validations etc will not work. We can disable the callbacks using the <code>skip_callback</code> method.  For eg:</p>
+  <div class="entry-content"><p>It is common requirement to disable the callbacks like <code>after_save</code>, <code>after_create </code>etc while importing/migrating data. One way to avoid this is by directly importing the data into DB using a command like <code>mysqlimport</code>. But by doing that, the Rails validations etc will not work. We can disable the callbacks using the <code>skip_callback</code> method.  For eg:</p>
 
 <p><code>User.skip_callback("create",:after,:send_confirmation_email)</code></p>
 
@@ -169,8 +160,22 @@
 
 <p><code>User.set_callback("create",:after,:send_confirmation_email)</code></p>
 </div>
+  
+    <p class="meta">
+      
+
+<div class="categories">
+	<strong>Filed in: </strong> 
+  
+    <a class='category' href='/blog/categories/all-posts/'>All Posts</a>, <a class='category' href='/blog/categories/rails/'>Rails</a>, <a class='category' href='/blog/categories/technology/'>Technology</a>
+  
+</div>
 
 
+      
+    </p>
+  
+</div>
   <footer>
     
       <div class="sharing">
@@ -203,12 +208,6 @@
       <li class="previous"><a class="basic-alignment left"
         href="/blog/2011/04/planning-an-informative-workspace-at-our-new-office/" title="Previous Post:
         Planning an Informative Workspace at our New Office">&laquo; Planning an Informative Workspace at our New Office</a></li>
-      
-      <li><a href="/blog/archives">Blog Archives</a></li>
-      
-      <li class="next"><a class="basic-alignment right" href="/blog/2011/06/takeaways-from-ruby-conf-india-2011/"
-        title="Next Post: Takeaways from Ruby Conf India 2011">Takeaways from Ruby Conf India 2011
-        &raquo;</a></li>
       
     </ul>
   </footer>

@@ -119,47 +119,38 @@
   <div class="container-fluid main-content">
     <div class="row-fluid">
       <article class="hentry span9 blog-post" role="article">
-  
-  <header>
+  <div class="row-fluid">
+  <div class="span2 date-container">
     
-      <h1 class="entry-title">Running Tests in Parallel Using Parallel_tests</h1>
+
+
+
+
+
+
+
+
+  
+
+
+<div datetime="2011-06-27T10:48:01+05:30" pubdate data-updated="true"><div class='day'>27</div><div class='month-year'><div class='month'>June</div><div class='year'>2011</div></div></div>
+  </div>
+  <div class="span10">
     
+      <header>
+        <h2 class="entry-title">Running Tests in Parallel Using Parallel_tests</h2>
+        <p class="meta">
+          
+  
+
+<div class="byline author vcard"><strong>Posted by: </strong><span class="fn">Leena</span></div>
+
+        </p>
+      </header>
     
-      <p class="meta">
-        
-  
+  </div>
 
-<span class="byline author vcard">Posted by <span class="fn">Leena</span></span>
-
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2011-06-27T10:48:01+05:30" pubdate data-updated="true">Jun 27<span>th</span>, 2011</time>
-        
-
-<span class="categories">
-  
-    <a class='category' href='/blog/categories/all-posts/'>All Posts</a>, <a class='category' href='/blog/categories/rails/'>Rails</a>, <a class='category' href='/blog/categories/technology/'>Technology</a>
-  
-</span>
-
-
-        
-      </p>
-    
-  </header>
-
-
-<div class="entry-content"><p>One of the action items I had mentioned in <a href="/blog/2011/06/takeaways-from-ruby-conf-india-2011/">an earlier post</a>, was to setup the  infrastructure for running tests in parallel.</p>
+  <div class="entry-content"><p>One of the action items I had mentioned in <a href="/blog/2011/06/takeaways-from-ruby-conf-india-2011/">an earlier post</a>, was to setup the  infrastructure for running tests in parallel.</p>
 
 <p>I tried <a href="http://test-load-balancer.github.com/">TLB</a>, but stopped on it because it required cluster setup for our CI server i.e. hudson. I was looking for something which was even simpler than TLB, and tried <a href="https://github.com/ngauthier/hydra">Hydra</a>, but could not setup it successfully. Thankfully though, the Hydra committer  <a href="https://github.com/ngauthier/hydra/issues/48">suggested</a> that I try out  <a href="https://github.com/grosser/parallel_tests">parallel_tests</a> - as hydra is not currently being maintained.</p>
 
@@ -200,8 +191,22 @@ sys 0m14.269s</pre>
 
 <p>But parallel_tests by default spawns multiple processes depending upon the &#8220;core&#8221; i.e. on a dual core it starts 2 processes unless you mention otherwise.</p>
 </div>
+  
+    <p class="meta">
+      
+
+<div class="categories">
+	<strong>Filed in: </strong> 
+  
+    <a class='category' href='/blog/categories/all-posts/'>All Posts</a>, <a class='category' href='/blog/categories/rails/'>Rails</a>, <a class='category' href='/blog/categories/technology/'>Technology</a>
+  
+</div>
 
 
+      
+    </p>
+  
+</div>
   <footer>
     
       <div class="sharing">
@@ -234,12 +239,6 @@ sys 0m14.269s</pre>
       <li class="previous"><a class="basic-alignment left"
         href="/blog/2011/06/coffeescript-and-rails-3-0-quick-setup-2/" title="Previous Post:
         CoffeeScript and Rails 3.0 - Quick setup">&laquo; CoffeeScript and Rails 3.0 - Quick setup</a></li>
-      
-      <li><a href="/blog/archives">Blog Archives</a></li>
-      
-      <li class="next"><a class="basic-alignment right" href="/blog/2011/06/avoiding-the-crunch-mode-in-the-last-few-weeks-of-a-project/"
-        title="Next Post: Avoiding the "crunch mode" in the last few weeks of a project">Avoiding the "crunch mode" in the last few weeks of a project
-        &raquo;</a></li>
       
     </ul>
   </footer>

@@ -233,3 +233,62 @@ ul.nav li.active > a {
 .main-image-container {
 	margin: 0 30px 20px 0;
 }
+
+.pager {
+	background: rgba(30, 30, 30, 0.6);
+	border: 1px solid #222;
+
+	.next a {
+		background: url("/images/utilities/pager-arrow-left.png") no-repeat left center;
+		padding-left: 28px;
+		margin-left: 8px;
+		float: left;
+	}
+
+	.previous a {
+		background: url("/images/utilities/pager-arrow-right.png") no-repeat right center;
+		padding-right: 28px;
+		margin-right: 8px;
+		float: right;
+	}
+
+	a {
+		color: white !important;
+		background: none;
+		border-radius: 0;
+		border: none;
+	}
+
+	a:hover {
+		color: #D00 !important;
+		text-decoration: underline;
+	}
+}
+
+.date-container {
+	background: #AAA;
+	color: white;
+	margin-top: 1.2%;
+
+	.day {
+		float: left;
+		font-size: 2.5em;
+		padding: 10px 5.5px 10px 4.5px;
+	}
+
+	.month-year {
+		font-size: 0.85em;
+	}
+}
+
+.sharing {
+  	.fb_iframe_widget span {
+  		vertical-align: baseline !important;
+  	  	margin-right: 32px;
+  	}
+
+  	.IN-widget {
+  	  	margin-left: 30px;
+  	}
+}
+

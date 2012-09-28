@@ -35,6 +35,13 @@ module Octopress
       date = datetime(date)
       if format.nil? || format.empty? || format == "ordinal"
         date_formatted = ordinalize(date)
+      elsif format == "%d %B %Y"
+        day = date.strftime("%d")
+        month = date.strftime("%B")
+        year = date.strftime("%Y")
+        date_formatted = "<div class='day'>#{day}</div>"
+        date_formatted +="<div class='month-year'><div class='month'>#{month}</div>"
+        date_formatted +="<div class='year'>#{year}</div></div>"
       else
         date_formatted = date.strftime(format)
         date_formatted.gsub!(/%o/, ordinal(date.strftime('%e').to_i))

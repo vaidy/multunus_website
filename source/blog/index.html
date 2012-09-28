@@ -5,21 +5,15 @@ title: "Our Blog"
 
 <div class="span9">
   <h1>Our Blog</h1>
+  {% include custom/pager.html %}
   {% assign index = true %}
   {% for post in paginator.posts %}
     {% assign content = post.content %}
       <article>
-        {% include article.html %}
+        {% include article_index.html %}
       </article>
   {% endfor %}
-  <ul class="pager">
-    {% if paginator.next_page %}
-    <li class="previous"><a href="{{paginator.next_page}}">&larr; Older</a></li>
-    {% endif %}
-    {% if paginator.previous_page %}
-    <li class="next"><a href="{{paginator.previous_page}}">Newer &rarr;</a></li>
-    {% endif %}
-  </ul>
+  {% include custom/pager.html %}
 </div>
 <div class="sidebar-nav span3">
   {% include_array blog_index_asides %}

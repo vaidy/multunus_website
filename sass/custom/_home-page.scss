@@ -112,8 +112,12 @@
 .main-content > .row-fluid:first-child {
 	background: white;
 	border-radius: 10px;
-	.span9, .sidebar-nav {
-		padding: 3% 0 3% 3%;
+	.span9 {
+		padding: 3% 3% 3% 3%;
+	}
+
+	.sidebar-nav {
+		padding: 3% 0 3% 3%;	
 	}
 	.span12 {
 		padding: 3% 3% 3% 3%;
