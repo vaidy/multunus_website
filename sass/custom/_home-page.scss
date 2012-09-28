@@ -83,11 +83,11 @@
 
 .tumblr-feed {
 	position:relative;
-	height: 50px;
+	margin-bottom: 40px;
 
 	#tumblr_post {
 		overflow: hidden;
-		height: 330px;
+		height: 345px;
 		color: #959595;
 	}
 	#after-tumblr-widget {
@@ -163,10 +163,11 @@
 	#continue-reading {
 		background: url('/images/utilities/black-gradient-bar-bg.png') repeat-x 0px -9px;
 		text-align: center;
-		height: 25px;
-		position: relative;
+		position: absolute;
+		height: 70px;
 		padding-top: 40px;
-		top: -50px;
+		bottom: -70px;
+		width: 100%;
 
 		a {
 			font-size: 0.75em;
@@ -182,7 +183,7 @@
 	ul {
 		font-size: 0.75em;
 		font-weight: bold;
-		height: 350px;
+		margin-right: 25px;
 		overflow: hidden;
 
 		li {

@@ -16,13 +16,6 @@ sharing: true
       <div id="disqus_thread" aria-live="polite">{% include post/disqus_thread.html %}</div>
     </section>
     {% endif %}
-    <ul class="pager">
-      {% if page.previous.url %}
-      <li class="previous"><a class="basic-alignment left"
-        href="{{page.previous.url}}" title="Previous Post:
-        {{page.previous.title}}">&laquo; {{page.previous.title}}</a></li>
-      {% endif %}
-    </ul>
   </footer>
   {% include after_footer.html %}
 </article>
