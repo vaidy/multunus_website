@@ -3,8 +3,10 @@ layout: default
 slug: mobile-apps
 title: Mobile Applications
 ---
-<div class="span9"></div>
+<div class="span9">
+	<h1>{{ page.title }}</h1>
+</div>
 <div class="sidebar-nav span3">
-  {% include_array what_we_do_asides %}
+  {% include_array mobile_apps_asides %}
 </div>
 
