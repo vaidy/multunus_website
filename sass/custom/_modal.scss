@@ -13,6 +13,10 @@
 			color: #222222;
 			padding: 15px 60px 10px 60px;
 
+			@media (max-width: 979px) {
+			    padding: 15px 20px 10px 20px;
+			}
+
 			ul li {
 				list-style-type: square;
 				padding-bottom: 5px;
