@@ -282,7 +282,18 @@ ul.nav li.active > a {
 
 	.month-year {
 		font-size: 0.75em;
-		padding-left: 5px;
+		float: left;
+		position: relative;
+
+		.month {
+			position: absolute;
+			top: 2px;
+		}
+
+		.year {
+			position: absolute;
+			bottom: -38px;
+		}
 	}
 }
 

@@ -1,5 +1,5 @@
 article{
-	padding: 30px 0;
+	padding: 30px 0 0 0;
 	position: relative;
 	@media screen and (max-width: 800px){
 		padding-bottom: 15px;
@@ -16,8 +16,7 @@ article{
 		}
 	}
 	.entry-content{
-		line-height: 2;
-		//text-align: justify;
+		line-height: 1.5em;
 		a{
 			&:hover{
 				text-decoration: underline;

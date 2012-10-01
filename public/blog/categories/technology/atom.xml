@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Technology | Multunus]]></title>
   <link href="http://multunus.herokuapp.com/blog/categories/technology/atom.xml" rel="self"/>
   <link href="http://multunus.herokuapp.com/"/>
-  <updated>2012-10-01T16:41:42+05:30</updated>
+  <updated>2012-10-01T17:35:30+05:30</updated>
   <id>http://multunus.herokuapp.com/</id>
   <author>
     <name><![CDATA[Your Name]]></name>
@@ -26,15 +26,21 @@
   functions for animations. But these will simply cease to function if you're using
   jQuery animations because in reality jQuery is not "animating" anything. However, in
   the case of CSS3, the browser optimizes animations using the GPU's resources to give a
-  much more polished effect. Go in for CSS3 whenever possible. <strong><span style=
-  "text-decoration: underline;">The long version:</span></strong> jQuery is an excellent
-  js framework to do a lot of things, but is it what you need for blazing fast
-  performance with animations for your website? Lets dig a little bit deeper into the
-  actual implementations, by considering these two examples, <strong>(a) jQuery
-  animation</strong>
+  much more polished effect. Go in for CSS3 whenever possible.
 </p>
 
 
+<p>
+  <strong><span style=
+  "text-decoration: underline;">The long version:</span></strong> jQuery is an excellent
+  js framework to do a lot of things, but is it what you need for blazing fast
+  performance with animations for your website? Lets dig a little bit deeper into the
+  actual implementations, by considering these two examples,
+</p>
+
+
+<p>
+<strong>(a) jQuery animation</strong>
 <pre>
   $(".onclick").toggle(
       function(){
@@ -45,48 +51,49 @@
       }
   );
 </pre>
-
-
 <iframe style="width: 100%; height: 300px;" src=
 "http://jsfiddle.net/midhun_k/aq9gq/embedded/" frameborder="0" width="320" height=
-"240"></iframe>
+"240"></iframe> 
+In this case the drop down menu is implemented using jquery animate method.
+</p>
 
 
-<p> In this case the drop down menu is implemented using jquery animate
-method. <strong>(b) CSS3 animation</strong>
+<p>
+ <strong>(b) CSS3 animation</strong>
   <pre>
-.children{</p>
+.children{
+           height: 0px;
+           border-bottom: 1px solid grey;
+           -webkit-transition: height .3s ease-in-out;
+}
 
-<pre><code>       height: 0px;
-       border-bottom: 1px solid grey;
-       -webkit-transition: height .3s ease-in-out;
-</code></pre>
-
-<p>}</p>
-
-<p>.children-onhover{</p>
-
-<pre><code>       height: 50px;
-</code></pre>
-
-<p>}
+.children-onhover{
+           height: 50px;
+}
 </pre>
   <pre>
-$(".onclick").click(function(){</p>
-
-<pre><code>$(".children").toggleClass("children-onhover");
-</code></pre>
-
-<p>});
+$(".onclick").click(function(){
+    $(".children").toggleClass("children-onhover");
+});
 </pre><iframe style="width: 100%; height: 300px;" src=
 "http://jsfiddle.net/midhun_k/kANVs/embedded/" frameborder="0" width="320" height=
 "240"></iframe> In this case the drop down menu is done using css3 transitions using
-ease-in-out transition effect. Lets analyze what's going on with the css3 animation for
+ease-in-out transition effect. 
+</p>
+
+
+<p>
+Lets analyze what's going on with the css3 animation for
 sliding down the menus. Both of these menus progressively increase the height of each of
 the containing submenus, but in case of css3, the height is progressively updated from
 the old value to the new value over time, which is done by the layout engine of the
 browser internally, as it is described in the <a title="surfin' safari" href=
-"http://www.webkit.org/blog/138/css-animation/">surfin' safari</a> blog. In case of
+"http://www.webkit.org/blog/138/css-animation/">surfin' safari</a> blog.
+</p>
+
+
+<p>
+ In case of
 jQuery, inside the animate of each property, an fx Object is created.
   <pre>
 jQuery.each( prop, function( name, val ) {
@@ -97,14 +104,11 @@ jQuery.each( prop, function( name, val ) {
 fx: function( elem, options, prop ) {
   this.options = options;
   this.elem = elem;
-  this.prop = prop;</p>
+  this.prop = prop;
 
-<p>  if ( !options.orig ) {</p>
-
-<pre><code>  options.orig = {};
-</code></pre>
-
-<p>  }
+  if ( !options.orig ) {
+      options.orig = {};
+  }
 }
 </pre>After that, the start and end values is set. In our case:
   <pre>
@@ -120,29 +124,25 @@ custom: function( from, to, unit ) {
   this.end = to;
   this.unit = unit || this.unit || "px";
   this.now = this.start;
-  this.pos = this.state = 0;</p>
+  this.pos = this.state = 0;
 
-<p>  var self = this;
-  function t( gotoEnd ) {</p>
+  var self = this;
+  function t( gotoEnd ) {
+      return self.step(gotoEnd);
+  }
 
-<pre><code>  return self.step(gotoEnd);
-</code></pre>
+  t.elem = this.elem;
 
-<p>  }</p>
-
-<p>  t.elem = this.elem;</p>
-
-<p>  if ( t() &amp;&amp; jQuery.timers.push(t) &amp;&amp; !timerId ) {</p>
-
-<pre><code>  timerId = setInterval(jQuery.fx.tick, 13);
-</code></pre>
-
-<p>  }
+  if ( t() &amp;&amp; jQuery.timers.push(t) &amp;&amp; !timerId ) {
+      timerId = setInterval(jQuery.fx.tick, 13);
+  }
 }
 </pre>As you can see above, a call to step method is made every every 13 milliseconds. As
-of jQuery 1.8 this interval is called JQuery.fx.interval. That is, for a height increase
-of 50px over a time period of 400ms (default JQuery animation interval), it does 31 steps
-of 13 ms each.
+of jQuery 1.8 this interval is called JQuery.fx.interval. 
+</p>
+
+
+<p>That is, for a height increase of 50px over a time period of 400ms (default JQuery animation interval), it does 31 steps of 13 ms each.
   <pre>
 jQuery.fx.speeds = {</p>
 
@@ -153,22 +153,31 @@ jQuery.fx.speeds = {</p>
 </code></pre>
 
 <p>};
-</pre>As of jQuery 1.8 the step function is replaced, but the same logic is applied:
+</pre></p>
+
+<p>
+As of jQuery 1.8 the step function is replaced, but the same logic is applied:
   <pre>
 step: function( gotoEnd ) {
   var t = now();
   var n = t - this.startTime;
   this.state = n / this.options.duration;
-  pos = jQuery.easing<a href="this.state,%20n,%200,%201,%20this.options.duration">'swing'</a>;
+  pos = jQuery.easing['swing'](this.state, n, 0, 1, this.options.duration);
   this.now = this.start + ((this.end - this.start) * this.pos);
   this.update();
 }
-</pre>You can dig deeper into jQuery effects at: <a title=
+</pre>
+</p>
+
+
+<p>You can dig deeper into jQuery effects at: <a title=
 "https://github.com/jquery/jquery/blob/master/src/effects.js#L124" href=
 "https://github.com/jquery/jquery/blob/master/src/effects.js#L124">https://github.com/jquery/jquery/blob/master/src/effects.js#L124</a>
 Also make sure to check out the relevant webkit source: <a title=
 "https://github.com/WebKit/webkit/tree/master/Source/WebCore" href=
-"https://github.com/WebKit/webkit/tree/master/Source/WebCore">https://github.com/WebKit/webkit/tree/master/Source/WebCore</a></p>
+"https://github.com/WebKit/webkit/tree/master/Source/WebCore">https://github.com/WebKit/webkit/tree/master/Source/WebCore</a>
+</p>
+
 ]]></content>
   </entry>
   
