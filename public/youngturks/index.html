@@ -50,7 +50,7 @@
 
 		<div class="container-fluid">
 			<div class="row-fluid the-turks">
-				<div class="span1 turk" name="manoj">
+				<div class="span1 turk" name="manoj" rel="popover" data-content="Click on a person to see his timeline" data-original-title="The Young Turks" data-placement="bottom">
 					<a href="#manoj">
 						<img src="/youngturks/images/manoj.jpg" alt="Manoj">
 					</a>
@@ -97,7 +97,7 @@
 				</div>
 			</div>
 
-			<div class="sub-title">
+			<div class="sub-title" rel="clickover" data-content="Click on a person to see his timeline" data-original-title="The Young Turks" data-placement="bottom">
 				<p>Join our league of young turks.</p>
 				<p>But first, learn more about them.</p>
 			</div>
@@ -847,7 +847,7 @@
 				$.timeliner({
 					startState: 'open'
 				});
-
+				
 				$(".the-turks .turk").click(showTimeline);
 				$(".the-turks .turk").click(selectATurk);
 
@@ -857,6 +857,12 @@
 				$(".turk img, .title-line, #" + turkNameFromUrl + "-timeline").load(function(){
 					$(".turk[name='" + turkNameFromUrl + "']").click();
 				});					
+
+				setUpPopOverCloseOnClick();
+
+				setTimeout(function() {
+					$('[rel="popover"]').popover('show');
+				},1250);
 			});
 		</script>
 

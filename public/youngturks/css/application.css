@@ -296,3 +296,13 @@ img.color {
 .IN-widget {
   margin-left: 30px;
 }
+
+.popover-inner {
+
+}
+
+.popover {
+  width: 140px;
+  color: #282828;
+  text-align: center;
+}
