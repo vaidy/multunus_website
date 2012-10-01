@@ -306,3 +306,7 @@ img.color {
   color: #282828;
   text-align: center;
 }
+
+.popover p {
+  margin: 0;
+}
