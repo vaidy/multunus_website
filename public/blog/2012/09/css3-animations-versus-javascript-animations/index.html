@@ -5,11 +5,11 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>Software Development as a balance  | Multunus </title>
+  <title>CSS3 animations versus Javascript animations  | Multunus </title>
   <meta name="author" content="Your Name">
 
   
-  <meta name="description" content="Why is delivering good software on a consistent basis hard? There are many existing answers to this question already. This is our version. A list of &hellip;">
+  <meta name="description" content="tl; dr; Layout engines in major browsers, like gecko, webkit or trident now have many optimization functions for animations. But these will simply &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -18,7 +18,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://multunus.herokuapp.com/blog/2011/02/software-development-as-a-balance-2">
+  <link rel="canonical" href="http://multunus.herokuapp.com/blog/2012/09/css3-animations-versus-javascript-animations">
   <link href="/images/favicon.ico" rel="icon">
   <link href="/stylesheets/bootstrap/bootstrap.css" media="screen, projection" rel="stylesheet" type="text/css">
   <link href="/stylesheets/bootstrap/responsive.css" media="screen, projection" rel="stylesheet" type="text/css">
@@ -133,60 +133,144 @@
   
 
 
-<div datetime="2011-02-09T00:17:24+05:30" pubdate data-updated="true"><div class='day'>09</div><div class='month-year'><div class='month'>February</div><div class='year'>2011</div></div></div>
+<div datetime="2012-09-27T10:55:05+05:30" pubdate data-updated="true"><div class='day'>27</div><div class='month-year'><div class='month'>September</div><div class='year'>2012</div></div></div>
   </div>
   <div class="span10">
     
       <header>
-        <h2 class="entry-title">Software Development as a Balance</h2>
+        <h2 class="entry-title">CSS3 Animations Versus Javascript Animations</h2>
         <p class="meta">
           
   
 
-<div class="byline author vcard"><strong>Posted by: </strong><span class="fn">Vaidy</span></div>
+<div class="byline author vcard"><strong>Posted by: </strong><span class="fn">Manoj, Midhun</span></div>
 
         </p>
       </header>
     
   </div>
 
-  <div class="entry-content"><p>Why is delivering good software on a consistent basis hard? There are many existing answers to this question already. This is our version.</p>
+  <div class="entry-content"><strong><span style="text-decoration: underline;">tl; dr;</span></strong> 
+<p>
+  Layout
+  engines in major browsers, like gecko, webkit or trident now have many optimization
+  functions for animations. But these will simply cease to function if you&#8217;re using
+  jQuery animations because in reality jQuery is not &#8220;animating&#8221; anything. However, in
+  the case of CSS3, the browser optimizes animations using the GPU&#8217;s resources to give a
+  much more polished effect. Go in for CSS3 whenever possible. <strong><span style=
+  "text-decoration: underline;">The long version:</span></strong> jQuery is an excellent
+  js framework to do a lot of things, but is it what you need for blazing fast
+  performance with animations for your website? Lets dig a little bit deeper into the
+  actual implementations, by considering these two examples, <strong>(a) jQuery
+  animation</strong>
+</p>
+<pre>
+  $(".onclick").toggle(
+      function(){
+        $(".children").animate({height:'50'});
+      },
+      function(){
+        $(".children").animate({height:'0'});
+      }
+  );
+</pre><iframe style="width: 100%; height: 300px;" src=
+"http://jsfiddle.net/midhun_k/aq9gq/embedded/" frameborder="0" width="320" height=
+"240"></iframe> In this case the drop down menu is implemented using jquery animate
+method. <strong>(b) CSS3 animation</strong>
+  <pre>
+.children{
+           height: 0px;
+           border-bottom: 1px solid grey;
+           -webkit-transition: height .3s ease-in-out;
+}
 
-<p>A list of things good software should achieve:</p>
+.children-onhover{
+           height: 50px;
+}
+</pre>
+  <pre>
+$(".onclick").click(function(){
+    $(".children").toggleClass("children-onhover");
+});
+</pre><iframe style="width: 100%; height: 300px;" src=
+"http://jsfiddle.net/midhun_k/kANVs/embedded/" frameborder="0" width="320" height=
+"240"></iframe> In this case the drop down menu is done using css3 transitions using
+ease-in-out transition effect. Lets analyze what&#8217;s going on with the css3 animation for
+sliding down the menus. Both of these menus progressively increase the height of each of
+the containing submenus, but in case of css3, the height is progressively updated from
+the old value to the new value over time, which is done by the layout engine of the
+browser internally, as it is described in the <a title="surfin' safari" href=
+"http://www.webkit.org/blog/138/css-animation/">surfin&#8217; safari</a> blog. In case of
+jQuery, inside the animate of each property, an fx Object is created.
+  <pre>
+jQuery.each( prop, function( name, val ) {
+  var e = new jQuery.fx( self, opt, name );
+}
+</pre>This return a javascript object instance,
+  <pre>
+fx: function( elem, options, prop ) {
+  this.options = options;
+  this.elem = elem;
+  this.prop = prop;
 
-<ul>
-    <li>Should solve a real problem</li>
-    <li>Should be shipped and maintained within the budgeted cost and time</li>
-    <li>Should be easy to use</li>
-</ul>
+  if ( !options.orig ) {
+      options.orig = {};
+  }
+}
+</pre>After that, the start and end values is set. In our case:
+  <pre>
+   start = 0;
+   end = 50;
+   unit = 'px';
+   e.custom( start, end, unit );
+</pre>The above snippet calls the custom function:
+  <pre>
+custom: function( from, to, unit ) {
+  this.startTime = now();
+  this.start = from;
+  this.end = to;
+  this.unit = unit || this.unit || "px";
+  this.now = this.start;
+  this.pos = this.state = 0;
 
+  var self = this;
+  function t( gotoEnd ) {
+      return self.step(gotoEnd);
+  }
 
-<p><strong>Update: </strong>We&#8217;ve now migrated to <a href="http://jamesshore.com/Agile-Book/why_agile.html">James Shore&#8217;s definition</a>:</p>
+  t.elem = this.elem;
 
-<p style="padding-left: 30px;"><span style="font-family: verdana, 'trebuchet MS', helvetica, sans-serif; line-height: 16px; -webkit-border-horizontal-spacing: 2px; -webkit-border-vertical-spacing: 2px; font-size: small;"><em>&#8220;Success is usually defined as delivering on time, under budget, and as specified. That&#8217;s a flawed definition. Many late projects are huge successes for their organizations, and many on-time projects don&#8217;t deliver any value. Instead, think in terms of organizational, technical, and personal success.&#8221;</em></span></p>
-
-
-<p>What it takes to build such software:</p>
-
-<div id="_mcePaste">
-<ul>
-    <li><strong>Great code</strong>: Easily Testable, Maintainable &amp; Scalable code across ALL Tiers of the App</li>
-    <li><strong>Constant estimating and planning</strong>: Has to be woven into the Iterative Release process</li>
-    <li><strong>Feedback Management</strong>: Collection &amp; Processing of Qualitative &amp; Quantitative Feedback</li>
-    <li><strong>Continuous Improvement</strong>: A team habit of proactively finding and fixing problems</li>
-    <li><strong>Good Infrastructure</strong>: S/W &amp; H/W tools to improve Team &amp; Apps efficiency</li>
-    <li><strong>High Quality</strong>: Focus on all <a href="http://onestepbacktwostepsforward.blogspot.com/2009/06/agile-testing-quadrants.html">4 Agile Testing</a> Quadrants</li>
-    <li><strong>Constant Communication</strong>: Customer Collaboration &amp; Team Interaction along with just enough Documentation</li>
-    <li><strong>Great Design</strong>: Balancing Form with Function</li>
-    <li><strong>Constant UX Focus</strong>: Focus on the user&#8217;s interactive experience [along with focus on Copy] woven into the Iterative Release Process. This is covered by Quadrant 3 in the Agile Testing diagram linked to above - but I&#8217;m mentioning it separately because its usually happens to get less attention.</li>
-    <li><strong>Knowledgeable, Skilled and Motivated Team</strong>: Important roles include Managers, Programmers, Testers, Analysts, Leads, Architects and Designers</li>
-</ul>
-</div>
-
-
-<p>Our version of the software life-&#8220;cycle&#8221; :-) :
-<img src="/images/CopyofBalancedswdevelopment-e1334671302237.png" alt="Balanced Software Development" title="Balancedswdevelopment" width="500" height="452" class="alignnone size-full" /></p>
-</div>
+  if ( t() &amp;&amp; jQuery.timers.push(t) &amp;&amp; !timerId ) {
+      timerId = setInterval(jQuery.fx.tick, 13);
+  }
+}
+</pre>As you can see above, a call to step method is made every every 13 milliseconds. As
+of jQuery 1.8 this interval is called JQuery.fx.interval. That is, for a height increase
+of 50px over a time period of 400ms (default JQuery animation interval), it does 31 steps
+of 13 ms each.
+  <pre>
+jQuery.fx.speeds = {
+        slow: 600,
+        fast: 200,
+        // Default speed
+        _default: 400
+};
+</pre>As of jQuery 1.8 the step function is replaced, but the same logic is applied:
+  <pre>
+step: function( gotoEnd ) {
+  var t = now();
+  var n = t - this.startTime;
+  this.state = n / this.options.duration;
+  pos = jQuery.easing['swing'](this.state, n, 0, 1, this.options.duration);
+  this.now = this.start + ((this.end - this.start) * this.pos);
+  this.update();
+}
+</pre>You can dig deeper into jQuery effects at: <a title=
+"https://github.com/jquery/jquery/blob/master/src/effects.js#L124" href=
+"https://github.com/jquery/jquery/blob/master/src/effects.js#L124">https://github.com/jquery/jquery/blob/master/src/effects.js#L124</a>
+Also make sure to check out the relevant webkit source: <a title=
+"https://github.com/WebKit/webkit/tree/master/Source/WebCore" href=
+"https://github.com/WebKit/webkit/tree/master/Source/WebCore">https://github.com/WebKit/webkit/tree/master/Source/WebCore</a></div>
   
     <p class="meta">
       
@@ -194,7 +278,7 @@
 <div class="categories">
 	<strong>Filed in: </strong> 
   
-    <a class='category' href='/blog/categories/all-posts/'>All Posts</a>, <a class='category' href='/blog/categories/process/'>Process</a>
+    <a class='category' href='/blog/categories/technology/'>Technology</a>
   
 </div>
 
@@ -211,11 +295,11 @@
 		</div>
 	
 	
-		<div class="g-plusone" data-size="medium" data-href="http://multunus.herokuapp.com/blog/2011/02/software-development-as-a-balance-2">
+		<div class="g-plusone" data-size="medium" data-href="http://multunus.herokuapp.com/blog/2012/09/css3-animations-versus-javascript-animations">
 		</div>
 	
   	
-  		<a href="http://twitter.com/share" class="twitter-share-button" data-url="http://multunus.herokuapp.com/blog/2011/02/software-development-as-a-balance-2" data-counturl="http://multunus.herokuapp.com/blog/2011/02/software-development-as-a-balance-2" data-count="none">
+  		<a href="http://twitter.com/share" class="twitter-share-button" data-url="http://multunus.herokuapp.com/blog/2012/09/css3-animations-versus-javascript-animations" data-counturl="http://multunus.herokuapp.com/blog/2012/09/css3-animations-versus-javascript-animations" data-count="none">
   		</a>
   	
   	<script src="//platform.linkedin.com/in.js" type="text/javascript"></script>
@@ -238,8 +322,8 @@
       
         
         // var disqus_developer = 1;
-        var disqus_identifier = 'http://multunus.herokuapp.com/blog/2011/02/software-development-as-a-balance-2/';
-        var disqus_url = 'http://multunus.herokuapp.com/blog/2011/02/software-development-as-a-balance-2/';
+        var disqus_identifier = 'http://multunus.herokuapp.com/blog/2012/09/css3-animations-versus-javascript-animations/';
+        var disqus_url = 'http://multunus.herokuapp.com/blog/2012/09/css3-animations-versus-javascript-animations/';
         var disqus_script = 'embed.js';
       
     (function () {

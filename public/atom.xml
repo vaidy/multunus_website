@@ -4,7 +4,7 @@
   <title><![CDATA[Multunus]]></title>
   <link href="http://multunus.herokuapp.com/atom.xml" rel="self"/>
   <link href="http://multunus.herokuapp.com/"/>
-  <updated>2012-10-01T10:40:20+05:30</updated>
+  <updated>2012-10-01T11:46:12+05:30</updated>
   <id>http://multunus.herokuapp.com/</id>
   <author>
     <name><![CDATA[Your Name]]></name>
@@ -12,6 +12,134 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[CSS3 animations versus Javascript animations]]></title>
+    <link href="http://multunus.herokuapp.com/blog/2012/09/css3-animations-versus-javascript-animations/"/>
+    <updated>2012-09-27T10:55:05+05:30</updated>
+    <id>http://multunus.herokuapp.com/blog/2012/09/css3-animations-versus-javascript-animations</id>
+    <content type="html"><![CDATA[<strong><span style="text-decoration: underline;">tl; dr;</span></strong> 
+<p>
+  Layout
+  engines in major browsers, like gecko, webkit or trident now have many optimization
+  functions for animations. But these will simply cease to function if you&#8217;re using
+  jQuery animations because in reality jQuery is not &#8220;animating&#8221; anything. However, in
+  the case of CSS3, the browser optimizes animations using the GPU&#8217;s resources to give a
+  much more polished effect. Go in for CSS3 whenever possible. <strong><span style=
+  "text-decoration: underline;">The long version:</span></strong> jQuery is an excellent
+  js framework to do a lot of things, but is it what you need for blazing fast
+  performance with animations for your website? Lets dig a little bit deeper into the
+  actual implementations, by considering these two examples, <strong>(a) jQuery
+  animation</strong>
+</p>
+<pre>
+  $(".onclick").toggle(
+      function(){
+        $(".children").animate({height:'50'});
+      },
+      function(){
+        $(".children").animate({height:'0'});
+      }
+  );
+</pre><iframe style="width: 100%; height: 300px;" src=
+"http://jsfiddle.net/midhun_k/aq9gq/embedded/" frameborder="0" width="320" height=
+"240"></iframe> In this case the drop down menu is implemented using jquery animate
+method. <strong>(b) CSS3 animation</strong>
+  <pre>
+.children{
+           height: 0px;
+           border-bottom: 1px solid grey;
+           -webkit-transition: height .3s ease-in-out;
+}
+
+.children-onhover{
+           height: 50px;
+}
+</pre>
+  <pre>
+$(".onclick").click(function(){
+    $(".children").toggleClass("children-onhover");
+});
+</pre><iframe style="width: 100%; height: 300px;" src=
+"http://jsfiddle.net/midhun_k/kANVs/embedded/" frameborder="0" width="320" height=
+"240"></iframe> In this case the drop down menu is done using css3 transitions using
+ease-in-out transition effect. Lets analyze what&#8217;s going on with the css3 animation for
+sliding down the menus. Both of these menus progressively increase the height of each of
+the containing submenus, but in case of css3, the height is progressively updated from
+the old value to the new value over time, which is done by the layout engine of the
+browser internally, as it is described in the <a title="surfin' safari" href=
+"http://www.webkit.org/blog/138/css-animation/">surfin&#8217; safari</a> blog. In case of
+jQuery, inside the animate of each property, an fx Object is created.
+  <pre>
+jQuery.each( prop, function( name, val ) {
+  var e = new jQuery.fx( self, opt, name );
+}
+</pre>This return a javascript object instance,
+  <pre>
+fx: function( elem, options, prop ) {
+  this.options = options;
+  this.elem = elem;
+  this.prop = prop;
+
+  if ( !options.orig ) {
+      options.orig = {};
+  }
+}
+</pre>After that, the start and end values is set. In our case:
+  <pre>
+   start = 0;
+   end = 50;
+   unit = 'px';
+   e.custom( start, end, unit );
+</pre>The above snippet calls the custom function:
+  <pre>
+custom: function( from, to, unit ) {
+  this.startTime = now();
+  this.start = from;
+  this.end = to;
+  this.unit = unit || this.unit || "px";
+  this.now = this.start;
+  this.pos = this.state = 0;
+
+  var self = this;
+  function t( gotoEnd ) {
+      return self.step(gotoEnd);
+  }
+
+  t.elem = this.elem;
+
+  if ( t() &amp;&amp; jQuery.timers.push(t) &amp;&amp; !timerId ) {
+      timerId = setInterval(jQuery.fx.tick, 13);
+  }
+}
+</pre>As you can see above, a call to step method is made every every 13 milliseconds. As
+of jQuery 1.8 this interval is called JQuery.fx.interval. That is, for a height increase
+of 50px over a time period of 400ms (default JQuery animation interval), it does 31 steps
+of 13 ms each.
+  <pre>
+jQuery.fx.speeds = {
+        slow: 600,
+        fast: 200,
+        // Default speed
+        _default: 400
+};
+</pre>As of jQuery 1.8 the step function is replaced, but the same logic is applied:
+  <pre>
+step: function( gotoEnd ) {
+  var t = now();
+  var n = t - this.startTime;
+  this.state = n / this.options.duration;
+  pos = jQuery.easing['swing'](this.state, n, 0, 1, this.options.duration);
+  this.now = this.start + ((this.end - this.start) * this.pos);
+  this.update();
+}
+</pre>You can dig deeper into jQuery effects at: <a title=
+"https://github.com/jquery/jquery/blob/master/src/effects.js#L124" href=
+"https://github.com/jquery/jquery/blob/master/src/effects.js#L124">https://github.com/jquery/jquery/blob/master/src/effects.js#L124</a>
+Also make sure to check out the relevant webkit source: <a title=
+"https://github.com/WebKit/webkit/tree/master/Source/WebCore" href=
+"https://github.com/WebKit/webkit/tree/master/Source/WebCore">https://github.com/WebKit/webkit/tree/master/Source/WebCore</a>]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Continuous Delivery of iOS apps using Jenkins and TestFlightApp ]]></title>
@@ -1095,93 +1223,6 @@ done
 sudo nice --adjustment=19 apt-get install -y sun-java6-jre
 <span style="font-family: monospace;">
 </span></pre>
-
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Continuous Delivery - Part 1: Our Jenkins Build Pipeline setup]]></title>
-    <link href="http://multunus.herokuapp.com/blog/2011/07/continuous-delivery-using-jenkins-build-pipeline/"/>
-    <updated>2011-07-07T14:28:55+05:30</updated>
-    <id>http://multunus.herokuapp.com/blog/2011/07/continuous-delivery-using-jenkins-build-pipeline</id>
-    <content type="html"><![CDATA[<p>As part of our journey towards implementing <a href="http://continuousdelivery.com/">Continous Delivery</a>, I&#8217;ve added the <a href="https://wiki.jenkins-ci.org/display/JENKINS/Build+Pipeline+Plugin">Build pipeline</a> for our continous integration server <a href="http://jenkins-ci.org/">Jenkins</a>.  There are quite a few resources available on the net on how to add the plugin and configure it. This blog is not about how to configure the plugin, but more on how I&#8217;ve configured it for one of our projects and issues I faced while doing the same.</p>
-
-<p>The pipeline we have now is very simple. They are:</p>
-
-<ul>
-    <li>Run all the RSpec tests</li>
-    <li>Run the Javascript Unit tests</li>
-    <li>Deploy to staging</li>
-    <li>Deploy to production</li>
-</ul>
-
-
-<p><strong>The problems we had with our earlier approach, and how the current approach solved those problems:</strong></p>
-
-<p>What we had in the past was, simple scripts with the above items. We had a job for running the tests. If the build was successful, we would run <a href="https://github.com/capistrano/capistrano">capistrano</a> scripts to deploy to staging and once the customer gave the thumbs up, we&#8217;d push it to production.  There are a series of steps that we had to do for each deployment. For eg:  for staging deployment:</p>
-
-<ul>
-    <li>Merge the &#8220;staging&#8221; branch with master</li>
-    <li>Run the cap script</li>
-    <li>Tag the build</li>
-</ul>
-
-
-<p>And almost similar steps needed to be followed for production deployment also. The usual problems that we used to face are:</p>
-
-<ul>
-    <li>There is no way we knew what deployment was done on a certain day for what</li>
-    <li>All staging updates would not get pushed to production, so it was a tough task to identify which tag to merge when we were finally ready for a production update</li>
-</ul>
-
-
-<p>With the current approach, the advantages are:</p>
-
-<ul>
-    <li>Its a one click deployment, so rare chance of making any kind of mistake</li>
-    <li>We can clearly see when a feature has been moved to staging, and whether it has been pushed to production or not</li>
-    <li>Anyone can do deployment as it is just a click of a button. We may even be able to teach the client how to do this.</li>
-</ul>
-
-
-<p>One of the major problems I had faced in the earlier &#8220;manual&#8221; system - was the inability to pass parameters between builds. For example, once the app would be moved to staging, a tag is created and when its ready to be pushed to production, we&#8217;d have to merge that particular tag to production and then push it.</p>
-
-<p>To achieve the above I used the &#8220;parameterized build&#8221; option. In Jenkins, the parameters get converted to Environment Variables and got passed to the downstream job.
-When you fire the build, it prompts for the value of the parameter. Once entered this would be available as an Environment variable for this job and all its downstream jobs.</p>
-
-<p>For eg: in the pipeline, the downstream project is &#8220;Stage deploy&#8221;, and it will know the value for TAG and uses that value to create a tag in Git after successful deployment.</p>
-
-<p>When it is ready for production deployment it merges with the same tag and deploys to production. In the latest version of the plugin, moving to the next step is <strong>not</strong> triggered automatically and you can retry the failed ones.</p>
-
-<p><strong>Note:</strong> Capturing the parameter will happen <strong>only</strong> for the first job. So, if the parameterized job is <em>not</em> the first one in the pipeline, the capture of the parameter will not happen.</p>
-
-<p>So we&#8217;ve reached the &#8220;one click deployment stage&#8221; with this. But we&#8217;ve still got the following pending tasks - based on what&#8217;s mention in the book  <a href="http://www.informit.com/store/product.aspx?isbn=0321601912">Continuous Delivery</a>:</p>
-
-<ul>
-    <li>Rolling back the bad builds</li>
-    <li>Add non-functional tests to the pipeline i.e. performance and security tests</li>
-    <li>Feature flags</li>
-    <li>Zero downtime deployment</li>
-    <li>Canary Releases (Something on the lines of A/B testing)</li>
-</ul>
-
-
-<p>Continued..</p>
-
-<ul>
-    <li><a title="Continuous Delivery – Part 2: Code metrics with metrical" href="http://multunus.herokuapp.com/blog/2011/07/continuous-delivery-code-metrics-with-metrical/">Continuous Delivery – Part 2: Code metrics with metrical</a></li>
-    <li><a title="Continuous Delivery – Part 3: Running custom rake tasks during deployment" href="http://multunus.herokuapp.com/blog/2011/07/continuous-delivery-contd/">Continuous Delivery – Part 3: Running custom rake tasks during deployment</a></li>
-    <li><a title="Continuous Delivery – Part 4: Rolling back database migrations with Capistrano rollback" href="http://multunus.herokuapp.com/blog/2011/08/continuous-delivery-part-3-rolling-back-database-migrations-with-capistrano-rollback/">Continuous Delivery – Part 4: Rolling back database migrations with Capistrano rollback</a></li>
-</ul>
-
-
-<p>References:</p>
-
-<ul>
-    <li><a href="http://weblogs.java.net/blog/johnsmart/archive/2011/03/10/build-pipelines-jenkinshudson">http://weblogs.java.net/blog/johnsmart/archive/2011/03/10/build-pipelines-jenkinshudson</a></li>
-    <li><a href="http://continuousdelivery.com/patterns">http://continuousdelivery.com/patterns</a></li>
-    <li><a href="http://www.quora.com/How-does-Etsy-manage-development-and-operations" target="_blank">http://www.quora.com/How-does-Etsy-manage-development-and-operations</a></li>
-</ul>
 
 ]]></content>
   </entry>

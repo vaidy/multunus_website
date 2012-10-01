@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Technology | Multunus]]></title>
   <link href="http://multunus.herokuapp.com/blog/categories/technology/atom.xml" rel="self"/>
   <link href="http://multunus.herokuapp.com/"/>
-  <updated>2012-10-01T10:40:20+05:30</updated>
+  <updated>2012-10-01T11:46:12+05:30</updated>
   <id>http://multunus.herokuapp.com/</id>
   <author>
     <name><![CDATA[Your Name]]></name>
@@ -12,6 +12,165 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[CSS3 animations versus Javascript animations]]></title>
+    <link href="http://multunus.herokuapp.com/blog/2012/09/css3-animations-versus-javascript-animations/"/>
+    <updated>2012-09-27T10:55:05+05:30</updated>
+    <id>http://multunus.herokuapp.com/blog/2012/09/css3-animations-versus-javascript-animations</id>
+    <content type="html"><![CDATA[<p><strong><span style="text-decoration: underline;">tl; dr;</span></strong></p>
+
+<p>
+  Layout
+  engines in major browsers, like gecko, webkit or trident now have many optimization
+  functions for animations. But these will simply cease to function if you're using
+  jQuery animations because in reality jQuery is not "animating" anything. However, in
+  the case of CSS3, the browser optimizes animations using the GPU's resources to give a
+  much more polished effect. Go in for CSS3 whenever possible. <strong><span style=
+  "text-decoration: underline;">The long version:</span></strong> jQuery is an excellent
+  js framework to do a lot of things, but is it what you need for blazing fast
+  performance with animations for your website? Lets dig a little bit deeper into the
+  actual implementations, by considering these two examples, <strong>(a) jQuery
+  animation</strong>
+</p>
+
+
+<pre>
+  $(".onclick").toggle(
+      function(){
+        $(".children").animate({height:'50'});
+      },
+      function(){
+        $(".children").animate({height:'0'});
+      }
+  );
+</pre>
+
+
+<iframe style="width: 100%; height: 300px;" src=
+"http://jsfiddle.net/midhun_k/aq9gq/embedded/" frameborder="0" width="320" height=
+"240"></iframe>
+
+
+<p> In this case the drop down menu is implemented using jquery animate
+method. <strong>(b) CSS3 animation</strong>
+  <pre>
+.children{</p>
+
+<pre><code>       height: 0px;
+       border-bottom: 1px solid grey;
+       -webkit-transition: height .3s ease-in-out;
+</code></pre>
+
+<p>}</p>
+
+<p>.children-onhover{</p>
+
+<pre><code>       height: 50px;
+</code></pre>
+
+<p>}
+</pre>
+  <pre>
+$(".onclick").click(function(){</p>
+
+<pre><code>$(".children").toggleClass("children-onhover");
+</code></pre>
+
+<p>});
+</pre><iframe style="width: 100%; height: 300px;" src=
+"http://jsfiddle.net/midhun_k/kANVs/embedded/" frameborder="0" width="320" height=
+"240"></iframe> In this case the drop down menu is done using css3 transitions using
+ease-in-out transition effect. Lets analyze what's going on with the css3 animation for
+sliding down the menus. Both of these menus progressively increase the height of each of
+the containing submenus, but in case of css3, the height is progressively updated from
+the old value to the new value over time, which is done by the layout engine of the
+browser internally, as it is described in the <a title="surfin' safari" href=
+"http://www.webkit.org/blog/138/css-animation/">surfin' safari</a> blog. In case of
+jQuery, inside the animate of each property, an fx Object is created.
+  <pre>
+jQuery.each( prop, function( name, val ) {
+  var e = new jQuery.fx( self, opt, name );
+}
+</pre>This return a javascript object instance,
+  <pre>
+fx: function( elem, options, prop ) {
+  this.options = options;
+  this.elem = elem;
+  this.prop = prop;</p>
+
+<p>  if ( !options.orig ) {</p>
+
+<pre><code>  options.orig = {};
+</code></pre>
+
+<p>  }
+}
+</pre>After that, the start and end values is set. In our case:
+  <pre>
+   start = 0;
+   end = 50;
+   unit = 'px';
+   e.custom( start, end, unit );
+</pre>The above snippet calls the custom function:
+  <pre>
+custom: function( from, to, unit ) {
+  this.startTime = now();
+  this.start = from;
+  this.end = to;
+  this.unit = unit || this.unit || "px";
+  this.now = this.start;
+  this.pos = this.state = 0;</p>
+
+<p>  var self = this;
+  function t( gotoEnd ) {</p>
+
+<pre><code>  return self.step(gotoEnd);
+</code></pre>
+
+<p>  }</p>
+
+<p>  t.elem = this.elem;</p>
+
+<p>  if ( t() &amp;&amp; jQuery.timers.push(t) &amp;&amp; !timerId ) {</p>
+
+<pre><code>  timerId = setInterval(jQuery.fx.tick, 13);
+</code></pre>
+
+<p>  }
+}
+</pre>As you can see above, a call to step method is made every every 13 milliseconds. As
+of jQuery 1.8 this interval is called JQuery.fx.interval. That is, for a height increase
+of 50px over a time period of 400ms (default JQuery animation interval), it does 31 steps
+of 13 ms each.
+  <pre>
+jQuery.fx.speeds = {</p>
+
+<pre><code>    slow: 600,
+    fast: 200,
+    // Default speed
+    _default: 400
+</code></pre>
+
+<p>};
+</pre>As of jQuery 1.8 the step function is replaced, but the same logic is applied:
+  <pre>
+step: function( gotoEnd ) {
+  var t = now();
+  var n = t - this.startTime;
+  this.state = n / this.options.duration;
+  pos = jQuery.easing<a href="this.state,%20n,%200,%201,%20this.options.duration">'swing'</a>;
+  this.now = this.start + ((this.end - this.start) * this.pos);
+  this.update();
+}
+</pre>You can dig deeper into jQuery effects at: <a title=
+"https://github.com/jquery/jquery/blob/master/src/effects.js#L124" href=
+"https://github.com/jquery/jquery/blob/master/src/effects.js#L124">https://github.com/jquery/jquery/blob/master/src/effects.js#L124</a>
+Also make sure to check out the relevant webkit source: <a title=
+"https://github.com/WebKit/webkit/tree/master/Source/WebCore" href=
+"https://github.com/WebKit/webkit/tree/master/Source/WebCore">https://github.com/WebKit/webkit/tree/master/Source/WebCore</a></p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Introduction to Continuous Delivery]]></title>
@@ -238,54 +397,6 @@ References: <a href="http://skaug.no/ingvald/2011/09/android-app-with-jenkins/"
 </ul>
 
 
-
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Continuous Delivery - Part 2: Code metrics with metrical]]></title>
-    <link href="http://multunus.herokuapp.com/blog/2011/07/continuous-delivery-code-metrics-with-metrical/"/>
-    <updated>2011-07-31T15:44:40+05:30</updated>
-    <id>http://multunus.herokuapp.com/blog/2011/07/continuous-delivery-code-metrics-with-metrical</id>
-    <content type="html"><![CDATA[<p><a href="http://iain.nl/easier-metricfu-with-metrical">Metrical</a> is for easier <a href="http://metric-fu.rubyforge.org/">metric_fu</a> setup. You can see the details on why and how <a href="http://iain.nl/easier-metricfu-with-metrical">here</a>. Its an awesome tool which allows us to easily use metric_fu without adding any dependency to the project code.</p>
-
-<p>The steps I followed for setting it up in our Jenkins server are:</p>
-
-<ul>
-    <li> Install the gem. I installed it under our ruby 1.9.2 in RVM.</li>
-    <li> Create a .metrics file under your projects directory with the settings. This is not mandatory, but I had to use this because some configurations do not seem to be working with ruby 1.9.2. I've mentioned those below along with the contents of the .metrics file</li>
-    <li> Create a job in Jenkins server, mention the repository details and for build step give the shell command as <em>rvm 1.9.2 -S metrical</em></li>
-    <li> Configure the <a href="https://wiki.jenkins-ci.org/display/JENKINS/HTML+Publisher+Plugin">HTML Publisher plugin</a> for showing the nice Graphs generated by metric_fu as part of the build report. The default report location is tmp/metric_fu/output under the project directory. You can change the same in .metrics file.</li>
-</ul>
-
-
-<p>As I mentioned above, tools such as flay and flog, which comes as part of metric_fu, have <a href="https://github.com/iain/metrical/issues/4">issues</a> working with ruby 1.9.2. And the same case with stats graph and syntax highlighting. The same case with <a href="https://github.com/relevance/rcov/issues/8">rcov</a> also. So I had to create a <em><strong>.metrics</strong></em> file with the following contents and put in the project dir:</p>
-
-<p><span style="font-family: Consolas, Monaco, 'Courier New', Courier, monospace; line-height: 18px;"> </span></p>
-
-<p>```
-MetricFu::Configuration.run do |config|</p>
-
-<pre><code>    config.code_dirs = ['app', 'lib']
-    config.syntax_highlighting = false
-    config.metrics  = [:churn,:reek,:roodi,:hotspots,:rails_best_practices]
-    config.graphs   = [:reek, :roodi, :rails_best_practices]
-    config.rcov[:test_files] = ['spec/**/*_spec.rb']
-    config.rcov[:rcov_opts] &amp;lt;&amp;lt; &amp;quot;-Ispec&amp;quot; # Needed to find spec_helper
-</code></pre>
-
-<p>end
-```</p>
-
-<p>For test coverage I've used <a href="https://github.com/colszowka/simplecov">Simplecov</a> which is easy to setup. It will generate the coverage report whenever you run the tests. This also generated html report which can be integrated easily into Jenkins. As mentioned <a href="https://github.com/colszowka/simplecov/issues/42">here</a> in the issue list, it does not generate the report when you are running with <a href="https://github.com/timcharper/spork/wiki">spork</a>.</p>
-
-<p>Continued..</p>
-
-<ul>
-    <li><a title="Continuous Delivery – Part 1: Our Jenkins Build Pipeline setup" href="http://multunus.herokuapp.com/blog/2011/07/continuous-delivery-using-jenkins-build-pipeline/">Continuous Delivery – Part 1: Our Jenkins Build Pipeline setup</a></li>
-    <li><a title="Continuous Delivery – Part 3: Running custom rake tasks during deployment" href="http://multunus.herokuapp.com/blog/2011/07/continuous-delivery-contd/">Continuous Delivery – Part 3: Running custom rake tasks during deployment</a></li>
-    <li><a title="Continuous Delivery – Part 4: Rolling back database migrations with Capistrano rollback" href="http://multunus.herokuapp.com/blog/2011/08/continuous-delivery-part-3-rolling-back-database-migrations-with-capistrano-rollback/">Continuous Delivery – Part 4: Rolling back database migrations with Capistrano rollback</a></li>
-</ul>
 
 ]]></content>
   </entry>
