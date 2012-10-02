@@ -66,3 +66,11 @@ connectTimeline = function(source, target) {
 	});
 };
 
+
+setUpPopOverCloseOnClick = function() {
+	$('html').click(function(){
+		if($('.popover').is(':visible')) {
+			$('[rel="popover"]').popover('hide');
+		}
+	});
+};
