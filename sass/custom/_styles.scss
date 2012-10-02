@@ -56,11 +56,53 @@ li {
 }
 
 form {
-	input {
-		width: 40%;
+
+	label {
+	    font-size: 0.9em;
 	}
+
+	input {
+		width: 335px;
+		height: 25px !important;
+
+		@media (max-width: 767px) {
+		    width: 300px;
+		}
+
+		@media (max-width: 480px) {
+		    width: 90%;
+		}
+	}
+
+	input:focus, textarea:focus {
+	    outline: none !important;
+	    border: 1px solid #999 !important;
+	    -moz-box-shadow:    3px 3px 5px 6px #999;
+	    -webkit-box-shadow: 3px 3px 5px 6px #999;
+	    box-shadow:         0px 0px 3px 0.8px #999 !important;
+	}
+
+	input[type="submit"] {
+	    width: 100px;
+	    height: 35px !important;
+	    font-size: 1em;
+	    background: #222;
+	    border-radius: 5px;
+	    color: white;
+	    border: none;
+	    font-family: $font-default;
+	}
+
 	textarea {
-		width: 60%;
+		width: 500px;
+
+		@media (max-width: 767px) {
+		    width: 350px;
+		}
+
+		@media (max-width: 480px) {
+		    width: 90%;
+		}
 	}
 }
 
@@ -272,7 +314,6 @@ ul.nav li.active > a {
 	background: #AAA;
 	color: white;
 	margin-top: 1.2%;
-	height: 40px;
 
 	.day {
 		float: left;
