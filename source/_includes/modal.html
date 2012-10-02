@@ -19,3 +19,21 @@
     </div>
   </div>
 </div>
+
+<script type="text/javascript">
+  $('#defaultModal').on('show', function () {
+     var page_url = $(this).data('modal').options.url;
+     var modal_title = $(this).data('modal').options.title;
+
+     $(".modal_title").html(modal_title);
+
+     $.ajax(page_url).done(function(data) {
+        $(".modal-body").html(data);
+     });
+  });
+
+  $('#defaultModal').on('hide', function () { 
+    $(".modal_title").html("");
+    $(".modal-body").html("");
+  });
+</script>
