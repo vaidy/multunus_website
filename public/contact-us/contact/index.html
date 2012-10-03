@@ -61,6 +61,18 @@
 <script src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.9/jquery.validate.min.js"></script> 
 <script src="/javascripts/google_form.js"></script>
   
+  <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-5073218-1']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+  </script>
+
 
 </head>
 
@@ -130,41 +142,41 @@
 		<br>
 		<div class="errorbox-good">
 			<div class="ss-form-entry">
-				<label class="ss-q-title" for="entry_3">Your Name (required)</label>
+				<label class="ss-q-title" for="entry_0">Your Name (required)</label>
+				<label class="ss-q-help" for="entry_0"></label>
+				<input type="text" name="entry.0.single" value="" class="ss-q-short" id="entry_0">
+			</div>
+		</div>
+		<br /> 
+		<div class="errorbox-good">
+			<div class="ss-form-entry">
+				<label class="ss-q-title" for="entry_1">Your Email (required)</label>
+				<label class="ss-q-help" for="entry_1"></label>
+				<input type="text" name="entry.1.single" value="" class="ss-q-short" id="entry_1">
+			</div>
+		</div>
+		<br /> 
+		<div class="errorbox-good">
+			<div class="ss-form-entry">
+				<label class="ss-q-title" for="entry_2">Website</label>
+				<label class="ss-q-help" for="entry_2"></label>
+				<input type="text" name="entry.2.single" value="" class="ss-q-short" id="entry_2">
+			</div>
+		</div>
+		<br> 
+		<div class="errorbox-good">
+			<div class="ss-form-entry">
+				<label class="ss-q-title" for="entry_3">Subject</label>
 				<label class="ss-q-help" for="entry_3"></label>
 				<input type="text" name="entry.3.single" value="" class="ss-q-short" id="entry_3">
 			</div>
 		</div>
-		<br /> 
+		<br> 
 		<div class="errorbox-good">
 			<div class="ss-form-entry">
-				<label class="ss-q-title" for="entry_4">Your Email (required)</label>
+				<label class="ss-q-title" for="entry_4">Your Message</label>
 				<label class="ss-q-help" for="entry_4"></label>
-				<input type="text" name="entry.4.single" value="" class="ss-q-short" id="entry_4">
-			</div>
-		</div>
-		<br /> 
-		<div class="errorbox-good">
-			<div class="ss-form-entry">
-				<label class="ss-q-title" for="entry_5">Website</label>
-				<label class="ss-q-help" for="entry_5"></label>
-				<input type="text" name="entry.5.single" value="" class="ss-q-short" id="entry_5">
-			</div>
-		</div>
-		<br> 
-		<div class="errorbox-good">
-			<div class="ss-form-entry">
-				<label class="ss-q-title" for="entry_6">Subject</label>
-				<label class="ss-q-help" for="entry_6"></label>
-				<input type="text" name="entry.6.single" value="" class="ss-q-short" id="entry_6">
-			</div>
-		</div>
-		<br> 
-		<div class="errorbox-good">
-			<div class="ss-form-entry">
-				<label class="ss-q-title" for="entry_7">Your Message</label>
-				<label class="ss-q-help" for="entry_7"></label>
-				<textarea name="entry.7.single" rows="8" cols="75" class="ss-q-long" id="entry_7"></textarea>
+				<textarea name="entry.4.single" rows="8" cols="75" class="ss-q-long" id="entry_4"></textarea>
 			</div>
 		</div>
 		<br>
@@ -181,15 +193,15 @@
 	    	form.validate({
 	    		errorClass: 'invalid',
 	    		rules: {
-	    			'entry.3.single': "required",
-	    			'entry.4.single': {
+	    			'entry.0.single': "required",
+	    			'entry.1.single': {
 	    				required: true,
 	    				email: true
 	    			}
 	    		},
 	    		messages: {
-	    		    'entry.3.single': "Please specify your name",
-	    		    'entry.4.single': {
+	    		    'entry.0.single': "Please specify your name",
+	    		    'entry.1.single': {
 	    		    	required: "Please enter an email address",
 	    		       	email: "Your email address must be in the format of name@domain.com"
 	    		    }
