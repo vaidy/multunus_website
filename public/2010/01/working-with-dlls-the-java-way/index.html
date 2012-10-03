@@ -1,0 +1,588 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>Working with DLLs, the Java way  | Multunus </title>
+  <meta name="author" content="Your Name">
+
+  
+  <meta name="description" content="We had a very simple requirement, to invoke my DLLs using Java code for couple of reasons: We want to reuse application code built for a .NET &hellip;">
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://www.multunus.com/2010/01/working-with-dlls-the-java-way">
+  <link href="/images/favicon.ico" rel="icon">
+  <link href="/stylesheets/bootstrap/bootstrap.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <link href="/stylesheets/bootstrap/responsive.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <link href="/stylesheets/syntax/syntax.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" type="text/css" href="/stylesheets/screen.css">
+  <style type="text/css">
+    body {
+        }
+    h1 {
+      margin-bottom: 15px;
+    }
+    img {
+      max-width: 100%;
+    }
+    .sharing, .meta, .pager {
+      margin: 20px 0px 20px 0px;
+    }
+    
+  </style>
+  <script src="/javascripts/libs/jquery.js"></script>
+  <script src="/javascripts/libs/modernizr-2.0.js"></script>
+  <script src="/javascripts/libs/bootstrap.js"></script>
+  <script src="/javascripts/octopress.js" type="text/javascript"></script>
+  <link href="/atom.xml" rel="alternate" title="Multunus" type="application/atom+xml">
+  <!-- jQuery Form Plugin -->
+<script src="http://malsup.github.com/jquery.form.js"></script>
+<!-- jQuery Form Validation Plugin -->
+<script src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.9/jquery.validate.min.js"></script> 
+<script src="/javascripts/google_form.js"></script>
+  <link href='http://fonts.googleapis.com/css?family=Bitter:400,700,400italic&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+<!-- jQuery -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+<script type="text/javascript">
+    // Avoid conflict with ender.js.
+    jQuery.noConflict();
+</script>
+<!-- jQuery Form Plugin -->
+<script src="http://malsup.github.com/jquery.form.js"></script>
+<!-- jQuery Form Validation Plugin -->
+<script src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.9/jquery.validate.min.js"></script> 
+<script src="/javascripts/google_form.js"></script>
+  
+
+</head>
+
+<body   >
+  <nav role="navigation"><div class="navbar subnav">
+  <div class="container-fluid">
+      <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </a>        
+
+      <div class="nav-collapse top-bar">
+        <ul class="nav">
+  
+    <li><a class="small-logo" href="/"><img src='/images/logo_small.png' /></a></li>  
+  
+	<li  ><a href="/">Home</a></li>	
+  <li  ><a href="/what-we-do">What We Do</a></li>
+  <li  ><a href="/why-us">Why Us?</a></li>
+  <li  ><a href="/careers-multunus">Careers</a></li>
+  <li  class="dropdown">
+    <a href="/about/history">About</a>
+    <ul class="dropdown-menu">
+      <li><a href="/about/history">History</a></li>
+      <li><a href="/about/people">The Team</a></li>
+    </ul>
+  </li>
+  <li  class="active" ><a href="/blog">Our Blog</a></li>
+  <li  class="dropdown">
+      <a href="/contact-us/contact">Contact Us</a>
+      <ul class="dropdown-menu">
+        <li><a href="/contact-us/contact">Write to Us</a></li>
+        <li><a href="/contact-us/location">Location</a></li>
+      </ul>
+  </li>
+</ul>
+<ul class="nav social-icons pull-right">
+  <li id="facebook"> 
+    <a href="https://www.facebook.com/multunus" title="facebook">
+      <img src="/images/facebook_white_icon.png" alt="facebook" />
+    </a>
+  </li> 
+  <li id="twitter"> 
+    <a href="http://twitter.com/multunus" title="twitter">
+      <img src="/images/twitter_white_icon.png" alt="twitter" />
+    </a>
+  </li>   
+
+</ul>
+
+      </div>
+    </div>
+</div>
+</nav>
+  <div class="container-fluid main-content">
+    <div class="row-fluid">
+      <article class="hentry span9 blog-post" role="article">
+  <div class="row-fluid">
+  <div class="span2 date-container">
+    
+
+
+
+
+
+
+
+
+  
+
+
+<div datetime="2010-01-29T12:20:51+05:30" pubdate data-updated="true"><div class='day'>29</div><div class='month-year'><div class='month'>January</div><div class='year'>2010</div></div></div>
+  </div>
+  <div class="span10">
+    
+      <header>
+        <h2 class="entry-title">Working With DLLs, the Java Way</h2>
+        <p class="meta">
+          
+  
+
+<div class="byline author vcard"><strong>Posted by: </strong><span class="fn">Jeevan</span></div>
+
+        </p>
+      </header>
+    
+  </div>
+
+  <div class="entry-content"><p>We had a very simple requirement, to invoke my DLLs using Java code for couple of reasons:</p>
+
+<ol>
+    <li> We want to reuse application code built for a .NET application</li>
+    <li> We want to integrate the DLLs with a Java based sever technology</li>
+    <li> Should be simple enough to maintain the code by .NET professionals</li>
+</ol>
+
+
+<p>There are couple of Java-COM bridging solutions I came across.</p>
+
+<ul>
+    <li> <a id="o-ek" title="Java Native Interface (JNI)" href="http://en.wikipedia.org/wiki/Java_Native_Interface">Java Native Interface (JNI)</a></li>
+    <li> <a id="m-.." title="JACOB" href="http://sourceforge.net/projects/jacob-project/">JACOB</a></li>
+    <li> <a id="r0rf" title="Scriptom (Groovy - COM Scripting)" href="http://groovy.codehaus.org/COM+Scripting">Scriptom (Groovy - COM Scripting)</a></li>
+    <li> <a id="h:uh" title="Java Native Access (JNA)" href="https://jna.dev.java.net/">Java Native Access (JNA)</a></li>
+    <li> <a id="ck4a" title="JNBridge" href="http://www.jnbridge.com/">JNBridge</a></li>
+</ul>
+
+
+<p>In this post, we&#8217;ll see how Scriptom can be used to access DLLs.</p>
+
+<p>Scriptom is a module in Groovy (A Java VM based scripting language) which wraps the JACOB classes to make it more usable. Scriptom&#8217;s syntax looks like VB.NET code.</p>
+
+<p>Lets jump in to the sample application.</p>
+
+<p>Assume that we have a VB class named TimerState in the TestDLL VB.NET project, exposes the COM, signed and generates the DLLs.</p>
+
+<p>Following is the TimerState VB class. In this class, we have an event <em>UpdateTime</em> which raises an event when to notify updated time.</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>
+</span><span class='line'>    Public Event UpdateTime(ByVal Jump As Double)
+</span><span class='line'>
+</span><span class='line'>    Public Sub TimerTask(ByVal Duration As Double)
+</span><span class='line'>        Dim Start As Double
+</span><span class='line'>        Dim Second As Double
+</span><span class='line'>        Dim SoFar As Double
+</span><span class='line'>
+</span><span class='line'>        Start = Timer
+</span><span class='line'>        SoFar = Start
+</span><span class='line'>        Do While Timer &lt; Start + Duration
+</span><span class='line'>            If Timer - SoFar &gt;= 0.1 Then
+</span><span class='line'>                SoFar = SoFar + 0.1
+</span><span class='line'>                RaiseEvent UpdateTime(Timer - Start)
+</span><span class='line'>            End If
+</span><span class='line'>        Loop
+</span><span class='line'>    End Sub
+</span><span class='line'>End Class
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>We want to use this logic in the Scriptom code and do something whenever a UpdateTime event is raised. Here are the steps:</p>
+
+<ol>
+    <li> Register the DLLs (this is required step for the Java Virtual Machine to get meta data about the DLLs)</li>
+    <li> Download Scriptom</li>
+    <li> Copy the jacob-*.dll to any system PATH</li>
+    <li> Have all the JARS from Scriptom jar folder available in the CLASSPATH</li>
+</ol>
+
+
+<p>Following is the sample code for invoking</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>import org.codehaus.groovy.scriptom.ActiveXObject // Imports the ActiveX object class which holds the reference to the class in DLL
+</span><span class='line'>
+</span><span class='line'>def timer = new ActiveXObject(&quot;TestDLL.TimerState&quot;) // Looks for the meta data in the registry with &quot;TestDLL.TimerState&quot; name and creates a reference to that class
+</span><span class='line'>
+</span><span class='line'>def time = 1.00
+</span><span class='line'>
+</span><span class='line'>timer.events.UpdateTime = { variants -&gt; // event registration for UpdateTime event in the VB class. Variants holds the data passed from the event. In this case, it is Jump value.
+</span><span class='line'>    println &quot;UpdateTime: &quot; + variants[0] // We're just printing the upated time
+</span><span class='line'>}
+</span><span class='line'>
+</span><span class='line'>timer.TimerTask(time) // starting the timer task in TimerState class
+</span><span class='line'>while(true) { // keeping itself alive to respond when timer events are raised
+</span><span class='line'>}</span></code></pre></td></tr></table></div></figure>
+
+
+
+
+<div style="text-align: left;">Please refer <a id="hzki" title="COM Data Types in Scriptom" href="http://groovy.codehaus.org/COM+Data+Types+in+Scriptom">COM Data Types in Scriptom</a> for the .NET data types supported in Scriptom.</div>
+
+
+<p><strong><span style="font-weight: normal;">
+In the next post, we&#8217;ll discuss about JNBridge, a comercial solution.</span></strong></p>
+
+<div id="_mcePaste" style="overflow: hidden; position: absolute; left: -10000px; top: 694px; width: 1px; height: 1px;">
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>Public Event UpdateTime(ByVal Jump As Double)
+</span><span class='line'>
+</span><span class='line'>Public Sub TimerTask(ByVal Duration As Double)
+</span><span class='line'>Dim Start As Double
+</span><span class='line'>Dim Second As Double
+</span><span class='line'>Dim SoFar As Double
+</span><span class='line'>
+</span><span class='line'>Start = Timer
+</span><span class='line'>SoFar = Start
+</span><span class='line'>Do While Timer &lt; Start + Duration
+</span><span class='line'>If Timer - SoFar &gt;= 0.1 Then
+</span><span class='line'>SoFar = SoFar + 0.1
+</span><span class='line'>RaiseEvent UpdateTime(Timer - Start)
+</span><span class='line'>End If
+</span><span class='line'>Loop
+</span><span class='line'>End Sub
+</span><span class='line'>End Class</span></code></pre></td></tr></table></div></figure>
+</div>
+
+</div>
+  
+    <p class="meta">
+      
+
+<div class="categories">
+	<strong>Filed in: </strong> 
+  
+    <a class='category' href='/blog/categories/all-posts/'>All Posts</a>, <a class='category' href='/blog/categories/technology/'>Technology</a>
+  
+</div>
+
+
+      
+    </p>
+  
+</div>
+  <footer>
+    
+      <div class="sharing">
+	
+		<div class="fb-like" data-width="368" data-layout="button_count" data-href="" data-show-faces="false">
+		</div>
+	
+	
+		<div class="g-plusone" data-size="medium" data-href="http://www.multunus.com/2010/01/working-with-dlls-the-java-way">
+		</div>
+	
+  	
+  		<a href="http://twitter.com/share" class="twitter-share-button" data-url="http://www.multunus.com/2010/01/working-with-dlls-the-java-way" data-counturl="http://www.multunus.com/2010/01/working-with-dlls-the-java-way" data-count="none" data-text="See the timelines of the young turks at Multunus">
+  		</a>
+  	
+  	<script src="//platform.linkedin.com/in.js" type="text/javascript"></script>
+  	<script type="IN/Share" data-counter="right"></script>
+</div>
+
+    
+    
+    <section>
+      <h1>Comments</h1>
+      <div id="disqus_thread" aria-live="polite"><noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+    </section>
+    
+  </footer>
+  
+
+<script type="text/javascript">
+      var disqus_shortname = 'multunus';
+      
+        
+        // var disqus_developer = 1;
+        var disqus_identifier = 'http://www.multunus.com/2010/01/working-with-dlls-the-java-way/';
+        var disqus_url = 'http://www.multunus.com/2010/01/working-with-dlls-the-java-way/';
+        var disqus_script = 'embed.js';
+      
+    (function () {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = 'http://' + disqus_shortname + '.disqus.com/' + disqus_script;
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    }());
+</script>
+
+
+
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) {return;}
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#appId=212934732101925&xfbml=1";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+
+
+  <script type="text/javascript">
+    (function() {
+      var script = document.createElement('script'); script.type = 'text/javascript'; script.async = true;
+      script.src = 'https://apis.google.com/js/plusone.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(script, s);
+    })();
+  </script>
+
+
+
+  <script type="text/javascript">
+    (function(){
+      var twitterWidgets = document.createElement('script');
+      twitterWidgets.type = 'text/javascript';
+      twitterWidgets.async = true;
+      twitterWidgets.src = 'http://platform.twitter.com/widgets.js';
+      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
+    })();
+  </script>
+
+
+
+
+
+</article>
+
+<aside class="sidebar-nav span3">
+  <h3>Categories</h3>
+<ul id="category-list">
+	<li  class="page_item"><a href="/blog/categories/all-posts">All Posts</a></li>
+	<li  class="page_item"><a href="/blog/categories/android">Android</a></li>
+	<li  class="page_item"><a href="/blog/categories/business">Business</a></li>
+	<li  class="page_item"><a href="/blog/categories/continuous-delivery">Continuous Delivery</a></li>
+	<li  class="page_item"><a href="/blog/categories/process">Process</a></li>
+	<li  class="page_item"><a href="/blog/categories/rails">Rails</a></li>
+	<li  class="page_item"><a href="/blog/categories/technology">Technology</a></li>
+</ul>
+
+</aside> 
+    </div>
+  </div>
+  <div class="container-fluid dark-background">
+      <div class="row-fluid">
+        <div class="span4 featured-posts">
+          <div class="header">Featured Posts</div>
+<ul id="featured-posts">
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+      <li class="post">
+        <a href="/2012/01/a-sneak-peak-into-mobile-app-opportunities-in-2012/">A sneak peek into Mobile App Opportunities in 2012</a>
+      </li>
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+      <li class="post">
+        <a href="/2011/09/continuous-delivery-for-android-apps-part-1/">Continuous Delivery for Android Apps - Part 1</a>
+      </li>
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+      <li class="post">
+        <a href="/2011/07/continuous-delivery-using-jenkins-build-pipeline/">Continuous Delivery - Part 1: Our Jenkins Build Pipeline setup</a>
+      </li>
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+      <li class="post">
+        <a href="/2011/02/software-development-as-a-balance/">A Macro Level Perspective of Software Development</a>
+      </li>
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+</ul>
+
+        </div>
+        <div class="span4 tumblr-feed">
+          <div class="header">Our Daily Voice</div>
+<ul id="tumblr_post">
+  <li class="loading">Fetching...</li>
+</ul>
+<div id="continue-reading"><a href="http://multunus.tumblr.com/">Continue reading at our tumblog</a></div>
+<script type="text/javascript">
+  $(document).ready(function(){
+    getTumblrPost("multunus", 1);
+  });
+</script>
+<script src="/javascripts/asides/tumblr.js" type="text/javascript"> </script>
+
+        </div>
+        <div class="span4 twitter-feed">
+          
+  <div class='header'>@multunus</div>
+  <ul id="tweets">
+    <li class="loading">Status updating...</li>
+  </ul>
+  <script type="text/javascript">
+    $(document).ready(function(){
+      getTwitterFeed("multunus", 5, false);
+    });
+  </script>
+  <script src="/javascripts/asides/twitter.js" type="text/javascript"> </script>
+
+
+        </div>         
+      </div>
+    </div>
+  <footer role="contentinfo" class="page-footer">
+<div class = "navbar footer-navbar">
+  <div class = "container-fluid">
+    <div class="nav-collapse footer-container">
+      <ul class="nav"><li class="copyright">&copy;2012 Copyright by Multunus Software Private Limited.</li></ul>
+
+<ul class="nav pull-right">
+  <li><a href="/">Home</a></li>	
+  <li><a href="/what-we-do">What We Do</a></li>
+  <li><a href="/why-us">Why Us?</a></li>
+  <li><a href="/careers-multunus">Careers</a></li>
+  <li><a href="/about/history">About</a></li>
+  <li><a href="/blog">Our Blog</a></li>
+  <li><a href="/contact-us/contact">Contact Us</a></li>
+</ul>
+
+    </div>
+  </div>
+</div>
+</footer>
+</body>
+</html>

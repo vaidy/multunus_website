@@ -1,0 +1,572 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>CSS3 animations versus Javascript animations  | Multunus </title>
+  <meta name="author" content="Your Name">
+
+  
+  <meta name="description" content="tl; dr; Layout engines in major browsers, like gecko, webkit or trident now have many optimization functions for animations. But these will simply &hellip;">
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://www.multunus.com/2012/09/css3-animations-versus-javascript-animations">
+  <link href="/images/favicon.ico" rel="icon">
+  <link href="/stylesheets/bootstrap/bootstrap.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <link href="/stylesheets/bootstrap/responsive.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <link href="/stylesheets/syntax/syntax.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" type="text/css" href="/stylesheets/screen.css">
+  <style type="text/css">
+    body {
+        }
+    h1 {
+      margin-bottom: 15px;
+    }
+    img {
+      max-width: 100%;
+    }
+    .sharing, .meta, .pager {
+      margin: 20px 0px 20px 0px;
+    }
+    
+  </style>
+  <script src="/javascripts/libs/jquery.js"></script>
+  <script src="/javascripts/libs/modernizr-2.0.js"></script>
+  <script src="/javascripts/libs/bootstrap.js"></script>
+  <script src="/javascripts/octopress.js" type="text/javascript"></script>
+  <link href="/atom.xml" rel="alternate" title="Multunus" type="application/atom+xml">
+  <!-- jQuery Form Plugin -->
+<script src="http://malsup.github.com/jquery.form.js"></script>
+<!-- jQuery Form Validation Plugin -->
+<script src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.9/jquery.validate.min.js"></script> 
+<script src="/javascripts/google_form.js"></script>
+  <link href='http://fonts.googleapis.com/css?family=Bitter:400,700,400italic&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+<!-- jQuery -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+<script type="text/javascript">
+    // Avoid conflict with ender.js.
+    jQuery.noConflict();
+</script>
+<!-- jQuery Form Plugin -->
+<script src="http://malsup.github.com/jquery.form.js"></script>
+<!-- jQuery Form Validation Plugin -->
+<script src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.9/jquery.validate.min.js"></script> 
+<script src="/javascripts/google_form.js"></script>
+  
+
+</head>
+
+<body   >
+  <nav role="navigation"><div class="navbar subnav">
+  <div class="container-fluid">
+      <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </a>        
+
+      <div class="nav-collapse top-bar">
+        <ul class="nav">
+  
+    <li><a class="small-logo" href="/"><img src='/images/logo_small.png' /></a></li>  
+  
+	<li  ><a href="/">Home</a></li>	
+  <li  ><a href="/what-we-do">What We Do</a></li>
+  <li  ><a href="/why-us">Why Us?</a></li>
+  <li  ><a href="/careers-multunus">Careers</a></li>
+  <li  class="dropdown">
+    <a href="/about/history">About</a>
+    <ul class="dropdown-menu">
+      <li><a href="/about/history">History</a></li>
+      <li><a href="/about/people">The Team</a></li>
+    </ul>
+  </li>
+  <li  class="active" ><a href="/blog">Our Blog</a></li>
+  <li  class="dropdown">
+      <a href="/contact-us/contact">Contact Us</a>
+      <ul class="dropdown-menu">
+        <li><a href="/contact-us/contact">Write to Us</a></li>
+        <li><a href="/contact-us/location">Location</a></li>
+      </ul>
+  </li>
+</ul>
+<ul class="nav social-icons pull-right">
+  <li id="facebook"> 
+    <a href="https://www.facebook.com/multunus" title="facebook">
+      <img src="/images/facebook_white_icon.png" alt="facebook" />
+    </a>
+  </li> 
+  <li id="twitter"> 
+    <a href="http://twitter.com/multunus" title="twitter">
+      <img src="/images/twitter_white_icon.png" alt="twitter" />
+    </a>
+  </li>   
+
+</ul>
+
+      </div>
+    </div>
+</div>
+</nav>
+  <div class="container-fluid main-content">
+    <div class="row-fluid">
+      <article class="hentry span9 blog-post" role="article">
+  <div class="row-fluid">
+  <div class="span2 date-container">
+    
+
+
+
+
+
+
+
+
+  
+
+
+<div datetime="2012-09-27T10:55:05+05:30" pubdate data-updated="true"><div class='day'>27</div><div class='month-year'><div class='month'>September</div><div class='year'>2012</div></div></div>
+  </div>
+  <div class="span10">
+    
+      <header>
+        <h2 class="entry-title">CSS3 Animations Versus Javascript Animations</h2>
+        <p class="meta">
+          
+  
+
+<div class="byline author vcard"><strong>Posted by: </strong><span class="fn">Manoj, Midhun</span></div>
+
+        </p>
+      </header>
+    
+  </div>
+
+  <div class="entry-content"><strong><span style="text-decoration: underline;">tl; dr;</span></strong> 
+<p>
+  Layout
+  engines in major browsers, like gecko, webkit or trident now have many optimization
+  functions for animations. But these will simply cease to function if you&#8217;re using
+  jQuery animations because in reality jQuery is not &#8220;animating&#8221; anything. However, in
+  the case of CSS3, the browser optimizes animations using the GPU&#8217;s resources to give a
+  much more polished effect. Go in for CSS3 whenever possible.
+</p>
+<p>
+  <strong><span style=
+  "text-decoration: underline;">The long version:</span></strong> jQuery is an excellent
+  js framework to do a lot of things, but is it what you need for blazing fast
+  performance with animations for your website? Lets dig a little bit deeper into the
+  actual implementations, by considering these two examples,
+</p>
+<p>
+<strong>(a) jQuery animation</strong>
+<pre>
+  $(".onclick").toggle(
+      function(){
+        $(".children").animate({height:'50'});
+      },
+      function(){
+        $(".children").animate({height:'0'});
+      }
+  );
+</pre>
+<iframe style="width: 100%; height: 300px;" src=
+"http://jsfiddle.net/midhun_k/aq9gq/embedded/" frameborder="0" width="320" height=
+"240"></iframe> 
+In this case the drop down menu is implemented using jquery animate method.
+</p>
+<p>
+ <strong>(b) CSS3 animation</strong>
+  <pre>
+.children{
+           height: 0px;
+           border-bottom: 1px solid grey;
+           -webkit-transition: height .3s ease-in-out;
+}
+
+.children-onhover{
+           height: 50px;
+}
+</pre>
+  <pre>
+$(".onclick").click(function(){
+    $(".children").toggleClass("children-onhover");
+});
+</pre><iframe style="width: 100%; height: 300px;" src=
+"http://jsfiddle.net/midhun_k/kANVs/embedded/" frameborder="0" width="320" height=
+"240"></iframe> In this case the drop down menu is done using css3 transitions using
+ease-in-out transition effect. 
+</p>
+<p>
+Lets analyze what&#8217;s going on with the css3 animation for
+sliding down the menus. Both of these menus progressively increase the height of each of
+the containing submenus, but in case of css3, the height is progressively updated from
+the old value to the new value over time, which is done by the layout engine of the
+browser internally, as it is described in the <a title="surfin' safari" href=
+"http://www.webkit.org/blog/138/css-animation/">surfin&#8217; safari</a> blog.
+</p>
+<p>
+ In case of
+jQuery, inside the animate of each property, an fx Object is created.
+  <pre>
+jQuery.each( prop, function( name, val ) {
+  var e = new jQuery.fx( self, opt, name );
+}
+</pre>This return a javascript object instance,
+  <pre>
+fx: function( elem, options, prop ) {
+  this.options = options;
+  this.elem = elem;
+  this.prop = prop;
+
+  if ( !options.orig ) {
+      options.orig = {};
+  }
+}
+</pre>After that, the start and end values is set. In our case:
+  <pre>
+   start = 0;
+   end = 50;
+   unit = 'px';
+   e.custom( start, end, unit );
+</pre>The above snippet calls the custom function:
+  <pre>
+custom: function( from, to, unit ) {
+  this.startTime = now();
+  this.start = from;
+  this.end = to;
+  this.unit = unit || this.unit || "px";
+  this.now = this.start;
+  this.pos = this.state = 0;
+
+  var self = this;
+  function t( gotoEnd ) {
+      return self.step(gotoEnd);
+  }
+
+  t.elem = this.elem;
+
+  if ( t() &amp;&amp; jQuery.timers.push(t) &amp;&amp; !timerId ) {
+      timerId = setInterval(jQuery.fx.tick, 13);
+  }
+}
+</pre>As you can see above, a call to step method is made every every 13 milliseconds. As
+of jQuery 1.8 this interval is called JQuery.fx.interval. 
+</p>
+That is, for a height increase of 50px over a time period of 400ms (default JQuery animation interval), it does 31 steps of 13 ms each.
+  <pre>
+jQuery.fx.speeds = {
+        slow: 600,
+        fast: 200,
+        // Default speed
+        _default: 400
+};
+</pre>
+<p>
+As of jQuery 1.8 the step function is replaced, but the same logic is applied:
+  <pre>
+step: function( gotoEnd ) {
+  var t = now();
+  var n = t - this.startTime;
+  this.state = n / this.options.duration;
+  pos = jQuery.easing['swing'](this.state, n, 0, 1, this.options.duration);
+  this.now = this.start + ((this.end - this.start) * this.pos);
+  this.update();
+}
+</pre>
+</p>
+<p>You can dig deeper into jQuery effects at: <a title=
+"https://github.com/jquery/jquery/blob/master/src/effects.js#L124" href=
+"https://github.com/jquery/jquery/blob/master/src/effects.js#L124">https://github.com/jquery/jquery/blob/master/src/effects.js#L124</a>
+Also make sure to check out the relevant webkit source: <a title=
+"https://github.com/WebKit/webkit/tree/master/Source/WebCore" href=
+"https://github.com/WebKit/webkit/tree/master/Source/WebCore">https://github.com/WebKit/webkit/tree/master/Source/WebCore</a>
+</p></div>
+  
+    <p class="meta">
+      
+
+<div class="categories">
+	<strong>Filed in: </strong> 
+  
+    <a class='category' href='/blog/categories/technology/'>Technology</a>
+  
+</div>
+
+
+      
+    </p>
+  
+</div>
+  <footer>
+    
+      <div class="sharing">
+	
+		<div class="fb-like" data-width="368" data-layout="button_count" data-href="" data-show-faces="false">
+		</div>
+	
+	
+		<div class="g-plusone" data-size="medium" data-href="http://www.multunus.com/2012/09/css3-animations-versus-javascript-animations">
+		</div>
+	
+  	
+  		<a href="http://twitter.com/share" class="twitter-share-button" data-url="http://www.multunus.com/2012/09/css3-animations-versus-javascript-animations" data-counturl="http://www.multunus.com/2012/09/css3-animations-versus-javascript-animations" data-count="none" data-text="See the timelines of the young turks at Multunus">
+  		</a>
+  	
+  	<script src="//platform.linkedin.com/in.js" type="text/javascript"></script>
+  	<script type="IN/Share" data-counter="right"></script>
+</div>
+
+    
+    
+    <section>
+      <h1>Comments</h1>
+      <div id="disqus_thread" aria-live="polite"><noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+    </section>
+    
+  </footer>
+  
+
+<script type="text/javascript">
+      var disqus_shortname = 'multunus';
+      
+        
+        // var disqus_developer = 1;
+        var disqus_identifier = 'http://www.multunus.com/2012/09/css3-animations-versus-javascript-animations/';
+        var disqus_url = 'http://www.multunus.com/2012/09/css3-animations-versus-javascript-animations/';
+        var disqus_script = 'embed.js';
+      
+    (function () {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = 'http://' + disqus_shortname + '.disqus.com/' + disqus_script;
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    }());
+</script>
+
+
+
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) {return;}
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#appId=212934732101925&xfbml=1";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+
+
+  <script type="text/javascript">
+    (function() {
+      var script = document.createElement('script'); script.type = 'text/javascript'; script.async = true;
+      script.src = 'https://apis.google.com/js/plusone.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(script, s);
+    })();
+  </script>
+
+
+
+  <script type="text/javascript">
+    (function(){
+      var twitterWidgets = document.createElement('script');
+      twitterWidgets.type = 'text/javascript';
+      twitterWidgets.async = true;
+      twitterWidgets.src = 'http://platform.twitter.com/widgets.js';
+      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
+    })();
+  </script>
+
+
+
+
+
+</article>
+
+<aside class="sidebar-nav span3">
+  <h3>Categories</h3>
+<ul id="category-list">
+	<li  class="page_item"><a href="/blog/categories/all-posts">All Posts</a></li>
+	<li  class="page_item"><a href="/blog/categories/android">Android</a></li>
+	<li  class="page_item"><a href="/blog/categories/business">Business</a></li>
+	<li  class="page_item"><a href="/blog/categories/continuous-delivery">Continuous Delivery</a></li>
+	<li  class="page_item"><a href="/blog/categories/process">Process</a></li>
+	<li  class="page_item"><a href="/blog/categories/rails">Rails</a></li>
+	<li  class="page_item"><a href="/blog/categories/technology">Technology</a></li>
+</ul>
+
+</aside> 
+    </div>
+  </div>
+  <div class="container-fluid dark-background">
+      <div class="row-fluid">
+        <div class="span4 featured-posts">
+          <div class="header">Featured Posts</div>
+<ul id="featured-posts">
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+      <li class="post">
+        <a href="/2012/01/a-sneak-peak-into-mobile-app-opportunities-in-2012/">A sneak peek into Mobile App Opportunities in 2012</a>
+      </li>
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+      <li class="post">
+        <a href="/2011/09/continuous-delivery-for-android-apps-part-1/">Continuous Delivery for Android Apps - Part 1</a>
+      </li>
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+      <li class="post">
+        <a href="/2011/07/continuous-delivery-using-jenkins-build-pipeline/">Continuous Delivery - Part 1: Our Jenkins Build Pipeline setup</a>
+      </li>
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+      <li class="post">
+        <a href="/2011/02/software-development-as-a-balance/">A Macro Level Perspective of Software Development</a>
+      </li>
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+</ul>
+
+        </div>
+        <div class="span4 tumblr-feed">
+          <div class="header">Our Daily Voice</div>
+<ul id="tumblr_post">
+  <li class="loading">Fetching...</li>
+</ul>
+<div id="continue-reading"><a href="http://multunus.tumblr.com/">Continue reading at our tumblog</a></div>
+<script type="text/javascript">
+  $(document).ready(function(){
+    getTumblrPost("multunus", 1);
+  });
+</script>
+<script src="/javascripts/asides/tumblr.js" type="text/javascript"> </script>
+
+        </div>
+        <div class="span4 twitter-feed">
+          
+  <div class='header'>@multunus</div>
+  <ul id="tweets">
+    <li class="loading">Status updating...</li>
+  </ul>
+  <script type="text/javascript">
+    $(document).ready(function(){
+      getTwitterFeed("multunus", 5, false);
+    });
+  </script>
+  <script src="/javascripts/asides/twitter.js" type="text/javascript"> </script>
+
+
+        </div>         
+      </div>
+    </div>
+  <footer role="contentinfo" class="page-footer">
+<div class = "navbar footer-navbar">
+  <div class = "container-fluid">
+    <div class="nav-collapse footer-container">
+      <ul class="nav"><li class="copyright">&copy;2012 Copyright by Multunus Software Private Limited.</li></ul>
+
+<ul class="nav pull-right">
+  <li><a href="/">Home</a></li>	
+  <li><a href="/what-we-do">What We Do</a></li>
+  <li><a href="/why-us">Why Us?</a></li>
+  <li><a href="/careers-multunus">Careers</a></li>
+  <li><a href="/about/history">About</a></li>
+  <li><a href="/blog">Our Blog</a></li>
+  <li><a href="/contact-us/contact">Contact Us</a></li>
+</ul>
+
+    </div>
+  </div>
+</div>
+</footer>
+</body>
+</html>

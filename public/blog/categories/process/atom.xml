@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Process | Multunus]]></title>
   <link href="http://www.multunus.com/blog/categories/process/atom.xml" rel="self"/>
   <link href="http://www.multunus.com/"/>
-  <updated>2012-10-03T11:14:06+05:30</updated>
+  <updated>2012-10-03T12:27:01+05:30</updated>
   <id>http://www.multunus.com/</id>
   <author>
     <name><![CDATA[Your Name]]></name>
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[Introduction to Continuous Delivery]]></title>
-    <link href="http://www.multunus.com/blog/2012/05/introduction-to-continuous-delivery/"/>
+    <link href="http://www.multunus.com/2012/05/introduction-to-continuous-delivery/"/>
     <updated>2012-05-15T14:49:16+05:30</updated>
-    <id>http://www.multunus.com/blog/2012/05/introduction-to-continuous-delivery</id>
+    <id>http://www.multunus.com/2012/05/introduction-to-continuous-delivery</id>
     <content type="html"><![CDATA[<p>We've been doing Continuous Delivery for sometime and also been writing about how to implement the same. This post is about why Continuous Delivery is required and what problems does it solve.</p>
 
 <h3><strong><span style="text-decoration: underline;">What is Continuous Delivery</span></strong></h3>
@@ -110,9 +110,9 @@ One of the key principle of Continuous Delivery is <strong>To </strong><strong>
   
   <entry>
     <title type="html"><![CDATA[Continuous Delivery for Android Apps – Part 2]]></title>
-    <link href="http://www.multunus.com/blog/2011/10/continuous-delivery-for-android-apps-part-2/"/>
+    <link href="http://www.multunus.com/2011/10/continuous-delivery-for-android-apps-part-2/"/>
     <updated>2011-10-06T06:51:57+05:30</updated>
-    <id>http://www.multunus.com/blog/2011/10/continuous-delivery-for-android-apps-part-2</id>
+    <id>http://www.multunus.com/2011/10/continuous-delivery-for-android-apps-part-2</id>
     <content type="html"><![CDATA[<p>This post talks about how to run tests for the build setup as mentioned in <a href="http://www.multunus.com/blog/2011/09/continuous-delivery-for-android-apps-part-1/">Part 1</a>.</p>
 
 <h3><span style="text-decoration: underline;">Generate the build script for test</span></h3>
@@ -164,9 +164,9 @@ description="Runs tests from the package defined in test.package property"&gt;
   
   <entry>
     <title type="html"><![CDATA[Confident Estimates]]></title>
-    <link href="http://www.multunus.com/blog/2011/09/confident-estimates/"/>
+    <link href="http://www.multunus.com/2011/09/confident-estimates/"/>
     <updated>2011-09-29T08:58:51+05:30</updated>
-    <id>http://www.multunus.com/blog/2011/09/confident-estimates</id>
+    <id>http://www.multunus.com/2011/09/confident-estimates</id>
     <content type="html"><![CDATA[<div class="zemanta-img" style="margin: 1em; display: block;">
 
 <a href="http://commons.wikipedia.org/wiki/File:Goudargues.JPG"><img title="Goudargues" src="http://upload.wikimedia.org/wikipedia/commons/thumb/4/4b/Goudargues.JPG/300px-Goudargues.JPG" alt="Goudargues" width="300" height="200" /></a>
@@ -213,9 +213,9 @@ description="Runs tests from the package defined in test.package property"&gt;
   
   <entry>
     <title type="html"><![CDATA[Continuous Delivery for Android Apps - Part 1]]></title>
-    <link href="http://www.multunus.com/blog/2011/09/continuous-delivery-for-android-apps-part-1/"/>
+    <link href="http://www.multunus.com/2011/09/continuous-delivery-for-android-apps-part-1/"/>
     <updated>2011-09-23T11:15:50+05:30</updated>
-    <id>http://www.multunus.com/blog/2011/09/continuous-delivery-for-android-apps-part-1</id>
+    <id>http://www.multunus.com/2011/09/continuous-delivery-for-android-apps-part-1</id>
     <content type="html"><![CDATA[<div>
 
 We've set up our CI server for building android apps. We use Jenkins as our CI server, but the same steps can be applied to any CI server.
@@ -251,9 +251,9 @@ References: <a href="http://skaug.no/ingvald/2011/09/android-app-with-jenkins/"
   
   <entry>
     <title type="html"><![CDATA[Rebuilding in Jenkins]]></title>
-    <link href="http://www.multunus.com/blog/2011/09/rebuilding-in-jenkins/"/>
+    <link href="http://www.multunus.com/2011/09/rebuilding-in-jenkins/"/>
     <updated>2011-09-22T14:32:49+05:30</updated>
-    <id>http://www.multunus.com/blog/2011/09/rebuilding-in-jenkins</id>
+    <id>http://www.multunus.com/2011/09/rebuilding-in-jenkins</id>
     <content type="html"><![CDATA[<div>
 
 One option that might be required after setting up a <a href="http://www.multunus.com/blog/2011/07/continuous-delivery-using-jenkins-build-pipeline/">build pipeline</a> is the provision to redeploy an earlier version by click of a button. This can become handy when we find a bug in the production and want to see when the bug got introduced. For that we will have to redeploy the earlier version to the staging/UAT environment and test the same.
