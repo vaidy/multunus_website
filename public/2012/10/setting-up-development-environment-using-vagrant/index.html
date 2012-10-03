@@ -5,11 +5,11 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>Continuous Delivery - Part 1: Our Jenkins Build Pipeline setup  | Multunus </title>
+  <title>Setting up Development Environment using Vagrant  | Multunus </title>
   <meta name="author" content="Multunus Admin">
 
   
-  <meta name="description" content="As part of our journey towards implementing Continous Delivery, I&#8217;ve added the Build pipeline for our continous integration server Jenkins.   &hellip;">
+  <meta name="description" content="Problem We have some projects which takes lot of effort to set up. As with every projects setting up development environment includes installing git &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -18,7 +18,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://www.multunus.com/2011/07/continuous-delivery-using-jenkins-build-pipeline">
+  <link rel="canonical" href="http://www.multunus.com/2012/10/setting-up-development-environment-using-vagrant">
   <link href="/images/favicon.ico" rel="icon">
   <link href="/stylesheets/bootstrap/bootstrap.css" media="screen, projection" rel="stylesheet" type="text/css">
   <link href="/stylesheets/bootstrap/responsive.css" media="screen, projection" rel="stylesheet" type="text/css">
@@ -145,102 +145,91 @@
   
 
 
-<div datetime="2011-07-07T14:28:55+05:30" pubdate data-updated="true"><div class='day'>07</div><div class='month-year'><div class='month'>July</div><div class='year'>2011</div></div></div>
+<div datetime="2012-10-03T10:55:05+05:30" pubdate data-updated="true"><div class='day'>03</div><div class='month-year'><div class='month'>October</div><div class='year'>2012</div></div></div>
   </div>
   <div class="span10">
     
       <header>
-        <h2 class="entry-title">Continuous Delivery - Part 1: Our Jenkins Build Pipeline Setup</h2>
+        <h2 class="entry-title">Setting Up Development Environment Using Vagrant</h2>
         <p class="meta">
           
   
 
-<div class="byline author vcard"><strong>Posted by: </strong><span class="fn">Multunus Admin</span></div>
+<div class="byline author vcard"><strong>Posted by: </strong><span class="fn">Abhilash, Vimal</span></div>
 
         </p>
       </header>
     
   </div>
 
-  <div class="entry-content"><p>As part of our journey towards implementing <a href="http://continuousdelivery.com/">Continous Delivery</a>, I&#8217;ve added the <a href="https://wiki.jenkins-ci.org/display/JENKINS/Build+Pipeline+Plugin">Build pipeline</a> for our continous integration server <a href="http://jenkins-ci.org/">Jenkins</a>.  There are quite a few resources available on the net on how to add the plugin and configure it. This blog is not about how to configure the plugin, but more on how I&#8217;ve configured it for one of our projects and issues I faced while doing the same.</p>
-
-<p>The pipeline we have now is very simple. They are:</p>
-
-<ul>
-    <li>Run all the RSpec tests</li>
-    <li>Run the Javascript Unit tests</li>
-    <li>Deploy to staging</li>
-    <li>Deploy to production</li>
-</ul>
-
-
-<p><strong>The problems we had with our earlier approach, and how the current approach solved those problems:</strong></p>
-
-<p>What we had in the past was, simple scripts with the above items. We had a job for running the tests. If the build was successful, we would run <a href="https://github.com/capistrano/capistrano">capistrano</a> scripts to deploy to staging and once the customer gave the thumbs up, we&#8217;d push it to production.  There are a series of steps that we had to do for each deployment. For eg:  for staging deployment:</p>
-
-<ul>
-    <li>Merge the &#8220;staging&#8221; branch with master</li>
-    <li>Run the cap script</li>
-    <li>Tag the build</li>
-</ul>
-
-
-<p>And almost similar steps needed to be followed for production deployment also. The usual problems that we used to face are:</p>
-
-<ul>
-    <li>There is no way we knew what deployment was done on a certain day for what</li>
-    <li>All staging updates would not get pushed to production, so it was a tough task to identify which tag to merge when we were finally ready for a production update</li>
-</ul>
-
-
-<p>With the current approach, the advantages are:</p>
-
-<ul>
-    <li>Its a one click deployment, so rare chance of making any kind of mistake</li>
-    <li>We can clearly see when a feature has been moved to staging, and whether it has been pushed to production or not</li>
-    <li>Anyone can do deployment as it is just a click of a button. We may even be able to teach the client how to do this.</li>
-</ul>
-
-
-<p>One of the major problems I had faced in the earlier &#8220;manual&#8221; system - was the inability to pass parameters between builds. For example, once the app would be moved to staging, a tag is created and when its ready to be pushed to production, we&#8217;d have to merge that particular tag to production and then push it.</p>
-
-<p>To achieve the above I used the &#8220;parameterized build&#8221; option. In Jenkins, the parameters get converted to Environment Variables and got passed to the downstream job.
-When you fire the build, it prompts for the value of the parameter. Once entered this would be available as an Environment variable for this job and all its downstream jobs.</p>
-
-<p>For eg: in the pipeline, the downstream project is &#8220;Stage deploy&#8221;, and it will know the value for TAG and uses that value to create a tag in Git after successful deployment.</p>
-
-<p>When it is ready for production deployment it merges with the same tag and deploys to production. In the latest version of the plugin, moving to the next step is <strong>not</strong> triggered automatically and you can retry the failed ones.</p>
-
-<p><strong>Note:</strong> Capturing the parameter will happen <strong>only</strong> for the first job. So, if the parameterized job is <em>not</em> the first one in the pipeline, the capture of the parameter will not happen.</p>
-
-<p>So we&#8217;ve reached the &#8220;one click deployment stage&#8221; with this. But we&#8217;ve still got the following pending tasks - based on what&#8217;s mention in the book  <a href="http://www.informit.com/store/product.aspx?isbn=0321601912">Continuous Delivery</a>:</p>
-
-<ul>
-    <li>Rolling back the bad builds</li>
-    <li>Add non-functional tests to the pipeline i.e. performance and security tests</li>
-    <li>Feature flags</li>
-    <li>Zero downtime deployment</li>
-    <li>Canary Releases (Something on the lines of A/B testing)</li>
-</ul>
-
-
-<p>Continued..</p>
-
-<ul>
-    <li><a title="Continuous Delivery – Part 2: Code metrics with metrical" href="/blog/2011/07/continuous-delivery-code-metrics-with-metrical/">Continuous Delivery – Part 2: Code metrics with metrical</a></li>
-    <li><a title="Continuous Delivery – Part 3: Running custom rake tasks during deployment" href="/blog/2011/07/continuous-delivery-contd/">Continuous Delivery – Part 3: Running custom rake tasks during deployment</a></li>
-    <li><a title="Continuous Delivery – Part 4: Rolling back database migrations with Capistrano rollback" href="/blog/2011/08/continuous-delivery-part-3-rolling-back-database-migrations-with-capistrano-rollback/">Continuous Delivery – Part 4: Rolling back database migrations with Capistrano rollback</a></li>
-</ul>
-
-
-<p>References:</p>
-
-<ul>
-    <li><a href="http://weblogs.java.net/blog/johnsmart/archive/2011/03/10/build-pipelines-jenkinshudson">http://weblogs.java.net/blog/johnsmart/archive/2011/03/10/build-pipelines-jenkinshudson</a></li>
-    <li><a href="http://continuousdelivery.com/patterns">http://continuousdelivery.com/patterns</a></li>
-    <li><a href="http://www.quora.com/How-does-Etsy-manage-development-and-operations" target="_blank">http://www.quora.com/How-does-Etsy-manage-development-and-operations</a></li>
-</ul>
-
+  <div class="entry-content"><strong><span style="text-decoration: underline;">Problem</span></strong> 
+<p>
+  We have some projects which takes lot of effort to set up. As with every projects setting up development environment includes installing git, curl, apache, mysql-server, ruby, rvm, ruby-gems for the app, etc. and also the project specific configurations.
+</p>
+<p>
+  Doing all these every time when you need to setup the development environment will be time consuming and takes a lot of effort.
+</p>
+<strong><span style= "text-decoration: underline;">Solution</span></strong>
+<p>
+  Setting up the development environment in VM using Vagrant. 
+</p>
+<p>
+  Vagrant helps to build development environment for projects and rebuild them when needed. And this environment can be shared among the team easily.
+</p>
+<strong><span style= "text-decoration: underline;">How?</span></strong>
+<p>
+  Vagrant is primarily a driver for Oracle VirtualBox virtual machines. You can download and install Vagrant from <a href="http://downloads.vagrantup.com/" target="_NEW">here</a> or you can install it as a ruby gem for the rails projects. Vagrant uses a &#8220;base box&#8221; which is a base install (an OS) for the system you are going to use.
+</p>
+<p>
+  Different flavours of base boxes can be downloaded from <a href="http://www.vagrantbox.es/" target="_NEW">http://www.vagrantbox.es/</a>.
+</p>
+<p>
+  First step is to mark the root directory and setup the basic required files using the following command:
+  <pre>vagrant init</pre>
+</p>
+<p>
+  This will create a file called <em><strong>Vagrantfile</strong></em> this will contain the configuration details for the VM.
+</p>
+<p>
+  After the project initailization you can download Vagrant boxes from <a href="http://www.vagrantbox.es/" target="_NEW">http://www.vagrantbox.es/</a> and add it to your project:
+  <pre>vagrant box add lucid64 lucid64.box </pre>
+</p>
+<p>
+  You can also add the box from a remote server using:
+  <pre>vagrant box add lucid64 http://files.vagrantup.com/lucid64.box</pre>
+</p>
+<p>
+  To list the boxes that you added you can use:
+  <pre>vagrant box list</pre>
+</p>
+<p>
+  Now you have to edit the Vagrantfile to use the base box that you have added.
+  <pre>Vagrant::Config.run do |config|
+        config.vm.box = "lucid64" 
+end</pre>
+</p>
+<p>
+  Now we can start our new VM:
+  <pre>vagrant up</pre>
+  This will start a fully functional VM. 
+</p>
+<p>
+  To access the VM you have to do ssh:
+  <pre>vagrant ssh</pre>
+  This will log you into the virtual machine.
+</p>
+<p>
+  Now you can start setting up the development environment. Once everything is ready we can package this VM to a box. This will help us to share the virtual environment that we created with the other team members.
+  <pre>vagrant package</pre>
+  This will create a vagrant box with the entire dev environment setup. 
+</p>
+<p>
+  Now to use this any machine, you have to install Virtualbox and Vagrant. Then add this box using:
+  <pre>vagrant box add lucid64_with_dev_setup package.box</pre>
+</p>
+<p>
+  You can create a VM with this box and all the dev environment setup will be available with this VM.
+</p>
 </div>
   
     <p class="meta">
@@ -249,7 +238,7 @@ When you fire the build, it prompts for the value of the parameter. Once entered
 <div class="categories">
 	<strong>Filed in: </strong> 
   
-    <a class='category' href='/blog/categories/all-posts/'>All Posts</a>, <a class='category' href='/blog/categories/continuous-delivery/'>Continuous Delivery</a>, <a class='category' href='/blog/categories/process/'>Process</a>, <a class='category' href='/blog/categories/technology/'>Technology</a>
+    <a class='category' href='/blog/categories/technology/'>Technology</a>
   
 </div>
 
@@ -266,11 +255,11 @@ When you fire the build, it prompts for the value of the parameter. Once entered
 		</div>
 	
 	
-		<div class="g-plusone" data-size="medium" data-href="http://www.multunus.com/2011/07/continuous-delivery-using-jenkins-build-pipeline">
+		<div class="g-plusone" data-size="medium" data-href="http://www.multunus.com/2012/10/setting-up-development-environment-using-vagrant">
 		</div>
 	
   	
-  		<a href="http://twitter.com/share" class="twitter-share-button" data-url="http://www.multunus.com/2011/07/continuous-delivery-using-jenkins-build-pipeline" data-counturl="http://www.multunus.com/2011/07/continuous-delivery-using-jenkins-build-pipeline" data-count="none" data-text="See the timelines of the young turks at Multunus">
+  		<a href="http://twitter.com/share" class="twitter-share-button" data-url="http://www.multunus.com/2012/10/setting-up-development-environment-using-vagrant" data-counturl="http://www.multunus.com/2012/10/setting-up-development-environment-using-vagrant" data-count="none" data-text="See the timelines of the young turks at Multunus">
   		</a>
   	
   	<script src="//platform.linkedin.com/in.js" type="text/javascript"></script>
@@ -293,8 +282,8 @@ When you fire the build, it prompts for the value of the parameter. Once entered
       
         
         // var disqus_developer = 1;
-        var disqus_identifier = 'http://www.multunus.com/2011/07/continuous-delivery-using-jenkins-build-pipeline/';
-        var disqus_url = 'http://www.multunus.com/2011/07/continuous-delivery-using-jenkins-build-pipeline/';
+        var disqus_identifier = 'http://www.multunus.com/2012/10/setting-up-development-environment-using-vagrant/';
+        var disqus_url = 'http://www.multunus.com/2012/10/setting-up-development-environment-using-vagrant/';
         var disqus_script = 'embed.js';
       
     (function () {

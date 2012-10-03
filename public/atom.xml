@@ -4,7 +4,7 @@
   <title><![CDATA[Multunus]]></title>
   <link href="http://www.multunus.com/atom.xml" rel="self"/>
   <link href="http://www.multunus.com/"/>
-  <updated>2012-10-03T19:10:27+05:30</updated>
+  <updated>2012-10-03T19:59:11+05:30</updated>
   <id>http://www.multunus.com/</id>
   <author>
     <name><![CDATA[Multunus Admin]]></name>
@@ -12,6 +12,82 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Setting up Development Environment using Vagrant]]></title>
+    <link href="http://www.multunus.com/2012/10/setting-up-development-environment-using-vagrant/"/>
+    <updated>2012-10-03T10:55:05+05:30</updated>
+    <id>http://www.multunus.com/2012/10/setting-up-development-environment-using-vagrant</id>
+    <content type="html"><![CDATA[<strong><span style="text-decoration: underline;">Problem</span></strong> 
+<p>
+  We have some projects which takes lot of effort to set up. As with every projects setting up development environment includes installing git, curl, apache, mysql-server, ruby, rvm, ruby-gems for the app, etc. and also the project specific configurations.
+</p>
+<p>
+  Doing all these every time when you need to setup the development environment will be time consuming and takes a lot of effort.
+</p>
+<strong><span style= "text-decoration: underline;">Solution</span></strong>
+<p>
+  Setting up the development environment in VM using Vagrant. 
+</p>
+<p>
+  Vagrant helps to build development environment for projects and rebuild them when needed. And this environment can be shared among the team easily.
+</p>
+<strong><span style= "text-decoration: underline;">How?</span></strong>
+<p>
+  Vagrant is primarily a driver for Oracle VirtualBox virtual machines. You can download and install Vagrant from <a href="http://downloads.vagrantup.com/" target="_NEW">here</a> or you can install it as a ruby gem for the rails projects. Vagrant uses a &#8220;base box&#8221; which is a base install (an OS) for the system you are going to use.
+</p>
+<p>
+  Different flavours of base boxes can be downloaded from <a href="http://www.vagrantbox.es/" target="_NEW">http://www.vagrantbox.es/</a>.
+</p>
+<p>
+  First step is to mark the root directory and setup the basic required files using the following command:
+  <pre>vagrant init</pre>
+</p>
+<p>
+  This will create a file called <em><strong>Vagrantfile</strong></em> this will contain the configuration details for the VM.
+</p>
+<p>
+  After the project initailization you can download Vagrant boxes from <a href="http://www.vagrantbox.es/" target="_NEW">http://www.vagrantbox.es/</a> and add it to your project:
+  <pre>vagrant box add lucid64 lucid64.box </pre>
+</p>
+<p>
+  You can also add the box from a remote server using:
+  <pre>vagrant box add lucid64 http://files.vagrantup.com/lucid64.box</pre>
+</p>
+<p>
+  To list the boxes that you added you can use:
+  <pre>vagrant box list</pre>
+</p>
+<p>
+  Now you have to edit the Vagrantfile to use the base box that you have added.
+  <pre>Vagrant::Config.run do |config|
+        config.vm.box = "lucid64" 
+end</pre>
+</p>
+<p>
+  Now we can start our new VM:
+  <pre>vagrant up</pre>
+  This will start a fully functional VM. 
+</p>
+<p>
+  To access the VM you have to do ssh:
+  <pre>vagrant ssh</pre>
+  This will log you into the virtual machine.
+</p>
+<p>
+  Now you can start setting up the development environment. Once everything is ready we can package this VM to a box. This will help us to share the virtual environment that we created with the other team members.
+  <pre>vagrant package</pre>
+  This will create a vagrant box with the entire dev environment setup. 
+</p>
+<p>
+  Now to use this any machine, you have to install Virtualbox and Vagrant. Then add this box using:
+  <pre>vagrant box add lucid64_with_dev_setup package.box</pre>
+</p>
+<p>
+  You can create a VM with this box and all the dev environment setup will be available with this VM.
+</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[CSS3 animations versus Javascript animations]]></title>
@@ -1208,41 +1284,6 @@ Note: It will show the Rebuild button only for those builds which occurred afte
 <p><strong>Rating</strong>: Moderately useful</p>
 
 <p><img src="http://www.multunus.com/images/rails-wizard-300x187.png" alt="" width="300" height="187" /></a></p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Issue while installing Java in EC2 Micro instance]]></title>
-    <link href="http://www.multunus.com/2011/07/issue-while-installing-java-in-ec2-micro-instance/"/>
-    <updated>2011-07-31T14:22:30+05:30</updated>
-    <id>http://www.multunus.com/2011/07/issue-while-installing-java-in-ec2-micro-instance</id>
-    <content type="html"><![CDATA[<p>When I tried to install Java in our <a href="http://aws.amazon.com/ec2/instance-types/">EC2 micro instance</a>, it stopped responding. There was no luck even after restarting the instance. I thought it might be a specific issue with that particular instance, so tried it again by bringing up a new micro instance and every time it was the same behaviour. I then googled and discovered it as a known <a href="https://bugs.launchpad.net/ubuntu/+source/linux/+bug/634487">issue</a> reported back in September 2010. The suggested workaround is:</p>
-
-<ul>
-    <li>Bring up a small instance</li>
-    <li>Install Java</li>
-    <li>Convert it into micro instance.</li>
-</ul>
-
-
-<p>Converting of the instance can be done using <a href="http://aws.amazon.com/developertools/351">API tools</a>, or from the <a href="http://www.kinlane.com/2011/03/easier-scalability-with-aws/">AWS Console</a>. But for me this option was never enabled from the console. I don&#8217;t know why. Of course, the API option would still work, I suppose.</p>
-
-<p>But after looking at the bug in detail, I could see a solution which uses the linux <a href="http://linux.about.com/library/cmd/blcmdl1_nice.htm">nice</a> command, and that did the trick for me. You can see the script as the last comment. The script is as follows:</p>
-
-<pre class="Bash/shell">
-#!/bin/bash
-sudo add-apt-repository "deb <a rel="nofollow" href="http://archive.canonical.com/">http://archive.canonical.com/</a> natty partner"
-sudo apt-get update
-#Accept the Java license.
-for i in bin jdk jre; do
-echo "sun-java6-$i shared/accepted-sun-dlj-v1-1 select true" | sudo debconf-set-selections
-done
-# convoluted way to install java. this seems to only work some times! Race condition?
-# <a rel="nofollow" href="https://forums.aws.amazon.com/message.jspa?messageID=199841#199841">https://forums.aws.amazon.com/message.jspa?messageID=199841#199841</a>
-sudo nice --adjustment=19 apt-get install -y sun-java6-jre
-<span style="font-family: monospace;">
-</span></pre>
-
 ]]></content>
   </entry>
   
