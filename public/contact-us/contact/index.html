@@ -199,6 +199,9 @@
 	    	$("#hidden_iframe").load(function (){
 	    		$("#ss-form input[type='text'], #ss-form textarea").val('');
 	    		$('.notification').slideDown('slow');
+	    		setTimeout(function(){
+	    			$('.notification').slideUp('slow');
+	    		},2000);
 			});
 	    });
 	</script>
