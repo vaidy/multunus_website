@@ -15,35 +15,27 @@ nav: Contact Us
 	<div class="notification success" style="display:none;">
 		Thank You. We got your message.
 	</div>
-	<form action="https://docs.google.com/a/multunus.com/spreadsheet/formResponse?formkey=dDV6dTFGTXpVVDh0a0YxZGFpVEkxMlE6MQ&amp;ifq" method="POST" target="hidden_iframe" id="ss-form">
+	<form action="https://docs.google.com/a/multunus.com/spreadsheet/formResponse?formkey=dDliaXprMGgtYTRKemYyVDVmaDdFOHc6MQ&amp;ifq" method="POST" target="hidden_iframe" id="ss-form">
 		<br>
 		<div class="errorbox-good">
 			<div class="ss-form-entry">
-				<label class="ss-q-title" for="entry_0">Your Name (required)</label>
-				<label class="ss-q-help" for="entry_0"></label>
-				<input type="text" name="entry.0.single" value="" class="ss-q-short" id="entry_0">
+				<label class="ss-q-title" for="entry_3">Your Name (required)</label>
+				<label class="ss-q-help" for="entry_3"></label>
+				<input type="text" name="entry.3.single" value="" class="ss-q-short" id="entry_3">
 			</div>
 		</div>
 		<br /> 
 		<div class="errorbox-good">
 			<div class="ss-form-entry">
-				<label class="ss-q-title" for="entry_2">Your Email (required)</label>
-				<label class="ss-q-help" for="entry_2"></label>
-				<input type="text" name="entry.2.single" value="" class="ss-q-short" id="entry_2">
-			</div>
-		</div>
-		<br /> 
-		<div class="errorbox-good">
-			<div class="ss-form-entry">
-				<label class="ss-q-title" for="entry_4">Website</label>
+				<label class="ss-q-title" for="entry_4">Your Email (required)</label>
 				<label class="ss-q-help" for="entry_4"></label>
 				<input type="text" name="entry.4.single" value="" class="ss-q-short" id="entry_4">
 			</div>
 		</div>
-		<br> 
+		<br /> 
 		<div class="errorbox-good">
 			<div class="ss-form-entry">
-				<label class="ss-q-title" for="entry_5">Subject</label>
+				<label class="ss-q-title" for="entry_5">Website</label>
 				<label class="ss-q-help" for="entry_5"></label>
 				<input type="text" name="entry.5.single" value="" class="ss-q-short" id="entry_5">
 			</div>
@@ -51,9 +43,17 @@ nav: Contact Us
 		<br> 
 		<div class="errorbox-good">
 			<div class="ss-form-entry">
-				<label class="ss-q-title" for="entry_6">Your Message</label>
+				<label class="ss-q-title" for="entry_6">Subject</label>
 				<label class="ss-q-help" for="entry_6"></label>
-				<textarea name="entry.6.single" rows="8" cols="75" class="ss-q-long" id="entry_6"></textarea>
+				<input type="text" name="entry.6.single" value="" class="ss-q-short" id="entry_6">
+			</div>
+		</div>
+		<br> 
+		<div class="errorbox-good">
+			<div class="ss-form-entry">
+				<label class="ss-q-title" for="entry_7">Your Message</label>
+				<label class="ss-q-help" for="entry_7"></label>
+				<textarea name="entry.7.single" rows="8" cols="75" class="ss-q-long" id="entry_7"></textarea>
 			</div>
 		</div>
 		<br>
@@ -70,15 +70,15 @@ nav: Contact Us
 	    	form.validate({
 	    		errorClass: 'invalid',
 	    		rules: {
-	    			'entry.0.single': "required",
-	    			'entry.2.single': {
+	    			'entry.3.single': "required",
+	    			'entry.4.single': {
 	    				required: true,
 	    				email: true
 	    			}
 	    		},
 	    		messages: {
-	    		    'entry.0.single': "Please specify your name",
-	    		    'entry.2.single': {
+	    		    'entry.3.single': "Please specify your name",
+	    		    'entry.4.single': {
 	    		    	required: "Please enter an email address",
 	    		       	email: "Your email address must be in the format of name@domain.com"
 	    		    }
@@ -86,7 +86,7 @@ nav: Contact Us
 	    	});
 
 	    	$("#hidden_iframe").load(function (){
-	    		$('#ss-form input, #ss-form textarea').val('');
+	    		$("#ss-form input[type='text'], #ss-form textarea").val('');
 	    		$('.notification').slideDown('slow');
 			});
 	    });
