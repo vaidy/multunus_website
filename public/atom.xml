@@ -4,7 +4,7 @@
   <title><![CDATA[Multunus]]></title>
   <link href="http://www.multunus.com/atom.xml" rel="self"/>
   <link href="http://www.multunus.com/"/>
-  <updated>2012-10-03T19:59:11+05:30</updated>
+  <updated>2012-10-04T09:30:15+05:30</updated>
   <id>http://www.multunus.com/</id>
   <author>
     <name><![CDATA[Multunus Admin]]></name>
@@ -490,7 +490,7 @@ One of the key principle of Continuous Delivery is <strong>To </strong><strong>
 </span></div>
 
 
-<div style="padding-left: 30px;"><span id="internal-source-marker_0.3345638057217002">The following chart shows the distribution of apps across various marketplaces as of Nov 2011 [Sources: <a href="http://www.distimo.com/blog/2011_12_distimo-releases-full-year-2011-publication/">Distimo</a>, <a href="http://www.pcmag.com/article2/0,2817,2395188,00.asp">PCMag</a>]</span></div>
+<div style="padding-left: 30px;"><span id="internal-source-marker_0.3345638057217002">The following chart shows the distribution of apps across various marketplaces as of Nov 2011 [Sources: <a href="http://www.distimo.com/2011_12_distimo-releases-full-year-2011-publication/">Distimo</a>, <a href="http://www.pcmag.com/article2/0,2817,2395188,00.asp">PCMag</a>]</span></div>
 
 
 <p><strong> </strong></p>
@@ -886,7 +886,7 @@ We will be concentrating on Vertex and Fragment processing phases in OpenGL pipe
     <link href="http://www.multunus.com/2011/10/continuous-delivery-for-android-apps-part-2/"/>
     <updated>2011-10-06T06:51:57+05:30</updated>
     <id>http://www.multunus.com/2011/10/continuous-delivery-for-android-apps-part-2</id>
-    <content type="html"><![CDATA[<p>This post talks about how to run tests for the build setup as mentioned in <a href="http://www.multunus.com/blog/2011/09/continuous-delivery-for-android-apps-part-1/">Part 1</a>.</p>
+    <content type="html"><![CDATA[<p>This post talks about how to run tests for the build setup as mentioned in <a href="http://www.multunus.com/2011/09/continuous-delivery-for-android-apps-part-1/">Part 1</a>.</p>
 
 <h3><span style="text-decoration: underline;">Generate the build script for test</span></h3>
 
@@ -1073,7 +1073,7 @@ References: <a href="http://skaug.no/ingvald/2011/09/android-app-with-jenkins/"
     <id>http://www.multunus.com/2011/09/rebuilding-in-jenkins</id>
     <content type="html"><![CDATA[<div>
 
-One option that might be required after setting up a <a href="http://www.multunus.com/blog/2011/07/continuous-delivery-using-jenkins-build-pipeline/">build pipeline</a> is the provision to redeploy an earlier version by click of a button. This can become handy when we find a bug in the production and want to see when the bug got introduced. For that we will have to redeploy the earlier version to the staging/UAT environment and test the same.
+One option that might be required after setting up a <a href="http://www.multunus.com/2011/07/continuous-delivery-using-jenkins-build-pipeline/">build pipeline</a> is the provision to redeploy an earlier version by click of a button. This can become handy when we find a bug in the production and want to see when the bug got introduced. For that we will have to redeploy the earlier version to the staging/UAT environment and test the same.
 
 Jenkins by default does not allow to rerun any of the earlier jobs. But you can achieve this by the <a href="https://wiki.jenkins-ci.org/display/JENKINS/Rebuild+Plugin">Rebuild</a> plugin. It allows you to rebuild any job provided its parameterized build. It also allows you override the parameters. It will show the &#8220;Rebuild&#8221; button at the left side as shown below when you go to a specific build page:
 
@@ -1106,9 +1106,9 @@ Note: It will show the Rebuild button only for those builds which occurred afte
 <p>Continued..</p>
 
 <ul>
-    <li><a title="Continuous Delivery – Part 1: Our Jenkins Build Pipeline setup" href="http://www.multunus.com/blog/2011/07/continuous-delivery-using-jenkins-build-pipeline/">Continuous Delivery – Part 1: Our Jenkins Build Pipeline setup</a></li>
-    <li><a title="Continuous Delivery – Part 2: Code metrics with metrical" href="http://www.multunus.com/blog/2011/07/continuous-delivery-code-metrics-with-metrical/">Continuous Delivery – Part 2: Code metrics with metrical</a></li>
-    <li><a title="Continuous Delivery – Part 3: Running custom rake tasks during deployment" href="http://www.multunus.com/blog/2011/07/continuous-delivery-contd/">Continuous Delivery – Part 3: Running custom rake tasks during deployment</a></li>
+    <li><a title="Continuous Delivery – Part 1: Our Jenkins Build Pipeline setup" href="http://www.multunus.com/2011/07/continuous-delivery-using-jenkins-build-pipeline/">Continuous Delivery – Part 1: Our Jenkins Build Pipeline setup</a></li>
+    <li><a title="Continuous Delivery – Part 2: Code metrics with metrical" href="http://www.multunus.com/2011/07/continuous-delivery-code-metrics-with-metrical/">Continuous Delivery – Part 2: Code metrics with metrical</a></li>
+    <li><a title="Continuous Delivery – Part 3: Running custom rake tasks during deployment" href="http://www.multunus.com/2011/07/continuous-delivery-contd/">Continuous Delivery – Part 3: Running custom rake tasks during deployment</a></li>
 </ul>
 
 
@@ -1121,7 +1121,7 @@ Note: It will show the Rebuild button only for those builds which occurred afte
     <link href="http://www.multunus.com/2011/07/continuous-delivery-contd/"/>
     <updated>2011-07-31T15:50:54+05:30</updated>
     <id>http://www.multunus.com/2011/07/continuous-delivery-contd</id>
-    <content type="html"><![CDATA[<p>One problem we faced with the pipeline setup what I had mentioned in my <a href="http://www.multunus.com/blog/2011/07/continuous-delivery-using-jenkins-build-pipeline/">first post</a> was that - it was not handling how to run the extra tasks that we need to do in some of the deployments. Some examples are:</p>
+    <content type="html"><![CDATA[<p>One problem we faced with the pipeline setup what I had mentioned in my <a href="http://www.multunus.com/2011/07/continuous-delivery-using-jenkins-build-pipeline/">first post</a> was that - it was not handling how to run the extra tasks that we need to do in some of the deployments. Some examples are:</p>
 
 <ul>
     <li>Reindex the solr/lucene indexes if any new field has been added to the index</li>
@@ -1138,9 +1138,9 @@ Note: It will show the Rebuild button only for those builds which occurred afte
 <p>Continued..</p>
 
 <ul>
-    <li><a title="Continuous Delivery – Part 1: Our Jenkins Build Pipeline setup" href="http://www.multunus.com/blog/2011/07/continuous-delivery-using-jenkins-build-pipeline/">Continuous Delivery – Part 1: Our Jenkins Build Pipeline setup</a></li>
-    <li><a title="Continuous Delivery – Part 2: Code metrics with metrical" href="http://www.multunus.com/blog/2011/07/continuous-delivery-code-metrics-with-metrical/">Continuous Delivery – Part 2: Code metrics with metrical</a></li>
-    <li><a title="Continuous Delivery – Part 4: Rolling back database migrations with Capistrano rollback" href="http://www.multunus.com/blog/2011/08/continuous-delivery-part-3-rolling-back-database-migrations-with-capistrano-rollback/">Continuous Delivery – Part 4: Rolling back database migrations with Capistrano rollback</a></li>
+    <li><a title="Continuous Delivery – Part 1: Our Jenkins Build Pipeline setup" href="http://www.multunus.com/2011/07/continuous-delivery-using-jenkins-build-pipeline/">Continuous Delivery – Part 1: Our Jenkins Build Pipeline setup</a></li>
+    <li><a title="Continuous Delivery – Part 2: Code metrics with metrical" href="http://www.multunus.com/2011/07/continuous-delivery-code-metrics-with-metrical/">Continuous Delivery – Part 2: Code metrics with metrical</a></li>
+    <li><a title="Continuous Delivery – Part 4: Rolling back database migrations with Capistrano rollback" href="http://www.multunus.com/2011/08/continuous-delivery-part-3-rolling-back-database-migrations-with-capistrano-rollback/">Continuous Delivery – Part 4: Rolling back database migrations with Capistrano rollback</a></li>
 </ul>
 
 
@@ -1192,9 +1192,9 @@ Note: It will show the Rebuild button only for those builds which occurred afte
 <p>Continued..</p>
 
 <ul>
-    <li><a title="Continuous Delivery – Part 1: Our Jenkins Build Pipeline setup" href="http://www.multunus.com/blog/2011/07/continuous-delivery-using-jenkins-build-pipeline/">Continuous Delivery – Part 1: Our Jenkins Build Pipeline setup</a></li>
-    <li><a title="Continuous Delivery – Part 3: Running custom rake tasks during deployment" href="http://www.multunus.com/blog/2011/07/continuous-delivery-contd/">Continuous Delivery – Part 3: Running custom rake tasks during deployment</a></li>
-    <li><a title="Continuous Delivery – Part 4: Rolling back database migrations with Capistrano rollback" href="http://www.multunus.com/blog/2011/08/continuous-delivery-part-3-rolling-back-database-migrations-with-capistrano-rollback/">Continuous Delivery – Part 4: Rolling back database migrations with Capistrano rollback</a></li>
+    <li><a title="Continuous Delivery – Part 1: Our Jenkins Build Pipeline setup" href="http://www.multunus.com/2011/07/continuous-delivery-using-jenkins-build-pipeline/">Continuous Delivery – Part 1: Our Jenkins Build Pipeline setup</a></li>
+    <li><a title="Continuous Delivery – Part 3: Running custom rake tasks during deployment" href="http://www.multunus.com/2011/07/continuous-delivery-contd/">Continuous Delivery – Part 3: Running custom rake tasks during deployment</a></li>
+    <li><a title="Continuous Delivery – Part 4: Rolling back database migrations with Capistrano rollback" href="http://www.multunus.com/2011/08/continuous-delivery-part-3-rolling-back-database-migrations-with-capistrano-rollback/">Continuous Delivery – Part 4: Rolling back database migrations with Capistrano rollback</a></li>
 </ul>
 
 ]]></content>

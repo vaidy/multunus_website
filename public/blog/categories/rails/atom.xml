@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Rails | Multunus]]></title>
   <link href="http://www.multunus.com/blog/categories/rails/atom.xml" rel="self"/>
   <link href="http://www.multunus.com/"/>
-  <updated>2012-10-03T19:59:11+05:30</updated>
+  <updated>2012-10-04T09:30:15+05:30</updated>
   <id>http://www.multunus.com/</id>
   <author>
     <name><![CDATA[Multunus Admin]]></name>
@@ -79,7 +79,7 @@
     <link href="http://www.multunus.com/2011/06/running-tests-in-parallel-using-parallel_tests/"/>
     <updated>2011-06-27T10:48:01+05:30</updated>
     <id>http://www.multunus.com/2011/06/running-tests-in-parallel-using-parallel_tests</id>
-    <content type="html"><![CDATA[<p>One of the action items I had mentioned in <a href="http://www.multunus.com/blog/2011/06/takeaways-from-ruby-conf-india-2011/">an earlier post</a>, was to setup the  infrastructure for running tests in parallel.</p>
+    <content type="html"><![CDATA[<p>One of the action items I had mentioned in <a href="http://www.multunus.com/2011/06/takeaways-from-ruby-conf-india-2011/">an earlier post</a>, was to setup the  infrastructure for running tests in parallel.</p>
 
 <p>I tried <a href="http://test-load-balancer.github.com/">TLB</a>, but stopped on it because it required cluster setup for our CI server i.e. hudson. I was looking for something which was even simpler than TLB, and tried <a href="https://github.com/ngauthier/hydra">Hydra</a>, but could not setup it successfully. Thankfully though, the Hydra committer  <a href="https://github.com/ngauthier/hydra/issues/48">suggested</a> that I try out  <a href="https://github.com/grosser/parallel_tests">parallel_tests</a> - as hydra is not currently being maintained.</p>
 

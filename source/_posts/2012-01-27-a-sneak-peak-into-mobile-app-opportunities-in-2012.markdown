@@ -42,7 +42,7 @@ categories:
 <div style="padding-left: 30px;"><span id="internal-source-marker_0.3345638057217002">There are now more a million active apps now available across the major app stores. Apple’s app store and the Android Market currently lead by a large margin. However 2012 will probably bring in at least one more serious contender in the Windows Phone 7 marketplace - it has grown by more than 400% this year alone.</span></div>
 <div style="padding-left: 30px;"><span>
 </span></div>
-<div style="padding-left: 30px;"><span id="internal-source-marker_0.3345638057217002">The following chart shows the distribution of apps across various marketplaces as of Nov 2011 [Sources: <a href="http://www.distimo.com/blog/2011_12_distimo-releases-full-year-2011-publication/">Distimo</a>, <a href="http://www.pcmag.com/article2/0,2817,2395188,00.asp">PCMag</a>]</span></div>
+<div style="padding-left: 30px;"><span id="internal-source-marker_0.3345638057217002">The following chart shows the distribution of apps across various marketplaces as of Nov 2011 [Sources: <a href="http://www.distimo.com/2011_12_distimo-releases-full-year-2011-publication/">Distimo</a>, <a href="http://www.pcmag.com/article2/0,2817,2395188,00.asp">PCMag</a>]</span></div>
 <strong> </strong>
 
 <strong> </strong><strong> </strong>

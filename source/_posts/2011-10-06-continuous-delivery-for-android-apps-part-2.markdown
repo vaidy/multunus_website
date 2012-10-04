@@ -10,7 +10,7 @@ categories:
 - Continuous Delivery
 - Process
 ---
-This post talks about how to run tests for the build setup as mentioned in <a href="/blog/2011/09/continuous-delivery-for-android-apps-part-1/">Part 1</a>.
+This post talks about how to run tests for the build setup as mentioned in <a href="/2011/09/continuous-delivery-for-android-apps-part-1/">Part 1</a>.
 <h3><span style="text-decoration: underline;">Generate the build script for test</span></h3>
 The suggested practice is to have 2 separate projects for android, one the source and the other for the tests. The following command will generate a build.xml for the test project. Replace the  with the path of the source path.
 

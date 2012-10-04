@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Continuous Delivery | Multunus]]></title>
   <link href="http://www.multunus.com/blog/categories/continuous-delivery/atom.xml" rel="self"/>
   <link href="http://www.multunus.com/"/>
-  <updated>2012-10-03T19:59:11+05:30</updated>
+  <updated>2012-10-04T09:30:15+05:30</updated>
   <id>http://www.multunus.com/</id>
   <author>
     <name><![CDATA[Multunus Admin]]></name>
@@ -219,7 +219,7 @@ One of the key principle of Continuous Delivery is <strong>To </strong><strong>
     <link href="http://www.multunus.com/2011/10/continuous-delivery-for-android-apps-part-2/"/>
     <updated>2011-10-06T06:51:57+05:30</updated>
     <id>http://www.multunus.com/2011/10/continuous-delivery-for-android-apps-part-2</id>
-    <content type="html"><![CDATA[<p>This post talks about how to run tests for the build setup as mentioned in <a href="http://www.multunus.com/blog/2011/09/continuous-delivery-for-android-apps-part-1/">Part 1</a>.</p>
+    <content type="html"><![CDATA[<p>This post talks about how to run tests for the build setup as mentioned in <a href="http://www.multunus.com/2011/09/continuous-delivery-for-android-apps-part-1/">Part 1</a>.</p>
 
 <h3><span style="text-decoration: underline;">Generate the build script for test</span></h3>
 

@@ -10,7 +10,7 @@ categories:
 - Process
 - Technology
 ---
-One problem we faced with the pipeline setup what I had mentioned in my <a href="/blog/2011/07/continuous-delivery-using-jenkins-build-pipeline/">first post</a> was that - it was not handling how to run the extra tasks that we need to do in some of the deployments. Some examples are:
+One problem we faced with the pipeline setup what I had mentioned in my <a href="/2011/07/continuous-delivery-using-jenkins-build-pipeline/">first post</a> was that - it was not handling how to run the extra tasks that we need to do in some of the deployments. Some examples are:
 <ul>
 	<li>Reindex the solr/lucene indexes if any new field has been added to the index</li>
 	<li>Some custom rake tasks , say for eg: task to update values in the DB, which you don't want to add to migrations</li>
@@ -23,8 +23,8 @@ The only difference in this case is that - sometimes the parameter can be empty.
 
 Continued..
 <ul>
-	<li><a title="Continuous Delivery – Part 1: Our Jenkins Build Pipeline setup" href="/blog/2011/07/continuous-delivery-using-jenkins-build-pipeline/">Continuous Delivery – Part 1: Our Jenkins Build Pipeline setup</a></li>
-	<li><a title="Continuous Delivery – Part 2: Code metrics with metrical" href="/blog/2011/07/continuous-delivery-code-metrics-with-metrical/">Continuous Delivery – Part 2: Code metrics with metrical</a></li>
-	<li><a title="Continuous Delivery – Part 4: Rolling back database migrations with Capistrano rollback" href="/blog/2011/08/continuous-delivery-part-3-rolling-back-database-migrations-with-capistrano-rollback/">Continuous Delivery – Part 4: Rolling back database migrations with Capistrano rollback</a></li>
+	<li><a title="Continuous Delivery – Part 1: Our Jenkins Build Pipeline setup" href="/2011/07/continuous-delivery-using-jenkins-build-pipeline/">Continuous Delivery – Part 1: Our Jenkins Build Pipeline setup</a></li>
+	<li><a title="Continuous Delivery – Part 2: Code metrics with metrical" href="/2011/07/continuous-delivery-code-metrics-with-metrical/">Continuous Delivery – Part 2: Code metrics with metrical</a></li>
+	<li><a title="Continuous Delivery – Part 4: Rolling back database migrations with Capistrano rollback" href="/2011/08/continuous-delivery-part-3-rolling-back-database-migrations-with-capistrano-rollback/">Continuous Delivery – Part 4: Rolling back database migrations with Capistrano rollback</a></li>
 </ul>
 

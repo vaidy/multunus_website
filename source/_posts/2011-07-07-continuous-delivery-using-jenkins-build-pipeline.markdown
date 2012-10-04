@@ -4,6 +4,7 @@ layout: post
 featured: true
 title: ! 'Continuous Delivery - Part 1: Our Jenkins Build Pipeline setup'
 date: 2011-07-07 14:28:55.000000000 +05:30
+author: Leena
 categories:
 - All Posts
 - Continuous Delivery
@@ -59,9 +60,9 @@ So we've reached the "one click deployment stage" with this. But we've still got
 </ul>
 Continued..
 <ul>
-	<li><a title="Continuous Delivery – Part 2: Code metrics with metrical" href="/blog/2011/07/continuous-delivery-code-metrics-with-metrical/">Continuous Delivery – Part 2: Code metrics with metrical</a></li>
-	<li><a title="Continuous Delivery – Part 3: Running custom rake tasks during deployment" href="/blog/2011/07/continuous-delivery-contd/">Continuous Delivery – Part 3: Running custom rake tasks during deployment</a></li>
-	<li><a title="Continuous Delivery – Part 4: Rolling back database migrations with Capistrano rollback" href="/blog/2011/08/continuous-delivery-part-3-rolling-back-database-migrations-with-capistrano-rollback/">Continuous Delivery – Part 4: Rolling back database migrations with Capistrano rollback</a></li>
+	<li><a title="Continuous Delivery – Part 2: Code metrics with metrical" href="/2011/07/continuous-delivery-code-metrics-with-metrical/">Continuous Delivery – Part 2: Code metrics with metrical</a></li>
+	<li><a title="Continuous Delivery – Part 3: Running custom rake tasks during deployment" href="/2011/07/continuous-delivery-contd/">Continuous Delivery – Part 3: Running custom rake tasks during deployment</a></li>
+	<li><a title="Continuous Delivery – Part 4: Rolling back database migrations with Capistrano rollback" href="/2011/08/continuous-delivery-part-3-rolling-back-database-migrations-with-capistrano-rollback/">Continuous Delivery – Part 4: Rolling back database migrations with Capistrano rollback</a></li>
 </ul>
 References:
 <ul>

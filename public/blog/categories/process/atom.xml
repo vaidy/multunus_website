@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Process | Multunus]]></title>
   <link href="http://www.multunus.com/blog/categories/process/atom.xml" rel="self"/>
   <link href="http://www.multunus.com/"/>
-  <updated>2012-10-03T19:59:11+05:30</updated>
+  <updated>2012-10-04T09:30:15+05:30</updated>
   <id>http://www.multunus.com/</id>
   <author>
     <name><![CDATA[Multunus Admin]]></name>
@@ -113,7 +113,7 @@ One of the key principle of Continuous Delivery is <strong>To </strong><strong>
     <link href="http://www.multunus.com/2011/10/continuous-delivery-for-android-apps-part-2/"/>
     <updated>2011-10-06T06:51:57+05:30</updated>
     <id>http://www.multunus.com/2011/10/continuous-delivery-for-android-apps-part-2</id>
-    <content type="html"><![CDATA[<p>This post talks about how to run tests for the build setup as mentioned in <a href="http://www.multunus.com/blog/2011/09/continuous-delivery-for-android-apps-part-1/">Part 1</a>.</p>
+    <content type="html"><![CDATA[<p>This post talks about how to run tests for the build setup as mentioned in <a href="http://www.multunus.com/2011/09/continuous-delivery-for-android-apps-part-1/">Part 1</a>.</p>
 
 <h3><span style="text-decoration: underline;">Generate the build script for test</span></h3>
 
@@ -256,7 +256,7 @@ References: <a href="http://skaug.no/ingvald/2011/09/android-app-with-jenkins/"
     <id>http://www.multunus.com/2011/09/rebuilding-in-jenkins</id>
     <content type="html"><![CDATA[<div>
 
-One option that might be required after setting up a <a href="http://www.multunus.com/blog/2011/07/continuous-delivery-using-jenkins-build-pipeline/">build pipeline</a> is the provision to redeploy an earlier version by click of a button. This can become handy when we find a bug in the production and want to see when the bug got introduced. For that we will have to redeploy the earlier version to the staging/UAT environment and test the same.
+One option that might be required after setting up a <a href="http://www.multunus.com/2011/07/continuous-delivery-using-jenkins-build-pipeline/">build pipeline</a> is the provision to redeploy an earlier version by click of a button. This can become handy when we find a bug in the production and want to see when the bug got introduced. For that we will have to redeploy the earlier version to the staging/UAT environment and test the same.
 
 Jenkins by default does not allow to rerun any of the earlier jobs. But you can achieve this by the <a href="https://wiki.jenkins-ci.org/display/JENKINS/Rebuild+Plugin">Rebuild</a> plugin. It allows you to rebuild any job provided its parameterized build. It also allows you override the parameters. It will show the "Rebuild" button at the left side as shown below when you go to a specific build page:
 
