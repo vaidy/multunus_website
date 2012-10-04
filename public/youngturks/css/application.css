@@ -42,7 +42,7 @@ body {
 }
 
 .sub-title {
-  text-align:center;
+  margin-top: -20px;
 }
 
 .call-to-action span {
@@ -309,4 +309,31 @@ img.color {
 
 .popover p {
   margin: 0;
+}
+
+ol {
+  margin: 0 0 10px 45px;
+}
+
+li {
+  margin-bottom: 5px;
+  font-size: 0.9em;
+  line-height: 25px;
+}
+
+.rock {
+  font-size: 1.6em;
+}
+
+.whitespace {
+  white-space: pre-wrap;
+}
+
+.sub-title p {
+  margin: 0;
+}
+
+tbody {
+  font-size: 0.9em;
+  color: #B4B4B4;
 }
