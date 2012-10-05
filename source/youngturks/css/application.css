@@ -337,3 +337,7 @@ tbody {
   font-size: 0.9em;
   color: #B4B4B4;
 }
+
+.timelineMinor dd h3 {
+  white-space: normal !important;
+}
