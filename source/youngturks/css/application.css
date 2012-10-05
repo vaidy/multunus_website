@@ -340,4 +340,11 @@ tbody {
 
 .timelineMinor dd h3 {
   white-space: normal !important;
+  line-height: 1.5em !important;
+  margin-bottom: 15px;
+  margin-top: 7px;
+}
+
+.timelineMinor dt {
+  margin: 0 !important;
 }
