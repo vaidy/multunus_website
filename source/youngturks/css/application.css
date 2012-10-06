@@ -215,11 +215,11 @@ body {
   filter: gray; /* IE6-9 */
   -webkit-filter: grayscale(100%); /* Chrome 19+ & Safari 6+ */
 
-  -webkit-transition: -webkit-filter 0.6s ease-in-out;
-  -moz-transition: filter 0.6s ease-in-out;
-  -o-transition: filter 0.6s ease-in-out;
-  -ms-transition: filter 0.6s ease-in-out;
-  transition: filter 0.6s ease-in-out;
+  -webkit-transition: -webkit-filter 0.6s ease;
+  -moz-transition: filter 0.6s ease;
+  -o-transition: filter 0.6s ease;
+  -ms-transition: filter 0.6s ease;
+  transition: filter 0.6s ease;
 }
 
 .turk img:hover {

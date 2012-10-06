@@ -729,7 +729,7 @@
 						<dl class="timelineMinor">
 							<dt id="19540517"><a>Oct 2012</a></dt>
 							<dd class="timelineEvent" id="19540517EX" style="display: none; ">
-                                                            <h3>Joined the Narrable.com team. Checkout <a target="_blank" href="demo.narrable.com">demo.narrable.com</a> - to try this kickass product.</h3>
+                                                            <h3>Joined the Narrable.com team. Checkout <a target="_blank" href="http://demo.narrable.com">demo.narrable.com</a> - to try this kickass product.</h3>
                                                             <h3>Launched the Young Turks site (yup, the one that you&#8217;re currently looking at :)</h3>
                                                             <h3>Completed one year @ Multunus - and received a <a target="_blank" href="http://on.fb.me/Un08tp">one-of-a-kind &#8220;Certificate&#8221;</a></h3>
                                                             <br class="clear">
@@ -747,7 +747,7 @@
 							<dt id="19540517"><a>June 2012</a></dt>
 							<dd class="timelineEvent" id="19540517EX" style="display: none; ">
 								<h3>Lightning talk at Bangalore Ruby User Group meetup - on &#8220;Collecting Application Metrics for Rails Apps&#8221;</h3>
-                                                                <h3>Launched <a target="_blank" href="creed.io">Creed.io</a> into production. You should check it out right now.</h3>
+                                                                <h3>Launched <a target="_blank" href="http://creed.io">Creed.io</a> into production. You should check it out right now.</h3>
 								<br class="clear">
 							</dd><!-- /.timelineEvent -->
 						</dl><!-- /.timelineMinor -->
@@ -988,8 +988,7 @@
 
 				setUpPopOverCloseOnClick();
 
-				var url = window.location.href;
-				var turkNameFromUrl = url.substr(window.location.href.lastIndexOf('#') + 1);
+				var turkNameFromUrl = window.location.hash.slice(1);
 
 				$(".turk img, .title-line, #" + turkNameFromUrl + "-timeline").load(function(){
 					$(".turk[name='" + turkNameFromUrl + "']").click();
