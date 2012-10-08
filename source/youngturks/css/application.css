@@ -274,6 +274,14 @@ img.color {
   margin-top: 1.4%;
 }
 
+.turk-roles a {
+  color: inherit;
+}
+
+.turk-roles a {
+  text-decoration: none;
+}
+
 #you-timeline .turk-name {
   float: none;
 }
