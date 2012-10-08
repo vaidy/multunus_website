@@ -1,5 +1,6 @@
 #!/bin/bash
 echo "Pushing to Unfuddle..."
 git push origin master
-echo "\nPushing to Heroku..."
+echo ""
+echo "Pushing to Heroku..."
 git push heroku master
