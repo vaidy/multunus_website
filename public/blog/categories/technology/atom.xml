@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Technology | Multunus]]></title>
   <link href="http://www.multunus.com/blog/categories/technology/atom.xml" rel="self"/>
   <link href="http://www.multunus.com/"/>
-  <updated>2012-10-08T14:48:55+05:30</updated>
+  <updated>2012-10-10T06:02:57+00:00</updated>
   <id>http://www.multunus.com/</id>
   <author>
     <name><![CDATA[Multunus Admin]]></name>
@@ -16,7 +16,7 @@
   <entry>
     <title type="html"><![CDATA[Setting up Development Environment using Vagrant]]></title>
     <link href="http://www.multunus.com/2012/10/setting-up-development-environment-using-vagrant/"/>
-    <updated>2012-10-03T10:55:05+05:30</updated>
+    <updated>2012-10-03T05:25:05+00:00</updated>
     <id>http://www.multunus.com/2012/10/setting-up-development-environment-using-vagrant</id>
     <content type="html"><![CDATA[<p><strong><span style="text-decoration: underline;">Problem</span></strong></p>
 
@@ -128,7 +128,7 @@ end</pre>
   <entry>
     <title type="html"><![CDATA[CSS3 animations versus Javascript animations]]></title>
     <link href="http://www.multunus.com/2012/09/css3-animations-versus-javascript-animations/"/>
-    <updated>2012-09-27T10:55:05+05:30</updated>
+    <updated>2012-09-27T05:25:05+00:00</updated>
     <id>http://www.multunus.com/2012/09/css3-animations-versus-javascript-animations</id>
     <content type="html"><![CDATA[<p><strong><span style="text-decoration: underline;">tl; dr;</span></strong></p>
 
@@ -296,7 +296,7 @@ Also make sure to check out the relevant webkit source: <a title=
   <entry>
     <title type="html"><![CDATA[Introduction to Continuous Delivery]]></title>
     <link href="http://www.multunus.com/2012/05/introduction-to-continuous-delivery/"/>
-    <updated>2012-05-15T14:49:16+05:30</updated>
+    <updated>2012-05-15T09:19:16+00:00</updated>
     <id>http://www.multunus.com/2012/05/introduction-to-continuous-delivery</id>
     <content type="html"><![CDATA[<p>We've been doing Continuous Delivery for sometime and also been writing about how to implement the same. This post is about why Continuous Delivery is required and what problems does it solve.</p>
 
@@ -391,7 +391,7 @@ One of the key principle of Continuous Delivery is <strong>To </strong><strong>
   <entry>
     <title type="html"><![CDATA[Simple Image Filter using OpenGL ES in Android]]></title>
     <link href="http://www.multunus.com/2011/10/simple-image-filter-using-opengl-es-in-android/"/>
-    <updated>2011-10-07T15:35:45+05:30</updated>
+    <updated>2011-10-07T10:05:45+00:00</updated>
     <id>http://www.multunus.com/2011/10/simple-image-filter-using-opengl-es-in-android</id>
     <content type="html"><![CDATA[<p><em><strong>Note</strong>: This post assumes some basic knowledge in setting up an OpenGL app in Android. A basic example for rendering a texture on to a surface can be found <a href="http://developer.android.com/resources/samples/ApiDemos/src/com/example/android/apis/graphics/GLES20TriangleRenderer.html">here.</a> You can use this as the initial setup for trying out Shader language program listed in this post.</em></p>
 
@@ -455,7 +455,7 @@ void main() {
   <entry>
     <title type="html"><![CDATA[Continuous Delivery for Android Apps - Part 1]]></title>
     <link href="http://www.multunus.com/2011/09/continuous-delivery-for-android-apps-part-1/"/>
-    <updated>2011-09-23T11:15:50+05:30</updated>
+    <updated>2011-09-23T05:45:50+00:00</updated>
     <id>http://www.multunus.com/2011/09/continuous-delivery-for-android-apps-part-1</id>
     <content type="html"><![CDATA[<div>
 
