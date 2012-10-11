@@ -251,6 +251,10 @@ img.color {
   text-decoration: none;
 }
 
+.timelineEvent a:hover {
+    text-decoration: underline;
+}
+
 .timelineContainer {
   display: none;
   margin-top: -2px !important;
