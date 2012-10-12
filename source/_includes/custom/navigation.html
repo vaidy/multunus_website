@@ -5,6 +5,13 @@
   <li {% if page.nav == "What We Do" %} class="active" {% endif %} ><a href="{{ root_url }}/what-we-do">What We Do</a></li>
   <li {% if page.nav == "Why Us?" %} class="active" {% endif %} ><a href="{{ root_url }}/why-us">Why Us?</a></li>
   <li {% if page.nav == "Careers" %} class="active" {% endif %} ><a href="{{ root_url }}/careers">Careers</a></li>
+  <li {% if page.nav == "Our Blog" %} class="active" {% endif %}><a href="{{ root_url }}/blog">Blog</a></li>
+  <li {% if page.nav == "Opensource" %} class="active dropdown" {% endif %} class="dropdown">
+      <a href="{{ root_url }}/contact-us/contact">Open Source</a>
+      <ul class="dropdown-menu">
+        <li><a href="http://github.com/multunus/timeline" target="_NEW">Timeline</a></li>
+      </ul>
+  </li>
   <li {% if page.nav == "About" %} class="active dropdown" {% endif %} class="dropdown">
     <a href="{{ root_url }}/about/history">About</a>
     <ul class="dropdown-menu">
@@ -12,18 +19,11 @@
       <li><a href="{{ root_url }}/about/people">The Team</a></li>
     </ul>
   </li>
-  <li {% if page.nav == "Blog" %} class="active" {% endif %}><a href="{{ root_url }}/blog">Our Blog</a></li>
   <li {% if page.nav == "Contact Us" %} class="active dropdown" {% endif %} class="dropdown">
       <a href="{{ root_url }}/contact-us/contact">Contact Us</a>
       <ul class="dropdown-menu">
         <li><a href="{{ root_url }}/contact-us/contact">Write to Us</a></li>
         <li><a href="{{ root_url }}/contact-us/location">Location</a></li>
-      </ul>
-  </li>
-  <li {% if page.nav == "Opensource" %} class="active dropdown" {% endif %} class="dropdown">
-      <a href="{{ root_url }}/contact-us/contact">Open Source</a>
-      <ul class="dropdown-menu">
-        <li><a href="http://github.com/multunus/timeline" target="_NEW">Timeline</a></li>
       </ul>
   </li>
   <li>
