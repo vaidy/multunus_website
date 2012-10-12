@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Technology | Multunus]]></title>
   <link href="http://www.multunus.com/blog/categories/technology/atom.xml" rel="self"/>
   <link href="http://www.multunus.com/"/>
-  <updated>2012-10-11T10:12:50+00:00</updated>
+  <updated>2012-10-12T07:45:53+05:30</updated>
   <id>http://www.multunus.com/</id>
   <author>
     <name><![CDATA[Multunus Admin]]></name>
@@ -14,9 +14,232 @@
 
   
   <entry>
+    <title type="html"><![CDATA[Web Application Security]]></title>
+    <link href="http://www.multunus.com/2012/10/web-application-security/"/>
+    <updated>2012-10-11T09:55:05+05:30</updated>
+    <id>http://www.multunus.com/2012/10/web-application-security</id>
+    <content type="html"><![CDATA[<p class="c0"><span>Now a days we, programmers are really obsessed
+    with test driving our application and automating. We automate our
+    unit tests and integration tests. We do continuous
+    integration. But what about security testing
+    ?</span></p>
+
+
+<p class="c0
+    c2"><span></span></p>
+
+
+<p class="c0"><span>Many organization hire
+    security professionals to test the web application security when
+    the complete product is built and most often to test production
+    environment. But most of the vulnerabilities that is present in
+    the system could have fixed very easily and cheaply when found
+    during the development phase. Also since the app is in the
+    production environment hired security consultants will not be able
+    to conduct an attack against the system and verify the
+    vulnerability.</span></p>
+
+
+<p class="c0
+    c2"><span></span></p>
+
+
+<p class="c0"><span>Hiring a security
+    consultant is very costly as well as :</span></p>
+
+
+<p class="c0
+    c2"><span></span></p>
+
+
+<ol class="c6" start="1"><li class="c4
+    c0"><span>We will not be supplied with a security test
+    suit.</span></li><li class="c4 c0"><span>We will not have list of
+    passing test cases and failing tests instead we get a list of
+    vulnerabilities</span></li><li class="c4 c0"><span>After fixing
+    the vulnerabilities we might have to hire them again to make sure
+    that all the vulnerabilities are
+    fixed.</span></li></ol>
+
+
+<p class="c0
+    c2"><span></span></p>
+
+
+<p class="c0"><span>The truth is developers
+    can identify and fix many of such vulnerabilities during the
+    development itself. Moreover we can write automated security
+    testing with the help of integration testing
+    tools.</span></p>
+
+
+<p class="c0
+    c2"><span></span></p>
+
+
+<p class="c0"><span>There are two approaches
+    for testing our web application security</span></p>
+
+
+<p class="c0
+    c2"><span></span></p>
+
+
+<ol class="c6" start="1"><li class="c4
+    c0"><span>Black box testing.</span></li><li class="c0
+    c4"><span>White box testing.</span></li></ol>
+
+
+<p class="c0
+    c2"><span></span></p>
+
+
+<p class="c0"><span>In black box testing we
+    analyse the security of our application through the web
+    &nbsp;front-end of our application. Vulnerability scanners is an
+    example for black box scanning. In white box testing we use static
+    code analysis to find the vulnerabilities in the
+    system.</span></p>
+
+
+<p class="c0
+    c2"><span></span></p>
+
+
+<p class="c0"><span>For automated security
+    analysis many tools are available. ROR developers can use any of
+    the following.</span></p>
+
+
+<p class="c0
+    c2"><span></span></p>
+
+
+<ol class="c6" start="1"><li class="c4
+    c0"><span class="c7"><a class="c10"
+    href="http://brakemanscanner.org/">Brakeman</a></span><span>&nbsp;for
+    White box testing.</span></li><li class="c4
+    c0"><span class="c7"><a class="c10"
+    href="https://www.owasp.org/index.php/OWASP_Zed_Attack_Proxy_Project">Zed
+    Attack Proxy</a></span><span>&nbsp;for Black box
+    testing.</span></li></ol>
+
+
+<p class="c0
+    c2"><span></span></p>
+
+
+<p class="c0
+    c2"><span></span></p>
+
+
+<p class="c0"><span>Brakeman is a static code
+    analyzer whereas ZAP is a vulnerability scanning tool. Both serves
+    different functionalities. Note that ZAP is not dependent on any
+    programming language.</span></p>
+
+
+<p class="c0
+    c2"><span></span></p>
+
+
+<p class="c0"><span>Now regarding which
+    method to follow for security testing I would like to quote the
+    following from this </span><span class="c7"><a class="c10"
+    href="http://jeremiahgrossman.blogspot.in/2009/10/black-box-vs-white-box-you-are-doing-it.html">blog</a></span><span>&nbsp;</span><span>:</span></p>
+
+
+<p class="c0
+    c2"><span></span></p>
+
+
+<p class="c0"><span class="c8">&ldquo;Black
+    box vulnerability assessments measure the hackability of a website
+    given an attacker with a certain amount of resources, skill, and
+    scope. We know that bad guys will attack essentially all publicly
+    facing websites at some point in time, so it makes sense for us to
+    learn about the defects before they do. As such, black box
+    vulnerability assessments are best defined as an outcome based
+    metric for measuring the security of a system with all security
+    safeguards in place.</span></p>
+
+
+<p class="c0
+    c2"><span class="c8"></span></p>
+
+
+<p class="c0"><span class="c8">White
+    box source code reviews, on the other hand, measure and/or help
+    reduce the number of security defects in an application resulting
+    from the current software development life-cycle. In the immortal
+    words of Michael Howard regarding Microsoft&rsquo;s SDL mantra,
+    &ldquo;Reduce the number of vulnerabilities and reduce the
+    severity of the bugs you miss.&rdquo; Software has bugs, and that
+    will continue to be the case. Therefore it is best to minimize
+    them to the extent we can in effort to increase software
+    assurance.&rdquo;</span></p>
+
+
+<p class="c0
+    c2"><span class="c13"></span></p>
+
+
+<p class="c0"><span>We can run
+    Brakeman against our application and after assessing the written
+    code Brakeman will report the possible vulnerabilities. It will
+    help us improve our code. But the downside is, it &nbsp;may not be
+    zen percentage in finding the possible vulnerabilities because it
+    checks for typical coding errors which opens the doors for
+    security breaches. </span></p>
+
+
+<p class="c0
+    c2"><span></span></p>
+
+
+<p class="c0"><span>ZAP is a really good web
+    app security analysis tool. It is a proxy which sits between the
+    web application and the web browser constantly analysing all the
+    HTTP traffic. But for the same reason, we need to walk through all
+    the web features so that ZAP can analyse the
+    traffic. </span></p>
+
+
+<p class="c0"><span>We were thinking we
+    &nbsp;should try to &nbsp;automate this process and once we find
+    any issue, write a test to reproduce the same issue and go ahead
+    and fix the problem. This will help us in making sure that the
+    problem got fixed.</span></p>
+
+
+<p class="c0
+    c2"><span></span></p>
+
+
+<p class="c0"><span>If you want to automate
+    the security testing using ZAP, it can be used done by integrating
+    it with Web application testing tools such
+    as </span><span class="c7"><a class="c10"
+    href="http://seleniumhq.org/">Selenium</a></span><span>.</span></p>
+
+
+<p class="c0
+    c2"><span></span></p>
+
+
+<p class="c0"><span>Regarding how to
+    configure ZAP and analyze the security vulnerabilities, I will
+    cover it in a separate blog post. I also will be writing about how
+    to integrate it with Selenium for creating automated security
+    testing suite.</span></p>
+
+]]></content>
+  </entry>
+  
+  <entry>
     <title type="html"><![CDATA[Setting up Development Environment using Vagrant]]></title>
     <link href="http://www.multunus.com/2012/10/setting-up-development-environment-using-vagrant/"/>
-    <updated>2012-10-03T05:25:05+00:00</updated>
+    <updated>2012-10-03T10:55:05+05:30</updated>
     <id>http://www.multunus.com/2012/10/setting-up-development-environment-using-vagrant</id>
     <content type="html"><![CDATA[<p><strong><span style="text-decoration: underline;">Problem</span></strong></p>
 
@@ -128,7 +351,7 @@ end</pre>
   <entry>
     <title type="html"><![CDATA[CSS3 animations versus Javascript animations]]></title>
     <link href="http://www.multunus.com/2012/09/css3-animations-versus-javascript-animations/"/>
-    <updated>2012-09-27T05:25:05+00:00</updated>
+    <updated>2012-09-27T10:55:05+05:30</updated>
     <id>http://www.multunus.com/2012/09/css3-animations-versus-javascript-animations</id>
     <content type="html"><![CDATA[<p><strong><span style="text-decoration: underline;">tl; dr;</span></strong></p>
 
@@ -296,7 +519,7 @@ Also make sure to check out the relevant webkit source: <a title=
   <entry>
     <title type="html"><![CDATA[Introduction to Continuous Delivery]]></title>
     <link href="http://www.multunus.com/2012/05/introduction-to-continuous-delivery/"/>
-    <updated>2012-05-15T09:19:16+00:00</updated>
+    <updated>2012-05-15T14:49:16+05:30</updated>
     <id>http://www.multunus.com/2012/05/introduction-to-continuous-delivery</id>
     <content type="html"><![CDATA[<p>We've been doing Continuous Delivery for sometime and also been writing about how to implement the same. This post is about why Continuous Delivery is required and what problems does it solve.</p>
 
@@ -391,7 +614,7 @@ One of the key principle of Continuous Delivery is <strong>To </strong><strong>
   <entry>
     <title type="html"><![CDATA[Simple Image Filter using OpenGL ES in Android]]></title>
     <link href="http://www.multunus.com/2011/10/simple-image-filter-using-opengl-es-in-android/"/>
-    <updated>2011-10-07T10:05:45+00:00</updated>
+    <updated>2011-10-07T15:35:45+05:30</updated>
     <id>http://www.multunus.com/2011/10/simple-image-filter-using-opengl-es-in-android</id>
     <content type="html"><![CDATA[<p><em><strong>Note</strong>: This post assumes some basic knowledge in setting up an OpenGL app in Android. A basic example for rendering a texture on to a surface can be found <a href="http://developer.android.com/resources/samples/ApiDemos/src/com/example/android/apis/graphics/GLES20TriangleRenderer.html">here.</a> You can use this as the initial setup for trying out Shader language program listed in this post.</em></p>
 
@@ -449,44 +672,6 @@ void main() {
 <p>Fragment shaders are executed to calculate the color of individual pixels. This is where the actual image transformation happens. Instead of mapping the corresponding texture coordinates to corresponding pixels, we can map different coordinates of the texture to different pixels which will distort the image in some way. In the above example the texture co-ordinate to fill each pixel is chosen based on the calculation in line no 6. The actual movement depends on the distance of the texture coordinate from the center. This creates an effect which is similar to what is shown in the below picture.</p>
 
 <p>Although this is a very simple effect, the intention here is to just show potential applications of OpenGL in Android apps.</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Continuous Delivery for Android Apps - Part 1]]></title>
-    <link href="http://www.multunus.com/2011/09/continuous-delivery-for-android-apps-part-1/"/>
-    <updated>2011-09-23T05:45:50+00:00</updated>
-    <id>http://www.multunus.com/2011/09/continuous-delivery-for-android-apps-part-1</id>
-    <content type="html"><![CDATA[<div>
-
-We've set up our CI server for building android apps. We use Jenkins as our CI server, but the same steps can be applied to any CI server.
-<h3><span style="text-decoration: underline">Setup Android Environment on CI server</span></h3>
-You need to first install the android SDK and platform tools on the CI server. The steps are well defined <a href="http://developer.android.com/sdk/installing.html">here</a>. You can run the command <code>android update sdk --no-ui</code> if the CI server is in an headless environment.
-<h3><span style="text-decoration: underline">Generate Build script</span></h3>
-Using android SDK tool , you can generate build script for the android project which contains the standard steps for building the app such as clean, compile, release, install etc. The following command will generate the build script, replace &lt;appname&gt;, &lt;target&gt; and &lt;project path&gt; accordingly.
-<pre>android update project -n &lt;appname&gt; -t &lt;target&gt; -p &lt;project directory&gt;</pre>
-This will create build.xml file under the project directory. You need to create build.properties file with the following contents:
-<pre>key.store=path-to-keystore
-key.alias=[alias]
-key.store.password=[pw]
-key.alias.password=[pw2]</pre>
-You can generate the key file using keytoool or you can generate the key file from eclipse. Run the command  <span style="font-family: Consolas, Monaco, 'Courier New', Courier, monospace;line-height: 18px">ant clean release<span style="font-family: Georgia, 'Times New Roman', 'Bitstream Charter', Times, serif;line-height: 19px">, which will compile the files, and generate the apk files (it generates signed, unsigned and unaligned files). The signed version can be used for uploading to Android Market or for installing directly on any device. Couple of stuff to be noted here are:</span></span>
-<ul>
-    <li>Ant version has to be 1.8.0 or higher.</li>
-    <li>Put the external libraries in the <span style="font-family: Consolas, Monaco, 'Courier New', Courier, monospace;line-height: 18px">libs</span> directory. Build script automatically picks up the libraries put under libs directory, otherwise the script need to be changed to look at a different classpath.</li>
-</ul>
-Checkin the build.xml, build.properties and the key file into the repository.
-<h3><span style="text-decoration: underline">Setup the CI server</span></h3>
-The CI server has to run the ant script for building the app. One more setting what we've done in our Jenkins server was to archive the apks as artifacts (available in the post build action). In upcoming posts, I will cover how to do the following:
-<ol>
-    <li>Running android tests</li>
-    <li>Running code/test coverage tools</li>
-    <li>Actual deployment</li>
-</ol>
-References: <a href="http://skaug.no/ingvald/2011/09/android-app-with-jenkins/" target="_blank">http://skaug.no/ingvald/2011/09/android-app-with-jenkins/</a>
-
-</div>
-
 ]]></content>
   </entry>
   

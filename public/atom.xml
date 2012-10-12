@@ -4,7 +4,7 @@
   <title><![CDATA[Multunus]]></title>
   <link href="http://www.multunus.com/atom.xml" rel="self"/>
   <link href="http://www.multunus.com/"/>
-  <updated>2012-10-11T10:12:50+00:00</updated>
+  <updated>2012-10-12T07:45:53+05:30</updated>
   <id>http://www.multunus.com/</id>
   <author>
     <name><![CDATA[Multunus Admin]]></name>
@@ -12,5 +12,1332 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
-  Liquid error: incompatible character encodings: UTF-8 and ISO-8859-1
+  
+  <entry>
+    <title type="html"><![CDATA[Web Application Security]]></title>
+    <link href="http://www.multunus.com/2012/10/web-application-security/"/>
+    <updated>2012-10-11T09:55:05+05:30</updated>
+    <id>http://www.multunus.com/2012/10/web-application-security</id>
+    <content type="html"><![CDATA[<p class="c0"><span>Now a days we, programmers are really obsessed
+    with test driving our application and automating. We automate our
+    unit tests and integration tests. We do continuous
+    integration. But what about security testing
+    ?</span></p><p class="c0
+    c2"><span></span></p><p class="c0"><span>Many organization hire
+    security professionals to test the web application security when
+    the complete product is built and most often to test production
+    environment. But most of the vulnerabilities that is present in
+    the system could have fixed very easily and cheaply when found
+    during the development phase. Also since the app is in the
+    production environment hired security consultants will not be able
+    to conduct an attack against the system and verify the
+    vulnerability.</span></p><p class="c0
+    c2"><span></span></p><p class="c0"><span>Hiring a security
+    consultant is very costly as well as :</span></p><p class="c0
+    c2"><span></span></p><ol class="c6" start="1"><li class="c4
+    c0"><span>We will not be supplied with a security test
+    suit.</span></li><li class="c4 c0"><span>We will not have list of
+    passing test cases and failing tests instead we get a list of
+    vulnerabilities</span></li><li class="c4 c0"><span>After fixing
+    the vulnerabilities we might have to hire them again to make sure
+    that all the vulnerabilities are
+    fixed.</span></li></ol><p class="c0
+    c2"><span></span></p><p class="c0"><span>The truth is developers
+    can identify and fix many of such vulnerabilities during the
+    development itself. Moreover we can write automated security
+    testing with the help of integration testing
+    tools.</span></p><p class="c0
+    c2"><span></span></p><p class="c0"><span>There are two approaches
+    for testing our web application security</span></p><p class="c0
+    c2"><span></span></p><ol class="c6" start="1"><li class="c4
+    c0"><span>Black box testing.</span></li><li class="c0
+    c4"><span>White box testing.</span></li></ol><p class="c0
+    c2"><span></span></p><p class="c0"><span>In black box testing we
+    analyse the security of our application through the web
+    &nbsp;front-end of our application. Vulnerability scanners is an
+    example for black box scanning. In white box testing we use static
+    code analysis to find the vulnerabilities in the
+    system.</span></p><p class="c0
+    c2"><span></span></p><p class="c0"><span>For automated security
+    analysis many tools are available. ROR developers can use any of
+    the following.</span></p><p class="c0
+    c2"><span></span></p><ol class="c6" start="1"><li class="c4
+    c0"><span class="c7"><a class="c10"
+    href="http://brakemanscanner.org/">Brakeman</a></span><span>&nbsp;for
+    White box testing.</span></li><li class="c4
+    c0"><span class="c7"><a class="c10"
+    href="https://www.owasp.org/index.php/OWASP_Zed_Attack_Proxy_Project">Zed
+    Attack Proxy</a></span><span>&nbsp;for Black box
+    testing.</span></li></ol><p class="c0
+    c2"><span></span></p><p class="c0
+    c2"><span></span></p><p class="c0"><span>Brakeman is a static code
+    analyzer whereas ZAP is a vulnerability scanning tool. Both serves
+    different functionalities. Note that ZAP is not dependent on any
+    programming language.</span></p><p class="c0
+    c2"><span></span></p><p class="c0"><span>Now regarding which
+    method to follow for security testing I would like to quote the
+    following from this </span><span class="c7"><a class="c10"
+    href="http://jeremiahgrossman.blogspot.in/2009/10/black-box-vs-white-box-you-are-doing-it.html">blog</a></span><span>&nbsp;</span><span>:</span></p><p class="c0
+    c2"><span></span></p><p class="c0"><span class="c8">&ldquo;Black
+    box vulnerability assessments measure the hackability of a website
+    given an attacker with a certain amount of resources, skill, and
+    scope. We know that bad guys will attack essentially all publicly
+    facing websites at some point in time, so it makes sense for us to
+    learn about the defects before they do. As such, black box
+    vulnerability assessments are best defined as an outcome based
+    metric for measuring the security of a system with all security
+    safeguards in place.</span></p><p class="c0
+    c2"><span class="c8"></span></p><p class="c0"><span class="c8">White
+    box source code reviews, on the other hand, measure and/or help
+    reduce the number of security defects in an application resulting
+    from the current software development life-cycle. In the immortal
+    words of Michael Howard regarding Microsoft&rsquo;s SDL mantra,
+    &ldquo;Reduce the number of vulnerabilities and reduce the
+    severity of the bugs you miss.&rdquo; Software has bugs, and that
+    will continue to be the case. Therefore it is best to minimize
+    them to the extent we can in effort to increase software
+    assurance.&rdquo;</span></p><p class="c0
+    c2"><span class="c13"></span></p><p class="c0"><span>We can run
+    Brakeman against our application and after assessing the written
+    code Brakeman will report the possible vulnerabilities. It will
+    help us improve our code. But the downside is, it &nbsp;may not be
+    zen percentage in finding the possible vulnerabilities because it
+    checks for typical coding errors which opens the doors for
+    security breaches. </span></p><p class="c0
+    c2"><span></span></p><p class="c0"><span>ZAP is a really good web
+    app security analysis tool. It is a proxy which sits between the
+    web application and the web browser constantly analysing all the
+    HTTP traffic. But for the same reason, we need to walk through all
+    the web features so that ZAP can analyse the
+    traffic. </span></p><p class="c0"><span>We were thinking we
+    &nbsp;should try to &nbsp;automate this process and once we find
+    any issue, write a test to reproduce the same issue and go ahead
+    and fix the problem. This will help us in making sure that the
+    problem got fixed.</span></p><p class="c0
+    c2"><span></span></p><p class="c0"><span>If you want to automate
+    the security testing using ZAP, it can be used done by integrating
+    it with Web application testing tools such
+    as </span><span class="c7"><a class="c10"
+    href="http://seleniumhq.org/">Selenium</a></span><span>.</span></p><p class="c0
+    c2"><span></span></p><p class="c0"><span>Regarding how to
+    configure ZAP and analyze the security vulnerabilities, I will
+    cover it in a separate blog post. I also will be writing about how
+    to integrate it with Selenium for creating automated security
+    testing suite.</span></p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Setting up Development Environment using Vagrant]]></title>
+    <link href="http://www.multunus.com/2012/10/setting-up-development-environment-using-vagrant/"/>
+    <updated>2012-10-03T10:55:05+05:30</updated>
+    <id>http://www.multunus.com/2012/10/setting-up-development-environment-using-vagrant</id>
+    <content type="html"><![CDATA[<strong><span style="text-decoration: underline;">Problem</span></strong> 
+<p>
+  We have some projects which takes lot of effort to set up. As with every projects setting up development environment includes installing git, curl, apache, mysql-server, ruby, rvm, ruby-gems for the app, etc. and also the project specific configurations.
+</p>
+<p>
+  Doing all these every time when you need to setup the development environment will be time consuming and takes a lot of effort.
+</p>
+<strong><span style= "text-decoration: underline;">Solution</span></strong>
+<p>
+  Setting up the development environment in VM using Vagrant. 
+</p>
+<p>
+  Vagrant helps to build development environment for projects and rebuild them when needed. And this environment can be shared among the team easily.
+</p>
+<strong><span style= "text-decoration: underline;">How?</span></strong>
+<p>
+  Vagrant is primarily a driver for Oracle VirtualBox virtual machines. You can download and install Vagrant from <a href="http://downloads.vagrantup.com/" target="_NEW">here</a> or you can install it as a ruby gem for the rails projects. Vagrant uses a &#8220;base box&#8221; which is a base install (an OS) for the system you are going to use.
+</p>
+<p>
+  Different flavours of base boxes can be downloaded from <a href="http://www.vagrantbox.es/" target="_NEW">http://www.vagrantbox.es/</a>.
+</p>
+<p>
+  First step is to mark the root directory and setup the basic required files using the following command:
+  <pre>vagrant init</pre>
+</p>
+<p>
+  This will create a file called <em><strong>Vagrantfile</strong></em> this will contain the configuration details for the VM.
+</p>
+<p>
+  After the project initailization you can download Vagrant boxes from <a href="http://www.vagrantbox.es/" target="_NEW">http://www.vagrantbox.es/</a> and add it to your project:
+  <pre>vagrant box add lucid64 lucid64.box </pre>
+</p>
+<p>
+  You can also add the box from a remote server using:
+  <pre>vagrant box add lucid64 http://files.vagrantup.com/lucid64.box</pre>
+</p>
+<p>
+  To list the boxes that you added you can use:
+  <pre>vagrant box list</pre>
+</p>
+<p>
+  Now you have to edit the Vagrantfile to use the base box that you have added.
+  <pre>Vagrant::Config.run do |config|
+        config.vm.box = "lucid64" 
+end</pre>
+</p>
+<p>
+  Now we can start our new VM:
+  <pre>vagrant up</pre>
+  This will start a fully functional VM. 
+</p>
+<p>
+  To access the VM you have to do ssh:
+  <pre>vagrant ssh</pre>
+  This will log you into the virtual machine.
+</p>
+<p>
+  Now you can start setting up the development environment. Once everything is ready we can package this VM to a box. This will help us to share the virtual environment that we created with the other team members.
+  <pre>vagrant package</pre>
+  This will create a vagrant box with the entire dev environment setup. 
+</p>
+<p>
+  Now to use this any machine, you have to install Virtualbox and Vagrant. Then add this box using:
+  <pre>vagrant box add lucid64_with_dev_setup package.box</pre>
+</p>
+<p>
+  You can create a VM with this box and all the dev environment setup will be available with this VM.
+</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[CSS3 animations versus Javascript animations]]></title>
+    <link href="http://www.multunus.com/2012/09/css3-animations-versus-javascript-animations/"/>
+    <updated>2012-09-27T10:55:05+05:30</updated>
+    <id>http://www.multunus.com/2012/09/css3-animations-versus-javascript-animations</id>
+    <content type="html"><![CDATA[<strong><span style="text-decoration: underline;">tl; dr;</span></strong> 
+<p>
+  Layout
+  engines in major browsers, like gecko, webkit or trident now have many optimization
+  functions for animations. But these will simply cease to function if you&#8217;re using
+  jQuery animations because in reality jQuery is not &#8220;animating&#8221; anything. However, in
+  the case of CSS3, the browser optimizes animations using the GPU&#8217;s resources to give a
+  much more polished effect. Go in for CSS3 whenever possible.
+</p>
+<p>
+  <strong><span style=
+  "text-decoration: underline;">The long version:</span></strong> jQuery is an excellent
+  js framework to do a lot of things, but is it what you need for blazing fast
+  performance with animations for your website? Lets dig a little bit deeper into the
+  actual implementations, by considering these two examples,
+</p>
+<p>
+<strong>(a) jQuery animation</strong>
+<pre>
+  $(".onclick").toggle(
+      function(){
+        $(".children").animate({height:'50'});
+      },
+      function(){
+        $(".children").animate({height:'0'});
+      }
+  );
+</pre>
+<iframe style="width: 100%; height: 300px;" src=
+"http://jsfiddle.net/midhun_k/aq9gq/embedded/" frameborder="0" width="320" height=
+"240"></iframe> 
+In this case the drop down menu is implemented using jquery animate method.
+</p>
+<p>
+ <strong>(b) CSS3 animation</strong>
+  <pre>
+.children{
+           height: 0px;
+           border-bottom: 1px solid grey;
+           -webkit-transition: height .3s ease-in-out;
+}
+
+.children-onhover{
+           height: 50px;
+}
+</pre>
+  <pre>
+$(".onclick").click(function(){
+    $(".children").toggleClass("children-onhover");
+});
+</pre><iframe style="width: 100%; height: 300px;" src=
+"http://jsfiddle.net/midhun_k/kANVs/embedded/" frameborder="0" width="320" height=
+"240"></iframe> In this case the drop down menu is done using css3 transitions using
+ease-in-out transition effect. 
+</p>
+<p>
+Lets analyze what&#8217;s going on with the css3 animation for
+sliding down the menus. Both of these menus progressively increase the height of each of
+the containing submenus, but in case of css3, the height is progressively updated from
+the old value to the new value over time, which is done by the layout engine of the
+browser internally, as it is described in the <a title="surfin' safari" href=
+"http://www.webkit.org/blog/138/css-animation/">surfin&#8217; safari</a> blog.
+</p>
+<p>
+ In case of
+jQuery, inside the animate of each property, an fx Object is created.
+  <pre>
+jQuery.each( prop, function( name, val ) {
+  var e = new jQuery.fx( self, opt, name );
+}
+</pre>This return a javascript object instance,
+  <pre>
+fx: function( elem, options, prop ) {
+  this.options = options;
+  this.elem = elem;
+  this.prop = prop;
+
+  if ( !options.orig ) {
+      options.orig = {};
+  }
+}
+</pre>After that, the start and end values is set. In our case:
+  <pre>
+   start = 0;
+   end = 50;
+   unit = 'px';
+   e.custom( start, end, unit );
+</pre>The above snippet calls the custom function:
+  <pre>
+custom: function( from, to, unit ) {
+  this.startTime = now();
+  this.start = from;
+  this.end = to;
+  this.unit = unit || this.unit || "px";
+  this.now = this.start;
+  this.pos = this.state = 0;
+
+  var self = this;
+  function t( gotoEnd ) {
+      return self.step(gotoEnd);
+  }
+
+  t.elem = this.elem;
+
+  if ( t() &amp;&amp; jQuery.timers.push(t) &amp;&amp; !timerId ) {
+      timerId = setInterval(jQuery.fx.tick, 13);
+  }
+}
+</pre>As you can see above, a call to step method is made every every 13 milliseconds. As
+of jQuery 1.8 this interval is called JQuery.fx.interval. 
+</p>
+That is, for a height increase of 50px over a time period of 400ms (default JQuery animation interval), it does 31 steps of 13 ms each.
+  <pre>
+jQuery.fx.speeds = {
+        slow: 600,
+        fast: 200,
+        // Default speed
+        _default: 400
+};
+</pre>
+<p>
+As of jQuery 1.8 the step function is replaced, but the same logic is applied:
+  <pre>
+step: function( gotoEnd ) {
+  var t = now();
+  var n = t - this.startTime;
+  this.state = n / this.options.duration;
+  pos = jQuery.easing['swing'](this.state, n, 0, 1, this.options.duration);
+  this.now = this.start + ((this.end - this.start) * this.pos);
+  this.update();
+}
+</pre>
+</p>
+<p>You can dig deeper into jQuery effects at: <a title=
+"https://github.com/jquery/jquery/blob/master/src/effects.js#L124" href=
+"https://github.com/jquery/jquery/blob/master/src/effects.js#L124">https://github.com/jquery/jquery/blob/master/src/effects.js#L124</a>
+Also make sure to check out the relevant webkit source: <a title=
+"https://github.com/WebKit/webkit/tree/master/Source/WebCore" href=
+"https://github.com/WebKit/webkit/tree/master/Source/WebCore">https://github.com/WebKit/webkit/tree/master/Source/WebCore</a>
+</p>]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Continuous Delivery of iOS apps using Jenkins and TestFlightApp ]]></title>
+    <link href="http://www.multunus.com/2012/05/continuous-delivery-of-ios-apps-using-jenkins-and-testflightapp/"/>
+    <updated>2012-05-21T11:03:21+05:30</updated>
+    <id>http://www.multunus.com/2012/05/continuous-delivery-of-ios-apps-using-jenkins-and-testflightapp</id>
+    <content type="html"><![CDATA[<p>As mentioned in <a href="http://www.multunus.com/blog/categories/continuous-delivery/">earlier posts</a> we&#8217;ve been doing Continuous Delivery for both Webapps and Android apps for quite sometime. This post is about setting up Continuous Delivery for iOS apps using Jenkins and <a href="http://testflightapp.com" target="_blank">TestFlightApp</a>. TestFlightApp is a free service which helps to do closed beta testing without putting into AppStore. Using their APIs, the process of delivering new versions of the app can be automated.</p>
+
+<!-- more -->
+
+
+<p>Setting up Continuous Delivery mainly involves the following steps:</p>
+
+<ul>
+    <li>Setup Mac Machine as Jenkins Node</li>
+    <li>Setup Jenkins Xcode plugin</li>
+    <li>Configure Distribution profile</li>
+    <li>Integrate with TestFlightApp API</li>
+</ul>
+
+
+<p>Lets see those steps in detail.</p>
+
+<p><strong><span style="text-decoration: underline;">Setup Mac Machine as Jenkins Node</span></strong></p>
+
+<p>Setting up a node with Jenkins is very easy . You can either control the slave using SSH or using JWS. Each node will have a label name associated with it, which needs to be mentioned during setting up the job which needs to be run on this node. You can configure the nodes from the Manage Nodes under the Manage Jenkins option. The following screenshot shows how to configure a node using SSH.</p>
+
+<p><img style="border: none;" src="https://s3.amazonaws.com/multunus-cdimages/jenkins_node.png" alt="Configure Node using SSH" width="579" height="411" /></p>
+
+<p>This <a href="https://wiki.jenkins-ci.org/display/JENKINS/Step+by+step+guide+to+set+up+master+and+slave+machines">link</a> contains step by step instructions on how to configure a node using JavaWebStart.</p>
+
+<h3><strong><span style="text-decoration: underline;">Setup Jenkins Xcode plugin</span></strong></h3>
+
+
+<p>Jenkins XCode plugin abstracts the xcode commands to run for creating packages for distribution. <a href="https://wiki.jenkins-ci.org/display/JENKINS/Xcode+Plugin">Jenkins Wiki</a> has details about how to configure the same. I encountered one <a href="https://issues.jenkins-ci.org/browse/JENKINQS-12635?focusedCommentId=161518#comment-161518">issue</a> while configuring the same, i.e. ipa generation was failing when the &#8220;Build output directory&#8221; was configured with relative path. It got resolved by giving the full path as <strong>${WORKSPACE}/build</strong>.</p>
+
+<h3><strong><span style="text-decoration: underline;">Configure Distribution profile</span></strong></h3>
+
+
+<p>For distributing applications, an ad-hoc distribution profile needs to be created using the this <a href="https://developer.apple.com/ios/manage/provisioningprofiles/create.action?type=2">link</a>. The Development Provisioning Profile will not work with TestFlightApp. It took me sometime to figure out the same. The following video gives detailed instructions on how to create the same.</p>
+
+<p><a href="http://www.youtube.com/watch?v=XVO0tIHmQTg&amp;feature=relmfu">http://www.youtube.com/watch?v=XVO0tIHmQTg&amp;feature=relmfu</a></p>
+
+<h3><strong><span style="text-decoration: underline;">Integrate with TestFlightApp API</span></strong></h3>
+
+
+<p>TestFlightApp provides <a href="https://testflightapp.com/api/doc/">API</a> which can be integrated with Jenkins to upload the IPA after successful build. I used curl command, as given as sample in the document, to upload the IPA. You can create support groups to be notified on each new upload of the app, and installation of the app is very simple i.e. just a click of link in the email. No iTunes and no sharing of IPA through emails.</p>
+
+<p>One issue I was stuck during the setup was the configuration of the profile with the Xcode plugin. The plugin has the option &#8220;Embed Profile&#8221;, but even if you give the path of the profile file, it was using the wrong profile for the IPA. The problem resolved when the profiles were refreshed in Xcode. You can get the Refresh option in the Organizer menu as shown below.
+<img src="https://s3.amazonaws.com/multunus-cdimages/refresh_profiles_xcode.jpg" alt="Refresh profiles - Xcode" width="600" style="border: none;" /></p>
+
+<p><strong><span style="text-decoration: underline;">Note:</span></strong> This post is mainly about integrating Jenkins with TestflightApp, hence not talking about testing tools. I am planning to cover about the same in my upcoming posts.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Introduction to Continuous Delivery]]></title>
+    <link href="http://www.multunus.com/2012/05/introduction-to-continuous-delivery/"/>
+    <updated>2012-05-15T14:49:16+05:30</updated>
+    <id>http://www.multunus.com/2012/05/introduction-to-continuous-delivery</id>
+    <content type="html"><![CDATA[<p>We&#8217;ve been doing Continuous Delivery for sometime and also been writing about how to implement the same. This post is about why Continuous Delivery is required and what problems does it solve.</p>
+
+<h3><strong><span style="text-decoration: underline;">What is Continuous Delivery</span></strong></h3>
+
+
+<p>Continuous Delivery is the process of being able to continuously deliver new versions of a software product to create a tight feedback loop between users and the project team—including the customer or product owner.</p>
+
+<!-- more -->
+
+
+<p>This helps to test new ideas and changes in the product and also measure the effect of changes in the revenue. Continuous Delivery means releasing software very frequently, i.e. multiple times a day, rather than once in months.</p>
+
+<h3><strong>Bottlenecks for Continuous Delivery</strong></h3>
+
+
+<div>Lets see the usual challenges for releases. The following are the challenges that we faced before moving to Continuous Delivery. Let me put it in this way i.e. the following are the challenges which got us thinking on how to make releases more predictable and pain free. We already had a Continuous Integration setup at our end, but that was not enough to ease the process.</div>
+
+
+<ul>
+    <li>No tracking on which version was deployed, when and to which environment</li>
+    <li>Different people working on different branches, code merge hell when its ready for deployment.</li>
+    <li>When an urgent bug needs to be fixed, the fix need to be replicated in multiple branches along with the mainline branch</li>
+    <li>No easy way to revert back to the previous stable version</li>
+</ul>
+
+
+<p>We&#8217;ve seen even more challenges in teams which do not have a Continuous Integration setup yet. They are:</p>
+
+<ul>
+    <li>Adhoc build processes</li>
+    <li>Too much time spent on manual testing</li>
+    <li>Integration of code happens only during deployment</li>
+    <li>Complexity of build and deployment increases, depending on the complexity of the app.</li>
+    <li>For clustered environments, the deployment needs to be updated to all slaves</li>
+</ul>
+
+
+<div>
+
+Thats when we stumbled upon &#8221;<a href="http://www.informit.com/store/product.aspx?isbn=0321601912&amp;WT.DCSext.w_ptgrevartcl=Continuous+Delivery%3a+Reliable+Software+Releases+through+Build%2c+Test%2c+and+Deployment+Automation_1641923_ISBNTopCover">Continuous Delivery</a>&#8221; book by Jez Humble and Dave Farley and extended our Continuous Integration setup to Continuous Delivery.
+
+</div>
+
+
+<div>
+<h3>Continuous Delivery to the rescue</h3>
+One of the key principle of Continuous Delivery is <strong>To </strong><strong>create a <em>repeatable</em> and <em>reliable</em> process for releasing software.</strong> It solves problems by providing fast automated feedback on the <strong>production readiness</strong> of the application - every time there is a change to the code, infrastructure or the configuration.  So in Continuous Delivery, <strong><em>Done </em>means <em>Released.</em></strong>
+
+</div>
+
+
+<div>A central pattern of Continuous Delivery is called the <em><strong>Deployment pipeline - </strong></em>an automated implementation of the application&#8217;s build, deploy, test and release process. The following shows a sample deployment pipeline:</div>
+
+
+<p style="text-align: center;"><img class="aligncenter" style="border: none;" src="https://s3.amazonaws.com/multunus-cdimages/pipeline.png" alt="Deployment Pipeline" width="549" height="189" /></p>
+
+
+
+
+<div>The deployment pipeline includes the following build and deployment process:</div>
+
+
+<ul>
+    <li>Creates executable code to verify that the syntax of the source code is valid.</li>
+    <li>Runs the unit tests to check that the code behaves as expected.</li>
+    <li>Runs the acceptance tests to check that the application conforms to its business acceptance criteria—that it delivers the business value that was intended.</li>
+    <li>Run nonfunctional tests which checks that the application performs sufficiently well in terms of capacity, availability, security, and so on to meet its users’ needs.</li>
+    <li>Runs tools which check that the expected code quality criteria such as test coverage and other technology-specific metrics are met.</li>
+    <li>Then in the manual testing environment, exploratory testing is done. In parallel a demonstration to the customer and a selection of users can also be done. This helps the product owner to decide whether there are missing features, or find bugs that require fixing.</li>
+    <li>If any of the above fails, the deployment should be stopped because it is a clear indication that the application is not production ready.</li>
+</ul>
+
+
+<div>I will write about the Benefits of Continuous Delivery in the next post.</div>
+
+
+<h4><span style="text-decoration: underline;">References</span></h4>
+
+
+<div><a href="https://docs.google.com/a/multunus.com/present/edit?id=0AQj1177vtu0MZHRoM2dmN180NzRneGp2bXRndw">https://docs.google.com/a/multunus.com/present/edit?id=0AQj1177vtu0MZHRoM2dmN180NzRneGp2bXRndw</a></div>
+
+
+<div><a href="http://www.informit.com/articles/article.aspx?p=1829417" target="_blank">http://www.informit.com/articles/article.aspx?p=1829417</a></div>
+
+
+<div><a href="http://continousdelivery.com" target="_blank">http://continousdelivery.com</a></div>
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[A round up of our presentations and writings]]></title>
+    <link href="http://www.multunus.com/2012/02/a-round-up-of-our-presentations-and-writings/"/>
+    <updated>2012-02-27T23:59:30+05:30</updated>
+    <id>http://www.multunus.com/2012/02/a-round-up-of-our-presentations-and-writings</id>
+    <content type="html"><![CDATA[<p>We started speaking at conferences last year. We&#8217;ve also been doing a fair bit of writing. This post rounds up what we&#8217;ve up to - along with links to our presentations and some of what we&#8217;ve written.</p>
+
+<!-- more -->
+
+
+<p><strong><span style="text-decoration: underline;">Presentations [in Chronological Order]</span></strong></p>
+
+<p><strong>DevOpsDays 2011: </strong>Leena gave a lightning talk on &#8220;Push Button Deployment with Jenkins&#8221;. <a href="http://sliwww.slideshare.net/leenasn/push-button-deployment-using-jenkins">Here&#8217;s the presentation</a>.</p>
+
+<p><strong>DroidCon India 2011: </strong>We gave two talks at this conference:</p>
+
+<ul>
+    <li>Leena and I co-presented on &#8220;Continuous Delivery for an Android application&#8221;. Here&#8217;s the <a href="http://funnel.hasgeek.com/droidcon/83-continuous-delivery-for-an-android-application">original proposal</a> and <a href="http://prezi.com/56ueprf0mkql/continuous-delivery-on-android/">here&#8217;s the link to the prezi</a>. Here&#8217;s a <a href="http://www.youtube.com/watch?feature=player_embedded&amp;v=uNvjNIK1EEU">short video</a> where Leena and I describe the talk.</li>
+    <li>Tamil and KP gave an intro to OpenGL on Android. Here&#8217;s the <a href="http://funnel.hasgeek.com/droidcon/94-introduction-to-opengl-in-android">original proposal</a> and here&#8217;s the <a href="http://www.slideshare.net/tamillarasan/introduction-to-openglinandroid?from=ss_embed">link to the presentation</a>.</li>
+</ul>
+
+
+<p><strong>Agile India 2012</strong>: Leena and I spoke there on &#8220;Continuous Delivery for a Song&#8221;. Here&#8217;s the link to the <a href="http://submit2012india.agilealliance.org/node/8894">original proposal</a>. And here&#8217;s the <a href="https://docs.google.com/a/multunus.com/present/view?id=0AQj1177vtu0MZHRoM2dmN180NzRneGp2bXRndw">link to the presentation</a>. It was a live demo - and by the comments we got from our audience, we think it went off fairly well.</p>
+
+<p><img class="aligncenter size-medium" title="Agile India 2012 Talk" src="http://www.multunus.com/images/DSC_7209-300x201.jpg" alt="" width="300" height="201" /></p>
+
+<p><strong>Recent Writing: </strong>An article I wrote for YourStory.in was published late last year. It was titled &#8221;<a href="http://yourstory.in/2011/12/a-sneak-peek-into-mobile-app-opportunities-in-2012/">Mobile App Opportunities in 2012</a>&#8221;.</p>
+
+<p><strong>Blogging:</strong> Leena has written a lot of articles on Continuous Delivery <a href="http://www.multunus.com/blog/categories/continuous-delivery/">on this blog itself</a>. And Akshay <a href="http://akshayatmultunus.wordpress.com/">has been writing regularly</a> since he joined us last year.</p>
+
+<p>I hope you found this round up useful. I expect the Agile India organizers to upload videos of the all the talks soon. Once that happens, I&#8217;ll update this post with the link to the video of our talk there.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[A sneak peek into Mobile App Opportunities in 2012]]></title>
+    <link href="http://www.multunus.com/2012/01/a-sneak-peak-into-mobile-app-opportunities-in-2012/"/>
+    <updated>2012-01-27T16:45:13+05:30</updated>
+    <id>http://www.multunus.com/2012/01/a-sneak-peak-into-mobile-app-opportunities-in-2012</id>
+    <content type="html"><![CDATA[<div style="text-align: center;"><em>This article was originally written by me for <a href="http://yourstory.in/2011/12/a-sneak-peek-into-mobile-app-opportunities-in-2012/" target="_blank">yourstory.in</a>. But this version is more &#8220;complete&#8221; with all of the original links in place.</em></div>
+
+
+<div style="text-align: center;"><strong><img src="https://lh5.googleusercontent.com/fPMHVSttl3ew1PBhQoR8pWlEYnnwJNFroicMocnz8FO9kA0w6M2Om7T6BGDLKEZuGthb84bCI54sDOzRviRFJFiG0w8P8ihB7SpaUfLM_EwY0kyqefI" alt="" width="421px;" height="315px;" /></strong></div>
+
+
+<p><span id="internal-source-marker_0.3345638057217002">This was originally supposed to be a post on predictions. But as the founder of a mobile app development company myself, my focus is more on specific opportunities that exist for a boutique company such as ourselves in this space.</span></p>
+
+<!-- more -->
+
+
+<div><span id="internal-source-marker_0.3345638057217002">We all know that almost no opportunity is exactly what it seems like, but it pays to have good starting points of exploration. And that is what I hope you will leave with, after reading this article.</span></div>
+
+
+<h2><strong>First let’s look at some <span style="color: #ff0000;">facts</span>:</strong></h2>
+
+
+<div><span id="internal-source-marker_0.3345638057217002">
+<ul>
+    <li>About 40 per cent of Internet users in India <a href="http://www.medianama.com/2011/03/223-google-india-has-100m-internet-40m-mobile-internet-users-india-search-trends/">access it on their mobile phones</a></li>
+    <li><a href="http://googlemobileads.blogspot.com/2011/06/mobile-ize-your-business-with-google.html">61% users are unlikely</a> to return to a site that they found were not mobile optimized. What’s worse, 40% of them are likely to go to a competitor’s website.</li>
+    <li>The middle class in the BRIC (Brazil, Russia, India and China) countries together have the  <a href="http://blog.flurry.com/bid/79595/Kaboom-iOS-and-Android-International-Installed-Base-Expansion">largest untapped populations</a> that can now afford a smart phone but are yet to get one.</li>
+</ul>
+</span></div>
+
+
+<div style="text-align: center;"><strong><img src="https://lh3.googleusercontent.com/f5jZLsYQqwhgkCMk5NM1PDHChINvrZ-B4Q7Pedgsjwl6mhTTLKMV5eHavPoMD9sUAYrbdLjmVhxojTr_kCbYOWe2H3QBnbTehSd6z9MtvDgJCHtr41I" alt="" width="572px;" height="390px;" /></strong></div>
+
+
+<p><strong> </strong></p>
+
+<p><strong> </strong></p>
+
+<p><strong> </strong></p>
+
+<p style="font-weight: bold;"></p>
+
+
+<p style="font-weight: bold;"></p>
+
+
+<p style="font-weight: bold;"></p>
+
+
+<p style="font-weight: bold;"></p>
+
+
+
+
+<h2 style="font-weight: bold;"><strong>Now take a look at some major <span style="color: #ff0000;">trends</span>:</strong></h2>
+
+
+<div style="font-weight: bold;">
+<ul>
+    <li><strong>More Platforms: </strong><span style="font-weight: normal;">We have Apple to thank - for creating the app economy with the iOS platform, Google for democratizing the smart phone with Android and<a href="http://www.engadget.com/2011/12/28/windows-phone-marketplace-hits-50-000-app-submission-milestone/"> now Microsoft</a> for making the life of the “I support all platforms” developer more difficult with Windows Phone 7. If you still want to include Blackberry, despite all of the<a href="http://www.theaustralian.com.au/business/wall-street-journal/pressure-mounts-on-blackberrys-rim/story-fnay3ubk-1226223581617"> recent gloom</a>, then that would make it 4 platforms that you’d at least want to consider.</span></li>
+</ul>
+</div>
+
+
+<div style="padding-left: 30px;"><span id="internal-source-marker_0.3345638057217002">There are now more a million active apps now available across the major app stores. Apple’s app store and the Android Market currently lead by a large margin. However 2012 will probably bring in at least one more serious contender in the Windows Phone 7 marketplace - it has grown by more than 400% this year alone.</span></div>
+
+
+<div style="padding-left: 30px;"><span>
+</span></div>
+
+
+<div style="padding-left: 30px;"><span id="internal-source-marker_0.3345638057217002">The following chart shows the distribution of apps across various marketplaces as of Nov 2011 [Sources: <a href="http://www.distimo.com/2011_12_distimo-releases-full-year-2011-publication/">Distimo</a>, <a href="http://www.pcmag.com/article2/0,2817,2395188,00.asp">PCMag</a>]</span></div>
+
+
+<p><strong> </strong></p>
+
+<p><strong> </strong><strong> </strong></p>
+
+<div style="text-align: center;"><strong><img class="aligncenter" src="https://lh5.googleusercontent.com/gcF8VLupDmQ0-M3h7gX_XmhxzeIem7pjhJt__EP6UvxwNB56rPHvADUJyKetOruGlR2978HzFpG_RhtIuQ6T6sceC57OmuMco-NiGUqaSxp3RmccOb0" alt="" width="500" height="230" /></strong></div>
+
+
+<div><span id="internal-source-marker_0.3345638057217002">
+<ul>
+    <li><strong>Mobile Optimization Services: </strong>There are now multiple services available that make it easy for small business owners to “mobili”-ze their websites. Here are 3 such services:</li>
+</ul>
+</span></div>
+
+
+<div style="text-align: center;"><strong><img src="http://yourstory.in/wp-content/uploads/2011/12/Mobile-Optimization-Services.jpg" alt="Mobile-Optimization-Services.jpg (419×52)" /></strong></div>
+
+
+<div style="text-align: left;">
+<div><span id="internal-source-marker_0.3345638057217002">
+<ul>
+    <li><strong>HTML5 Mobile:<span style="font-weight: normal;"> The browsers from</span></strong><a href="http://www.infoworld.com/d/html5/ios-5s-safari-beats-all-mobile-browsers-in-html5-compatibility-175371"> every</a> <a href="http://www.winrumors.com/microsoft-benchmarks-windows-phone-browser-against-iphone-4-and-android-wins/"> big</a> <a href="http://www.sencha.com/blog/galaxy-nexus-the-html5-developer-scorecard/"> player</a> are getting more powerful. The open source tools are<a href="http://html5boilerplate.com/mobile"> getting</a> <a href="http://www.sencha.com/products/touch/"> better</a> and<a href="http://jquerymobile.com/"> better</a>. And with the Flash war finally having ended, Adobe is finally <a href="http://mashable.com/2011/11/11/flash-mobile-dead-adobe/">getting on board</a> as well.</li>
+</ul>
+</span></div>
+<div style="text-align: center;"><strong><img src="https://lh5.googleusercontent.com/hTW2K0tBVW0aRKezNkI3jOkMcPjIiiqBUUA_GjEsz4RzJasJRNwjeXPnT8u7527IV09hk9RfPuOqfAOr8ipPixskPjUwQohmM8F_trXh_kZOf_WCXBY" alt="" width="433px;" height="460px;" /></strong></div>
+<div><span id="internal-source-marker_0.3345638057217002">
+<ul>
+    <li><strong>Cross Platform Tools: </strong>These tools make it possible for the app developer to write-once-and-run-on-multiple-platforms. Or at least they try to make that possible.<a href="http://www.adobe.com/aboutadobe/pressroom/pressreleases/201110/AdobeAcquiresNitobi.html"> Multiple</a> <a href="http://rhomobile.com/blog/motorola-acquires-rhomobile-and-rhoelements-version-1-launched/">acquisitions</a> and fairly large<a href="http://techcrunch.com/2011/11/01/appcelerator-raises-15-million-series-c-round/"> VC investments</a> have happened in this space.</li>
+</ul>
+</span></div>
+<div style="text-align: center;"><strong><img src="https://lh5.googleusercontent.com/i-qWEO80aZSQqdT1KscQlyi52RZqLFwpuflccTQRXAqlQAI0nx661xJxcBzZWjLDrE31PfmF9Odt2pfz5YgFwN65nfbbgqkrh_wazy-LfzWsBeG8-DM" alt="" width="377px;" height="118px;" /></strong></div>
+<div style="text-align: left;">
+<div><span id="internal-source-marker_0.3345638057217002">
+<ul>
+    <li><strong>Hyper-Local-Mobile:<span style="font-weight: normal;"> The early movers in this space are</span></strong><a href="http://searchenginewatch.com/article/2081107/Foursquare-Hits-10-Million-Users-Yeah-Thats-1000-Annual-Growth"> continuing to grow</a> or have been<a href="http://www.guardian.co.uk/technology/2011/dec/05/facebook-buys-gowalla-location-sharing"> acquired</a>. But the<a href="http://socialcommercetoday.com/social-commerce-platform-overview-shopkick-mobile-commerce-on-steroids/"> new players</a> are doing well as well.</li>
+</ul>
+</span></div>
+</div>
+<div style="text-align: center;"><strong><img src="https://lh6.googleusercontent.com/-b4IZffxNy08thOITpu51-QB3Da2GhopjubrfZ7DYzHrUwFEQboJNVCfgZl2OHeEUvVsZA2_ClNVEK7Q8aJJlJTeYr4EUDzntcuaWTBVNZHPTfgYcjw" alt="" width="333px;" height="104px;" /></strong></div>
+<div style="text-align: left;">
+<div><span id="internal-source-marker_0.3345638057217002">
+<ul>
+    <li><strong>Cross Device Testing as a Service: <span style="font-weight: normal;">With more than 300 Android handsets now available from various manufacturers, it is next to impossible to manually test an application across all these devices. There are now </span></strong><a href="http://testdroid.com/">multiple</a> <a href="http://www.perfectomobile.com/portal/cms/android.html">services</a> on the cloud that aim to solve this problem for you by automatically testing your Android applications across a wide array of devices.</li>
+</ul>
+</span></div>
+<p style="text-align: center;"><img class="aligncenter" src="http://yourstory.in/wp-content/uploads/2011/12/Mobile-Cross-Device-Testing-as-a-Service.jpg" alt="Mobile-Cross-Device-Testing-as-a-Service.jpg (327×90)" /></p>
+<p style="text-align: left;"></p>
+
+<h2><strong>Keeping the above in mind, here are a few <span style="color: #ff0000;">opportunities </span>for 2012:</strong></h2>
+<div><span id="internal-source-marker_0.3345638057217002">
+<ul>
+    <li><strong>&#8220;Hybrid&#8221; Cross Platform Apps: </strong>The cross platform tools I&#8217;ve referred to above, allow for native platform API [Application Programming Interface] calls as well. These are useful when you have an application that has a combination of native components and other &#8220;content&#8221; components which most likely consume web services [and can be built with HTML5 and CSS3].</li>
+</ul>
+</span></div>
+<div><span id="internal-source-marker_0.3345638057217002">
+<p style="padding-left: 30px;" dir="ltr">An example of such an application is the <a href="http://bits.blogs.nytimes.com/2011/04/01/the-onion-releases-free-html5-ipad-app/">Onion iPad</a> app. The application is written in HTML5 for the most part - but uses falls back on native API to play video. This is probably because of <a href="http://blog.millermedeiros.com/2011/03/html5-video-issues-on-the-ipad-and-how-to-solve-them/">some of the issues</a> related to HTML5 video tag support on iOS. The Onion plans to roll out the app quickly on the Android platform as well - and <a href="http://sndstl.com/wp-content/uploads/2011/09/snd-app.pdf">with mostly the same code</a> [pdf].</p>
+
+<div style="padding-left: 30px;"><span id="internal-source-marker_0.3345638057217002"><em>Main Challenges:</em></span></div>
+<div style="padding-left: 30px;">
+<ul>
+    <li><strong>Cross Platform Tools are not mature yet: </strong>The API documentation is sparse, support is patchy and the community is still nascent. So which platform should you bet on? Unfortunately, the answer is, &#8220;it depends&#8221; - on multiple factors such as whether you need a native look and feel (which Appcelerator and Rhodes provide - but PhoneGap does not), the number of platforms you need to support, the technical skills of your dev team etc.</li>
+    <li><strong>The Mobile Web is Slow(er):</strong> Performance optimization is key if you want your site to look pretty and be snappy on mobile devices. There are<a href="http://www.google.co.in/search?q=html5+performance+mobile"> many good resources</a> available to get you started in the right direction.</li>
+</ul>
+<em> </em>
+
+</div>
+<div style="padding-left: 30px;"><span id="internal-source-marker_0.3345638057217002"> </span></div>
+</span></div>
+</div>
+<div><span id="internal-source-marker_0.3345638057217002">
+<ul>
+    <li><strong>Low Cost Solutions for Mobile Optimization: </strong>While purely content based sites can choose to rely on the Mobile Optimization Services I&#8217;ve mentioned above, there are a lot of other verticals that don&#8217;t have such an option - yet. For example, there are a lot of E-Commerce sites out there that are not mobile optimized. Especially those being run by small business owners or startups.</li>
+</ul>
+</span></div>
+<div style="padding-left: 30px;"><span id="internal-source-marker_0.3345638057217002"><em>Main Challenges:</em></span></div>
+<div style="padding-left: 30px;">
+<ul>
+    <li>The data has to kept in sync with the original systems - in a seamless fashion</li>
+    <li>Mobile payment gateways are still far from mature - <a href="http://www.venturewoods.org/index.php/2011/01/19/mobile-payments-shifting-opportunities-for-startups/">especially in a country like India</a>.</li>
+    <li>Oh, and the Mobile Web is Slow - but I said that already.</li>
+</ul>
+</div>
+</div>
+
+
+<div><span id="internal-source-marker_0.3345638057217002">
+<ul>
+    <li><strong>Mobile presence for non-Internet-Savvy retailers: </strong>I&#8217;m going on a limb here - but most small retailers in India don&#8217;t have an Internet presence - and what that means is, a certain  high quality trouser shop with very reasonable price tags - is now invisible on your phone.</li>
+</ul>
+</span></div>
+
+
+<p style="padding-left: 30px;"><em> Main Challenge:</em></p>
+
+
+<p style="padding-left: 30px;"><em> </em></p>
+
+
+
+
+<div><span id="internal-source-marker_0.3345638057217002"> </span></div>
+
+
+<div><span id="internal-source-marker_0.3345638057217002">
+<ul>
+    <li>
+<ul>
+    <li>With even companies like Google<a href="http://articles.timesofindia.indiatimes.com/2011-06-20/internet/29679379_1_google-street-view-google-s-street-view-privacy-concerns"> facing stiff resistance</a> while trying to map our streets, you&#8217;re left with the only other option - User Generated Content. And that in turn means, the classic chicken and egg conundrum.</li>
+</ul>
+</li>
+</ul>
+</span></div>
+
+
+<div><span id="internal-source-marker_0.3345638057217002">
+<ul>
+    <li><strong>Cross Platform Testing as Service: </strong>While there are cloud testing services now available for specific platforms, services that take care of automated cross-platform testing are still not available.</li>
+</ul>
+</span></div>
+
+
+<div style="padding-left: 30px;"><span id="internal-source-marker_0.3345638057217002"><em> Main Challenge:</em></span></div>
+
+
+<div style="padding-left: 30px;">
+<ul>
+    <li>You&#8217;ve got SDK installations, developer &amp; signing certificates, build chains, and custom project layouts to worry about with each platform. <a href="http://savagelook.com/blog/portfolio/8-things-to-know-about-phonegap">PhoneGap solves this problem</a> for you from a deployment perspective, but running automated tests on multiple platforms is a different challenge.</li>
+</ul>
+</div>
+
+
+<div><span id="internal-source-marker_0.3345638057217002"> </span></div>
+
+
+<div><span id="internal-source-marker_0.3345638057217002">This list of opportunities is admittedly short. But I hope you are now motivated to brainstorm more ideas, distill the most interesting opportunities and finally implement a winner in 2012. Happy New Year! </span></div>
+
+
+<div><strong>
+<p dir="ltr">So what are you waiting for? Start <span style="color: #ff0000;">exploring </span>:)</p>
+
+</strong><strong> </strong><strong> </strong><strong> </strong><strong> </strong><strong> </strong><strong> </strong><strong> </strong><strong> </strong><strong> </strong><strong> </strong>
+
+</div>
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Our talks at Droidcon 2011, Bangalore]]></title>
+    <link href="http://www.multunus.com/2011/12/droidcon-two-talks-we-gave/"/>
+    <updated>2011-12-02T15:37:00+05:30</updated>
+    <id>http://www.multunus.com/2011/12/droidcon-two-talks-we-gave</id>
+    <content type="html"><![CDATA[<p>We spoke at Droidcon, Bangalore that happened on Nov 18th and 19th. We had two interesting talks on both days.</p>
+
+<div style="float: left;">
+<h3><a href="http://funnel.hasgeek.com/droidcon/83-continuous-delivery-for-an-android-application" target="_new">1. Continuous Delivery for an Android application</a></h3>
+<!-- more -->
+
+<img style="margin: 0px 12px;" src="http://www.multunus.com/images/vaidy-leena.png" alt="" align="left" /><span>This talk was on First day of the Droidcon conference given by Vaidy and Leena. In this talk, we spoke on what the first step towards moving to a CD setup is. Specifically demonstrated setting up a Push Button deployment system using Ant and Jenkins. <a href="http://funnel.hasgeek.com/droidcon/83-continuous-delivery-for-an-android-application">More details here</a>. </span>
+
+</div>
+
+
+<div style="float: left; margin-top: 24px;">
+<h3><a href="http://funnel.hasgeek.com/droidcon/94-introduction-to-opengl-in-android" target="_new">2. Introduction to OpenGL in Android</a></h3>
+<img style="margin: 0px 12px;" src="http://www.multunus.com/images/tamil-and-kp.png" alt="" align="left" />This talk was on Second day of the Droidcon given by Tamil KP. The objective of talk was to have people get started with OpenGL programming which can seem to be a little heavy but it need not be. The talk started with a brief introduction to OpenGL and then had quick step-by-step tutorial demonstration. <a href="http://funnel.hasgeek.com/droidcon/94-introduction-to-opengl-in-android">More details here</a>.
+
+</div>
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Continuous Delivery: Building Android Library project]]></title>
+    <link href="http://www.multunus.com/2011/11/continuous-delivery-building-android-library-project/"/>
+    <updated>2011-11-04T14:55:20+05:30</updated>
+    <id>http://www.multunus.com/2011/11/continuous-delivery-building-android-library-project</id>
+    <content type="html"><![CDATA[<p>This post talks about how to build an Android Project using ant which depends on an Android Library project.</p>
+
+<ul>
+    <li>Add default.properties in the library project and add <span style="font-family: Consolas, Monaco, 'Courier New', Courier, monospace; line-height: 18px;">android.library=true </span>in the same</li>
+    <li>Run the command in the main Android Project <span style="font-family: Consolas, Monaco, 'Courier New', Courier, monospace; line-height: 18px;">android update project &#8211;path . &#8211;library ../path-to-the-library/</span><strong>Note: This always has to be relative path.</strong></li>
+    <li>Now running <span style="font-family: Consolas, Monaco, 'Courier New', Courier, monospace; line-height: 18px;">ant release</span> should build the library project too.</li>
+</ul>
+
+
+<p><strong>Note:</strong> The android command mentioned in the second step adds an entry in the <span style="font-family: Consolas, Monaco, 'Courier New', Courier, monospace; line-height: 18px;">default.properties</span> file. If you need to override that in different environments, override that in the <span style="font-family: Consolas, Monaco, 'Courier New', Courier, monospace; line-height: 18px;">local.properties</span>. Even there, it has to be relative path, the absolute path will not work.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Lessons from interview with Joel Spolsky]]></title>
+    <link href="http://www.multunus.com/2011/10/lessons-from-interview-with-joel-spolsky/"/>
+    <updated>2011-10-17T00:30:36+05:30</updated>
+    <id>http://www.multunus.com/2011/10/lessons-from-interview-with-joel-spolsky</id>
+    <content type="html"><![CDATA[<p><a href="http://commons.wikipedia.org/wiki/File:PivotLaunching3S.jpg"><img title="USS Pivot launched at the Gulf Shipbuilding Co..." src="http://upload.wikimedia.org/wikipedia/commons/thumb/9/9d/PivotLaunching3S.jpg/300px-PivotLaunching3S.jpg" alt="USS Pivot launched at the Gulf Shipbuilding Co..." width="300" height="241" /></a></p>
+
+<p style="text-align: center;" dir="ltr"></p>
+
+
+<p dir="ltr">A couple of days back I watched an interview with Joel Splosky on <a href="http://mixergy.com/trello-joel-spolsky-interview/">Mixergy.com</a>. <a title="Joel Spolsky" rel="homepage" href="http://www.joelonsoftware.com/AboutMe.html">Joel Spolsky</a> recently launched a new product “Trello”, an online collaboration tool. In this interview he explains a few strategies/tips that went into building and launching a new product based on his experience.</p>
+
+
+
+
+<!-- more -->
+
+
+<p dir="ltr">Here are a few takeaways which I think are worth summarizing:</p>
+
+
+
+
+<ul>
+    <li>
+<p dir="ltr"><strong>Delivering Continuously</strong></p>
+</li>
+</ul>
+
+
+<p dir="ltr">Trello follows a process of continually delivering the product in small, tiny pieces. So instead of big releases that happen every month or so, the product is instead shipped everyday [maybe even multiple times each day]. To achieve this, the pipeline of work starting from the designer to  developer to tester and finally to the customer is always “in motion”.</p>
+
+
+
+
+<ul>
+    <li>
+<p dir="ltr"><strong>Pivoting endlessly in the early stages</strong></p>
+</li>
+</ul>
+
+
+<p dir="ltr">You build something quickly for the first version. Then you try getting real users’ feedback. You can fail early here and this will force you to change direction multiple times while building the product. This is what is called <em>Pivoting</em>. By pivoting you&#8217;ll eventually take the right direction and get to product-market fit. At this point the product is actually creating great value to your users by giving them what they wanted.</p>
+
+
+
+
+<ul>
+    <li>
+<p dir="ltr"><strong>Knowing your marketplace</strong></p>
+</li>
+</ul>
+
+
+<p dir="ltr">One of the reasons that most products fail is that they do not fit into the marketplace. They are simply built because it was imagined to be useful and what the customers might actually want would be something very different from your product. Joel says, a product must be created by keeping the “need” in mind. If your product solves a customer’s problem, then you know your marketplace.</p>
+
+
+
+
+<ul>
+    <li>
+<p dir="ltr"><strong>Getting early feedback from the users</strong></p>
+</li>
+</ul>
+
+
+<p dir="ltr">One of the best things one could do is getting to use the product internally i.e., within a closed circuit of users in the very early stages of the product. By watching them use the product and getting to know what they think, would be a great way to improve and polish your product.</p>
+
+
+
+
+<ul>
+    <li>
+<p dir="ltr"><strong>Launching your product for free</strong></p>
+</li>
+</ul>
+
+
+<p dir="ltr">The classic mistake that we often commit while launching a product is that we charge the users from day one. This will actually drive away your customers from using your product.</p>
+
+
+<p dir="ltr">Users are not ready to pay for a product if they find that have to pay something for just trying it out even if it is dirt cheap. So it is more important to get the attention of a customer towards your product. And, once the customers find that your product is highly useful, advertising your product becomes easier.</p>
+
+
+<p dir="ltr">Joel points out a few reasons for giving away his product for free:</p>
+
+
+
+
+<ul>
+    <li>Giving away for free is itself a form of advertising your product.</li>
+    <li>Getting the audience/users to use your product is the most important thing and this can be achieved only by this form of advertising.</li>
+    <li>Later when you make it paid, you&#8217;ll still have users who are getting real value out of your product.</li>
+</ul>
+
+
+<p dir="ltr">You also make it less sweet for others to compete with you and helps you get a longer runway. This particular point was not said by Joel in the interview, but something I saw in the comments. And I think it made enough sense to include here.</p>
+
+
+<p dir="ltr"><strong>Tried and Tested By Others</strong></p>
+
+
+<p dir="ltr">Some of the above techniques have been used by others like the team which created <em>Pivotal Tracker</em>, an application with some similarity to Trello - but more specific to Agile Software Project Management..</p>
+
+
+<p dir="ltr">One of them is what Joel asks every team, that is, to “use your product internally”. The team that built Pivotal Tracker used it within their team members in the early stages of the product. They improved the product based on the early feedback from the users.</p>
+
+
+<p dir="ltr">Also, Pivotal Tracker was launched for free initially and later the pricing was included for their product.</p>
+
+
+<p dir="ltr">Learning and following what great teams have done is a good way to reduce risk of failure and increase odds of getting it right the first time. Or at least the second :)</p>
+
+
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Simple Image Filter using OpenGL ES in Android]]></title>
+    <link href="http://www.multunus.com/2011/10/simple-image-filter-using-opengl-es-in-android/"/>
+    <updated>2011-10-07T15:35:45+05:30</updated>
+    <id>http://www.multunus.com/2011/10/simple-image-filter-using-opengl-es-in-android</id>
+    <content type="html"><![CDATA[<p><em><strong>Note</strong>: This post assumes some basic knowledge in setting up an OpenGL app in Android. A basic example for rendering a texture on to a surface can be found <a href="http://developer.android.com/resources/samples/ApiDemos/src/com/example/android/apis/graphics/GLES20TriangleRenderer.html">here.</a> You can use this as the initial setup for trying out Shader language program listed in this post.</em></p>
+
+<p>OpenGL is widely adopted as the graphics API of choice for real-time interactive 3D graphics applications. OpenGL is easy to understand, but its simplicity and orthogonality enable many interesting possibilities. One such possibility is image processing.</p>
+
+<!-- more -->
+
+
+<p>Using &#8220;OpenGL&#8221; for Image Processing enables us to completely utilize the power of Graphics Processing Unit (GPU) hence the image processing will be faster also it reduces the load on CPU. This can be crucial for Image processing applications, especially in mobile environment where the resources available are relatively lesser.</p>
+
+<p>In this post we will be discussing how to use OpenGL Shader Language to manipulate pixels and create Image filter effects.</p>
+
+<p><img class="aligncenter size-medium wp-image-1851" src="http://www.multunus.com/images/combined-300x250.png" alt="" width="300" height="250" /></p>
+
+<p>As with any OpenGL app, we will start with setting up the view.</p>
+
+<p>The next step is to load an image into the texture, This texture can be mapped on to the surface of a square, which will then be drawn on to the screen.For Image processing, we will require only 2 dimensions so we will set up the view in orthographic projection and will also discard z axis by keeping it to 0.0 most of the times.</p>
+
+<p>But before drawing to the screen, there are many intermediate operations that are done by the graphics hardware, which are now directly programmable in OpenGL ES 2.0 using Shader Language (GLSL).
+We will be concentrating on Vertex and Fragment processing phases in OpenGL pipeline. We will go through a simple fragment shader program and will explain how it works. Both of these programs are written in GLSL. GLSL is a ‘C’ like language which gives direct control over the  graphics pipeline without having to use assembly language or hardware-specific languages.</p>
+
+<p><strong>Vertex shader</strong></p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>uniform mat4 uMVPMatrix;
+</span><span class='line'>attribute vec4 aPosition;
+</span><span class='line'>attribute vec2 aTextureCoord;
+</span><span class='line'>varying vec2 vTextureCoord;
+</span><span class='line'>void main() {
+</span><span class='line'>  gl_Position = uMVPMatrix * aPosition
+</span><span class='line'>  vTextureCoord = aTextureCoord
+</span><span class='line'>}</span></code></pre></td></tr></table></div></figure>
+
+
+
+
+<p dir="ltr">The Vertex shader is executed for each vertex that is to be drawn. Here, we are drawing a square and mapping the texture on to that.</p>
+
+
+<p>This calculates the transformed coordinates of the square by multiplying the given coordinates with <a href="http://en.wikibooks.org/wiki/OpenGL_Programming/3D/Matrices" target="_blank">MVPMatrix</a> [ MVP -  Model * View * Projection ]. Other than this we are also storing corresponding texture co-ordinates in variable &#8217;<em>vTextureCoords&#8217;</em> so that it is available in the fragment shader.</p>
+
+<p><strong>Fragment Shader</strong></p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>precision mediump float;
+</span><span class='line'>varying vec2 vTextureCoord;
+</span><span class='line'>uniform sampler2D sTexture;
+</span><span class='line'>void main() {
+</span><span class='line'>   vec2 cen = vec2(0.5,0.5) - vTextureCoord.xy;
+</span><span class='line'>   vec2 mcen = -0.07*log(length(cen))*normalize(cen);
+</span><span class='line'>   gl_FragColor = texture2D(sTexture, vTextureCoord.xy-mcen);
+</span><span class='line'>}</span></code></pre></td></tr></table></div></figure>
+
+
+<p dir="ltr"></p>
+
+
+<p>Fragment shaders are executed to calculate the color of individual pixels. This is where the actual image transformation happens. Instead of mapping the corresponding texture coordinates to corresponding pixels, we can map different coordinates of the texture to different pixels which will distort the image in some way. In the above example the texture co-ordinate to fill each pixel is chosen based on the calculation in line no 6. The actual movement depends on the distance of the texture coordinate from the center. This creates an effect which is similar to what is shown in the below picture.</p>
+
+<p>Although this is a very simple effect, the intention here is to just show potential applications of OpenGL in Android apps.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Continuous Delivery for Android Apps – Part 2]]></title>
+    <link href="http://www.multunus.com/2011/10/continuous-delivery-for-android-apps-part-2/"/>
+    <updated>2011-10-06T06:51:57+05:30</updated>
+    <id>http://www.multunus.com/2011/10/continuous-delivery-for-android-apps-part-2</id>
+    <content type="html"><![CDATA[<p>This post talks about how to run tests for the build setup as mentioned in <a href="http://www.multunus.com/2011/09/continuous-delivery-for-android-apps-part-1/">Part 1</a>.</p>
+
+<h3><span style="text-decoration: underline;">Generate the build script for test</span></h3>
+
+
+<p>The suggested practice is to have 2 separate projects for android, one the source and the other for the tests. The following command will generate a build.xml for the test project. Replace the  with the path of the source path.</p>
+
+<p><span style="font-family: Consolas, Monaco, 'Courier New', Courier, monospace; line-height: 18px;">android update test-project -m ../&lt;project-path&gt; -p . </span></p>
+
+<p>One problem I&#8217;ve seen is that, it does not break the build even if there are failures in the test. Issue is reported here:</p>
+
+<!-- more -->
+
+
+<p><a href="http://code.google.com/p/android/issues/detail?id=14241">http://code.google.com/p/android/issues/detail?id=14241</a></p>
+
+<p>I had to override the run-tests target as mentioned below to fix this issue:</p>
+
+<pre>&lt;target name="run-tests" depends="-install-tested-project, install"
+description="Runs tests from the package defined in test.package property"&gt;
+    &lt;echo&gt;Running tests ...&lt;/echo&gt;
+    &lt;exec executable="${adb}" failonerror="true" outputproperty="tests.output"&gt;
+        &lt;arg value="shell" /&gt;
+        &lt;arg value="am" /&gt;
+        &lt;arg value="instrument" /&gt;
+        &lt;arg value="-w" /&gt;
+        &lt;arg value="-e" /&gt;
+        &lt;arg value="coverage" /&gt;
+        &lt;arg value="@{emma.enabled}" /&gt;
+        &lt;arg value="${manifest.package}/${test.runner}" /&gt;
+    &lt;/exec&gt;
+    &lt;echo message="${tests.output}"/&gt;
+    &lt;fail message="Tests failed!!!"&gt;
+        &lt;condition&gt;
+            &lt;or&gt;
+            &lt;contains string="${tests.output}" substring="Error" /&gt;
+            &lt;contains string="${tests.output}" substring="Fail" /&gt;
+            &lt;/or&gt;
+        &lt;/condition&gt;
+     &lt;/fail&gt;
+&lt;/target&gt;</pre>
+
+
+<p>You can change the ant commands to <span style="font-family: Consolas, Monaco, 'Courier New', Courier, monospace; line-height: 18px;">clean run-tests release </span>in Jenkins to run the tests as part of packaging.</p>
+
+<p>Next I will be writing about how to start emulator from Jenkins while running the tests.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Confident Estimates]]></title>
+    <link href="http://www.multunus.com/2011/09/confident-estimates/"/>
+    <updated>2011-09-29T08:58:51+05:30</updated>
+    <id>http://www.multunus.com/2011/09/confident-estimates</id>
+    <content type="html"><![CDATA[<div class="zemanta-img" style="margin: 1em; display: block;">
+
+<a href="http://commons.wikipedia.org/wiki/File:Goudargues.JPG"><img title="Goudargues" src="http://upload.wikimedia.org/wikipedia/commons/thumb/4/4b/Goudargues.JPG/300px-Goudargues.JPG" alt="Goudargues" width="300" height="200" /></a>
+
+</div>
+
+
+<p>We constantly try to provide accurate estimates that we can defend with confidence. But there are situations where we end up making mistakes. And this post describes one such situation.</p>
+
+<!-- more -->
+
+
+<p>One of our clients asked us to estimate a feature. As usual, we sent back an estimate without much delay.</p>
+
+<p>After few days, our client asked us to implement this feature. When we started to think about implementing the feature we found that it would take at least double the time that we&#8217;d earlier estimated. We&#8217;d put ourselves in a bad situation. It would of course be very hard to convince the client as to why there was this much deviation - considering we discovered this even before actually starting to implement the feature. We did the 5 why&#8217;s to get to the root of the problem.</p>
+
+<p>We discovered the following reasons:</p>
+
+<ul>
+    <li>We hadn&#8217;t gone through the usual process of breaking down the feature to the desired level of granularity. Digging deeper, the following root causes emerged:
+<ul>
+    <li>The project had been on &#8216;pause&#8217; mode for a couple of weeks and we had gotten busy with other things in the meanwhile.</li>
+    <li>The value of the feature [to the end user] was not completely obvious to us.</li>
+</ul>
+</li>
+</ul>
+
+
+<p>The solution? We&#8217;ve decided to ask ourselves the following question before sending across an estimate to any client in the future:</p>
+
+<blockquote><em>Is this a <strong>confident estimate</strong>? Can we defend the estimate with proper reasoning?</em></blockquote>
+
+
+<p>The above will force us to think again about the estimate and help us become more consistent.</p>
+
+<p><strong><span style="color: #008000;">Oh, and one more thing</span></strong>. Ask the stakeholder as to what value the feature is going to add - if it is not obvious. Don&#8217;t assume that you&#8217;re right!</p>
+
+<p>If you&#8217;re curious on what the client&#8217;s reaction was, when we sent across the revised [and much larger] estimate, <strong>ask us in the comment below</strong> :) We&#8217;d love to hear from you!</p>
+
+<p><span style="color: #008000;"><strong>
+</strong></span></p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Continuous Delivery for Android Apps - Part 1]]></title>
+    <link href="http://www.multunus.com/2011/09/continuous-delivery-for-android-apps-part-1/"/>
+    <updated>2011-09-23T11:15:50+05:30</updated>
+    <id>http://www.multunus.com/2011/09/continuous-delivery-for-android-apps-part-1</id>
+    <content type="html"><![CDATA[<div>
+
+We&#8217;ve set up our CI server for building android apps. We use Jenkins as our CI server, but the same steps can be applied to any CI server.
+<h3><span style="text-decoration: underline">Setup Android Environment on CI server</span></h3>
+You need to first install the android SDK and platform tools on the CI server. The steps are well defined <a href="http://developer.android.com/sdk/installing.html">here</a>. You can run the command <code>android update sdk --no-ui</code> if the CI server is in an headless environment.
+<h3><span style="text-decoration: underline">Generate Build script</span></h3>
+Using android SDK tool , you can generate build script for the android project which contains the standard steps for building the app such as clean, compile, release, install etc. The following command will generate the build script, replace &lt;appname&gt;, &lt;target&gt; and &lt;project path&gt; accordingly.
+<pre>android update project -n &lt;appname&gt; -t &lt;target&gt; -p &lt;project directory&gt;</pre>
+This will create build.xml file under the project directory. You need to create build.properties file with the following contents:
+<pre>key.store=path-to-keystore
+key.alias=[alias]
+key.store.password=[pw]
+key.alias.password=[pw2]</pre>
+You can generate the key file using keytoool or you can generate the key file from eclipse. Run the command  <span style="font-family: Consolas, Monaco, 'Courier New', Courier, monospace;line-height: 18px">ant clean release<span style="font-family: Georgia, 'Times New Roman', 'Bitstream Charter', Times, serif;line-height: 19px">, which will compile the files, and generate the apk files (it generates signed, unsigned and unaligned files). The signed version can be used for uploading to Android Market or for installing directly on any device. Couple of stuff to be noted here are:</span></span>
+<ul>
+    <li>Ant version has to be 1.8.0 or higher.</li>
+    <li>Put the external libraries in the <span style="font-family: Consolas, Monaco, 'Courier New', Courier, monospace;line-height: 18px">libs</span> directory. Build script automatically picks up the libraries put under libs directory, otherwise the script need to be changed to look at a different classpath.</li>
+</ul>
+Checkin the build.xml, build.properties and the key file into the repository.
+<h3><span style="text-decoration: underline">Setup the CI server</span></h3>
+The CI server has to run the ant script for building the app. One more setting what we&#8217;ve done in our Jenkins server was to archive the apks as artifacts (available in the post build action). In upcoming posts, I will cover how to do the following:
+<ol>
+    <li>Running android tests</li>
+    <li>Running code/test coverage tools</li>
+    <li>Actual deployment</li>
+</ol>
+References: <a href="http://skaug.no/ingvald/2011/09/android-app-with-jenkins/" target="_blank">http://skaug.no/ingvald/2011/09/android-app-with-jenkins/</a>
+
+</div>
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Setup Test Load Balancer using Jenkins]]></title>
+    <link href="http://www.multunus.com/2011/09/setup-test-load-balancer-using-jenkins/"/>
+    <updated>2011-09-23T09:40:07+05:30</updated>
+    <id>http://www.multunus.com/2011/09/setup-test-load-balancer-using-jenkins</id>
+    <content type="html"><![CDATA[<p>The main purpose of a test suite is to give fast feedback about the changes being made to the developer. Ideally the test suite should be really fast and should take no more than 10 mins to complete. But there are times when you end up with a test suit that takes 30 - 40 mins to complete. This can be really frustrating for the developers because they have to wait for 40 mins after checking in his changes to know if he broke something.</p>
+
+<p>For this problem there are two possible solutions. Take some time from your project schedule to rewrite some part of your test suite. Although this is the ideal solution to the problem, this might not always be an option for you because of delivery deadlines. The other alternative is to throw more hardware at the problem and this is where <a href="http://test-load-balancer.github.com/">TLB </a>comes in to picture.</p>
+
+<p>One approach to solving the problem is to partition your spec suite in to different sets and then run them paralley in different machines. The problem with this approach is that it will take a lot of trial and error before you end up with partitions that takes almost equal time to finish. Also mainting these partition as you add more tests become a head ache. This is the exact problem the <a href="http://test-load-balancer.github.com/">TLB</a> fixes.</p>
+
+<p>A detailed description of how to setup the test load balancer is available <a href="http://test-load-balancer.github.com/doc-0_3_2/getting_started_with_tlb.html">here</a>. It should give you a very good idea about how TLB works and also about how do add load balancing to your build.</p>
+
+<p>We are using jenkins as our CI server, so we will be concentrating on how to setup TLB on Jenkins. I am assuming that you already have the job [ to which you want to add load balancing ] configured in Jenkins.</p>
+
+<p>The TLB setup has two main two components</p>
+
+<div>
+<ul>
+    <li>TLB server</li>
+    <li>Balancer</li>
+</ul>
+</div>
+
+
+<h2>Setup TLB server</h2>
+
+
+<p>Download the TLB server and install it on your CI server host [ again for detailed instruction <a href="http://test-load-balancer.github.com/doc-0_3_2/getting_started_with_tlb.html">look here</a> ]. Optionally add a service startup script so that the TLB server starts up each time you restart the server.</p>
+
+<h2>Add balancing to your build</h2>
+
+
+<p>For Rspec TLB distribution comes with a ruby gem you can install this. Also the balancer requires a hook in to you build invocation process this too is available as a rake task in TLB docs, add this to your project.</p>
+
+<h2>Create Job Partitions</h2>
+
+
+<p>The setup for the jobs which run in different partitions are exactly same, only difference between the partitions are only the subset of test executed in each partition.</p>
+
+<p>Create as many copies of the existing job as the number of partitions that you want to run. Additionally you can name each of these jobs as &lt;job-name-n&gt; where n refers to the partition which this job is going to run. Create an dummy job and configure the post build task so that all the partitioned jobs will be triggered simultaneously.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Rebuilding in Jenkins]]></title>
+    <link href="http://www.multunus.com/2011/09/rebuilding-in-jenkins/"/>
+    <updated>2011-09-22T14:32:49+05:30</updated>
+    <id>http://www.multunus.com/2011/09/rebuilding-in-jenkins</id>
+    <content type="html"><![CDATA[<div>
+
+One option that might be required after setting up a <a href="http://www.multunus.com/2011/07/continuous-delivery-using-jenkins-build-pipeline/">build pipeline</a> is the provision to redeploy an earlier version by click of a button. This can become handy when we find a bug in the production and want to see when the bug got introduced. For that we will have to redeploy the earlier version to the staging/UAT environment and test the same.
+
+Jenkins by default does not allow to rerun any of the earlier jobs. But you can achieve this by the <a href="https://wiki.jenkins-ci.org/display/JENKINS/Rebuild+Plugin">Rebuild</a> plugin. It allows you to rebuild any job provided its parameterized build. It also allows you override the parameters. It will show the &#8220;Rebuild&#8221; button at the left side as shown below when you go to a specific build page:
+
+<img src="http://www.multunus.com/images/rebuild.png" alt="" width="156" height="247" />
+
+This is not a replacement for revert build, because it does not take care of reverting DB. But this can be extended to do the same.
+
+Note: It will show the Rebuild button only for those builds which occurred after installing the plugin. I took some time to realize this and it is not very clear in the documentation.
+
+</div>
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Continuous Delivery - Part 4: Rolling back database migrations with Capistrano rollback]]></title>
+    <link href="http://www.multunus.com/2011/08/continuous-delivery-part-3-rolling-back-database-migrations-with-capistrano-rollback/"/>
+    <updated>2011-08-14T08:22:40+05:30</updated>
+    <id>http://www.multunus.com/2011/08/continuous-delivery-part-3-rolling-back-database-migrations-with-capistrano-rollback</id>
+    <content type="html"><![CDATA[<p>According to the book <a href="http://www.amazon.com/gp/product/0321601912?tag=contindelive-20">Continuous Delivery</a>, the database also should be under version control, and Rails allows us to achieve this with ActiveRecord Migrations. Even though <a class="zem_slink" title="Capistrano" rel="homepage" href="http://www.capify.org/">Capistrano</a> can run the migrations automatically with its <code>deploy</code> command, its <code>deploy:rollback</code> task does not rollback the DB migrations automatically.  I&#8217;ve created a small capistrano <a href="https://github.com/multunus/capistrano-db-rollback">recipe</a> which can take care of rolling back migrations.  The assumptions made are:</p>
+
+<ul>
+    <li>All the migrations have the <code>down</code> method defined properly. You can check for this by running <code>rake db:migrate:redo</code></li>
+    <li>The schema.rb exists in the repository. This is one of the <a href="http://guides.rubyonrails.org/migrations.html#schema-dumps-and-source-control">suggested practices</a> for Rails.</li>
+</ul>
+
+
+<p>The script is very simple, it extracts the version from the <code>schema.rb</code> and runs the <code>rake db:migrate</code> with the same version. The task gets run automatically along with <code>deploy:rollback</code>. This approach should work for most small and medium complexity Rails apps.</p>
+
+<p>Continued..</p>
+
+<ul>
+    <li><a title="Continuous Delivery – Part 1: Our Jenkins Build Pipeline setup" href="http://www.multunus.com/2011/07/continuous-delivery-using-jenkins-build-pipeline/">Continuous Delivery – Part 1: Our Jenkins Build Pipeline setup</a></li>
+    <li><a title="Continuous Delivery – Part 2: Code metrics with metrical" href="http://www.multunus.com/2011/07/continuous-delivery-code-metrics-with-metrical/">Continuous Delivery – Part 2: Code metrics with metrical</a></li>
+    <li><a title="Continuous Delivery – Part 3: Running custom rake tasks during deployment" href="http://www.multunus.com/2011/07/continuous-delivery-contd/">Continuous Delivery – Part 3: Running custom rake tasks during deployment</a></li>
+</ul>
+
+
+<p></div></p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Continuous Delivery - Part 3: Running custom rake tasks during deployment]]></title>
+    <link href="http://www.multunus.com/2011/07/continuous-delivery-contd/"/>
+    <updated>2011-07-31T15:50:54+05:30</updated>
+    <id>http://www.multunus.com/2011/07/continuous-delivery-contd</id>
+    <content type="html"><![CDATA[<p>One problem we faced with the pipeline setup what I had mentioned in my <a href="http://www.multunus.com/2011/07/continuous-delivery-using-jenkins-build-pipeline/">first post</a> was that - it was not handling how to run the extra tasks that we need to do in some of the deployments. Some examples are:</p>
+
+<ul>
+    <li>Reindex the solr/lucene indexes if any new field has been added to the index</li>
+    <li>Some custom rake tasks , say for eg: task to update values in the DB, which you don&#8217;t want to add to migrations</li>
+</ul>
+
+
+<p>We do have Cap tasks for running the required rake tasks, but again it was done manually. So we&#8217;ve to remember to run them after deploying to production.  And also there is no way to track what steps were followed for a certain deployment.</p>
+
+<p>I used the build parameter again for fixing the above issue i.e. after accepting the extra tasks as parameter for the build for the first job, they will be passed on to the downstream jobs. In this way the same deployment steps will be automatically followed for rest of the jobs in the pipeline.</p>
+
+<p>The only difference in this case is that - sometimes the parameter can be empty. This check has to be done in the scripts i.e. if the value exists for the parameter, execute the extra tasks along with the normal deployment else just do a normal deployment.</p>
+
+<p>Continued..</p>
+
+<ul>
+    <li><a title="Continuous Delivery – Part 1: Our Jenkins Build Pipeline setup" href="http://www.multunus.com/2011/07/continuous-delivery-using-jenkins-build-pipeline/">Continuous Delivery – Part 1: Our Jenkins Build Pipeline setup</a></li>
+    <li><a title="Continuous Delivery – Part 2: Code metrics with metrical" href="http://www.multunus.com/2011/07/continuous-delivery-code-metrics-with-metrical/">Continuous Delivery – Part 2: Code metrics with metrical</a></li>
+    <li><a title="Continuous Delivery – Part 4: Rolling back database migrations with Capistrano rollback" href="http://www.multunus.com/2011/08/continuous-delivery-part-3-rolling-back-database-migrations-with-capistrano-rollback/">Continuous Delivery – Part 4: Rolling back database migrations with Capistrano rollback</a></li>
+</ul>
+
+
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Continuous Delivery - Part 2: Code metrics with metrical]]></title>
+    <link href="http://www.multunus.com/2011/07/continuous-delivery-code-metrics-with-metrical/"/>
+    <updated>2011-07-31T15:44:40+05:30</updated>
+    <id>http://www.multunus.com/2011/07/continuous-delivery-code-metrics-with-metrical</id>
+    <content type="html"><![CDATA[<p><a href="http://iain.nl/easier-metricfu-with-metrical">Metrical</a> is for easier <a href="http://metric-fu.rubyforge.org/">metric_fu</a> setup. You can see the details on why and how <a href="http://iain.nl/easier-metricfu-with-metrical">here</a>. Its an awesome tool which allows us to easily use metric_fu without adding any dependency to the project code.</p>
+
+<p>The steps I followed for setting it up in our Jenkins server are:</p>
+
+<ul>
+    <li> Install the gem. I installed it under our ruby 1.9.2 in RVM.</li>
+    <li> Create a .metrics file under your projects directory with the settings. This is not mandatory, but I had to use this because some configurations do not seem to be working with ruby 1.9.2. I&#8217;ve mentioned those below along with the contents of the .metrics file</li>
+    <li> Create a job in Jenkins server, mention the repository details and for build step give the shell command as <em>rvm 1.9.2 -S metrical</em></li>
+    <li> Configure the <a href="https://wiki.jenkins-ci.org/display/JENKINS/HTML+Publisher+Plugin">HTML Publisher plugin</a> for showing the nice Graphs generated by metric_fu as part of the build report. The default report location is tmp/metric_fu/output under the project directory. You can change the same in .metrics file.</li>
+</ul>
+
+
+<p>As I mentioned above, tools such as flay and flog, which comes as part of metric_fu, have <a href="https://github.com/iain/metrical/issues/4">issues</a> working with ruby 1.9.2. And the same case with stats graph and syntax highlighting. The same case with <a href="https://github.com/relevance/rcov/issues/8">rcov</a> also. So I had to create a <em><strong>.metrics</strong></em> file with the following contents and put in the project dir:</p>
+
+<p><span style="font-family: Consolas, Monaco, 'Courier New', Courier, monospace; line-height: 18px;"> </span></p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>MetricFu::Configuration.run do |config|
+</span><span class='line'>        config.code_dirs = ['app', 'lib']
+</span><span class='line'>        config.syntax_highlighting = false
+</span><span class='line'>        config.metrics  = [:churn,:reek,:roodi,:hotspots,:rails_best_practices]
+</span><span class='line'>        config.graphs   = [:reek, :roodi, :rails_best_practices]
+</span><span class='line'>        config.rcov[:test_files] = ['spec/**/*_spec.rb']
+</span><span class='line'>        config.rcov[:rcov_opts] &lt;&lt; &quot;-Ispec&quot; # Needed to find spec_helper
+</span><span class='line'>end</span></code></pre></td></tr></table></div></figure>
+
+
+<p>For test coverage I&#8217;ve used <a href="https://github.com/colszowka/simplecov">Simplecov</a> which is easy to setup. It will generate the coverage report whenever you run the tests. This also generated html report which can be integrated easily into Jenkins. As mentioned <a href="https://github.com/colszowka/simplecov/issues/42">here</a> in the issue list, it does not generate the report when you are running with <a href="https://github.com/timcharper/spork/wiki">spork</a>.</p>
+
+<p>Continued..</p>
+
+<ul>
+    <li><a title="Continuous Delivery – Part 1: Our Jenkins Build Pipeline setup" href="http://www.multunus.com/2011/07/continuous-delivery-using-jenkins-build-pipeline/">Continuous Delivery – Part 1: Our Jenkins Build Pipeline setup</a></li>
+    <li><a title="Continuous Delivery – Part 3: Running custom rake tasks during deployment" href="http://www.multunus.com/2011/07/continuous-delivery-contd/">Continuous Delivery – Part 3: Running custom rake tasks during deployment</a></li>
+    <li><a title="Continuous Delivery – Part 4: Rolling back database migrations with Capistrano rollback" href="http://www.multunus.com/2011/08/continuous-delivery-part-3-rolling-back-database-migrations-with-capistrano-rollback/">Continuous Delivery – Part 4: Rolling back database migrations with Capistrano rollback</a></li>
+</ul>
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Blueprint - reverse engineering your server configuration]]></title>
+    <link href="http://www.multunus.com/2011/07/blueprint-reverse-engineering-your-server-configuration/"/>
+    <updated>2011-07-31T15:35:16+05:30</updated>
+    <id>http://www.multunus.com/2011/07/blueprint-reverse-engineering-your-server-configuration</id>
+    <content type="html"><![CDATA[<p>There are many tools like <a href="http://wiki.opscode.com/display/chef/Home">Chef</a>, <a href="http://projects.puppetlabs.com/projects/puppet">Puppet</a> etc. to manage the server configuration, but there are not many which do the reverse i.e. create a configuration from an existing server. <a href="https://github.com/devstructure/blueprint">Blueprint</a> does exactly the latter.</p>
+
+<p>Its a set of python scripts which reverse engineer your server configuration. It stores the configuration locally in its own repository, but you can also:</p>
+
+<ul>
+    <li>Create Puppet/Chef scripts</li>
+    <li>Convert into a normal shell script</li>
+    <li>Using <a href="https://github.com/devstructure/blueprint-io">Blueprint I/O</a>, store the configuration in remote server and pull it when required</li>
+</ul>
+
+
+<p>It scans all the packages installed on the machine and adds those into the configuration. According to the <a href="https://devstructure.com/docs/tutorial.html">tutorial</a>, you can do this on a dedicated server or on virtual servers created using <a href="http://www.virtualbox.org/">VirtualBox</a> etc, or on cloud servers like <a href="http://aws.amazon.com/ec2">Amazon EC2</a>, <a href="http://www.rackspacecloud.com/cloud_hosting_products/servers">Rackspace</a> etc.</p>
+
+<p>I&#8217;ve tried it on a dedicated server (i.e. our CI server) as well as on an EC2 server. I faced a couple of issues, but with their help (see issues <a href="https://github.com/devstructure/blueprint/issues/71">71</a> and <a href="https://github.com/devstructure/blueprint/issues/63">63</a>), got those fixed.</p>
+
+<p>While bringing up the EC2 instance, you can give the shell script created by Blueprint as user data, provided the size of the script is below 16384 bytes.</p>
+
+<p>Its really an awesome tool. I got the reference to it from <a href="http://ruby5.envylabs.com/episodes/189-episode-186-june-24-2011/stories/1668-blueprint">Ruby5</a></p>
+]]></content>
+  </entry>
+  
 </feed>

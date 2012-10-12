@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Android | Multunus]]></title>
   <link href="http://www.multunus.com/blog/categories/android/atom.xml" rel="self"/>
   <link href="http://www.multunus.com/"/>
-  <updated>2012-10-11T10:12:50+00:00</updated>
+  <updated>2012-10-12T07:45:53+05:30</updated>
   <id>http://www.multunus.com/</id>
   <author>
     <name><![CDATA[Multunus Admin]]></name>
@@ -16,7 +16,7 @@
   <entry>
     <title type="html"><![CDATA[A round up of our presentations and writings]]></title>
     <link href="http://www.multunus.com/2012/02/a-round-up-of-our-presentations-and-writings/"/>
-    <updated>2012-02-27T18:29:30+00:00</updated>
+    <updated>2012-02-27T23:59:30+05:30</updated>
     <id>http://www.multunus.com/2012/02/a-round-up-of-our-presentations-and-writings</id>
     <content type="html"><![CDATA[<p>We started speaking at conferences last year. We've also been doing a fair bit of writing. This post rounds up what we've up to - along with links to our presentations and some of what we've written.</p>
 
@@ -50,7 +50,7 @@
   <entry>
     <title type="html"><![CDATA[A sneak peek into Mobile App Opportunities in 2012]]></title>
     <link href="http://www.multunus.com/2012/01/a-sneak-peak-into-mobile-app-opportunities-in-2012/"/>
-    <updated>2012-01-27T11:15:13+00:00</updated>
+    <updated>2012-01-27T16:45:13+05:30</updated>
     <id>http://www.multunus.com/2012/01/a-sneak-peak-into-mobile-app-opportunities-in-2012</id>
     <content type="html"><![CDATA[<div style="text-align: center;"><em>This article was originally written by me for <a href="http://yourstory.in/2011/12/a-sneak-peek-into-mobile-app-opportunities-in-2012/" target="_blank">yourstory.in</a>. But this version is more "complete" with all of the original links in place.</em></div>
 
@@ -270,7 +270,7 @@
   <entry>
     <title type="html"><![CDATA[Our talks at Droidcon 2011, Bangalore]]></title>
     <link href="http://www.multunus.com/2011/12/droidcon-two-talks-we-gave/"/>
-    <updated>2011-12-02T10:07:00+00:00</updated>
+    <updated>2011-12-02T15:37:00+05:30</updated>
     <id>http://www.multunus.com/2011/12/droidcon-two-talks-we-gave</id>
     <content type="html"><![CDATA[<p>We spoke at Droidcon, Bangalore that happened on Nov 18th and 19th. We had two interesting talks on both days.</p>
 
@@ -295,7 +295,7 @@
   <entry>
     <title type="html"><![CDATA[Continuous Delivery: Building Android Library project]]></title>
     <link href="http://www.multunus.com/2011/11/continuous-delivery-building-android-library-project/"/>
-    <updated>2011-11-04T09:25:20+00:00</updated>
+    <updated>2011-11-04T14:55:20+05:30</updated>
     <id>http://www.multunus.com/2011/11/continuous-delivery-building-android-library-project</id>
     <content type="html"><![CDATA[<p>This post talks about how to build an Android Project using ant which depends on an Android Library project.</p>
 
@@ -313,7 +313,7 @@
   <entry>
     <title type="html"><![CDATA[Simple Image Filter using OpenGL ES in Android]]></title>
     <link href="http://www.multunus.com/2011/10/simple-image-filter-using-opengl-es-in-android/"/>
-    <updated>2011-10-07T10:05:45+00:00</updated>
+    <updated>2011-10-07T15:35:45+05:30</updated>
     <id>http://www.multunus.com/2011/10/simple-image-filter-using-opengl-es-in-android</id>
     <content type="html"><![CDATA[<p><em><strong>Note</strong>: This post assumes some basic knowledge in setting up an OpenGL app in Android. A basic example for rendering a texture on to a surface can be found <a href="http://developer.android.com/resources/samples/ApiDemos/src/com/example/android/apis/graphics/GLES20TriangleRenderer.html">here.</a> You can use this as the initial setup for trying out Shader language program listed in this post.</em></p>
 
