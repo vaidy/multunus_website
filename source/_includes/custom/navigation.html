@@ -26,11 +26,13 @@
         <li><a href="{{ root_url }}/contact-us/location">Location</a></li>
       </ul>
   </li>
+  {% if page.url == "/index.html" %}
   <li>
     <a href="http://multunus.com/youngturks" target="_NEW">
-    Young Turks<img src="/images/icon_new.png" class="new-icon"/>
+      Young Turks<img src="/images/icon_new.png" class="new-icon"/>
     </a>
   </li>
+  {% endif %}
 </ul>
 <ul class="nav social-icons pull-right">
   <li id="facebook"> 
