@@ -5,11 +5,11 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>Disabling callbacks in Rails 3  | Multunus </title>
+  <title>Web Application Security  | Multunus </title>
   <meta name="author" content="Multunus Admin">
 
   
-  <meta name="description" content="It is common requirement to disable the callbacks like after_save, after_create etc while importing/migrating data. One way to avoid this is by &hellip;">
+  <meta name="description" content="Now a days we, programmers are really obsessed with test driving our application and automating. We automate our unit tests and integration tests. We &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -18,7 +18,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://www.multunus.com/2011/05/disabling-callbacks-in-rails-3">
+  <link rel="canonical" href="http://www.multunus.com/2012/10/web-application-security">
   <link href="/images/favicon.ico" rel="icon">
   <link href="/stylesheets/bootstrap/bootstrap.css" media="screen, projection" rel="stylesheet" type="text/css">
   <link href="/stylesheets/bootstrap/responsive.css" media="screen, projection" rel="stylesheet" type="text/css">
@@ -109,6 +109,17 @@
         <li><a href="/contact-us/location">Location</a></li>
       </ul>
   </li>
+  <li  class="dropdown">
+      <a href="/contact-us/contact">Opensource</a>
+      <ul class="dropdown-menu">
+        <li><a href="http://github.com/multunus/timeline" target="_NEW">Timeline</a></li>
+      </ul>
+  </li>
+  <li>
+    <a href="http://multunus.com/youngturks" target="_NEW">
+    Young Turks<img src="/images/icon_new.png" class="new-icon"/>
+    </a>
+  </li>
 </ul>
 <ul class="nav social-icons pull-right">
   <li id="facebook"> 
@@ -145,32 +156,129 @@
   
 
 
-<div datetime="2011-05-01T02:10:17+05:30" pubdate data-updated="true"><div class='day'>01</div><div class='month-year'><div class='month'>May</div><div class='year'>2011</div></div></div>
+<div datetime="2012-10-11T04:25:05+00:00" pubdate data-updated="true"><div class='day'>11</div><div class='month-year'><div class='month'>October</div><div class='year'>2012</div></div></div>
   </div>
   <div class="span10">
     
       <header>
-        <h2 class="entry-title">Disabling Callbacks in Rails 3</h2>
+        <h2 class="entry-title">Web Application Security</h2>
         <p class="meta">
           
   
 
-<div class="byline author vcard"><strong>Posted by: </strong><span class="fn">Leena</span></div>
+<div class="byline author vcard"><strong>Posted by: </strong><span class="fn">Sreenath, Leena</span></div>
 
         </p>
       </header>
     
   </div>
 
-  <div class="entry-content"><p>It is common requirement to disable the callbacks like <code>after_save</code>, <code>after_create </code>etc while importing/migrating data. One way to avoid this is by directly importing the data into DB using a command like <code>mysqlimport</code>. But by doing that, the Rails validations etc will not work. We can disable the callbacks using the <code>skip_callback</code> method.  For eg:</p>
-
-<p><code>User.skip_callback("create",:after,:send_confirmation_email)</code></p>
-
-<p>The above will skip the <code>send_confirmation_email</code> callback fired on after_create.</p>
-
-<p>To set the callback back:</p>
-
-<p><code>User.set_callback("create",:after,:send_confirmation_email)</code></p>
+  <div class="entry-content"><p class="c0"><span>Now a days we, programmers are really obsessed
+    with test driving our application and automating. We automate our
+    unit tests and integration tests. We do continuous
+    integration. But what about security testing
+    ?</span></p><p class="c0
+    c2"><span></span></p><p class="c0"><span>Many organization hire
+    security professionals to test the web application security when
+    the complete product is built and most often to test production
+    environment. But most of the vulnerabilities that is present in
+    the system could have fixed very easily and cheaply when found
+    during the development phase. Also since the app is in the
+    production environment hired security consultants will not be able
+    to conduct an attack against the system and verify the
+    vulnerability.</span></p><p class="c0
+    c2"><span></span></p><p class="c0"><span>Hiring a security
+    consultant is very costly as well as :</span></p><p class="c0
+    c2"><span></span></p><ol class="c6" start="1"><li class="c4
+    c0"><span>We will not be supplied with a security test
+    suit.</span></li><li class="c4 c0"><span>We will not have list of
+    passing test cases and failing tests instead we get a list of
+    vulnerabilities</span></li><li class="c4 c0"><span>After fixing
+    the vulnerabilities we might have to hire them again to make sure
+    that all the vulnerabilities are
+    fixed.</span></li></ol><p class="c0
+    c2"><span></span></p><p class="c0"><span>The truth is developers
+    can identify and fix many of such vulnerabilities during the
+    development itself. Moreover we can write automated security
+    testing with the help of integration testing
+    tools.</span></p><p class="c0
+    c2"><span></span></p><p class="c0"><span>There are two approaches
+    for testing our web application security</span></p><p class="c0
+    c2"><span></span></p><ol class="c6" start="1"><li class="c4
+    c0"><span>Black box testing.</span></li><li class="c0
+    c4"><span>White box testing.</span></li></ol><p class="c0
+    c2"><span></span></p><p class="c0"><span>In black box testing we
+    analyse the security of our application through the web
+    &nbsp;front-end of our application. Vulnerability scanners is an
+    example for black box scanning. In white box testing we use static
+    code analysis to find the vulnerabilities in the
+    system.</span></p><p class="c0
+    c2"><span></span></p><p class="c0"><span>For automated security
+    analysis many tools are available. ROR developers can use any of
+    the following.</span></p><p class="c0
+    c2"><span></span></p><ol class="c6" start="1"><li class="c4
+    c0"><span class="c7"><a class="c10"
+    href="http://brakemanscanner.org/">Brakeman</a></span><span>&nbsp;for
+    White box testing.</span></li><li class="c4
+    c0"><span class="c7"><a class="c10"
+    href="https://www.owasp.org/index.php/OWASP_Zed_Attack_Proxy_Project">Zed
+    Attack Proxy</a></span><span>&nbsp;for Black box
+    testing.</span></li></ol><p class="c0
+    c2"><span></span></p><p class="c0
+    c2"><span></span></p><p class="c0"><span>Brakeman is a static code
+    analyzer whereas ZAP is a vulnerability scanning tool. Both serves
+    different functionalities. Note that ZAP is not dependent on any
+    programming language.</span></p><p class="c0
+    c2"><span></span></p><p class="c0"><span>Now regarding which
+    method to follow for security testing I would like to quote the
+    following from this </span><span class="c7"><a class="c10"
+    href="http://jeremiahgrossman.blogspot.in/2009/10/black-box-vs-white-box-you-are-doing-it.html">blog</a></span><span>&nbsp;</span><span>:</span></p><p class="c0
+    c2"><span></span></p><p class="c0"><span class="c8">&ldquo;Black
+    box vulnerability assessments measure the hackability of a website
+    given an attacker with a certain amount of resources, skill, and
+    scope. We know that bad guys will attack essentially all publicly
+    facing websites at some point in time, so it makes sense for us to
+    learn about the defects before they do. As such, black box
+    vulnerability assessments are best defined as an outcome based
+    metric for measuring the security of a system with all security
+    safeguards in place.</span></p><p class="c0
+    c2"><span class="c8"></span></p><p class="c0"><span class="c8">White
+    box source code reviews, on the other hand, measure and/or help
+    reduce the number of security defects in an application resulting
+    from the current software development life-cycle. In the immortal
+    words of Michael Howard regarding Microsoft&rsquo;s SDL mantra,
+    &ldquo;Reduce the number of vulnerabilities and reduce the
+    severity of the bugs you miss.&rdquo; Software has bugs, and that
+    will continue to be the case. Therefore it is best to minimize
+    them to the extent we can in effort to increase software
+    assurance.&rdquo;</span></p><p class="c0
+    c2"><span class="c13"></span></p><p class="c0"><span>We can run
+    Brakeman against our application and after assessing the written
+    code Brakeman will report the possible vulnerabilities. It will
+    help us improve our code. But the downside is, it &nbsp;may not be
+    zen percentage in finding the possible vulnerabilities because it
+    checks for typical coding errors which opens the doors for
+    security breaches. </span></p><p class="c0
+    c2"><span></span></p><p class="c0"><span>ZAP is a really good web
+    app security analysis tool. It is a proxy which sits between the
+    web application and the web browser constantly analysing all the
+    HTTP traffic. But for the same reason, we need to walk through all
+    the web features so that ZAP can analyse the
+    traffic. </span></p><p class="c0"><span>We were thinking we
+    &nbsp;should try to &nbsp;automate this process and once we find
+    any issue, write a test to reproduce the same issue and go ahead
+    and fix the problem. This will help us in making sure that the
+    problem got fixed.</span></p><p class="c0
+    c2"><span></span></p><p class="c0"><span>If you want to automate
+    the security testing using ZAP, it can be used done by integrating
+    it with Web application testing tools such
+    as </span><span class="c7"><a class="c10"
+    href="http://seleniumhq.org/">Selenium</a></span><span>.</span></p><p class="c0
+    c2"><span></span></p><p class="c0"><span>Regarding how to
+    configure ZAP and analyze the security vulnerabilities, I will
+    cover it in a separate blog post. I also will be writing about how
+    to integrate it with Selenium for creating automated security
+    testing suite.</span></p>
 </div>
   
     <p class="meta">
@@ -179,7 +287,7 @@
 <div class="categories">
 	<strong>Filed in: </strong> 
   
-    <a class='category' href='/blog/categories/all-posts/'>All Posts</a>, <a class='category' href='/blog/categories/rails/'>Rails</a>, <a class='category' href='/blog/categories/technology/'>Technology</a>
+    <a class='category' href='/blog/categories/technology/'>Technology</a>
   
 </div>
 
@@ -196,11 +304,11 @@
 		</div>
 	
 	
-		<div class="g-plusone" data-size="medium" data-href="http://www.multunus.com/2011/05/disabling-callbacks-in-rails-3">
+		<div class="g-plusone" data-size="medium" data-href="http://www.multunus.com/2012/10/web-application-security">
 		</div>
 	
   	
-  		<a href="http://twitter.com/share" class="twitter-share-button" data-url="http://www.multunus.com/2011/05/disabling-callbacks-in-rails-3" data-counturl="http://www.multunus.com/2011/05/disabling-callbacks-in-rails-3" data-count="none" data-text="See the timelines of the young turks at Multunus">
+  		<a href="http://twitter.com/share" class="twitter-share-button" data-url="http://www.multunus.com/2012/10/web-application-security" data-counturl="http://www.multunus.com/2012/10/web-application-security" data-count="none" data-text="See the timelines of the young turks at Multunus">
   		</a>
   	
   	<script src="//platform.linkedin.com/in.js" type="text/javascript"></script>
@@ -223,8 +331,8 @@
       
         
         // var disqus_developer = 1;
-        var disqus_identifier = 'http://www.multunus.com/2011/05/disabling-callbacks-in-rails-3/';
-        var disqus_url = 'http://www.multunus.com/2011/05/disabling-callbacks-in-rails-3/';
+        var disqus_identifier = 'http://www.multunus.com/2012/10/web-application-security/';
+        var disqus_url = 'http://www.multunus.com/2012/10/web-application-security/';
         var disqus_script = 'embed.js';
       
     (function () {
@@ -293,6 +401,8 @@
         <div class="span4 featured-posts">
           <div class="header">Featured Posts</div>
 <ul id="featured-posts">
+  
+    
   
     
   

@@ -21,6 +21,17 @@
         <li><a href="{{ root_url }}/contact-us/location">Location</a></li>
       </ul>
   </li>
+  <li {% if page.nav == "Opensource" %} class="active dropdown" {% endif %} class="dropdown">
+      <a href="{{ root_url }}/contact-us/contact">Opensource</a>
+      <ul class="dropdown-menu">
+        <li><a href="http://github.com/multunus/timeline" target="_NEW">Timeline</a></li>
+      </ul>
+  </li>
+  <li>
+    <a href="http://multunus.com/youngturks" target="_NEW">
+    Young Turks<img src="/images/icon_new.png" class="new-icon"/>
+    </a>
+  </li>
 </ul>
 <ul class="nav social-icons pull-right">
   <li id="facebook"> 
