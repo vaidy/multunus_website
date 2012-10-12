@@ -9,7 +9,7 @@
   <meta name="author" content="Multunus Admin">
 
   
-  <meta name="description" content="Liquid error: incompatible character encodings: UTF-8 and ISO-8859-1 Comments Please enable JavaScript to view the comments powered by Disqus. var &hellip;">
+  <meta name="description" content="This post talks about how to run tests for the build setup as mentioned in Part 1. Generate the build script for test The suggested practice is to &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -90,7 +90,6 @@
   
     <li><a class="small-logo" href="/"><img src='/images/logo_small.png' /></a></li>  
   
-	<li  ><a href="/">Home</a></li>	
   <li  ><a href="/what-we-do">What We Do</a></li>
   <li  ><a href="/why-us">Why Us?</a></li>
   <li  ><a href="/careers">Careers</a></li>
@@ -101,7 +100,7 @@
       <li><a href="/about/people">The Team</a></li>
     </ul>
   </li>
-  <li  class="active" ><a href="/blog">Our Blog</a></li>
+  <li ><a href="/blog">Our Blog</a></li>
   <li  class="dropdown">
       <a href="/contact-us/contact">Contact Us</a>
       <ul class="dropdown-menu">
@@ -110,7 +109,7 @@
       </ul>
   </li>
   <li  class="dropdown">
-      <a href="/contact-us/contact">Opensource</a>
+      <a href="/contact-us/contact">Open Source</a>
       <ul class="dropdown-menu">
         <li><a href="http://github.com/multunus/timeline" target="_NEW">Timeline</a></li>
       </ul>
@@ -142,7 +141,100 @@
   <div class="container-fluid main-content">
     <div class="row-fluid">
       <article class="hentry span9 blog-post" role="article">
-  Liquid error: incompatible character encodings: UTF-8 and ISO-8859-1
+  <div class="row-fluid">
+  <div class="span2 date-container">
+    
+
+
+
+
+
+
+
+
+  
+
+
+<div datetime="2011-10-06T06:51:57+05:30" pubdate data-updated="true"><div class='day'>06</div><div class='month-year'><div class='month'>October</div><div class='year'>2011</div></div></div>
+  </div>
+  <div class="span10">
+    
+      <header>
+        <h2 class="entry-title">Continuous Delivery for Android Apps – Part 2</h2>
+        <p class="meta">
+          
+  
+
+<div class="byline author vcard"><strong>Posted by: </strong><span class="fn">Leena</span></div>
+
+        </p>
+      </header>
+    
+  </div>
+
+  <div class="entry-content"><p>This post talks about how to run tests for the build setup as mentioned in <a href="/2011/09/continuous-delivery-for-android-apps-part-1/">Part 1</a>.</p>
+
+<h3><span style="text-decoration: underline;">Generate the build script for test</span></h3>
+
+
+<p>The suggested practice is to have 2 separate projects for android, one the source and the other for the tests. The following command will generate a build.xml for the test project. Replace the  with the path of the source path.</p>
+
+<p><span style="font-family: Consolas, Monaco, 'Courier New', Courier, monospace; line-height: 18px;">android update test-project -m ../&lt;project-path&gt; -p . </span></p>
+
+<p>One problem I&#8217;ve seen is that, it does not break the build even if there are failures in the test. Issue is reported here:</p>
+
+<!-- more -->
+
+
+<p><a href="http://code.google.com/p/android/issues/detail?id=14241">http://code.google.com/p/android/issues/detail?id=14241</a></p>
+
+<p>I had to override the run-tests target as mentioned below to fix this issue:</p>
+
+<pre>&lt;target name="run-tests" depends="-install-tested-project, install"
+description="Runs tests from the package defined in test.package property"&gt;
+    &lt;echo&gt;Running tests ...&lt;/echo&gt;
+    &lt;exec executable="${adb}" failonerror="true" outputproperty="tests.output"&gt;
+        &lt;arg value="shell" /&gt;
+        &lt;arg value="am" /&gt;
+        &lt;arg value="instrument" /&gt;
+        &lt;arg value="-w" /&gt;
+        &lt;arg value="-e" /&gt;
+        &lt;arg value="coverage" /&gt;
+        &lt;arg value="@{emma.enabled}" /&gt;
+        &lt;arg value="${manifest.package}/${test.runner}" /&gt;
+    &lt;/exec&gt;
+    &lt;echo message="${tests.output}"/&gt;
+    &lt;fail message="Tests failed!!!"&gt;
+        &lt;condition&gt;
+            &lt;or&gt;
+            &lt;contains string="${tests.output}" substring="Error" /&gt;
+            &lt;contains string="${tests.output}" substring="Fail" /&gt;
+            &lt;/or&gt;
+        &lt;/condition&gt;
+     &lt;/fail&gt;
+&lt;/target&gt;</pre>
+
+
+<p>You can change the ant commands to <span style="font-family: Consolas, Monaco, 'Courier New', Courier, monospace; line-height: 18px;">clean run-tests release </span>in Jenkins to run the tests as part of packaging.</p>
+
+<p>Next I will be writing about how to start emulator from Jenkins while running the tests.</p>
+</div>
+  
+    <p class="meta">
+      
+
+<div class="categories">
+	<strong>Filed in: </strong> 
+  
+    <a class='category' href='/blog/categories/all-posts/'>All Posts</a>, <a class='category' href='/blog/categories/android/'>Android</a>, <a class='category' href='/blog/categories/continuous-delivery/'>Continuous Delivery</a>, <a class='category' href='/blog/categories/process/'>Process</a>
+  
+</div>
+
+
+      
+    </p>
+  
+</div>
   <footer>
     
       <div class="sharing">
