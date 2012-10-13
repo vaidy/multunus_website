@@ -1,31 +1,11 @@
 <ul class="nav">
+
   {% if page.url != "/index.html" %}
-    <li><a class="small-logo" href="{{ root_url }}/"><img src='/images/logo_small.png' /></a></li>  
-  {% endif %}
-  <li {% if page.nav == "What We Do" %} class="active" {% endif %} ><a href="{{ root_url }}/what-we-do">What We Do</a></li>
-  <li {% if page.nav == "Why Us?" %} class="active" {% endif %} ><a href="{{ root_url }}/why-us">Why Us?</a></li>
-  <li {% if page.nav == "Careers" %} class="active" {% endif %} ><a href="{{ root_url }}/careers">Careers</a></li>
-  <li {% if page.nav == "Our Blog" %} class="active" {% endif %}><a href="{{ root_url }}/blog">Blog</a></li>
-  <li {% if page.nav == "Opensource" %} class="active dropdown" {% endif %} class="dropdown">
-      <a href="#">Open Source</a>
-      <ul class="dropdown-menu">
-        <li><a href="http://github.com/multunus/timeline" target="_NEW">Timeline</a></li>
-      </ul>
-  </li>
-  <li {% if page.nav == "About" %} class="active dropdown" {% endif %} class="dropdown">
-    <a href="{{ root_url }}/about/history">About</a>
-    <ul class="dropdown-menu">
-      <li><a href="{{ root_url }}/about/history">History</a></li>
-      <li><a href="{{ root_url }}/about/people">The Team</a></li>
-    </ul>
-  </li>
-  <li {% if page.nav == "Contact Us" %} class="active dropdown" {% endif %} class="dropdown">
-      <a href="{{ root_url }}/contact-us/contact">Contact Us</a>
-      <ul class="dropdown-menu">
-        <li><a href="{{ root_url }}/contact-us/contact">Write to Us</a></li>
-        <li><a href="{{ root_url }}/contact-us/location">Location</a></li>
-      </ul>
-  </li>
+  <li><a class="small-logo" href="{{ root_url }}/"><img src='/images/logo_small.png' /></a></li>  
+  {% endif %} 
+
+  {% navigation %}
+
   {% if page.url == "/index.html" %}
   <li>
     <a href="http://multunus.com/youngturks" target="_NEW">
@@ -33,6 +13,7 @@
     </a>
   </li>
   {% endif %}
+
 </ul>
 <ul class="nav social-icons pull-right">
   <li id="facebook"> 
