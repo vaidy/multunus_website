@@ -1,5 +1,0 @@
----
-layout: post
-title: facebook_white_icon_with_fb_color
----
-

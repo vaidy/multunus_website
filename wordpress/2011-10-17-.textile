@@ -1,6 +1,0 @@
----
-layout: post
-title: Continuous Delivery - Configuring Sonar with Jenkins
----
-
-In this post, I am writing about how to configure Sonar with Jenkins.
