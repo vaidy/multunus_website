@@ -1,0 +1,41 @@
+--- 
+:what_we_do: 
+  :title: What We Do
+  :address: /what-we-do
+:why_us: 
+  :title: Why Us?
+  :address: /why-us
+:careers: 
+  :title: Careers
+  :address: /careers
+:blog: 
+  :title: Blog
+  :address: /blog
+:open_source: 
+  :title: Open Source
+  :address: "#"
+  :sub_nav: 
+    :timeline: 
+      :title: Timleine
+      :address: http://github.com/multunus/timeline
+      :target: _blank
+:about: 
+  :title: About
+  :address: /about/history
+  :sub_nav: 
+    :history: 
+      :title: History
+      :address: /about/history
+    :people: 
+      :title: The Team
+      :address: /about/people
+:contact_us: 
+  :title: Contact Us
+  :address: /contact-us/contact
+  :sub_nav: 
+    :write_to_us: 
+      :title: Write To Us
+      :address: /contact-us/contact
+    :location: 
+      :title: Location
+      :address: /contact-us/location
