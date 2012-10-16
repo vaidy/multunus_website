@@ -34,7 +34,6 @@ module Jekyll
       @base = base
       @dir  = author_dir
       @name = 'index.html'
-      puts "author #{author} @dir #{author_dir}"
       self.process(@name)
       # Read the YAML data from the layout page.
       self.read_yaml(File.join(base, '_layouts'), 'author_index.html')
@@ -93,7 +92,6 @@ module Jekyll
 
     def generate(site)
       site.write_author_indexes
-      puts "site.authors #{site.authors}"
     end
 
   end
