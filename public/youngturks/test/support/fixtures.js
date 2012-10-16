@@ -1,17 +1,13 @@
-<!DOCTYPE html>
+    function loadFixture(){
+      $('body').html('');
+      /*:DOC += <!DOCTYPE html>
 <html>
 
   <head>
     <title>Young Turks @ Multunus</title>
     <link rel="icon" type="image/png" href="images/favicon.ico">
     <meta property="og:image" content="http://multunus.herokuapp.com/youngturks/images/young_turks_collage.jpg"/>
-    <meta property="og:description" content="See the timelines of our
-    young turks: Manoj, Tamil, Akshay, Sreenath, Anup, Ernest,
-    Abhilash and KP" />
-    <script type="text/javascript">
-      var path = window.location.pathname;
-      if(path.lastIndexOf("/")==0){window.location.href=window.location.href+"/";}
-    </script>
+    <meta property="og:description" content="See the timelines of our young turks: Manoj, Tamil, Akshay, Sreenath, Anup, Ernest, Abhilash and KP" />
     <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
     <link rel="stylesheet" type="text/css" href="css/timeliner.css">
     <link rel="stylesheet" type="text/css" href="css/application.css">
@@ -209,3 +205,5 @@
 </body>
 
 </html>
+*/
+    }
