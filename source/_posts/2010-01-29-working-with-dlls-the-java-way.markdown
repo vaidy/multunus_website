@@ -3,7 +3,8 @@ comments: true
 layout: post
 title: Working with DLLs, the Java way
 date: 2010-01-29 12:20:51.000000000 +05:30
-author: Jeevan
+author: 
+- Jeevan
 categories:
 - All Posts
 - Technology

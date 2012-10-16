@@ -3,7 +3,8 @@ comments: true
 layout: post
 title: Our new reading list
 date: 2010-02-09 11:39:55.000000000 +05:30
-author: Vaidy
+author: 
+- Vaidy
 categories:
 - All Posts
 - Business

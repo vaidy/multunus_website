@@ -3,7 +3,8 @@ comments: true
 layout: post
 title: Venkat Subramaniam's talk on Code Quality
 date: 2011-04-21 09:47:11.000000000 +05:30
-author: Shakeeb
+author: 
+- Shakeeb
 categories:
 - All Posts
 - Process

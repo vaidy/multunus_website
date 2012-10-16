@@ -3,7 +3,8 @@ comments: true
 layout: post
 title: Convert code signing certificates from "pfx" to "p12" format
 date: 2010-02-06 05:13:34.000000000 +05:30
-author: Leena
+author: 
+- Leena
 categories:
 - All Posts
 - Technology

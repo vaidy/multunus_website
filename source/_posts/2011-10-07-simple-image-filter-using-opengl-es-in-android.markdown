@@ -3,7 +3,8 @@ comments: true
 layout: post
 title: Simple Image Filter using OpenGL ES in Android
 date: 2011-10-07 15:35:45.000000000 +05:30
-author: Tamil
+author: 
+- Tamil
 categories:
 - All Posts
 - Android

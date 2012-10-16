@@ -3,7 +3,8 @@ comments: true
 layout: post
 title: CoffeeScript and Rails 3.0 - Quick setup
 date: 2011-06-23 14:10:58.000000000 +05:30
-author: Manoj
+author: 
+- Manoj
 categories:
 - All Posts
 - Rails

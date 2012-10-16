@@ -44,7 +44,7 @@ module Jekyll
       self.data['title']       = "#{author}"
       # Set the meta-description for this page.
       meta_description_prefix  = site.config['author_meta_description_prefix'] || 'author: '
-      self.data['description'] = "#{meta_description_prefix}#{author}"
+      self.data['description'] = "#{meta_description_prefix}#{author}"      
     end
 
   end
@@ -58,7 +58,7 @@ module Jekyll
     #
     #  +author_dir+ is the String path to the author folder.
     #  +author+     is the author currently being processed.
-    def write_author_index(author_dir, author)
+    def write_author_index(author_dir, author)      
       index = AuthorIndex.new(self, self.source, author_dir, author)
       index.render(self.layouts, site_payload)
       index.write(self.dest)
@@ -69,15 +69,14 @@ module Jekyll
 
     # Loops through the list of author pages and processes each one.
     def write_author_indexes
-      puts "#{self.layouts.key? 'author_index'}"
       if self.layouts.key? 'author_index'
-        dir = self.config['author_dir'] || 'author'
-        puts "inside if #{self.authors}"
-        self.author.split(",").each do |author|
-          puts "authors #{author}"
-          self.write_author_index(File.join(dir, author), author)
+        dir = self.config['author_dir'] || 'authors'        
+        self.posts.each do |post|
+          post_authors = post.data["author"]
+          post_authors.each do |author|              
+            self.write_author_index(File.join(dir, author.downcase), author)
+          end
         end
-
       # Throw an exception if the layout couldn't be found.
       else
         throw "No 'author_index' layout found."
@@ -90,10 +89,11 @@ module Jekyll
   # Jekyll hook - the generate method is called by jekyll, and generates all of the author pages.
   class GenerateAuthor < Generator
     safe true
-    priority :low
+    priority :high
 
     def generate(site)
       site.write_author_indexes
+      puts "site.authors #{site.authors}"
     end
 
   end
@@ -109,10 +109,10 @@ module Jekyll
     #
     # Returns string
     #
-    def author_links(author)
+    def author_links(authors)
       dir = @context.registers[:site].config['author_dir']
-      authors = author.split(",").map do |item|
-        "<a class='author' href='/#{dir}/#{item.downcase}/'>#{item}</a>"
+      authors = authors.map do |author|
+        "<a class='author' href='/#{dir}/#{author.downcase}/'>#{author}</a>"
       end
       case authors.length
       when 0

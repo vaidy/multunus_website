@@ -3,7 +3,8 @@ comments: true
 layout: post
 title: Avoiding the "crunch mode" in the last few weeks of a project
 date: 2011-06-29 11:19:52.000000000 +05:30
-author: Anitha
+author: 
+- Anitha
 categories:
 - All Posts
 - Process

@@ -3,7 +3,8 @@ comments: true
 layout: post
 title: Configuring Hudson CI server behind firewall
 date: 2010-09-02 14:44:17.000000000 +05:30
-author: Leena
+author: 
+- Leena
 categories:
 - All Posts
 - Continuous Delivery

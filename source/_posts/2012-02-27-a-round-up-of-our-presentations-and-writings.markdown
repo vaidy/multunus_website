@@ -3,7 +3,8 @@ comments: true
 layout: post
 title: A round up of our presentations and writings
 date: 2012-02-27 23:59:30.000000000 +05:30
-author: Vaidy
+author: 
+- Vaidy
 categories:
 - All Posts
 - Android

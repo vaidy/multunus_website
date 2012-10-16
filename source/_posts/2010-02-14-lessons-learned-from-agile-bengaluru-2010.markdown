@@ -3,7 +3,8 @@ comments: true
 layout: post
 title: Lessons learned from Agile Bengaluru 2010
 date: 2010-02-14 09:55:48.000000000 +05:30
-author: Leena
+author: 
+- Leena
 categories:
 - All Posts
 - Process

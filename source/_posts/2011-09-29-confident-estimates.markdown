@@ -3,7 +3,8 @@ comments: true
 layout: post
 title: Confident Estimates
 date: 2011-09-29 08:58:51.000000000 +05:30
-author: Manoj
+author: 
+- Manoj
 categories:
 - All Posts
 - Process

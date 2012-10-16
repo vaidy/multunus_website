@@ -3,7 +3,8 @@ comments: true
 layout: post
 title: Issue while installing Java in EC2 Micro instance
 date: 2011-07-31 14:22:30.000000000 +05:30
-author: Leena
+author: 
+- Leena
 categories:
 - All Posts
 ---

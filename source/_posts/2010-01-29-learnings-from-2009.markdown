@@ -3,7 +3,8 @@ comments: true
 layout: post
 title: ! 'Learnings from 2009 '
 date: 2010-01-29 10:55:05.000000000 +05:30
-author: Vaidy
+author: 
+- Vaidy
 categories:
 - All Posts
 - Business

@@ -4,7 +4,8 @@ layout: post
 title: ! 'Continuous Delivery - Part 4: Rolling back database migrations with Capistrano
   rollback'
 date: 2011-08-14 08:22:40.000000000 +05:30
-author: Leena
+author: 
+- Leena
 categories:
 - All Posts
 - Continuous Delivery

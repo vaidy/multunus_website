@@ -3,7 +3,8 @@ comments: true
 layout: post
 title: Using études to continually improve our development process
 date: 2011-03-15 10:12:59.000000000 +05:30
-author: Vaidy
+author: 
+- Vaidy
 categories:
 - All Posts
 - Process

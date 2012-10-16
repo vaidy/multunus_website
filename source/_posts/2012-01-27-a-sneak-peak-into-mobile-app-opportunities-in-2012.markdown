@@ -4,7 +4,8 @@ layout: post
 featured: true
 title: A sneak peek into Mobile App Opportunities in 2012
 date: 2012-01-27 16:45:13.000000000 +05:30
-author: Vaidy
+author: 
+- Vaidy
 categories:
 - All Posts
 - Android

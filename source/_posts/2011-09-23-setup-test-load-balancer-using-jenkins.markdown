@@ -3,7 +3,8 @@ comments: true
 layout: post
 title: Setup Test Load Balancer using Jenkins
 date: 2011-09-23 09:40:07.000000000 +05:30
-author: KP
+author: 
+- KP
 categories:
 - All Posts
 - Continuous Delivery

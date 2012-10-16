@@ -3,7 +3,8 @@ comments: true
 layout: post
 title: Our talks at Droidcon 2011, Bangalore
 date: 2011-12-02 15:37:00.000000000 +05:30
-author: Manoj
+author: 
+- Manoj
 categories:
 - All Posts
 - Android

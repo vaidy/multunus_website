@@ -3,7 +3,8 @@ comments: true
 layout: post
 title: Rails threadsafe and rake task
 date: 2010-11-03 15:22:08.000000000 +05:30
-author: Leena
+author: 
+- Leena
 categories:
 - All Posts
 - Rails

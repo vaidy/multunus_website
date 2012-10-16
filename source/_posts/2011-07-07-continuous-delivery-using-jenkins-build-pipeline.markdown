@@ -4,7 +4,8 @@ layout: post
 featured: true
 title: ! 'Continuous Delivery - Part 1: Our Jenkins Build Pipeline setup'
 date: 2011-07-07 14:28:55.000000000 +05:30
-author: Leena
+author: 
+- Leena
 categories:
 - All Posts
 - Continuous Delivery

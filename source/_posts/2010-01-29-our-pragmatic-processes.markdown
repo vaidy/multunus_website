@@ -3,7 +3,8 @@ comments: true
 layout: post
 title: Our Pragmatic Processes
 date: 2010-01-29 12:02:22.000000000 +05:30
-author: Vaidy
+author: 
+- Vaidy
 categories:
 - All Posts
 - Process

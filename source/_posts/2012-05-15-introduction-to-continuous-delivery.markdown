@@ -3,7 +3,8 @@ comments: true
 layout: post
 title: Introduction to Continuous Delivery
 date: 2012-05-15 14:49:16.000000000 +05:30
-author: Leena
+author: 
+- Leena
 categories:
 - All Posts
 - Continuous Delivery

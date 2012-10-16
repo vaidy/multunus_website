@@ -3,7 +3,8 @@ comments: true
 layout: post
 title: Lessons from interview with Joel Spolsky
 date: 2011-10-17 00:30:36.000000000 +05:30
-author: Anitha
+author: 
+- Anitha
 categories:
 - All Posts
 ---

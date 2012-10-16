@@ -3,7 +3,8 @@ comments: true
 layout: post
 title: ! 'JQuery Tools: Smooth JS widgets'
 date: 2010-02-01 05:50:24.000000000 +05:30
-author: Manoj
+author: 
+- Manoj
 categories:
 - All Posts
 - Technology

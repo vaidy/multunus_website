@@ -3,7 +3,8 @@ comments: true
 layout: post
 title: ! 'Continuous Delivery of iOS apps using Jenkins and TestFlightApp '
 date: 2012-05-21 11:03:21.000000000 +05:30
-author: Leena
+author: 
+- Leena
 categories:
 - All Posts
 - Continuous Delivery

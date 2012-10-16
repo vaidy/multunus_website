@@ -3,7 +3,8 @@ comments: true
 layout: post
 title: ! 'Continuous Delivery: Building Android Library project'
 date: 2011-11-04 14:55:20.000000000 +05:30
-author: Leena
+author: 
+- Leena
 categories:
 - All Posts
 - Android

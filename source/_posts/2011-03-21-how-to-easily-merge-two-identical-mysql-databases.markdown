@@ -3,7 +3,8 @@ comments: true
 layout: post
 title: Script to merge two identical MySQL Databases
 date: 2011-03-21 07:43:51.000000000 +05:30
-author: Leena
+author: 
+- Leena
 categories:
 - All Posts
 ---

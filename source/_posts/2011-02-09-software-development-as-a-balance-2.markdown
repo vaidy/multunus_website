@@ -3,7 +3,8 @@ comments: true
 layout: post
 title: Software Development as a balance
 date: 2011-02-09 00:17:24.000000000 +05:30
-author: Vaidy
+author: 
+- Vaidy
 categories:
 - All Posts
 - Process

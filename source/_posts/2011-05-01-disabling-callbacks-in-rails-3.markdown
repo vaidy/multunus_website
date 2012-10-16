@@ -3,7 +3,8 @@ comments: true
 layout: post
 title: Disabling callbacks in Rails 3
 date: 2011-05-01 02:10:17.000000000 +05:30
-author: Leena
+author: 
+- Leena
 categories:
 - All Posts
 - Rails

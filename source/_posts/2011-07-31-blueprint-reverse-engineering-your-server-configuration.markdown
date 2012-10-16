@@ -3,7 +3,8 @@ comments: true
 layout: post
 title: Blueprint - reverse engineering your server configuration
 date: 2011-07-31 15:35:16.000000000 +05:30
-author: Leena
+author: 
+- Leena
 categories:
 - All Posts
 - Continuous Delivery

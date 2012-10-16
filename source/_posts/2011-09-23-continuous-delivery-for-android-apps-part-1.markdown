@@ -4,7 +4,8 @@ layout: post
 featured: true
 title: Continuous Delivery for Android Apps - Part 1
 date: 2011-09-23 11:15:50.000000000 +05:30
-author: Leena
+author: 
+- Leena
 categories:
 - All Posts
 - Android

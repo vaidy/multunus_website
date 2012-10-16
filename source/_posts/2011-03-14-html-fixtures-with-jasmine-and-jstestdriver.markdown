@@ -3,7 +3,8 @@ comments: true
 layout: post
 title: HTML Fixtures with Jasmine and JSTestdriver
 date: 2011-03-14 15:03:07.000000000 +05:30
-author: Leena
+author: 
+- Leena
 categories:
 - All Posts
 - Technology

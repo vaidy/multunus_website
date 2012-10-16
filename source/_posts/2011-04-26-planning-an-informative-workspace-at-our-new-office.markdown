@@ -3,7 +3,8 @@ comments: true
 layout: post
 title: Planning an Informative Workspace at our New Office
 date: 2011-04-26 15:08:43.000000000 +05:30
-author: Shakeeb
+author: 
+- Shakeeb
 categories:
 - All Posts
 ---

@@ -3,7 +3,8 @@ comments: true
 layout: post
 title: Our experience with Comatose - the MicroCMS
 date: 2010-02-23 13:46:44.000000000 +05:30
-author: Vaidy
+author: 
+- Vaidy
 categories:
 - All Posts
 - Rails

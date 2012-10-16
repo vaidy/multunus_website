@@ -4,7 +4,8 @@ layout: post
 featured: true
 title: A Macro Level Perspective of Software Development
 date: 2011-02-09 00:17:24.000000000 +05:30
-author: Vaidy
+author: 
+- Vaidy
 categories:
 - All Posts
 - Process

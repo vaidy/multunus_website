@@ -3,7 +3,8 @@ comments: true
 layout: post
 title: Running tests in parallel using parallel_tests
 date: 2011-06-27 10:48:01.000000000 +05:30
-author: Leena
+author: 
+- Leena
 categories:
 - All Posts
 - Rails

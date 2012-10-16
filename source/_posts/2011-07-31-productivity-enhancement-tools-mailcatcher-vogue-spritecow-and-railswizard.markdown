@@ -3,7 +3,8 @@ comments: true
 layout: post
 title: Productivity Enhancement Tools - MailCatcher, Vogue, SpriteCow and RailsWizard
 date: 2011-07-31 15:03:40.000000000 +05:30
-author: KP
+author: 
+- KP
 categories:
 - All Posts
 - Rails
