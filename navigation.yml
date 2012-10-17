@@ -13,12 +13,7 @@
   :address: /blog
 :open_source: 
   :title: Open Source
-  :address: "#"
-  :sub_nav: 
-    :timeline: 
-      :title: Timleine
-      :address: http://github.com/multunus/timeline
-      :target: _blank
+  :address: /opensource
 :about: 
   :title: About
   :address: /about/history
