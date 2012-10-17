@@ -14,6 +14,7 @@
 :open_source: 
   :title: Open Source
   :address: /opensource
+  :show_new_icon: true
 :about: 
   :title: About
   :address: /about/history
