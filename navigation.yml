@@ -35,3 +35,7 @@
     :location: 
       :title: Location
       :address: /contact-us/location
+:love:
+  :title: Love
+  :address: /love
+  :show_new_icon: true
