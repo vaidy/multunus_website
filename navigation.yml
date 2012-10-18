@@ -25,6 +25,9 @@
     :people: 
       :title: The Team
       :address: /about/people
+    :youngturks:
+      :title: Young Turks
+      :address: /youngturks
 :contact_us: 
   :title: Contact Us
   :address: /contact-us/contact
