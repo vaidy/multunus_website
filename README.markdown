@@ -11,7 +11,6 @@ Octopress is [Jekyll](https://github.com/mojombo/jekyll) blogging at its finest.
 
 ## Documentation
 
-
 Check out [Octopress.org](http://octopress.org/docs) for guides and documentation.
 
 
