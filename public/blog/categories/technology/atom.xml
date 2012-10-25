@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Technology | Multunus]]></title>
   <link href="http://www.multunus.com/blog/categories/technology/atom.xml" rel="self"/>
   <link href="http://www.multunus.com/"/>
-  <updated>2012-10-18T20:40:52+05:30</updated>
+  <updated>2012-10-25T08:31:55+05:30</updated>
   <id>http://www.multunus.com/</id>
   <author>
     <name><![CDATA[]]></name>
@@ -12,6 +12,227 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Our experience with Jekyll and Octopress]]></title>
+    <link href="http://www.multunus.com/2012/10/our-experience-with-jekyll-and-octopress/"/>
+    <updated>2012-10-25T08:30:05+05:30</updated>
+    <id>http://www.multunus.com/2012/10/our-experience-with-jekyll-and-octopress</id>
+    <content type="html"><![CDATA[<p><strong id="internal-source-marker_0.1731566982343793"></p>
+
+<pre><code>We recently moved from Wordpress to Jekyll for our website because we found it harder to maintain our site with Wordpress. We also hit performance
+bottlenecks with Wordpress and were clueless on how to fix those. Jekyll made a lot more sense as it uses Ruby, which we are very comfortable with as
+compared to PHP. And hardly any performance bottlenecks because the entire site is static, and so no DB tuning required :)
+&lt;br/&gt;
+&lt;h2 dir="ltr"&gt;
+    What is Jekyll?
+&lt;/h2&gt;
+Jekyll is a simple, blog aware, static site generator created by &lt;a href="http://tom.preston-werner.com/"&gt;Tom Preston-Werner&lt;/a&gt;, founder of GitHub. It
+takes a template directory (representing the raw form of a website), runs it through Textile or Markdown and Liquid converters, and spits out a complete,
+static website suitable for serving with any of your favorite web server. This is also the engine behind GitHub Pages, which you can use to host your
+website from GitHub source.
+&lt;br/&gt;
+We chose to use &lt;a href="http://octopress.org/"&gt;Octopress&lt;/a&gt;, a framework built on top of Jekyll. It comes with lot of features such as:
+&lt;br/&gt;
+&lt;ul&gt;
+    &lt;li&gt;
+        A semantic HTML5 template
+    &lt;/li&gt;
+    &lt;li&gt;
+        A Mobile first responsive layout (rotate, or resize your browser and see)
+    &lt;/li&gt;
+    &lt;li&gt;
+        Built in 3rd party support for Twitter, Google Plus One, Disqus Comments, Pinboard, Delicious, and Google Analytics
+    &lt;/li&gt;
+    &lt;li&gt;
+        An easy deployment strategy using Github pages or Rsync
+    &lt;/li&gt;
+    &lt;li&gt;
+        Built in support for Rack servers
+    &lt;/li&gt;
+&lt;/ul&gt;
+There are lot of &lt;a href="https://github.com/imathis/octopress/wiki/3rd-Party-Octopress-Themes"&gt;3rd party themes&lt;/a&gt; available with Octopress which you can
+chose. This helped us to convert the existing Wordpress theme to Jekyll.
+&lt;br/&gt;
+We chose to deploy it to Heroku, as we felt its much easier than GitHub pages.
+&lt;br/&gt;
+&lt;br/&gt;
+How does it work?
+&lt;br/&gt;
+&lt;br/&gt;
+Every page that you create in Jekyll will have the following sections:
+&lt;br/&gt;
+&lt;br/&gt;
+&lt;ul&gt;
+    &lt;li&gt;
+        &lt;a href="https://github.com/mojombo/jekyll/wiki/YAML-Front-Matter"&gt;YAML frontmatter&lt;/a&gt;
+        on top of every file which will contain data in the YAML format which is processed by Jekyll. The mandatory details needed are “title” and “layout”
+        which decides the title and layout of the page respectively.
+    &lt;/li&gt;
+    &lt;li&gt;
+        &lt;a href="https://github.com/Shopify/liquid"&gt;Liquid&lt;/a&gt;
+</code></pre>
+
+<p>markup for the templating with the in markdown format or HTML format. There is support for          <a href="https://github.com/plusjade/mustache-with-jekyll">Mustache</a> too.</p>
+
+<pre><code>    &lt;/li&gt;
+    &lt;li&gt;
+        Layouts for the pages.
+    &lt;/li&gt;
+&lt;/ul&gt;
+&lt;br/&gt;
+&lt;br/&gt;
+&lt;h2 dir="ltr"&gt;
+    “Aha” Moments
+&lt;/h2&gt;
+There were many “Aha” moments throughout the migration, I am putting those top ones which came to my mind while writing.
+&lt;br/&gt;
+&lt;br/&gt;
+Responsiveness
+&lt;br/&gt;
+&lt;br/&gt;
+Bootstrap makes it so much easier to do the regular stuff - modals, navigation bar, tooltips, etc. And with a little more effort you get responsiveness for
+free.
+&lt;br/&gt;
+&lt;br/&gt;
+Asides for Featured posts
+&lt;br/&gt;
+&lt;br/&gt;
+Asides are the way you can add sidebar to your pages in Octopress. So if you want something to be displayed on the navbar, add a new aside file and include
+it in your layout. We had the requirement to display certain posts as “featured” and needed to be shown them in all pages. The only thing to do was to add
+‘featured: true’ in the YAML front matter of the corresponding posts and create an aside as follows and include it in your layout.
+&lt;br/&gt;
+&lt;br/&gt;
+Integrating with comments
+&lt;br/&gt;
+&lt;br/&gt;
+It was as simple adding “comments: true” in the posts which you want the comments to be displayed for.
+&lt;br/&gt;
+&lt;br/&gt;
+Keeping the blogs as unpublished
+&lt;br/&gt;
+&lt;br/&gt;
+Keep “published: false” in the YAML frontmatter of the post. It won’t show up in the post list.
+&lt;br/&gt;
+&lt;br/&gt;
+Permanent Links for Posts
+&lt;br/&gt;
+&lt;br/&gt;
+Need to change the way the URL for blogs are being displayed? Just change the permlink in _config.yml
+&lt;br/&gt;
+&lt;h2 dir="ltr"&gt;
+    Where things took time
+&lt;/h2&gt;
+&lt;h3 dir="ltr"&gt;
+    Figuring out how Jekyll does the magic
+&lt;/h3&gt;
+It took a while for us to figure out how Jekyll does the “magic”. Getting a hang of the layouts, YAML Front matter, Liquid Templating, Asides in Octopress
+can take time.
+&lt;br/&gt;
+&lt;br/&gt;
+&lt;h3 dir="ltr"&gt;
+    Learning curve for Sass and Twitter bootstrap
+&lt;/h3&gt;
+</code></pre>
+
+<p>As mentioned earlier, Octopress uses <a href="http://sass-lang.com/">Sass</a> and we chose a theme which uses   <a href="http://twitter.github.com/bootstrap/">Twitter Bootstrap</a>. There would be a learning curve if you are new to both.</p>
+
+<pre><code>&lt;br/&gt;
+&lt;h3 dir="ltr"&gt;
+    Migrating content from Wordpress
+&lt;/h3&gt;
+There are quiet a few plugins written to &lt;a href="https://github.com/mojombo/jekyll/wiki/Blog-Migrations"&gt;migrate&lt;/a&gt; data from other blogging platforms
+including Wordpress. This worked well for blogs, but will not take care of downloading the related images and also the pages other than blogs. We used the
+tool &lt;a href="https://github.com/thomasf/exitwp"&gt;exitwp&lt;/a&gt;, which will try to migrate as much data as possible including downloading of images. But it
+does not take care of updating the posts with the new URL for the images, so that was a task that we had to take up manually.
+&lt;br/&gt;
+&lt;br/&gt;
+&lt;h3 dir="ltr"&gt;
+    Contact Us Form
+&lt;/h3&gt;
+There are Wordpress plugins that can help you create a contact us form or a suggestion box. But how can you do that for a static website? You’ve two
+options:
+&lt;br/&gt;
+&lt;br/&gt;
+&lt;ol&gt;
+    &lt;li&gt;
+        Create an app with an API for saving the contact details
+    &lt;/li&gt;
+    &lt;li&gt;
+        Use some existing services which can persist form data
+    &lt;/li&gt;
+&lt;/ol&gt;
+&lt;br/&gt;
+</code></pre>
+
+<p>We went with the second option and after a lot of shopping around, we finally settled for none other than   <a href="http://www.google.com/google-d-s/forms/">Google Forms</a>. This automatically took care of getting an email notification for every form</p>
+
+<pre><code>submission. Some of the issues that we fixed or workarounds we had done are:
+&lt;br/&gt;
+&lt;br/&gt;
+&lt;ul&gt;
+    &lt;li&gt;
+        We followed the instructions mentioned &lt;a href="http://www.morningcopy.com.au/tutorials/how-to-style-google-forms/"&gt;here&lt;/a&gt; to customize the look
+        and feel of the form.
+    &lt;/li&gt;
+    &lt;li&gt;
+        Added a hidden iframe to not to show the page from google form on submit
+    &lt;/li&gt;
+    &lt;li&gt;
+        Added front end validations for mandatory fields, to ensure that if and when the form is submitted, the submission would be successful.
+    &lt;/li&gt;
+&lt;/ul&gt;
+&lt;br/&gt;
+&lt;h3 dir="ltr"&gt;
+    Team Page
+&lt;/h3&gt;
+As any company’s website, we also needed a team page - A visual index of people and also separate pages of individual profiles. Flatterline had an
+excellent &lt;a href="https://github.com/flatterline/jekyll-plugins#company-team"&gt;plugin&lt;/a&gt;, that seemed to do just what we wanted. But since we had used
+Octopress, the directory structure was slightly different from what the plugin had expected. So we had to fiddle around with the plugin to understand how
+it worked and modify it to work for us. In the end, adding a new person to the team was as easy as adding a new yml file for that person.
+&lt;br/&gt;
+&lt;br/&gt;
+Our contribution back
+&lt;br/&gt;
+</code></pre>
+
+<p>We've created couple of open source contributions as part of the migration process. You can see the details <a href="http://www.multunus.com/opensource">here</a>.</p>
+
+<pre><code>&lt;br/&gt;
+Todo
+&lt;br/&gt;
+&lt;ul&gt;
+    &lt;li&gt;
+</code></pre>
+
+<p>Live Editor for Octopress using which you can write the blog and automatically publish it. If you are using only Jekyll with GitHub pages,          <a href="http://prose.io/">prose.io</a> would work for you.</p>
+
+<pre><code>    &lt;/li&gt;
+&lt;/ul&gt;
+Summary
+&lt;br/&gt;
+I would highly recommend Jekyll and/or Octopress for creating a company website especially if you are a software development firm comfortable with Ruby. It
+combines the power of Ruby, Templating and YAML with the speed of static web pages.
+&lt;br/&gt;
+Octopress helps you to quickly layout the foundation for your website on top of which you can easily build.
+&lt;br/&gt;
+A huge thanks to the awesome Ruby community and GitHub community without whom the entire project might not have been possible.
+&lt;br/&gt;
+References
+&lt;br/&gt;
+&lt;a href="http://vitobotta.com/how-to-migrate-from-wordpress-to-jekyll/"&gt;http://vitobotta.com/how-to-migrate-from-wordpress-to-jekyll/&lt;/a&gt;
+&lt;br/&gt;
+&lt;a href="https://github.com/thomasf/exitwp"&gt;https://github.com/thomasf/exitwp&lt;/a&gt;
+&lt;br/&gt;
+&lt;a href="https://github.com/flatterline/jekyll-plugins"&gt;https://github.com/flatterline/jekyll-plugins&lt;/a&gt;
+</code></pre>
+
+<p></strong></p>
+
+<br/>
+
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Web Application Security]]></title>
@@ -608,70 +829,6 @@ One of the key principle of Continuous Delivery is <strong>To </strong><strong>
 
 <div><a href="http://continousdelivery.com" target="_blank">http://continousdelivery.com</a></div>
 
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Simple Image Filter using OpenGL ES in Android]]></title>
-    <link href="http://www.multunus.com/2011/10/simple-image-filter-using-opengl-es-in-android/"/>
-    <updated>2011-10-07T15:35:45+05:30</updated>
-    <id>http://www.multunus.com/2011/10/simple-image-filter-using-opengl-es-in-android</id>
-    <content type="html"><![CDATA[<p><em><strong>Note</strong>: This post assumes some basic knowledge in setting up an OpenGL app in Android. A basic example for rendering a texture on to a surface can be found <a href="http://developer.android.com/resources/samples/ApiDemos/src/com/example/android/apis/graphics/GLES20TriangleRenderer.html">here.</a> You can use this as the initial setup for trying out Shader language program listed in this post.</em></p>
-
-<p>OpenGL is widely adopted as the graphics API of choice for real-time interactive 3D graphics applications. OpenGL is easy to understand, but its simplicity and orthogonality enable many interesting possibilities. One such possibility is image processing.</p>
-
-<!-- more -->
-
-
-<p>Using "OpenGL" for Image Processing enables us to completely utilize the power of Graphics Processing Unit (GPU) hence the image processing will be faster also it reduces the load on CPU. This can be crucial for Image processing applications, especially in mobile environment where the resources available are relatively lesser.</p>
-
-<p>In this post we will be discussing how to use OpenGL Shader Language to manipulate pixels and create Image filter effects.</p>
-
-<p><img class="aligncenter size-medium wp-image-1851" src="http://www.multunus.com/images/combined-300x250.png" alt="" width="300" height="250" /></p>
-
-<p>As with any OpenGL app, we will start with setting up the view.</p>
-
-<p>The next step is to load an image into the texture, This texture can be mapped on to the surface of a square, which will then be drawn on to the screen.For Image processing, we will require only 2 dimensions so we will set up the view in orthographic projection and will also discard z axis by keeping it to 0.0 most of the times.</p>
-
-<p>But before drawing to the screen, there are many intermediate operations that are done by the graphics hardware, which are now directly programmable in OpenGL ES 2.0 using Shader Language (GLSL).
-We will be concentrating on Vertex and Fragment processing phases in OpenGL pipeline. We will go through a simple fragment shader program and will explain how it works. Both of these programs are written in GLSL. GLSL is a ‘C’ like language which gives direct control over the  graphics pipeline without having to use assembly language or hardware-specific languages.</p>
-
-<p><strong>Vertex shader</strong></p>
-
-<p><code>
-uniform mat4 uMVPMatrix;
-attribute vec4 aPosition;
-attribute vec2 aTextureCoord;
-varying vec2 vTextureCoord;
-void main() {
-  gl_Position = uMVPMatrix * aPosition
-  vTextureCoord = aTextureCoord
-}
-</code></p>
-
-<p dir="ltr">The Vertex shader is executed for each vertex that is to be drawn. Here, we are drawing a square and mapping the texture on to that.</p>
-
-
-<p>This calculates the transformed coordinates of the square by multiplying the given coordinates with <a href="http://en.wikibooks.org/wiki/OpenGL_Programming/3D/Matrices" target="_blank">MVPMatrix</a> [ MVP -  Model * View * Projection ]. Other than this we are also storing corresponding texture co-ordinates in variable '<em>vTextureCoords'</em> so that it is available in the fragment shader.</p>
-
-<p><strong>Fragment Shader</strong>
-<code>
-precision mediump float;
-varying vec2 vTextureCoord;
-uniform sampler2D sTexture;
-void main() {
-   vec2 cen = vec2(0.5,0.5) - vTextureCoord.xy;
-   vec2 mcen = -0.07*log(length(cen))*normalize(cen);
-   gl_FragColor = texture2D(sTexture, vTextureCoord.xy-mcen);
-}
-</code></p>
-
-<p dir="ltr"></p>
-
-
-<p>Fragment shaders are executed to calculate the color of individual pixels. This is where the actual image transformation happens. Instead of mapping the corresponding texture coordinates to corresponding pixels, we can map different coordinates of the texture to different pixels which will distort the image in some way. In the above example the texture co-ordinate to fill each pixel is chosen based on the calculation in line no 6. The actual movement depends on the distance of the texture coordinate from the center. This creates an effect which is similar to what is shown in the below picture.</p>
-
-<p>Although this is a very simple effect, the intention here is to just show potential applications of OpenGL in Android apps.</p>
 ]]></content>
   </entry>
   
