@@ -1,3 +1,3 @@
 [submodule "source/youngturks"]
 	path = source/youngturks
-	url = git@github.com:multunus/timeline.git
+	url = git://github.com/multunus/timeline.git
