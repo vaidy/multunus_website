@@ -1,7 +1,7 @@
 <script type="text/javascript">
 
 if(/.*\?rel=continuousdelivery.*/.test(window.location.search)){
-	$('<div id="contdelnotification" class="container-fluid" style="background-color:#C72B2B;color: #fff;padding:10px;font-size:14px;text-align:center;z-index:2;text-shadow: 0px 1px 1px rgb(82, 2, 2);"><span>Thanks for visiting! We are <strong>Multunus Software</strong> - and we practice <strong>Continuous Delivery</strong> to ship new features everyday. Reach out to us at <a href="mailto:info@multunus.com" style="color: #fff;">info@multunus.com</a> if you\'d like to learn more.</span><span id="closenoti" style="position: absolute;color: #ddd;  height 10px;right: 10px;">&#10006;</span></div>').prependTo('body');
+	$('<div id="contdelnotification" class="container-fluid" style="background-color:#C72B2B;color: #fff;padding:10px;font-size:14px;text-align:center;z-index:2;text-shadow: 0px 1px 1px rgb(82, 2, 2);"><span>Thanks for visiting! We are <strong>Multunus Software</strong> - and we practice <strong>Continuous Delivery</strong> to ship new features everyday. Reach out to us at <a href="mailto:info@multunus.com" style="color: #fff;">info@multunus.com</a> if you\'d like to learn more.</span><span id="closenoti" style="position: absolute;color: #ddd;  height 10px;right: 10px;cursor: hand;cursor: pointer;">&#10006;</span></div>').prependTo('body');
 	$('#contdelnotification').click(function(){$(this).slideUp();});
 
 }
