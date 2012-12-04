@@ -1,12 +1,8 @@
-<script type="text/javascript" src="//www.hellobar.com/hellobar.js"></script>
-
 <script type="text/javascript">
 
-params = window.location.search.substring(1).split('&');
+if(/.*\?rel=continuousdelivery.*/.test(window.location.search)){
+	$('<div id="contdelnotification" class="container-fluid" style="background-color:#C72B2B;color: #fff;padding:10px;font-size:14px;text-align:center;z-index:2;text-shadow: 0px 1px 1px rgb(82, 2, 2);"><span>Thanks for visiting! We are <strong>Multunus Software</strong> - and we practice <strong>Continuous Delivery</strong> to ship new features everyday. Reach out to us at <a href="mailto:info@multunus.com" style="color: #fff;">info@multunus.com</a> if you\'d like to learn more.</span></div>').prependTo('body');
+	$('#contdelnotification').click(function(){$(this).slideUp();});
 
-for (var i=0;i<params.length;i++){
-    if(params[i] == "rel=continuousdelivery"){
-	    new HelloBar(58693,84859);
-    }
 }
 </script>
