@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Process | Multunus]]></title>
   <link href="http://www.multunus.com/blog/categories/process/atom.xml" rel="self"/>
   <link href="http://www.multunus.com/"/>
-  <updated>2013-01-21T15:13:14+05:30</updated>
+  <updated>2013-03-10T14:24:04+05:30</updated>
   <id>http://www.multunus.com/</id>
   <author>
     <name><![CDATA[]]></name>
@@ -12,6 +12,82 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[How we chose our Kanban Tool]]></title>
+    <link href="http://www.multunus.com/2013/03/how-we-chose-our-kanban-tool/"/>
+    <updated>2013-03-09T22:39:00+05:30</updated>
+    <id>http://www.multunus.com/2013/03/how-we-chose-our-kanban-tool</id>
+    <content type="html"><![CDATA[<p>We've been using <a href="http://www.pivotaltracker.com/">Pivotal Tracker</a> as our Project Management Tool so far, but realized that it would not work as a Kanban Tool as the implementation is entirely different. I am not going to talk about "Why Kanban", because there are many articles and books which talks about the same. But I am talking about how did we evaluate different tools and choose KanbanTool in the end.</p>
+
+<p>
+The different tools we evaluated are:
+<ul>
+  <li><a href="http://leankit.com/">LeanKit</a></li>
+  <li><a href="http://kanbanery.com/">Kanbanery</a></li>
+  <li><a href="http://kanbantool.com/">KanbanTool</a></li>
+</ul>
+</p>
+
+
+<p>
+  We started off by comparing the features from the point of view of Kanban, but later realized that the features provided by Pivotal Tracker, especially the collaboration and tasks are very much important. Then we came up with a set of criteria which included both Kanban and non-Kanban requirements. You can see the criteria that we've used for evaluating the tool and our findings in <a href="https://docs.google.com/spreadsheet/ccc?key=0ApUPwJdQvqT_dEJuS25YZzMwWkJVc0NXWXhIbUhaQ1E&usp=sharing">this</a> document.
+</p>
+
+
+<p>
+  <a href="https://trello.com/">Trello</a> was also considered but it does not provide features such as WIP limit, cycle and lead time reporting etc. which are the key for Kanban. But we found that there is a Google Chrome Extension which can be used for adding <a href="https://github.com/NateHark/TrelloWIPLimits">WIP(Work in Progress) limit</a> in Trello. And similarly other extensions exists too. But we felt its a very good tool which can used for <a href="http://en.wikipedia.org/wiki/Getting_Things_Done">GTD</a>, but may not be a good candidate as Kanban.
+</p>
+
+
+<p> Lastly, I would like to mention those articles which helped us to understand Kanban better. Those are:</p>
+
+<ul>    
+  <li><a href="http://www.agileproductdesign.com/blog/2009/kanban_over_simplified.html">Kanban Development OverSimplified</a> by Jeff Patton</li>
+  <li><a href="http://www.infoq.com/presentations/Single-Piece-Flow-Kanban">Single Piece Workflow in Kanban</a> by James Shore and Arloo Banshee</li>
+  <li><a href="http://www.crisp.se/gratis-material-och-guider/kanban">Kanban</a> by Henrik Kniberg</li>
+</ul>
+
+
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[AgileIndia 2013 Summary]]></title>
+    <link href="http://www.multunus.com/2013/03/agileindia-2013-summary/"/>
+    <updated>2013-03-08T17:07:00+05:30</updated>
+    <id>http://www.multunus.com/2013/03/agileindia-2013-summary</id>
+    <content type="html"><![CDATA[<p>This is the summary about the  recently concluded <a href="http://2013.agileindia.org/">Agile India Conference 2013</a>.
+This gave me a chance to interact with great legends and leaders of software industry such as
+Linda Rising, Mary Poppendieck, Henrik Kniberg, Jez Humble, Jeff Patton, Fred George, Craig Larman, Neil Ford, Venkat Subramaniam,
+Aslam Khan, Karl Scotland, Kenji Hiranabe, Laurent Bossavit, Rebecca Parsons etc. and listen to them multiple times in the span of 4 days.  Amazing.</p>
+
+<p>
+  I am not going to write about each session I attended, am instead summarizing what I learned during those 4 days both by attending the sessions and by interacting with the speakers during those 4 days:
+</p>
+
+
+<ul>
+    <li> Never stop learning. Experiment continuously. </li>
+    <li> Experiments may fail, but learn from it and move on.</li>
+  <li> Analyse why am I <i>doing</i> (whatever it is), and be innovative. If you delay innovation, it becomes worse.
+  </li>
+    <li>Great software can be created only with collaboration. So work as a team and share the responsibilities.</li>
+    <li>Be a good coach rather being authoritative. This will help to implement changes effectively.</li>
+  <li>Optimise the entire delivery process instead of just optimising the development process. Kanban helps to <i>optimise the whole</i> while Scrum helps to optimise only the development. </li>
+    <li>Have tight feedback cycles by applying timeboxing mercilessly. This will help for continuous learning and improvement. Eg: 15 minutes TDD cycles which result in simple design with refactorings, Frequent Retrospectives etc.</li>
+  <li>Apply Last Responsible Moment across, eg: Use practices such as <strong>Emergent Design</strong> and <strong>Evolutionary Architecture</strong> instead of doing <i>Big Design UpFront</i>. The Code complexity reports should help to identify the coding smells which helps to implement these practices.</li>
+    <li>You can defer writing tests until the validation of feature is done. Adding acceptance tests for stability can deferred when you feel that it's time to have more stability</li>
+</ul>
+
+
+<p>
+  Thanks a ton to Naresh Jain and team for organising such a wonderful event. Curious to know what's coming for Agile India 2014. :)
+</p>
+
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Introduction to Continuous Delivery]]></title>
@@ -208,66 +284,6 @@ description="Runs tests from the package defined in test.package property"&gt;
 
 <p><span style="color: #008000;"><strong>
 </strong></span></p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Continuous Delivery for Android Apps - Part 1]]></title>
-    <link href="http://www.multunus.com/2011/09/continuous-delivery-for-android-apps-part-1/"/>
-    <updated>2011-09-23T11:15:50+05:30</updated>
-    <id>http://www.multunus.com/2011/09/continuous-delivery-for-android-apps-part-1</id>
-    <content type="html"><![CDATA[<div>
-
-We've set up our CI server for building android apps. We use Jenkins as our CI server, but the same steps can be applied to any CI server.
-<h3><span style="text-decoration: underline">Setup Android Environment on CI server</span></h3>
-You need to first install the android SDK and platform tools on the CI server. The steps are well defined <a href="http://developer.android.com/sdk/installing.html">here</a>. You can run the command <code>android update sdk --no-ui</code> if the CI server is in an headless environment.
-<h3><span style="text-decoration: underline">Generate Build script</span></h3>
-Using android SDK tool , you can generate build script for the android project which contains the standard steps for building the app such as clean, compile, release, install etc. The following command will generate the build script, replace &lt;appname&gt;, &lt;target&gt; and &lt;project path&gt; accordingly.
-<pre>android update project -n &lt;appname&gt; -t &lt;target&gt; -p &lt;project directory&gt;</pre>
-This will create build.xml file under the project directory. You need to create build.properties file with the following contents:
-<pre>key.store=path-to-keystore
-key.alias=[alias]
-key.store.password=[pw]
-key.alias.password=[pw2]</pre>
-You can generate the key file using keytoool or you can generate the key file from eclipse. Run the command  <span style="font-family: Consolas, Monaco, 'Courier New', Courier, monospace;line-height: 18px">ant clean release<span style="font-family: Georgia, 'Times New Roman', 'Bitstream Charter', Times, serif;line-height: 19px">, which will compile the files, and generate the apk files (it generates signed, unsigned and unaligned files). The signed version can be used for uploading to Android Market or for installing directly on any device. Couple of stuff to be noted here are:</span></span>
-<ul>
-    <li>Ant version has to be 1.8.0 or higher.</li>
-    <li>Put the external libraries in the <span style="font-family: Consolas, Monaco, 'Courier New', Courier, monospace;line-height: 18px">libs</span> directory. Build script automatically picks up the libraries put under libs directory, otherwise the script need to be changed to look at a different classpath.</li>
-</ul>
-Checkin the build.xml, build.properties and the key file into the repository.
-<h3><span style="text-decoration: underline">Setup the CI server</span></h3>
-The CI server has to run the ant script for building the app. One more setting what we've done in our Jenkins server was to archive the apks as artifacts (available in the post build action). In upcoming posts, I will cover how to do the following:
-<ol>
-    <li>Running android tests</li>
-    <li>Running code/test coverage tools</li>
-    <li>Actual deployment</li>
-</ol>
-References: <a href="http://skaug.no/ingvald/2011/09/android-app-with-jenkins/" target="_blank">http://skaug.no/ingvald/2011/09/android-app-with-jenkins/</a>
-
-</div>
-
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Rebuilding in Jenkins]]></title>
-    <link href="http://www.multunus.com/2011/09/rebuilding-in-jenkins/"/>
-    <updated>2011-09-22T14:32:49+05:30</updated>
-    <id>http://www.multunus.com/2011/09/rebuilding-in-jenkins</id>
-    <content type="html"><![CDATA[<div>
-
-One option that might be required after setting up a <a href="http://www.multunus.com/2011/07/continuous-delivery-using-jenkins-build-pipeline/">build pipeline</a> is the provision to redeploy an earlier version by click of a button. This can become handy when we find a bug in the production and want to see when the bug got introduced. For that we will have to redeploy the earlier version to the staging/UAT environment and test the same.
-
-Jenkins by default does not allow to rerun any of the earlier jobs. But you can achieve this by the <a href="https://wiki.jenkins-ci.org/display/JENKINS/Rebuild+Plugin">Rebuild</a> plugin. It allows you to rebuild any job provided its parameterized build. It also allows you override the parameters. It will show the "Rebuild" button at the left side as shown below when you go to a specific build page:
-
-<img src="http://www.multunus.com/images/rebuild.png" alt="" width="156" height="247" />
-
-This is not a replacement for revert build, because it does not take care of reverting DB. But this can be extended to do the same.
-
-Note: It will show the Rebuild button only for those builds which occurred after installing the plugin. I took some time to realize this and it is not very clear in the documentation.
-
-</div>
-
 ]]></content>
   </entry>
   

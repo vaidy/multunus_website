@@ -4,7 +4,7 @@
   <title><![CDATA[Multunus]]></title>
   <link href="http://www.multunus.com/atom.xml" rel="self"/>
   <link href="http://www.multunus.com/"/>
-  <updated>2013-01-21T15:13:14+05:30</updated>
+  <updated>2013-03-10T14:24:04+05:30</updated>
   <id>http://www.multunus.com/</id>
   <author>
     <name><![CDATA[]]></name>
@@ -12,6 +12,76 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[How we chose our Kanban Tool]]></title>
+    <link href="http://www.multunus.com/2013/03/how-we-chose-our-kanban-tool/"/>
+    <updated>2013-03-09T22:39:00+05:30</updated>
+    <id>http://www.multunus.com/2013/03/how-we-chose-our-kanban-tool</id>
+    <content type="html"><![CDATA[<p>We&#8217;ve been using <a href="http://www.pivotaltracker.com/">Pivotal Tracker</a> as our Project Management Tool so far, but realized that it would not work as a Kanban Tool as the implementation is entirely different. I am not going to talk about &#8220;Why Kanban&#8221;, because there are many articles and books which talks about the same. But I am talking about how did we evaluate different tools and choose KanbanTool in the end.</p>
+
+<p>
+The different tools we evaluated are:
+<ul>
+  <li><a href="http://leankit.com/">LeanKit</a></li>
+  <li><a href="http://kanbanery.com/">Kanbanery</a></li>
+  <li><a href="http://kanbantool.com/">KanbanTool</a></li>
+</ul>
+</p>
+
+
+<p>
+  We started off by comparing the features from the point of view of Kanban, but later realized that the features provided by Pivotal Tracker, especially the collaboration and tasks are very much important. Then we came up with a set of criteria which included both Kanban and non-Kanban requirements. You can see the criteria that we&#8217;ve used for evaluating the tool and our findings in <a href="https://docs.google.com/spreadsheet/ccc?key=0ApUPwJdQvqT_dEJuS25YZzMwWkJVc0NXWXhIbUhaQ1E&usp=sharing">this</a> document.
+</p>
+
+
+<p>
+  <a href="https://trello.com/">Trello</a> was also considered but it does not provide features such as WIP limit, cycle and lead time reporting etc. which are the key for Kanban. But we found that there is a Google Chrome Extension which can be used for adding <a href="https://github.com/NateHark/TrelloWIPLimits">WIP(Work in Progress) limit</a> in Trello. And similarly other extensions exists too. But we felt its a very good tool which can used for <a href="http://en.wikipedia.org/wiki/Getting_Things_Done">GTD</a>, but may not be a good candidate as Kanban.
+</p>
+
+
+<p> Lastly, I would like to mention those articles which helped us to understand Kanban better. Those are:</p>
+
+<ul>    
+  <li><a href="http://www.agileproductdesign.com/blog/2009/kanban_over_simplified.html">Kanban Development OverSimplified</a> by Jeff Patton</li>
+  <li><a href="http://www.infoq.com/presentations/Single-Piece-Flow-Kanban">Single Piece Workflow in Kanban</a> by James Shore and Arloo Banshee</li>
+  <li><a href="http://www.crisp.se/gratis-material-och-guider/kanban">Kanban</a> by Henrik Kniberg</li>
+</ul>
+
+
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[AgileIndia 2013 Summary]]></title>
+    <link href="http://www.multunus.com/2013/03/agileindia-2013-summary/"/>
+    <updated>2013-03-08T17:07:00+05:30</updated>
+    <id>http://www.multunus.com/2013/03/agileindia-2013-summary</id>
+    <content type="html"><![CDATA[This is the summary about the  recently concluded <a href="http://2013.agileindia.org/">Agile India Conference 2013</a>. 
+This gave me a chance to interact with great legends and leaders of software industry such as 
+Linda Rising, Mary Poppendieck, Henrik Kniberg, Jez Humble, Jeff Patton, Fred George, Craig Larman, Neil Ford, Venkat Subramaniam, 
+Aslam Khan, Karl Scotland, Kenji Hiranabe, Laurent Bossavit, Rebecca Parsons etc. and listen to them multiple times in the span of 4 days.  Amazing.
+<p>
+  I am not going to write about each session I attended, am instead summarizing what I learned during those 4 days both by attending the sessions and by interacting with the speakers during those 4 days:
+</p>
+<ul>
+	<li> Never stop learning. Experiment continuously. </li>
+	<li> Experiments may fail, but learn from it and move on.</li>
+  <li> Analyse why am I <i>doing</i> (whatever it is), and be innovative. If you delay innovation, it becomes worse.
+  </li>
+ 	<li>Great software can be created only with collaboration. So work as a team and share the responsibilities.</li>
+ 	<li>Be a good coach rather being authoritative. This will help to implement changes effectively.</li>
+  <li>Optimise the entire delivery process instead of just optimising the development process. Kanban helps to <i>optimise the whole</i> while Scrum helps to optimise only the development. </li>
+ 	<li>Have tight feedback cycles by applying timeboxing mercilessly. This will help for continuous learning and improvement. Eg: 15 minutes TDD cycles which result in simple design with refactorings, Frequent Retrospectives etc.</li>
+  <li>Apply Last Responsible Moment across, eg: Use practices such as <strong>Emergent Design</strong> and <strong>Evolutionary Architecture</strong> instead of doing <i>Big Design UpFront</i>. The Code complexity reports should help to identify the coding smells which helps to implement these practices.</li>
+ 	<li>You can defer writing tests until the validation of feature is done. Adding acceptance tests for stability can deferred when you feel that it&#8217;s time to have more stability</li>
+</ul>
+<p>
+  Thanks a ton to Naresh Jain and team for organising such a wonderful event. Curious to know what&#8217;s coming for Agile India 2014. :)
+</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Our experience with Jekyll and Octopress]]></title>
@@ -1348,90 +1418,6 @@ Note: It will show the Rebuild button only for those builds which occurred afte
 
 
 <p></div></p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Continuous Delivery - Part 3: Running custom rake tasks during deployment]]></title>
-    <link href="http://www.multunus.com/2011/07/continuous-delivery-contd/"/>
-    <updated>2011-07-31T15:50:54+05:30</updated>
-    <id>http://www.multunus.com/2011/07/continuous-delivery-contd</id>
-    <content type="html"><![CDATA[<p>One problem we faced with the pipeline setup what I had mentioned in my <a href="http://www.multunus.com/2011/07/continuous-delivery-using-jenkins-build-pipeline/">first post</a> was that - it was not handling how to run the extra tasks that we need to do in some of the deployments. Some examples are:</p>
-
-<ul>
-    <li>Reindex the solr/lucene indexes if any new field has been added to the index</li>
-    <li>Some custom rake tasks , say for eg: task to update values in the DB, which you don&#8217;t want to add to migrations</li>
-</ul>
-
-
-<p>We do have Cap tasks for running the required rake tasks, but again it was done manually. So we&#8217;ve to remember to run them after deploying to production.  And also there is no way to track what steps were followed for a certain deployment.</p>
-
-<p>I used the build parameter again for fixing the above issue i.e. after accepting the extra tasks as parameter for the build for the first job, they will be passed on to the downstream jobs. In this way the same deployment steps will be automatically followed for rest of the jobs in the pipeline.</p>
-
-<p>The only difference in this case is that - sometimes the parameter can be empty. This check has to be done in the scripts i.e. if the value exists for the parameter, execute the extra tasks along with the normal deployment else just do a normal deployment.</p>
-
-<p>Continued..</p>
-
-<ul>
-    <li><a title="Continuous Delivery – Part 1: Our Jenkins Build Pipeline setup" href="http://www.multunus.com/2011/07/continuous-delivery-using-jenkins-build-pipeline/">Continuous Delivery – Part 1: Our Jenkins Build Pipeline setup</a></li>
-    <li><a title="Continuous Delivery – Part 2: Code metrics with metrical" href="http://www.multunus.com/2011/07/continuous-delivery-code-metrics-with-metrical/">Continuous Delivery – Part 2: Code metrics with metrical</a></li>
-    <li><a title="Continuous Delivery – Part 4: Rolling back database migrations with Capistrano rollback" href="http://www.multunus.com/2011/08/continuous-delivery-part-3-rolling-back-database-migrations-with-capistrano-rollback/">Continuous Delivery – Part 4: Rolling back database migrations with Capistrano rollback</a></li>
-</ul>
-
-
-
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Continuous Delivery - Part 2: Code metrics with metrical]]></title>
-    <link href="http://www.multunus.com/2011/07/continuous-delivery-code-metrics-with-metrical/"/>
-    <updated>2011-07-31T15:44:40+05:30</updated>
-    <id>http://www.multunus.com/2011/07/continuous-delivery-code-metrics-with-metrical</id>
-    <content type="html"><![CDATA[<p><a href="http://iain.nl/easier-metricfu-with-metrical">Metrical</a> is for easier <a href="http://metric-fu.rubyforge.org/">metric_fu</a> setup. You can see the details on why and how <a href="http://iain.nl/easier-metricfu-with-metrical">here</a>. Its an awesome tool which allows us to easily use metric_fu without adding any dependency to the project code.</p>
-
-<p>The steps I followed for setting it up in our Jenkins server are:</p>
-
-<ul>
-    <li> Install the gem. I installed it under our ruby 1.9.2 in RVM.</li>
-    <li> Create a .metrics file under your projects directory with the settings. This is not mandatory, but I had to use this because some configurations do not seem to be working with ruby 1.9.2. I&#8217;ve mentioned those below along with the contents of the .metrics file</li>
-    <li> Create a job in Jenkins server, mention the repository details and for build step give the shell command as <em>rvm 1.9.2 -S metrical</em></li>
-    <li> Configure the <a href="https://wiki.jenkins-ci.org/display/JENKINS/HTML+Publisher+Plugin">HTML Publisher plugin</a> for showing the nice Graphs generated by metric_fu as part of the build report. The default report location is tmp/metric_fu/output under the project directory. You can change the same in .metrics file.</li>
-</ul>
-
-
-<p>As I mentioned above, tools such as flay and flog, which comes as part of metric_fu, have <a href="https://github.com/iain/metrical/issues/4">issues</a> working with ruby 1.9.2. And the same case with stats graph and syntax highlighting. The same case with <a href="https://github.com/relevance/rcov/issues/8">rcov</a> also. So I had to create a <em><strong>.metrics</strong></em> file with the following contents and put in the project dir:</p>
-
-<p><span style="font-family: Consolas, Monaco, 'Courier New', Courier, monospace; line-height: 18px;"> </span></p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>MetricFu::Configuration.run do |config|
-</span><span class='line'>        config.code_dirs = ['app', 'lib']
-</span><span class='line'>        config.syntax_highlighting = false
-</span><span class='line'>        config.metrics  = [:churn,:reek,:roodi,:hotspots,:rails_best_practices]
-</span><span class='line'>        config.graphs   = [:reek, :roodi, :rails_best_practices]
-</span><span class='line'>        config.rcov[:test_files] = ['spec/**/*_spec.rb']
-</span><span class='line'>        config.rcov[:rcov_opts] &lt;&lt; &quot;-Ispec&quot; # Needed to find spec_helper
-</span><span class='line'>end</span></code></pre></td></tr></table></div></figure>
-
-
-<p>For test coverage I&#8217;ve used <a href="https://github.com/colszowka/simplecov">Simplecov</a> which is easy to setup. It will generate the coverage report whenever you run the tests. This also generated html report which can be integrated easily into Jenkins. As mentioned <a href="https://github.com/colszowka/simplecov/issues/42">here</a> in the issue list, it does not generate the report when you are running with <a href="https://github.com/timcharper/spork/wiki">spork</a>.</p>
-
-<p>Continued..</p>
-
-<ul>
-    <li><a title="Continuous Delivery – Part 1: Our Jenkins Build Pipeline setup" href="http://www.multunus.com/2011/07/continuous-delivery-using-jenkins-build-pipeline/">Continuous Delivery – Part 1: Our Jenkins Build Pipeline setup</a></li>
-    <li><a title="Continuous Delivery – Part 3: Running custom rake tasks during deployment" href="http://www.multunus.com/2011/07/continuous-delivery-contd/">Continuous Delivery – Part 3: Running custom rake tasks during deployment</a></li>
-    <li><a title="Continuous Delivery – Part 4: Rolling back database migrations with Capistrano rollback" href="http://www.multunus.com/2011/08/continuous-delivery-part-3-rolling-back-database-migrations-with-capistrano-rollback/">Continuous Delivery – Part 4: Rolling back database migrations with Capistrano rollback</a></li>
-</ul>
-
 ]]></content>
   </entry>
   
