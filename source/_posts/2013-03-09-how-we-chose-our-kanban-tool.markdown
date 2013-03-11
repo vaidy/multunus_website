@@ -33,7 +33,7 @@ The different tools we evaluated were:
 <iframe width='700' height='400' frameborder='0' src='https://docs.google.com/spreadsheet/pub?key=0ApUPwJdQvqT_dEJuS25YZzMwWkJVc0NXWXhIbUhaQ1E&output=html&widget=true'></iframe>
 <br/>
 <p>
- Please use this <a href="https://docs.google.com/spreadsheet/ccc?key=0ApUPwJdQvqT_dEJuS25YZzMwWkJVc0NXWXhIbUhaQ1E&usp=sharing">link</a> if you would like to see the original document.
+ Please check <a href="https://docs.google.com/spreadsheet/ccc?key=0ApUPwJdQvqT_dEJuS25YZzMwWkJVc0NXWXhIbUhaQ1E&usp=sharing">here</a> , if you want to see the original google spreadsheet.
 </p>
 <p>
   Lastly, I would like to mention those articles which helped us to understand Kanban better.
