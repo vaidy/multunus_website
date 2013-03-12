@@ -33,8 +33,9 @@ The different tools we evaluated were:
 <iframe width='700' height='400' frameborder='0' src='https://docs.google.com/spreadsheet/pub?key=0ApUPwJdQvqT_dEJuS25YZzMwWkJVc0NXWXhIbUhaQ1E&output=html&widget=true'></iframe>
 <br/>
 <p>
- Please check <a href="https://docs.google.com/spreadsheet/ccc?key=0ApUPwJdQvqT_dEJuS25YZzMwWkJVc0NXWXhIbUhaQ1E&usp=sharing">here</a> , if you want to see the original google spreadsheet.
+ Here is the <a href="https://docs.google.com/spreadsheet/ccc?key=0ApUPwJdQvqT_dEJuS25YZzMwWkJVc0NXWXhIbUhaQ1E&usp=sharing">original google spreadsheet</a> .
 </p>
+<p>So which tool did we end up choosing? Well, its a Kanban Tool called <a href="http://kanbantool.com">KanbanTool</a> :)</p>
 <p>
   Lastly, I would like to mention those articles which helped us to understand Kanban better.
 <ul>    
