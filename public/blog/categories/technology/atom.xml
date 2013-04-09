@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Technology | Multunus]]></title>
   <link href="http://www.multunus.com/blog/categories/technology/atom.xml" rel="self"/>
   <link href="http://www.multunus.com/"/>
-  <updated>2013-03-12T16:45:41+05:30</updated>
+  <updated>2013-04-09T12:31:55+00:00</updated>
   <id>http://www.multunus.com/</id>
   <author>
     <name><![CDATA[]]></name>
@@ -16,7 +16,7 @@
   <entry>
     <title type="html"><![CDATA[Our experience with Jekyll and Octopress]]></title>
     <link href="http://www.multunus.com/2012/10/our-experience-with-jekyll-and-octopress/"/>
-    <updated>2012-10-25T08:30:05+05:30</updated>
+    <updated>2012-10-25T03:00:05+00:00</updated>
     <id>http://www.multunus.com/2012/10/our-experience-with-jekyll-and-octopress</id>
     <content type="html"><![CDATA[<div>
 <p>
@@ -137,7 +137,7 @@ We’ve created couple of open source contributions as part of the migration pro
   <entry>
     <title type="html"><![CDATA[Web Application Security]]></title>
     <link href="http://www.multunus.com/2012/10/web-application-security/"/>
-    <updated>2012-10-11T09:55:05+05:30</updated>
+    <updated>2012-10-11T04:25:05+00:00</updated>
     <id>http://www.multunus.com/2012/10/web-application-security</id>
     <content type="html"><![CDATA[<p class="c0"><span>Now a days we, programmers are really obsessed
     with test driving our application and automating. We automate our
@@ -360,7 +360,7 @@ We’ve created couple of open source contributions as part of the migration pro
   <entry>
     <title type="html"><![CDATA[Setting up Development Environment using Vagrant]]></title>
     <link href="http://www.multunus.com/2012/10/setting-up-development-environment-using-vagrant/"/>
-    <updated>2012-10-03T10:55:05+05:30</updated>
+    <updated>2012-10-03T05:25:05+00:00</updated>
     <id>http://www.multunus.com/2012/10/setting-up-development-environment-using-vagrant</id>
     <content type="html"><![CDATA[<p><strong><span style="text-decoration: underline;">Problem</span></strong></p>
 
@@ -472,7 +472,7 @@ end</pre>
   <entry>
     <title type="html"><![CDATA[CSS3 animations versus Javascript animations]]></title>
     <link href="http://www.multunus.com/2012/09/css3-animations-versus-javascript-animations/"/>
-    <updated>2012-09-27T10:55:05+05:30</updated>
+    <updated>2012-09-27T05:25:05+00:00</updated>
     <id>http://www.multunus.com/2012/09/css3-animations-versus-javascript-animations</id>
     <content type="html"><![CDATA[<p><strong><span style="text-decoration: underline;">tl; dr;</span></strong></p>
 
@@ -640,7 +640,7 @@ Also make sure to check out the relevant webkit source: <a title=
   <entry>
     <title type="html"><![CDATA[Introduction to Continuous Delivery]]></title>
     <link href="http://www.multunus.com/2012/05/introduction-to-continuous-delivery/"/>
-    <updated>2012-05-15T14:49:16+05:30</updated>
+    <updated>2012-05-15T09:19:16+00:00</updated>
     <id>http://www.multunus.com/2012/05/introduction-to-continuous-delivery</id>
     <content type="html"><![CDATA[<p>We've been doing Continuous Delivery for sometime and also been writing about how to implement the same. This post is about why Continuous Delivery is required and what problems does it solve.</p>
 
