@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Process | Multunus]]></title>
   <link href="http://www.multunus.com/blog/categories/process/atom.xml" rel="self"/>
   <link href="http://www.multunus.com/"/>
-  <updated>2013-04-11T03:27:30+00:00</updated>
+  <updated>2013-04-11T03:31:02+00:00</updated>
   <id>http://www.multunus.com/</id>
   <author>
     <name><![CDATA[]]></name>
@@ -45,6 +45,9 @@ But we were still struggling with estimating. We tried the story points and velo
 <h2>First set of changes</h2>
 
 
+<br/>
+
+
 <ul>
     <li>Keep both <a href="http://www.jamesshore.com/Agile-Book/release_planning.html">MMFs and Stories</a> as small as possible. </li>
     <li>Slice down all stories to the same size. This reduces the margin of error that creeps in during story size estimation. </li>
@@ -65,6 +68,7 @@ However, things still fell apart for new projects and customers. The level of un
 <h2>Second set of changes</h2>
 
 
+<br/>
 
 
 <p>
@@ -102,6 +106,9 @@ We’ve tried the timeboxing approach on two different projects - and in both ca
 <h2>Kanban</h2>
 
 
+<br/>
+
+
 <p>
 As mentioned in my <a href="http://www.multunus.com/2013/03/how-we-chose-our-kanban-tool/">earlier post</a>, we’ve moved to Kanban, so we’re no longer doing fixed weekly iterations. And hence no calculations of velocity either.
 </p>
@@ -120,7 +127,8 @@ Of course, tracking the original project plan is still necessary - and allows fo
 <h3>References</h3>
 
 
-<p><a href="http://neilkillick.com/2012/04/12/do-not-estimate-software-projects-at-all">http://neilkillick.com/2012/04/12/do-not-estimate-software-projects-at-all/</a></p>
+<p></br/>
+<a href="http://neilkillick.com/2012/04/12/do-not-estimate-software-projects-at-all">http://neilkillick.com/2012/04/12/do-not-estimate-software-projects-at-all/</a></p>
 
 <br/>
 

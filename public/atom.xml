@@ -4,11 +4,7 @@
   <title><![CDATA[Multunus]]></title>
   <link href="http://www.multunus.com/atom.xml" rel="self"/>
   <link href="http://www.multunus.com/"/>
-<<<<<<< HEAD
-  <updated>2013-04-11T03:25:41+00:00</updated>
-=======
-  <updated>2013-04-09T12:31:55+00:00</updated>
->>>>>>> 90d49fa887ab77b27379075f816e6d8fd308890a
+  <updated>2013-04-11T03:30:32+00:00</updated>
   <id>http://www.multunus.com/</id>
   <author>
     <name><![CDATA[]]></name>
@@ -36,6 +32,7 @@ But we were still struggling with estimating. We tried the story points and velo
 <p>It was time to look beyond XP’s default practices. </p>
 
 <h2>First set of changes</h2>
+<br/>
 <ul>
     <li>Keep both <a href="http://www.jamesshore.com/Agile-Book/release_planning.html">MMFs and Stories</a> as small as possible. </li>
     <li>Slice down all stories to the same size. This reduces the margin of error that creeps in during story size estimation. </li>
@@ -48,7 +45,7 @@ The above changes worked well on projects which already had some kind of rhythm.
 However, things still fell apart for new projects and customers. The level of uncertainty is obviously much higher in these cases - and the above modified approach was not sufficient for us to remain predictable enough.
 </p>
 <h2>Second set of changes</h2>
-
+<br/>
 <p>
 During our search for alternative approaches [see references below], we discovered multiple presentations and blog posts - all suggesting the same thing: Estimating can never be accurate <em>enough</em>. 
 </p>
@@ -70,6 +67,7 @@ We’re also noticing a more ready acceptance of the “fail early” mantra - a
 We’ve tried the timeboxing approach on two different projects - and in both cases, have found remarkably better results. We were close enough to the original estimates that we’d provided - in terms of both cost and time. 
 </p>
 <h2>Kanban</h2>
+<br/>
 <p>
 As mentioned in my <a href="http://www.multunus.com/2013/03/how-we-chose-our-kanban-tool/">earlier post</a>, we’ve moved to Kanban, so we’re no longer doing fixed weekly iterations. And hence no calculations of velocity either.
 </p>
@@ -80,6 +78,7 @@ Instead the focus is on reducing the cycle time for stories - by constantly iden
 Of course, tracking the original project plan is still necessary - and allows for an additional level of feedback on how well the team is progressing. 
 </p>
 <h3>References</h3>
+</br/>
 <a href="http://neilkillick.com/2012/04/12/do-not-estimate-software-projects-at-all">http://neilkillick.com/2012/04/12/do-not-estimate-software-projects-at-all/</a>
 <br/>
 <a href="http://softwaredevelopmenttoday.blogspot.com.au/2012/01/story-points-considered-harmful-or-why.html">http://softwaredevelopmenttoday.blogspot.com.au/2012/01/story-points-considered-harmful-or-why.html</a>
@@ -1500,35 +1499,4 @@ Note: It will show the Rebuild button only for those builds which occurred afte
 ]]></content>
   </entry>
   
-<<<<<<< HEAD
-=======
-  <entry>
-    <title type="html"><![CDATA[Continuous Delivery - Part 4: Rolling back database migrations with Capistrano rollback]]></title>
-    <link href="http://www.multunus.com/2011/08/continuous-delivery-part-3-rolling-back-database-migrations-with-capistrano-rollback/"/>
-    <updated>2011-08-14T02:52:40+00:00</updated>
-    <id>http://www.multunus.com/2011/08/continuous-delivery-part-3-rolling-back-database-migrations-with-capistrano-rollback</id>
-    <content type="html"><![CDATA[<p>According to the book <a href="http://www.amazon.com/gp/product/0321601912?tag=contindelive-20">Continuous Delivery</a>, the database also should be under version control, and Rails allows us to achieve this with ActiveRecord Migrations. Even though <a class="zem_slink" title="Capistrano" rel="homepage" href="http://www.capify.org/">Capistrano</a> can run the migrations automatically with its <code>deploy</code> command, its <code>deploy:rollback</code> task does not rollback the DB migrations automatically.  I&#8217;ve created a small capistrano <a href="https://github.com/multunus/capistrano-db-rollback">recipe</a> which can take care of rolling back migrations.  The assumptions made are:</p>
-
-<ul>
-    <li>All the migrations have the <code>down</code> method defined properly. You can check for this by running <code>rake db:migrate:redo</code></li>
-    <li>The schema.rb exists in the repository. This is one of the <a href="http://guides.rubyonrails.org/migrations.html#schema-dumps-and-source-control">suggested practices</a> for Rails.</li>
-</ul>
-
-
-<p>The script is very simple, it extracts the version from the <code>schema.rb</code> and runs the <code>rake db:migrate</code> with the same version. The task gets run automatically along with <code>deploy:rollback</code>. This approach should work for most small and medium complexity Rails apps.</p>
-
-<p>Continued..</p>
-
-<ul>
-    <li><a title="Continuous Delivery – Part 1: Our Jenkins Build Pipeline setup" href="http://www.multunus.com/2011/07/continuous-delivery-using-jenkins-build-pipeline/">Continuous Delivery – Part 1: Our Jenkins Build Pipeline setup</a></li>
-    <li><a title="Continuous Delivery – Part 2: Code metrics with metrical" href="http://www.multunus.com/2011/07/continuous-delivery-code-metrics-with-metrical/">Continuous Delivery – Part 2: Code metrics with metrical</a></li>
-    <li><a title="Continuous Delivery – Part 3: Running custom rake tasks during deployment" href="http://www.multunus.com/2011/07/continuous-delivery-contd/">Continuous Delivery – Part 3: Running custom rake tasks during deployment</a></li>
-</ul>
-
-
-<p></div></p>
-]]></content>
-  </entry>
-  
->>>>>>> 90d49fa887ab77b27379075f816e6d8fd308890a
 </feed>
