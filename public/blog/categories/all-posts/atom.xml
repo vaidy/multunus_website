@@ -4,7 +4,7 @@
   <title><![CDATA[Category: All Posts | Multunus]]></title>
   <link href="http://www.multunus.com/blog/categories/all-posts/atom.xml" rel="self"/>
   <link href="http://www.multunus.com/"/>
-  <updated>2013-03-12T16:45:41+05:30</updated>
+  <updated>2013-04-11T03:25:41+00:00</updated>
   <id>http://www.multunus.com/</id>
   <author>
     <name><![CDATA[]]></name>
@@ -14,9 +14,136 @@
 
   
   <entry>
+    <title type="html"><![CDATA[Estimating to Timeboxing - Our Journey]]></title>
+    <link href="http://www.multunus.com/2013/04/estimating-to-timeboxing-our-journey/"/>
+    <updated>2013-04-11T02:33:00+00:00</updated>
+    <id>http://www.multunus.com/2013/04/estimating-to-timeboxing-our-journey</id>
+    <content type="html"><![CDATA[<p>Estimations are predictions. Unfortunately though, they end up being perceived as <em>commitments</em>. And the team in question starts getting unduly pressured when the estimates go wrong. At Multunus this has happened many times in the past.</p>
+
+<p>Sometime last year we realized there was no point in trying any harder to come up with better estimates - just by relying on our past experience and gut instincts. It was time to look at things from a different perspective. </p>
+
+
+
+
+<p>
+We learnt a lot of things from <a href="http://www.jamesshore.com/Agile-Book/">Art of Agile Development [by James Shore]</a>. We found it tremendously useful for learning how to get started with Extreme Programming - and making the “prevention rather than cure” mental shift. This in turn resulted in much less <em>waste</em> - and higher efficiency across the team.
+</p>
+
+
+
+
+<p>
+But we were still struggling with estimating. We tried the story points and velocity approach suggested by XP. But we were still unable to deliver things at a predictable pace.
+</p>
+
+
+<p>It was time to look beyond XP’s default practices. </p>
+
+
+
+
+<h2>First set of changes</h2>
+
+
+<ul>
+    <li>Keep both <a href="http://www.jamesshore.com/Agile-Book/release_planning.html">MMFs and Stories</a> as small as possible. </li>
+    <li>Slice down all stories to the same size. This reduces the margin of error that creeps in during story size estimation. </li>
+    <li>The velocity, then, is simply the number of stories delivered in an iteration.</li>
+</ul>
+
+
+<p>
+The above changes worked well on projects which already had some kind of rhythm. We’d been working with these customer for at least 3 months - so, our knowledge of the system and the customer’s requirements were good. 
+</p>
+
+
+<p>
+However, things still fell apart for new projects and customers. The level of uncertainty is obviously much higher in these cases - and the above modified approach was not sufficient for us to remain predictable enough.
+</p>
+
+
+<h2>Second set of changes</h2>
+
+
+
+
+<p>
+During our search for alternative approaches [see references below], we discovered multiple presentations and blog posts - all suggesting the same thing: Estimating can never be accurate <em>enough</em>. 
+</p>
+
+
+<p>
+We watched the <a href="http://www.infoq.com/presentations/Embracing-Uncertainty">Deliberate Discovery video [by Dan North]</a> - and that hit us. We might be more successful if we flipped things around - and <strong>timeboxed</strong> the stories and MMF’s. 
+</p>
+
+
+<p>
+Instead of asking the question “How long will it take to build this Feature?”, we instead ask the question “What is the maximum time that should allocate for this feature?”. In addition, we’re also documenting what it is that we’re trying to discover/learn by building that particular feature. 
+</p>
+
+
+<p>
+<strong>NOTE:</strong> This is subtly different from the “validated learning” approach in the Lean Startup world - because at this stage, we’re only speaking of engineering related risks.
+</p>
+
+
+<p>
+This is useful to overcome <a href="http://en.wikipedia.org/wiki/Parkinson's_law">Parkinson’s Law</a> [“Work expands so as to fill the time available for its completion”]. There’s an additional sense of urgency that prevails on the team. This sense of urgency in turn results in reacting faster when we find ourselves going down “inevitable” rabbit holes. 
+</p>
+
+
+<p>
+We’re also noticing a more ready acceptance of the “fail early” mantra - after shifting to the timeboxing mode. 
+
+We’ve tried the timeboxing approach on two different projects - and in both cases, have found remarkably better results. We were close enough to the original estimates that we’d provided - in terms of both cost and time. 
+</p>
+
+
+<h2>Kanban</h2>
+
+
+<p>
+As mentioned in my <a href="http://www.multunus.com/2013/03/how-we-chose-our-kanban-tool/">earlier post</a>, we’ve moved to Kanban, so we’re no longer doing fixed weekly iterations. And hence no calculations of velocity either.
+</p>
+
+
+<p>
+Instead the focus is on reducing the cycle time for stories - by constantly identifying and eliminating waste in the workflow. 
+</p>
+
+
+<p>
+Of course, tracking the original project plan is still necessary - and allows for an additional level of feedback on how well the team is progressing. 
+</p>
+
+
+<h3>References</h3>
+
+
+<p><a href="http://neilkillick.com/2012/04/12/do-not-estimate-software-projects-at-all">http://neilkillick.com/2012/04/12/do-not-estimate-software-projects-at-all/</a></p>
+
+<br/>
+
+
+<p><a href="http://softwaredevelopmenttoday.blogspot.com.au/2012/01/story-points-considered-harmful-or-why.html">http://softwaredevelopmenttoday.blogspot.com.au/2012/01/story-points-considered-harmful-or-why.html</a></p>
+
+<br/>
+
+
+<p><a href="http://www.infoq.com/presentations/Want-Better-Estimates-Stop-Estimating">http://www.infoq.com/presentations/Want-Better-Estimates-Stop-Estimating</a></p>
+
+<br/>
+
+
+<p><a href="http://www.industriallogic.com/blog/stop-using-story-points/">http://www.industriallogic.com/blog/stop-using-story-points/</a>
+<a href="http://dannorth.net/2009/07/01/the-perils-of-estimation/">http://dannorth.net/2009/07/01/the-perils-of-estimation/</a></p>
+]]></content>
+  </entry>
+  
+  <entry>
     <title type="html"><![CDATA[How we chose our Kanban Tool]]></title>
     <link href="http://www.multunus.com/2013/03/how-we-chose-our-kanban-tool/"/>
-    <updated>2013-03-09T22:39:00+05:30</updated>
+    <updated>2013-03-09T22:39:00+00:00</updated>
     <id>http://www.multunus.com/2013/03/how-we-chose-our-kanban-tool</id>
     <content type="html"><![CDATA[<p>We've been using <a href="http://www.pivotaltracker.com/">Pivotal Tracker</a>[PT] as our Collaborative Project Management Tool for over 2 years now.</p>
 
@@ -84,7 +211,7 @@ The different tools we evaluated were:
   <entry>
     <title type="html"><![CDATA[AgileIndia 2013 Summary]]></title>
     <link href="http://www.multunus.com/2013/03/agileindia-2013-summary/"/>
-    <updated>2013-03-08T17:07:00+05:30</updated>
+    <updated>2013-03-08T17:07:00+00:00</updated>
     <id>http://www.multunus.com/2013/03/agileindia-2013-summary</id>
     <content type="html"><![CDATA[<p>This is the summary about the  recently concluded <a href="http://2013.agileindia.org/">Agile India Conference 2013</a>.
 This gave me a chance to interact with great legends and leaders of software industry such as
@@ -120,7 +247,7 @@ Aslam Khan, Karl Scotland, Kenji Hiranabe, Laurent Bossavit, Rebecca Parsons etc
   <entry>
     <title type="html"><![CDATA[Continuous Delivery of iOS apps using Jenkins and TestFlightApp ]]></title>
     <link href="http://www.multunus.com/2012/05/continuous-delivery-of-ios-apps-using-jenkins-and-testflightapp/"/>
-    <updated>2012-05-21T11:03:21+05:30</updated>
+    <updated>2012-05-21T05:33:21+00:00</updated>
     <id>http://www.multunus.com/2012/05/continuous-delivery-of-ios-apps-using-jenkins-and-testflightapp</id>
     <content type="html"><![CDATA[<p>As mentioned in <a href="http://www.multunus.com/blog/categories/continuous-delivery/">earlier posts</a> we've been doing Continuous Delivery for both Webapps and Android apps for quite sometime. This post is about setting up Continuous Delivery for iOS apps using Jenkins and <a href="http://testflightapp.com" target="_blank">TestFlightApp</a>. TestFlightApp is a free service which helps to do closed beta testing without putting into AppStore. Using their APIs, the process of delivering new versions of the app can be automated.</p>
 
@@ -174,7 +301,7 @@ Aslam Khan, Karl Scotland, Kenji Hiranabe, Laurent Bossavit, Rebecca Parsons etc
   <entry>
     <title type="html"><![CDATA[Introduction to Continuous Delivery]]></title>
     <link href="http://www.multunus.com/2012/05/introduction-to-continuous-delivery/"/>
-    <updated>2012-05-15T14:49:16+05:30</updated>
+    <updated>2012-05-15T09:19:16+00:00</updated>
     <id>http://www.multunus.com/2012/05/introduction-to-continuous-delivery</id>
     <content type="html"><![CDATA[<p>We've been doing Continuous Delivery for sometime and also been writing about how to implement the same. This post is about why Continuous Delivery is required and what problems does it solve.</p>
 
@@ -263,40 +390,6 @@ One of the key principle of Continuous Delivery is <strong>To </strong><strong>
 
 <div><a href="http://continousdelivery.com" target="_blank">http://continousdelivery.com</a></div>
 
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[A round up of our presentations and writings]]></title>
-    <link href="http://www.multunus.com/2012/02/a-round-up-of-our-presentations-and-writings/"/>
-    <updated>2012-02-27T23:59:30+05:30</updated>
-    <id>http://www.multunus.com/2012/02/a-round-up-of-our-presentations-and-writings</id>
-    <content type="html"><![CDATA[<p>We started speaking at conferences last year. We've also been doing a fair bit of writing. This post rounds up what we've up to - along with links to our presentations and some of what we've written.</p>
-
-<!-- more -->
-
-
-<p><strong><span style="text-decoration: underline;">Presentations [in Chronological Order]</span></strong></p>
-
-<p><strong>DevOpsDays 2011: </strong>Leena gave a lightning talk on "Push Button Deployment with Jenkins". <a href="http://sliwww.slideshare.net/leenasn/push-button-deployment-using-jenkins">Here's the presentation</a>.</p>
-
-<p><strong>DroidCon India 2011: </strong>We gave two talks at this conference:</p>
-
-<ul>
-    <li>Leena and I co-presented on "Continuous Delivery for an Android application". Here's the <a href="http://funnel.hasgeek.com/droidcon/83-continuous-delivery-for-an-android-application">original proposal</a> and <a href="http://prezi.com/56ueprf0mkql/continuous-delivery-on-android/">here's the link to the prezi</a>. Here's a <a href="http://www.youtube.com/watch?feature=player_embedded&amp;v=uNvjNIK1EEU">short video</a> where Leena and I describe the talk.</li>
-    <li>Tamil and KP gave an intro to OpenGL on Android. Here's the <a href="http://funnel.hasgeek.com/droidcon/94-introduction-to-opengl-in-android">original proposal</a> and here's the <a href="http://www.slideshare.net/tamillarasan/introduction-to-openglinandroid?from=ss_embed">link to the presentation</a>.</li>
-</ul>
-
-
-<p><strong>Agile India 2012</strong>: Leena and I spoke there on "Continuous Delivery for a Song". Here's the link to the <a href="http://submit2012india.agilealliance.org/node/8894">original proposal</a>. And here's the <a href="https://docs.google.com/a/multunus.com/present/view?id=0AQj1177vtu0MZHRoM2dmN180NzRneGp2bXRndw">link to the presentation</a>. It was a live demo - and by the comments we got from our audience, we think it went off fairly well.</p>
-
-<p><img class="aligncenter size-medium" title="Agile India 2012 Talk" src="http://www.multunus.com/images/DSC_7209-300x201.jpg" alt="" width="300" height="201" /></p>
-
-<p><strong>Recent Writing: </strong>An article I wrote for YourStory.in was published late last year. It was titled "<a href="http://yourstory.in/2011/12/a-sneak-peek-into-mobile-app-opportunities-in-2012/">Mobile App Opportunities in 2012</a>".</p>
-
-<p><strong>Blogging:</strong> Leena has written a lot of articles on Continuous Delivery <a href="http://www.multunus.com/blog/categories/continuous-delivery/">on this blog itself</a>. And Akshay <a href="http://akshayatmultunus.wordpress.com/">has been writing regularly</a> since he joined us last year.</p>
-
-<p>I hope you found this round up useful. I expect the Agile India organizers to upload videos of the all the talks soon. Once that happens, I'll update this post with the link to the video of our talk there.</p>
 ]]></content>
   </entry>
   
