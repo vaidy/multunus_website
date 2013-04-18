@@ -1,15 +1,15 @@
 ---
 layout: post
-title: "Title"
+title: "Second Test for Prose"
 comments: true
-categories: 
-  --All Posts
-published: true
-
+date: 2013-04-17 02:33
+author:
+- Leena
+categories:
+- All Posts
+published: true	
 ---
 
-# This is a test from prose.io?
+# This is the second test with prose.io + octopress?
 
-The following link should appear :)
-
-[GitHub](http://github.com)
+Long lige [Jekyll](https://github.com/mojombo/jekyll)
