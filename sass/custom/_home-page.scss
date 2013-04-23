@@ -48,7 +48,7 @@
 	text-align: center;
 }
 
-.we-love-working-with {
+.we-love-working-with{
 	font-size: 3em;
 	line-height: 101%;
 	text-align: center;
@@ -240,4 +240,17 @@
 
 .small-logo {
 	padding-top: 5px !important;
+}
+
+.homepage-video{
+	margin-bottom: 4px;
+	.entrepreneurial-artists{
+		font-size: 3em;
+		line-height: 70px;
+		margin-top: 7%;
+	}
+	iframe{
+		margin-top: 4%;
+	}
+
 }

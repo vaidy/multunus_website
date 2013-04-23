@@ -4,7 +4,7 @@
   <title><![CDATA[Multunus]]></title>
   <link href="http://www.multunus.com/atom.xml" rel="self"/>
   <link href="http://www.multunus.com/"/>
-  <updated>2013-04-11T03:31:02+00:00</updated>
+  <updated>2013-04-23T21:04:26+05:30</updated>
   <id>http://www.multunus.com/</id>
   <author>
     <name><![CDATA[]]></name>
@@ -14,9 +14,20 @@
 
   
   <entry>
+    <title type="html"><![CDATA[Second Test for Prose]]></title>
+    <link href="http://www.multunus.com/2013/04/prose-test/"/>
+    <updated>2013-04-18T02:33:00+05:30</updated>
+    <id>http://www.multunus.com/2013/04/prose-test</id>
+    <content type="html"><![CDATA[<h1>This is the second test with prose.io + octopress?</h1>
+
+<p>Long lige <a href="https://github.com/mojombo/jekyll">Jekyll</a></p>
+]]></content>
+  </entry>
+  
+  <entry>
     <title type="html"><![CDATA[Estimating to Timeboxing - Our Journey]]></title>
     <link href="http://www.multunus.com/2013/04/estimating-to-timeboxing-our-journey/"/>
-    <updated>2013-04-11T02:33:00+00:00</updated>
+    <updated>2013-04-11T02:33:00+05:30</updated>
     <id>http://www.multunus.com/2013/04/estimating-to-timeboxing-our-journey</id>
     <content type="html"><![CDATA[Estimations are predictions. Unfortunately though, they end up being perceived as <em>commitments</em>. And the team in question starts getting unduly pressured when the estimates go wrong. At Multunus this has happened many times in the past.
 
@@ -94,7 +105,7 @@ Of course, tracking the original project plan is still necessary - and allows fo
   <entry>
     <title type="html"><![CDATA[How we chose our Kanban Tool]]></title>
     <link href="http://www.multunus.com/2013/03/how-we-chose-our-kanban-tool/"/>
-    <updated>2013-03-09T22:39:00+00:00</updated>
+    <updated>2013-03-09T22:39:00+05:30</updated>
     <id>http://www.multunus.com/2013/03/how-we-chose-our-kanban-tool</id>
     <content type="html"><![CDATA[<p>We&#8217;ve been using <a href="http://www.pivotaltracker.com/">Pivotal Tracker</a>[PT] as our Collaborative Project Management Tool for over 2 years now.</p>
 
@@ -162,7 +173,7 @@ The different tools we evaluated were:
   <entry>
     <title type="html"><![CDATA[AgileIndia 2013 Summary]]></title>
     <link href="http://www.multunus.com/2013/03/agileindia-2013-summary/"/>
-    <updated>2013-03-08T17:07:00+00:00</updated>
+    <updated>2013-03-08T17:07:00+05:30</updated>
     <id>http://www.multunus.com/2013/03/agileindia-2013-summary</id>
     <content type="html"><![CDATA[This is the summary about the  recently concluded <a href="http://2013.agileindia.org/">Agile India Conference 2013</a>. 
 This gave me a chance to interact with great legends and leaders of software industry such as 
@@ -192,7 +203,7 @@ Aslam Khan, Karl Scotland, Kenji Hiranabe, Laurent Bossavit, Rebecca Parsons etc
   <entry>
     <title type="html"><![CDATA[Our experience with Jekyll and Octopress]]></title>
     <link href="http://www.multunus.com/2012/10/our-experience-with-jekyll-and-octopress/"/>
-    <updated>2012-10-25T03:00:05+00:00</updated>
+    <updated>2012-10-25T08:30:05+05:30</updated>
     <id>http://www.multunus.com/2012/10/our-experience-with-jekyll-and-octopress</id>
     <content type="html"><![CDATA[<div>
 <p>
@@ -312,7 +323,7 @@ We’ve created couple of open source contributions as part of the migration pro
   <entry>
     <title type="html"><![CDATA[Web Application Security]]></title>
     <link href="http://www.multunus.com/2012/10/web-application-security/"/>
-    <updated>2012-10-11T04:25:05+00:00</updated>
+    <updated>2012-10-11T09:55:05+05:30</updated>
     <id>http://www.multunus.com/2012/10/web-application-security</id>
     <content type="html"><![CDATA[<p class="c0"><span>Now a days we, programmers are really obsessed
     with test driving our application and automating. We automate our
@@ -426,7 +437,7 @@ We’ve created couple of open source contributions as part of the migration pro
   <entry>
     <title type="html"><![CDATA[Setting up Development Environment using Vagrant]]></title>
     <link href="http://www.multunus.com/2012/10/setting-up-development-environment-using-vagrant/"/>
-    <updated>2012-10-03T05:25:05+00:00</updated>
+    <updated>2012-10-03T10:55:05+05:30</updated>
     <id>http://www.multunus.com/2012/10/setting-up-development-environment-using-vagrant</id>
     <content type="html"><![CDATA[<strong><span style="text-decoration: underline;">Problem</span></strong> 
 <p>
@@ -502,7 +513,7 @@ end</pre>
   <entry>
     <title type="html"><![CDATA[CSS3 animations versus Javascript animations]]></title>
     <link href="http://www.multunus.com/2012/09/css3-animations-versus-javascript-animations/"/>
-    <updated>2012-09-27T05:25:05+00:00</updated>
+    <updated>2012-09-27T10:55:05+05:30</updated>
     <id>http://www.multunus.com/2012/09/css3-animations-versus-javascript-animations</id>
     <content type="html"><![CDATA[<strong><span style="text-decoration: underline;">tl; dr;</span></strong> 
 <p>
@@ -650,7 +661,7 @@ Also make sure to check out the relevant webkit source: <a title=
   <entry>
     <title type="html"><![CDATA[Continuous Delivery of iOS apps using Jenkins and TestFlightApp ]]></title>
     <link href="http://www.multunus.com/2012/05/continuous-delivery-of-ios-apps-using-jenkins-and-testflightapp/"/>
-    <updated>2012-05-21T05:33:21+00:00</updated>
+    <updated>2012-05-21T11:03:21+05:30</updated>
     <id>http://www.multunus.com/2012/05/continuous-delivery-of-ios-apps-using-jenkins-and-testflightapp</id>
     <content type="html"><![CDATA[<p>As mentioned in <a href="http://www.multunus.com/blog/categories/continuous-delivery/">earlier posts</a> we&#8217;ve been doing Continuous Delivery for both Webapps and Android apps for quite sometime. This post is about setting up Continuous Delivery for iOS apps using Jenkins and <a href="http://testflightapp.com" target="_blank">TestFlightApp</a>. TestFlightApp is a free service which helps to do closed beta testing without putting into AppStore. Using their APIs, the process of delivering new versions of the app can be automated.</p>
 
@@ -704,7 +715,7 @@ Also make sure to check out the relevant webkit source: <a title=
   <entry>
     <title type="html"><![CDATA[Introduction to Continuous Delivery]]></title>
     <link href="http://www.multunus.com/2012/05/introduction-to-continuous-delivery/"/>
-    <updated>2012-05-15T09:19:16+00:00</updated>
+    <updated>2012-05-15T14:49:16+05:30</updated>
     <id>http://www.multunus.com/2012/05/introduction-to-continuous-delivery</id>
     <content type="html"><![CDATA[<p>We&#8217;ve been doing Continuous Delivery for sometime and also been writing about how to implement the same. This post is about why Continuous Delivery is required and what problems does it solve.</p>
 
@@ -799,7 +810,7 @@ One of the key principle of Continuous Delivery is <strong>To </strong><strong>
   <entry>
     <title type="html"><![CDATA[A round up of our presentations and writings]]></title>
     <link href="http://www.multunus.com/2012/02/a-round-up-of-our-presentations-and-writings/"/>
-    <updated>2012-02-27T18:29:30+00:00</updated>
+    <updated>2012-02-27T23:59:30+05:30</updated>
     <id>http://www.multunus.com/2012/02/a-round-up-of-our-presentations-and-writings</id>
     <content type="html"><![CDATA[<p>We started speaking at conferences last year. We&#8217;ve also been doing a fair bit of writing. This post rounds up what we&#8217;ve up to - along with links to our presentations and some of what we&#8217;ve written.</p>
 
@@ -833,7 +844,7 @@ One of the key principle of Continuous Delivery is <strong>To </strong><strong>
   <entry>
     <title type="html"><![CDATA[A sneak peek into Mobile App Opportunities in 2012]]></title>
     <link href="http://www.multunus.com/2012/01/a-sneak-peak-into-mobile-app-opportunities-in-2012/"/>
-    <updated>2012-01-27T11:15:13+00:00</updated>
+    <updated>2012-01-27T16:45:13+05:30</updated>
     <id>http://www.multunus.com/2012/01/a-sneak-peak-into-mobile-app-opportunities-in-2012</id>
     <content type="html"><![CDATA[<div style="text-align: center;"><em>This article was originally written by me for <a href="http://yourstory.in/2011/12/a-sneak-peek-into-mobile-app-opportunities-in-2012/" target="_blank">yourstory.in</a>. But this version is more &#8220;complete&#8221; with all of the original links in place.</em></div>
 
@@ -1053,7 +1064,7 @@ One of the key principle of Continuous Delivery is <strong>To </strong><strong>
   <entry>
     <title type="html"><![CDATA[Our talks at Droidcon 2011, Bangalore]]></title>
     <link href="http://www.multunus.com/2011/12/droidcon-two-talks-we-gave/"/>
-    <updated>2011-12-02T10:07:00+00:00</updated>
+    <updated>2011-12-02T15:37:00+05:30</updated>
     <id>http://www.multunus.com/2011/12/droidcon-two-talks-we-gave</id>
     <content type="html"><![CDATA[<p>We spoke at Droidcon, Bangalore that happened on Nov 18th and 19th. We had two interesting talks on both days.</p>
 
@@ -1078,7 +1089,7 @@ One of the key principle of Continuous Delivery is <strong>To </strong><strong>
   <entry>
     <title type="html"><![CDATA[Continuous Delivery: Building Android Library project]]></title>
     <link href="http://www.multunus.com/2011/11/continuous-delivery-building-android-library-project/"/>
-    <updated>2011-11-04T09:25:20+00:00</updated>
+    <updated>2011-11-04T14:55:20+05:30</updated>
     <id>http://www.multunus.com/2011/11/continuous-delivery-building-android-library-project</id>
     <content type="html"><![CDATA[<p>This post talks about how to build an Android Project using ant which depends on an Android Library project.</p>
 
@@ -1096,7 +1107,7 @@ One of the key principle of Continuous Delivery is <strong>To </strong><strong>
   <entry>
     <title type="html"><![CDATA[Lessons from interview with Joel Spolsky]]></title>
     <link href="http://www.multunus.com/2011/10/lessons-from-interview-with-joel-spolsky/"/>
-    <updated>2011-10-16T19:00:36+00:00</updated>
+    <updated>2011-10-17T00:30:36+05:30</updated>
     <id>http://www.multunus.com/2011/10/lessons-from-interview-with-joel-spolsky</id>
     <content type="html"><![CDATA[<p><a href="http://commons.wikipedia.org/wiki/File:PivotLaunching3S.jpg"><img title="USS Pivot launched at the Gulf Shipbuilding Co..." src="http://upload.wikimedia.org/wikipedia/commons/thumb/9/9d/PivotLaunching3S.jpg/300px-PivotLaunching3S.jpg" alt="USS Pivot launched at the Gulf Shipbuilding Co..." width="300" height="241" /></a></p>
 
@@ -1214,7 +1225,7 @@ One of the key principle of Continuous Delivery is <strong>To </strong><strong>
   <entry>
     <title type="html"><![CDATA[Simple Image Filter using OpenGL ES in Android]]></title>
     <link href="http://www.multunus.com/2011/10/simple-image-filter-using-opengl-es-in-android/"/>
-    <updated>2011-10-07T10:05:45+00:00</updated>
+    <updated>2011-10-07T15:35:45+05:30</updated>
     <id>http://www.multunus.com/2011/10/simple-image-filter-using-opengl-es-in-android</id>
     <content type="html"><![CDATA[<p><em><strong>Note</strong>: This post assumes some basic knowledge in setting up an OpenGL app in Android. A basic example for rendering a texture on to a surface can be found <a href="http://developer.android.com/resources/samples/ApiDemos/src/com/example/android/apis/graphics/GLES20TriangleRenderer.html">here.</a> You can use this as the initial setup for trying out Shader language program listed in this post.</em></p>
 
@@ -1295,7 +1306,7 @@ We will be concentrating on Vertex and Fragment processing phases in OpenGL pipe
   <entry>
     <title type="html"><![CDATA[Continuous Delivery for Android Apps – Part 2]]></title>
     <link href="http://www.multunus.com/2011/10/continuous-delivery-for-android-apps-part-2/"/>
-    <updated>2011-10-06T01:21:57+00:00</updated>
+    <updated>2011-10-06T06:51:57+05:30</updated>
     <id>http://www.multunus.com/2011/10/continuous-delivery-for-android-apps-part-2</id>
     <content type="html"><![CDATA[<p>This post talks about how to run tests for the build setup as mentioned in <a href="http://www.multunus.com/2011/09/continuous-delivery-for-android-apps-part-1/">Part 1</a>.</p>
 
@@ -1349,7 +1360,7 @@ description="Runs tests from the package defined in test.package property"&gt;
   <entry>
     <title type="html"><![CDATA[Confident Estimates]]></title>
     <link href="http://www.multunus.com/2011/09/confident-estimates/"/>
-    <updated>2011-09-29T03:28:51+00:00</updated>
+    <updated>2011-09-29T08:58:51+05:30</updated>
     <id>http://www.multunus.com/2011/09/confident-estimates</id>
     <content type="html"><![CDATA[<div class="zemanta-img" style="margin: 1em; display: block;">
 
@@ -1398,7 +1409,7 @@ description="Runs tests from the package defined in test.package property"&gt;
   <entry>
     <title type="html"><![CDATA[Continuous Delivery for Android Apps - Part 1]]></title>
     <link href="http://www.multunus.com/2011/09/continuous-delivery-for-android-apps-part-1/"/>
-    <updated>2011-09-23T05:45:50+00:00</updated>
+    <updated>2011-09-23T11:15:50+05:30</updated>
     <id>http://www.multunus.com/2011/09/continuous-delivery-for-android-apps-part-1</id>
     <content type="html"><![CDATA[<div>
 
@@ -1436,7 +1447,7 @@ References: <a href="http://skaug.no/ingvald/2011/09/android-app-with-jenkins/"
   <entry>
     <title type="html"><![CDATA[Setup Test Load Balancer using Jenkins]]></title>
     <link href="http://www.multunus.com/2011/09/setup-test-load-balancer-using-jenkins/"/>
-    <updated>2011-09-23T04:10:07+00:00</updated>
+    <updated>2011-09-23T09:40:07+05:30</updated>
     <id>http://www.multunus.com/2011/09/setup-test-load-balancer-using-jenkins</id>
     <content type="html"><![CDATA[<p>The main purpose of a test suite is to give fast feedback about the changes being made to the developer. Ideally the test suite should be really fast and should take no more than 10 mins to complete. But there are times when you end up with a test suit that takes 30 - 40 mins to complete. This can be really frustrating for the developers because they have to wait for 40 mins after checking in his changes to know if he broke something.</p>
 
@@ -1474,28 +1485,6 @@ References: <a href="http://skaug.no/ingvald/2011/09/android-app-with-jenkins/"
 <p>The setup for the jobs which run in different partitions are exactly same, only difference between the partitions are only the subset of test executed in each partition.</p>
 
 <p>Create as many copies of the existing job as the number of partitions that you want to run. Additionally you can name each of these jobs as &lt;job-name-n&gt; where n refers to the partition which this job is going to run. Create an dummy job and configure the post build task so that all the partitioned jobs will be triggered simultaneously.</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Rebuilding in Jenkins]]></title>
-    <link href="http://www.multunus.com/2011/09/rebuilding-in-jenkins/"/>
-    <updated>2011-09-22T09:02:49+00:00</updated>
-    <id>http://www.multunus.com/2011/09/rebuilding-in-jenkins</id>
-    <content type="html"><![CDATA[<div>
-
-One option that might be required after setting up a <a href="http://www.multunus.com/2011/07/continuous-delivery-using-jenkins-build-pipeline/">build pipeline</a> is the provision to redeploy an earlier version by click of a button. This can become handy when we find a bug in the production and want to see when the bug got introduced. For that we will have to redeploy the earlier version to the staging/UAT environment and test the same.
-
-Jenkins by default does not allow to rerun any of the earlier jobs. But you can achieve this by the <a href="https://wiki.jenkins-ci.org/display/JENKINS/Rebuild+Plugin">Rebuild</a> plugin. It allows you to rebuild any job provided its parameterized build. It also allows you override the parameters. It will show the &#8220;Rebuild&#8221; button at the left side as shown below when you go to a specific build page:
-
-<img src="http://www.multunus.com/images/rebuild.png" alt="" width="156" height="247" />
-
-This is not a replacement for revert build, because it does not take care of reverting DB. But this can be extended to do the same.
-
-Note: It will show the Rebuild button only for those builds which occurred after installing the plugin. I took some time to realize this and it is not very clear in the documentation.
-
-</div>
-
 ]]></content>
   </entry>
   

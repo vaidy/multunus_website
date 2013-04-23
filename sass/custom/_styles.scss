@@ -368,3 +368,13 @@ ul.nav li.active > a {
 .right-text{
         text-align: right;
 }
+
+.google-presentation{
+	margin-bottom: 50px;
+	width: 480px;
+	.go-to-top{
+		width: 100%;
+		display: inline-block;
+		text-align: right;
+	}
+}
