@@ -4,7 +4,7 @@
   <title><![CDATA[Multunus]]></title>
   <link href="http://www.multunus.com/atom.xml" rel="self"/>
   <link href="http://www.multunus.com/"/>
-  <updated>2013-04-23T21:04:26+05:30</updated>
+  <updated>2013-04-23T21:11:22+05:30</updated>
   <id>http://www.multunus.com/</id>
   <author>
     <name><![CDATA[]]></name>
@@ -12,17 +12,6 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
-  
-  <entry>
-    <title type="html"><![CDATA[Second Test for Prose]]></title>
-    <link href="http://www.multunus.com/2013/04/prose-test/"/>
-    <updated>2013-04-18T02:33:00+05:30</updated>
-    <id>http://www.multunus.com/2013/04/prose-test</id>
-    <content type="html"><![CDATA[<h1>This is the second test with prose.io + octopress?</h1>
-
-<p>Long lige <a href="https://github.com/mojombo/jekyll">Jekyll</a></p>
-]]></content>
-  </entry>
   
   <entry>
     <title type="html"><![CDATA[Estimating to Timeboxing - Our Journey]]></title>
@@ -1485,6 +1474,28 @@ References: <a href="http://skaug.no/ingvald/2011/09/android-app-with-jenkins/"
 <p>The setup for the jobs which run in different partitions are exactly same, only difference between the partitions are only the subset of test executed in each partition.</p>
 
 <p>Create as many copies of the existing job as the number of partitions that you want to run. Additionally you can name each of these jobs as &lt;job-name-n&gt; where n refers to the partition which this job is going to run. Create an dummy job and configure the post build task so that all the partitioned jobs will be triggered simultaneously.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Rebuilding in Jenkins]]></title>
+    <link href="http://www.multunus.com/2011/09/rebuilding-in-jenkins/"/>
+    <updated>2011-09-22T14:32:49+05:30</updated>
+    <id>http://www.multunus.com/2011/09/rebuilding-in-jenkins</id>
+    <content type="html"><![CDATA[<div>
+
+One option that might be required after setting up a <a href="http://www.multunus.com/2011/07/continuous-delivery-using-jenkins-build-pipeline/">build pipeline</a> is the provision to redeploy an earlier version by click of a button. This can become handy when we find a bug in the production and want to see when the bug got introduced. For that we will have to redeploy the earlier version to the staging/UAT environment and test the same.
+
+Jenkins by default does not allow to rerun any of the earlier jobs. But you can achieve this by the <a href="https://wiki.jenkins-ci.org/display/JENKINS/Rebuild+Plugin">Rebuild</a> plugin. It allows you to rebuild any job provided its parameterized build. It also allows you override the parameters. It will show the &#8220;Rebuild&#8221; button at the left side as shown below when you go to a specific build page:
+
+<img src="http://www.multunus.com/images/rebuild.png" alt="" width="156" height="247" />
+
+This is not a replacement for revert build, because it does not take care of reverting DB. But this can be extended to do the same.
+
+Note: It will show the Rebuild button only for those builds which occurred after installing the plugin. I took some time to realize this and it is not very clear in the documentation.
+
+</div>
+
 ]]></content>
   </entry>
   
