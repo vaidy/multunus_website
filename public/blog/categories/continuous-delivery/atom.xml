@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Continuous Delivery | Multunus]]></title>
   <link href="http://www.multunus.com/blog/categories/continuous-delivery/atom.xml" rel="self"/>
   <link href="http://www.multunus.com/"/>
-  <updated>2013-04-23T21:11:22+05:30</updated>
+  <updated>2013-04-24T13:08:34+00:00</updated>
   <id>http://www.multunus.com/</id>
   <author>
     <name><![CDATA[]]></name>
@@ -16,7 +16,7 @@
   <entry>
     <title type="html"><![CDATA[Estimating to Timeboxing - Our Journey]]></title>
     <link href="http://www.multunus.com/2013/04/estimating-to-timeboxing-our-journey/"/>
-    <updated>2013-04-11T02:33:00+05:30</updated>
+    <updated>2013-04-11T02:33:00+00:00</updated>
     <id>http://www.multunus.com/2013/04/estimating-to-timeboxing-our-journey</id>
     <content type="html"><![CDATA[<p>Estimations are predictions. Unfortunately though, they end up being perceived as <em>commitments</em>. And the team in question starts getting unduly pressured when the estimates go wrong. At Multunus this has happened many times in the past.</p>
 
@@ -151,7 +151,7 @@ Of course, tracking the original project plan is still necessary - and allows fo
   <entry>
     <title type="html"><![CDATA[Continuous Delivery of iOS apps using Jenkins and TestFlightApp ]]></title>
     <link href="http://www.multunus.com/2012/05/continuous-delivery-of-ios-apps-using-jenkins-and-testflightapp/"/>
-    <updated>2012-05-21T11:03:21+05:30</updated>
+    <updated>2012-05-21T05:33:21+00:00</updated>
     <id>http://www.multunus.com/2012/05/continuous-delivery-of-ios-apps-using-jenkins-and-testflightapp</id>
     <content type="html"><![CDATA[<p>As mentioned in <a href="http://www.multunus.com/blog/categories/continuous-delivery/">earlier posts</a> we've been doing Continuous Delivery for both Webapps and Android apps for quite sometime. This post is about setting up Continuous Delivery for iOS apps using Jenkins and <a href="http://testflightapp.com" target="_blank">TestFlightApp</a>. TestFlightApp is a free service which helps to do closed beta testing without putting into AppStore. Using their APIs, the process of delivering new versions of the app can be automated.</p>
 
@@ -205,7 +205,7 @@ Of course, tracking the original project plan is still necessary - and allows fo
   <entry>
     <title type="html"><![CDATA[Introduction to Continuous Delivery]]></title>
     <link href="http://www.multunus.com/2012/05/introduction-to-continuous-delivery/"/>
-    <updated>2012-05-15T14:49:16+05:30</updated>
+    <updated>2012-05-15T09:19:16+00:00</updated>
     <id>http://www.multunus.com/2012/05/introduction-to-continuous-delivery</id>
     <content type="html"><![CDATA[<p>We've been doing Continuous Delivery for sometime and also been writing about how to implement the same. This post is about why Continuous Delivery is required and what problems does it solve.</p>
 
@@ -300,7 +300,7 @@ One of the key principle of Continuous Delivery is <strong>To </strong><strong>
   <entry>
     <title type="html"><![CDATA[A round up of our presentations and writings]]></title>
     <link href="http://www.multunus.com/2012/02/a-round-up-of-our-presentations-and-writings/"/>
-    <updated>2012-02-27T23:59:30+05:30</updated>
+    <updated>2012-02-27T18:29:30+00:00</updated>
     <id>http://www.multunus.com/2012/02/a-round-up-of-our-presentations-and-writings</id>
     <content type="html"><![CDATA[<p>We started speaking at conferences last year. We've also been doing a fair bit of writing. This post rounds up what we've up to - along with links to our presentations and some of what we've written.</p>
 
@@ -334,7 +334,7 @@ One of the key principle of Continuous Delivery is <strong>To </strong><strong>
   <entry>
     <title type="html"><![CDATA[Continuous Delivery: Building Android Library project]]></title>
     <link href="http://www.multunus.com/2011/11/continuous-delivery-building-android-library-project/"/>
-    <updated>2011-11-04T14:55:20+05:30</updated>
+    <updated>2011-11-04T09:25:20+00:00</updated>
     <id>http://www.multunus.com/2011/11/continuous-delivery-building-android-library-project</id>
     <content type="html"><![CDATA[<p>This post talks about how to build an Android Project using ant which depends on an Android Library project.</p>
 

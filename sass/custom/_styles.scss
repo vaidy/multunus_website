@@ -119,6 +119,7 @@ form {
 	color: #222222;
 
 	p, ul, .span9, .team {
+dding
 		a {
 			color: #DD0000;
 		}
@@ -174,7 +175,7 @@ form {
 		padding: 2% 4% 4% 4%;
 		font-size: 1.05em;
 	}
-}
+}padding
 
 .row-fluid [class*="span"]:nth-child(4n + 1) {
 	margin-left: 0;
@@ -194,7 +195,7 @@ ul.nav li{
 		color: white !important;
 	}
 
-	a:hover {
+	paddinga:hover {
 		color: #DD0000 !important;
 	}
 }
@@ -376,5 +377,52 @@ ul.nav li.active > a {
 		width: 100%;
 		display: inline-block;
 		text-align: right;
+	}
+}
+
+.video-go-to-top{
+	width: 480px;
+	float:left;
+	clear:both;
+	text-align:right
+}
+
+#tdd-and-cd-in-action{
+	width: 120% !important;
+}
+	
+#iframe-session-player{
+	float:left;
+	width: 100%;
+
+	iframe{
+	  float: left;
+	  margin-right: 8px;
+	}
+
+	ol.chapter-list {
+	  margin: 0px;
+	  float: left;
+	  list-style-type: none;
+	  padding: 0;
+	}
+
+	ol.chapter-list > li {
+	  padding: 0.5em;
+	  margin: 0;
+	  cursor: pointer;
+	}
+
+	ol.chapter-list > li:nth-child(odd) {
+	  background-color: #ececec;
+	}
+
+	ol.chapter-list > li:nth-child(even) {
+	  background-color: #e4e4e4;
+	}
+
+	ol.chapter-list > li:hover {
+	  background-color: #c0c0c0;
+	
 	}
 }
