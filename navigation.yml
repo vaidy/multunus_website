@@ -5,6 +5,7 @@
 :why_us: 
   :title: Why Us?
   :address: /why-us/the-big-picture/
+  :show_new_icon: true
   :sub_nav:
     :the_big_picture:
       :title: The Big Picture
