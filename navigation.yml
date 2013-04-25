@@ -10,10 +10,10 @@
       :title: The Big Picture
       :address: /why-us/the-big-picture/
     :idea_to_reality:
-      :title: Idea To Reality
+      :title: Idea To Reality in 8 Weeks!
       :address: /why-us/idea-to-reality/
     :team:
-      :title: Team
+      :title: Collaboration
       :address: /why-us/collaboration/
     :engineering_and_technology:
       :title: Engineering & Technology
@@ -30,7 +30,6 @@
 :open_source: 
   :title: Open Source
   :address: /opensource
-  :show_new_icon: true
 :about: 
   :title: About
   :address: /about/history
@@ -57,4 +56,3 @@
 :love:
   :title: Love
   :address: /love
-  :show_new_icon: true
