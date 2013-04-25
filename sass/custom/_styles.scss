@@ -245,6 +245,10 @@ ul.nav li.active > a {
 			border-top-left-radius: 3px;
 			border-bottom-left-radius: 3px;
 			margin-right: 1px;
+			margin-left:15px;
+			&:last-child{
+				margin-bottom: 20px;
+			}
 		}
 
 		li.active {
