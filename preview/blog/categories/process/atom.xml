@@ -1,0 +1,404 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: Process | Multunus]]></title>
+  <link href="http://www.multunus.com/blog/categories/process/atom.xml" rel="self"/>
+  <link href="http://www.multunus.com/"/>
+  <updated>2013-04-25T06:25:24+00:00</updated>
+  <id>http://www.multunus.com/</id>
+  <author>
+    <name><![CDATA[]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Estimating to Timeboxing - Our Journey]]></title>
+    <link href="http://www.multunus.com/2013/04/estimating-to-timeboxing-our-journey/"/>
+    <updated>2013-04-11T02:33:00+00:00</updated>
+    <id>http://www.multunus.com/2013/04/estimating-to-timeboxing-our-journey</id>
+    <content type="html"><![CDATA[<p>Estimations are predictions. Unfortunately though, they end up being perceived as <em>commitments</em>. And the team in question starts getting unduly pressured when the estimates go wrong. At Multunus this has happened many times in the past.</p>
+
+<p>Sometime last year we realized there was no point in trying any harder to come up with better estimates - just by relying on our past experience and gut instincts. It was time to look at things from a different perspective. </p>
+
+
+
+
+<p>
+We learnt a lot of things from <a href="http://www.jamesshore.com/Agile-Book/">Art of Agile Development [by James Shore]</a>. We found it tremendously useful for learning how to get started with Extreme Programming - and making the “prevention rather than cure” mental shift. This in turn resulted in much less <em>waste</em> - and higher efficiency across the team.
+</p>
+
+
+
+
+<p>
+But we were still struggling with estimating. We tried the story points and velocity approach suggested by XP. But we were still unable to deliver things at a predictable pace.
+</p>
+
+
+<p>It was time to look beyond XP’s default practices. </p>
+
+
+
+
+<h2>First set of changes</h2>
+
+
+<br/>
+
+
+<ul>
+    <li>Keep both <a href="http://www.jamesshore.com/Agile-Book/release_planning.html">MMFs and Stories</a> as small as possible. </li>
+    <li>Slice down all stories to the same size. This reduces the margin of error that creeps in during story size estimation. </li>
+    <li>The velocity, then, is simply the number of stories delivered in an iteration.</li>
+</ul>
+
+
+<p>
+The above changes worked well on projects which already had some kind of rhythm. We’d been working with these customer for at least 3 months - so, our knowledge of the system and the customer’s requirements were good. 
+</p>
+
+
+<p>
+However, things still fell apart for new projects and customers. The level of uncertainty is obviously much higher in these cases - and the above modified approach was not sufficient for us to remain predictable enough.
+</p>
+
+
+<h2>Second set of changes</h2>
+
+
+<br/>
+
+
+<p>
+During our search for alternative approaches [see references below], we discovered multiple presentations and blog posts - all suggesting the same thing: Estimating can never be accurate <em>enough</em>. 
+</p>
+
+
+<p>
+We watched the <a href="http://www.infoq.com/presentations/Embracing-Uncertainty">Deliberate Discovery video [by Dan North]</a> - and that hit us. We might be more successful if we flipped things around - and <strong>timeboxed</strong> the stories and MMF’s. 
+</p>
+
+
+<p>
+Instead of asking the question “How long will it take to build this Feature?”, we instead ask the question “What is the maximum time that should allocate for this feature?”. In addition, we’re also documenting what it is that we’re trying to discover/learn by building that particular feature. 
+</p>
+
+
+<p>
+<strong>NOTE:</strong> This is subtly different from the “validated learning” approach in the Lean Startup world - because at this stage, we’re only speaking of engineering related risks.
+</p>
+
+
+<p>
+This is useful to overcome <a href="http://en.wikipedia.org/wiki/Parkinson's_law">Parkinson’s Law</a> [“Work expands so as to fill the time available for its completion”]. There’s an additional sense of urgency that prevails on the team. This sense of urgency in turn results in reacting faster when we find ourselves going down “inevitable” rabbit holes. 
+</p>
+
+
+<p>
+We’re also noticing a more ready acceptance of the “fail early” mantra - after shifting to the timeboxing mode. 
+
+We’ve tried the timeboxing approach on two different projects - and in both cases, have found remarkably better results. We were close enough to the original estimates that we’d provided - in terms of both cost and time. 
+</p>
+
+
+<h2>Kanban</h2>
+
+
+<br/>
+
+
+<p>
+As mentioned in my <a href="http://www.multunus.com/2013/03/how-we-chose-our-kanban-tool/">earlier post</a>, we’ve moved to Kanban, so we’re no longer doing fixed weekly iterations. And hence no calculations of velocity either.
+</p>
+
+
+<p>
+Instead the focus is on reducing the cycle time for stories - by constantly identifying and eliminating waste in the workflow. 
+</p>
+
+
+<p>
+Of course, tracking the original project plan is still necessary - and allows for an additional level of feedback on how well the team is progressing. 
+</p>
+
+
+<h3>References</h3>
+
+
+<p></br/>
+<a href="http://neilkillick.com/2012/04/12/do-not-estimate-software-projects-at-all">http://neilkillick.com/2012/04/12/do-not-estimate-software-projects-at-all/</a></p>
+
+<br/>
+
+
+<p><a href="http://softwaredevelopmenttoday.blogspot.com.au/2012/01/story-points-considered-harmful-or-why.html">http://softwaredevelopmenttoday.blogspot.com.au/2012/01/story-points-considered-harmful-or-why.html</a></p>
+
+<br/>
+
+
+<p><a href="http://www.infoq.com/presentations/Want-Better-Estimates-Stop-Estimating">http://www.infoq.com/presentations/Want-Better-Estimates-Stop-Estimating</a></p>
+
+<br/>
+
+
+<p><a href="http://www.industriallogic.com/blog/stop-using-story-points/">http://www.industriallogic.com/blog/stop-using-story-points/</a>
+<a href="http://dannorth.net/2009/07/01/the-perils-of-estimation/">http://dannorth.net/2009/07/01/the-perils-of-estimation/</a></p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[How we chose our Kanban Tool]]></title>
+    <link href="http://www.multunus.com/2013/03/how-we-chose-our-kanban-tool/"/>
+    <updated>2013-03-09T22:39:00+00:00</updated>
+    <id>http://www.multunus.com/2013/03/how-we-chose-our-kanban-tool</id>
+    <content type="html"><![CDATA[<p>We've been using <a href="http://www.pivotaltracker.com/">Pivotal Tracker</a>[PT] as our Collaborative Project Management Tool for over 2 years now.</p>
+
+<p>
+Recently though, we chose to move toward a Kanban style of workflow. PT is however heavily geared toward an iterative form of development - but we’ve now chosen to eschew iterations altogether. We’ve been doing continuous deployment for a while now, and we found the whole process of estimations and sizing of stories a largely wasteful exercise. 
+</p>
+
+
+<p>
+  I am not going to talk about “Why Kanban”, because there are many articles and books which talks about the same. But I am instead going to walk you through the process that we used to evaluate and decide upon the online Kanban tool that we finally ended up shifting to.
+</p>
+
+
+<p>
+The different tools we evaluated were:
+<ul>
+  <li><a href="http://leankit.com/">LeanKit</a></li>
+  <li><a href="http://kanbanery.com/">Kanbanery</a></li>
+  <li><a href="http://kanbantool.com/">KanbanTool</a></li>
+</ul>
+</p>
+
+
+<p>
+  If you’ve ever used PT, you already know what an awesome piece of software it is. The real-time collaboration features, the sheer fluidity of the user interface, the way it all tightly fits together - is amazing. So, our expectations from the Kanban tool were already fairly high - especially in terms of a clutter free, fluid, “don’t-get-in-my-way” user experience.
+</p>
+
+
+<p>
+  So, we came up with a list of criteria for deciding our tool of choice. 
+</p>
+
+
+<iframe width='700' height='400' frameborder='0' src='https://docs.google.com/spreadsheet/pub?key=0ApUPwJdQvqT_dEJuS25YZzMwWkJVc0NXWXhIbUhaQ1E&output=html&widget=true'></iframe>
+
+
+<br/>
+
+
+<p>
+ Here is the <a href="https://docs.google.com/spreadsheet/ccc?key=0ApUPwJdQvqT_dEJuS25YZzMwWkJVc0NXWXhIbUhaQ1E&usp=sharing">original google spreadsheet</a> .
+</p>
+
+
+<p>So which tool did we end up choosing? Well, its a Kanban Tool called <a href="http://kanbantool.com">KanbanTool</a> :)</p>
+
+
+<p>
+  Lastly, I would like to mention those articles which helped us to understand Kanban better.
+<ul>    
+  <li><a href="http://www.agileproductdesign.com/blog/2009/kanban_over_simplified.html">Kanban Development OverSimplified</a> by Jeff Patton</li>
+  <li><a href="http://www.infoq.com/presentations/Single-Piece-Flow-Kanban">Single Piece Workflow in Kanban</a> by James Shore and Arloo Banshee</li>
+  <li><a href="http://www.crisp.se/gratis-material-och-guider/kanban">Kanban</a> by Henrik Kniberg</li>
+</ul>
+</p>
+
+
+<p>
+  <strong>Update:</strong> We also looked at <a href="https://trello.com">Trello</a> but it does not provide features such as WIP limit, cycle and lead time reporting etc. which are key for Kanban. But we found that there is a Google Chrome Extension which can be used for adding <a href="https://github.com/NateHark/TrelloWIPLimits">WIP(Work in Progress) limit</a> in Trello. Obviously that would not be sufficient for collaboration, but would be sufficient for personal Kanban. 
+</p>
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[AgileIndia 2013 Summary]]></title>
+    <link href="http://www.multunus.com/2013/03/agileindia-2013-summary/"/>
+    <updated>2013-03-08T17:07:00+00:00</updated>
+    <id>http://www.multunus.com/2013/03/agileindia-2013-summary</id>
+    <content type="html"><![CDATA[<p>This is the summary about the  recently concluded <a href="http://2013.agileindia.org/">Agile India Conference 2013</a>.
+This gave me a chance to interact with great legends and leaders of software industry such as
+Linda Rising, Mary Poppendieck, Henrik Kniberg, Jez Humble, Jeff Patton, Fred George, Craig Larman, Neil Ford, Venkat Subramaniam,
+Aslam Khan, Karl Scotland, Kenji Hiranabe, Laurent Bossavit, Rebecca Parsons etc. and listen to them multiple times in the span of 4 days.  Amazing.</p>
+
+<p>
+  I am not going to write about each session I attended, am instead summarizing what I learned during those 4 days both by attending the sessions and by interacting with the speakers during those 4 days:
+</p>
+
+
+<ul>
+    <li> Never stop learning. Experiment continuously. </li>
+    <li> Experiments may fail, but learn from it and move on.</li>
+  <li> Analyse why am I <i>doing</i> (whatever it is), and be innovative. If you delay innovation, it becomes worse.
+  </li>
+    <li>Great software can be created only with collaboration. So work as a team and share the responsibilities.</li>
+    <li>Be a good coach rather being authoritative. This will help to implement changes effectively.</li>
+  <li>Optimise the entire delivery process instead of just optimising the development process. Kanban helps to <i>optimise the whole</i> while Scrum helps to optimise only the development. </li>
+    <li>Have tight feedback cycles by applying timeboxing mercilessly. This will help for continuous learning and improvement. Eg: 15 minutes TDD cycles which result in simple design with refactorings, Frequent Retrospectives etc.</li>
+  <li>Apply Last Responsible Moment across, eg: Use practices such as <strong>Emergent Design</strong> and <strong>Evolutionary Architecture</strong> instead of doing <i>Big Design UpFront</i>. The Code complexity reports should help to identify the coding smells which helps to implement these practices.</li>
+    <li>You can defer writing tests until the validation of feature is done. Adding acceptance tests for stability can deferred when you feel that it's time to have more stability</li>
+</ul>
+
+
+<p>
+  Thanks a ton to Naresh Jain and team for organising such a wonderful event. Curious to know what's coming for Agile India 2014. :)
+</p>
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Introduction to Continuous Delivery]]></title>
+    <link href="http://www.multunus.com/2012/05/introduction-to-continuous-delivery/"/>
+    <updated>2012-05-15T09:19:16+00:00</updated>
+    <id>http://www.multunus.com/2012/05/introduction-to-continuous-delivery</id>
+    <content type="html"><![CDATA[<p>We've been doing Continuous Delivery for sometime and also been writing about how to implement the same. This post is about why Continuous Delivery is required and what problems does it solve.</p>
+
+<h3><strong><span style="text-decoration: underline;">What is Continuous Delivery</span></strong></h3>
+
+
+<p>Continuous Delivery is the process of being able to continuously deliver new versions of a software product to create a tight feedback loop between users and the project team—including the customer or product owner.</p>
+
+<!-- more -->
+
+
+<p>This helps to test new ideas and changes in the product and also measure the effect of changes in the revenue. Continuous Delivery means releasing software very frequently, i.e. multiple times a day, rather than once in months.</p>
+
+<h3><strong>Bottlenecks for Continuous Delivery</strong></h3>
+
+
+<div>Lets see the usual challenges for releases. The following are the challenges that we faced before moving to Continuous Delivery. Let me put it in this way i.e. the following are the challenges which got us thinking on how to make releases more predictable and pain free. We already had a Continuous Integration setup at our end, but that was not enough to ease the process.</div>
+
+
+<ul>
+    <li>No tracking on which version was deployed, when and to which environment</li>
+    <li>Different people working on different branches, code merge hell when its ready for deployment.</li>
+    <li>When an urgent bug needs to be fixed, the fix need to be replicated in multiple branches along with the mainline branch</li>
+    <li>No easy way to revert back to the previous stable version</li>
+</ul>
+
+
+<p>We've seen even more challenges in teams which do not have a Continuous Integration setup yet. They are:</p>
+
+<ul>
+    <li>Adhoc build processes</li>
+    <li>Too much time spent on manual testing</li>
+    <li>Integration of code happens only during deployment</li>
+    <li>Complexity of build and deployment increases, depending on the complexity of the app.</li>
+    <li>For clustered environments, the deployment needs to be updated to all slaves</li>
+</ul>
+
+
+<div>
+
+Thats when we stumbled upon "<a href="http://www.informit.com/store/product.aspx?isbn=0321601912&amp;WT.DCSext.w_ptgrevartcl=Continuous+Delivery%3a+Reliable+Software+Releases+through+Build%2c+Test%2c+and+Deployment+Automation_1641923_ISBNTopCover">Continuous Delivery</a>" book by Jez Humble and Dave Farley and extended our Continuous Integration setup to Continuous Delivery.
+
+</div>
+
+
+<div>
+<h3>Continuous Delivery to the rescue</h3>
+One of the key principle of Continuous Delivery is <strong>To </strong><strong>create a <em>repeatable</em> and <em>reliable</em> process for releasing software.</strong> It solves problems by providing fast automated feedback on the <strong>production readiness</strong> of the application - every time there is a change to the code, infrastructure or the configuration.  So in Continuous Delivery, <strong><em>Done </em>means <em>Released.</em></strong>
+
+</div>
+
+
+<div>A central pattern of Continuous Delivery is called the <em><strong>Deployment pipeline - </strong></em>an automated implementation of the application's build, deploy, test and release process. The following shows a sample deployment pipeline:</div>
+
+
+<p style="text-align: center;"><img class="aligncenter" style="border: none;" src="https://s3.amazonaws.com/multunus-cdimages/pipeline.png" alt="Deployment Pipeline" width="549" height="189" /></p>
+
+
+
+
+<div>The deployment pipeline includes the following build and deployment process:</div>
+
+
+<ul>
+    <li>Creates executable code to verify that the syntax of the source code is valid.</li>
+    <li>Runs the unit tests to check that the code behaves as expected.</li>
+    <li>Runs the acceptance tests to check that the application conforms to its business acceptance criteria—that it delivers the business value that was intended.</li>
+    <li>Run nonfunctional tests which checks that the application performs sufficiently well in terms of capacity, availability, security, and so on to meet its users’ needs.</li>
+    <li>Runs tools which check that the expected code quality criteria such as test coverage and other technology-specific metrics are met.</li>
+    <li>Then in the manual testing environment, exploratory testing is done. In parallel a demonstration to the customer and a selection of users can also be done. This helps the product owner to decide whether there are missing features, or find bugs that require fixing.</li>
+    <li>If any of the above fails, the deployment should be stopped because it is a clear indication that the application is not production ready.</li>
+</ul>
+
+
+<div>I will write about the Benefits of Continuous Delivery in the next post.</div>
+
+
+<h4><span style="text-decoration: underline;">References</span></h4>
+
+
+<div><a href="https://docs.google.com/a/multunus.com/present/edit?id=0AQj1177vtu0MZHRoM2dmN180NzRneGp2bXRndw">https://docs.google.com/a/multunus.com/present/edit?id=0AQj1177vtu0MZHRoM2dmN180NzRneGp2bXRndw</a></div>
+
+
+<div><a href="http://www.informit.com/articles/article.aspx?p=1829417" target="_blank">http://www.informit.com/articles/article.aspx?p=1829417</a></div>
+
+
+<div><a href="http://continousdelivery.com" target="_blank">http://continousdelivery.com</a></div>
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Continuous Delivery for Android Apps – Part 2]]></title>
+    <link href="http://www.multunus.com/2011/10/continuous-delivery-for-android-apps-part-2/"/>
+    <updated>2011-10-06T01:21:57+00:00</updated>
+    <id>http://www.multunus.com/2011/10/continuous-delivery-for-android-apps-part-2</id>
+    <content type="html"><![CDATA[<p>This post talks about how to run tests for the build setup as mentioned in <a href="http://www.multunus.com/2011/09/continuous-delivery-for-android-apps-part-1/">Part 1</a>.</p>
+
+<h3><span style="text-decoration: underline;">Generate the build script for test</span></h3>
+
+
+<p>The suggested practice is to have 2 separate projects for android, one the source and the other for the tests. The following command will generate a build.xml for the test project. Replace the  with the path of the source path.</p>
+
+<p><span style="font-family: Consolas, Monaco, 'Courier New', Courier, monospace; line-height: 18px;">android update test-project -m ../&lt;project-path&gt; -p . </span></p>
+
+<p>One problem I've seen is that, it does not break the build even if there are failures in the test. Issue is reported here:</p>
+
+<!-- more -->
+
+
+<p><a href="http://code.google.com/p/android/issues/detail?id=14241">http://code.google.com/p/android/issues/detail?id=14241</a></p>
+
+<p>I had to override the run-tests target as mentioned below to fix this issue:</p>
+
+<pre>&lt;target name="run-tests" depends="-install-tested-project, install"
+description="Runs tests from the package defined in test.package property"&gt;
+    &lt;echo&gt;Running tests ...&lt;/echo&gt;
+    &lt;exec executable="${adb}" failonerror="true" outputproperty="tests.output"&gt;
+        &lt;arg value="shell" /&gt;
+        &lt;arg value="am" /&gt;
+        &lt;arg value="instrument" /&gt;
+        &lt;arg value="-w" /&gt;
+        &lt;arg value="-e" /&gt;
+        &lt;arg value="coverage" /&gt;
+        &lt;arg value="@{emma.enabled}" /&gt;
+        &lt;arg value="${manifest.package}/${test.runner}" /&gt;
+    &lt;/exec&gt;
+    &lt;echo message="${tests.output}"/&gt;
+    &lt;fail message="Tests failed!!!"&gt;
+        &lt;condition&gt;
+            &lt;or&gt;
+            &lt;contains string="${tests.output}" substring="Error" /&gt;
+            &lt;contains string="${tests.output}" substring="Fail" /&gt;
+            &lt;/or&gt;
+        &lt;/condition&gt;
+     &lt;/fail&gt;
+&lt;/target&gt;</pre>
+
+
+<p>You can change the ant commands to <span style="font-family: Consolas, Monaco, 'Courier New', Courier, monospace; line-height: 18px;">clean run-tests release </span>in Jenkins to run the tests as part of packaging.</p>
+
+<p>Next I will be writing about how to start emulator from Jenkins while running the tests.</p>
+]]></content>
+  </entry>
+  
+</feed>

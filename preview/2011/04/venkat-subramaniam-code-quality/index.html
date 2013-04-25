@@ -1,0 +1,485 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>Venkat Subramaniam's talk on Code Quality  | Multunus </title>
+  <meta name="author" content="">
+
+  
+  <meta name="description" content="We attended Venkat Subramaniam&#8217;s talk on Code Quality at Yahoo India a couple of days back. Venkat is the founder of Agile Developer and the &hellip;">
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://www.multunus.com/2011/04/venkat-subramaniam-code-quality">
+  <link href="/images/favicon.ico" rel="icon">
+  <link href="/stylesheets/bootstrap/bootstrap.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <link href="/stylesheets/bootstrap/responsive.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <link href="/stylesheets/syntax/syntax.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" type="text/css" href="/stylesheets/screen.css">
+
+  <style type="text/css">
+    body {
+        }
+    h1 {
+      margin-bottom: 15px;
+    }
+    img {
+      max-width: 100%;
+    }
+    .sharing, .meta, .pager {
+      margin: 20px 0px 20px 0px;
+    }
+    
+  </style>
+  <script src="/javascripts/libs/jquery.js"></script>
+  <script src="/javascripts/libs/modernizr-2.0.js"></script>
+  <script src="/javascripts/libs/bootstrap.js"></script>
+  <script src="/javascripts/octopress.js" type="text/javascript"></script>
+  <link href="/atom.xml" rel="alternate" title="Multunus" type="application/atom+xml">
+  <!-- jQuery Form Plugin -->
+<script src="http://malsup.github.com/jquery.form.js"></script>
+<!-- jQuery Form Validation Plugin -->
+<script src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.9/jquery.validate.min.js"></script> 
+<script src="/javascripts/google_form.js"></script>
+<script src="https://gdata-samples.googlecode.com/svn/trunk/ytplayer/ChapterMarkerPlayer/chapter_marker_player.js"></script>
+  <link href='http://fonts.googleapis.com/css?family=Bitter:400,700,400italic&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+<!-- jQuery -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+<script type="text/javascript">
+    // Avoid conflict with ender.js.
+    jQuery.noConflict();
+</script>
+<!-- jQuery Form Plugin -->
+<script src="http://malsup.github.com/jquery.form.js"></script>
+<!-- jQuery Form Validation Plugin -->
+<script src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.9/jquery.validate.min.js"></script> 
+<script src="/javascripts/google_form.js"></script>
+  
+  <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-5073218-1']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+  </script>
+
+
+</head>
+
+<body   >
+  <nav role="navigation"><div class="navbar subnav">
+  <div class="container-fluid">
+      <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </a>        
+
+      <div class="nav-collapse top-bar">
+        <ul class="nav">
+
+  
+  <li><a class="small-logo" href="/"><img src='/images/logo_small.png' /></a></li>  
+   
+
+  <li class=' '><a href='/what-we-do' target=''>What We Do</a></li><li class=' '><a href='/why-us' target=''>Why Us?</a></li><li class=' '><a href='/careers' target=''>Careers</a></li><li class=' '><a href='/blog' target=''>Blog</a></li><li class=' '><a href='/opensource' target=''>Open Source<img src='/images/icon_new.png' class='new-icon'/></a></li><li class=' dropdown'><a href='/about/history' target=''>About</a><ul class='dropdown-menu'><li><a href='/about/history' target=''>History</a></li><li><a href='/about/people' target=''>The Team</a></li><li><a href='/youngturks' target=''>Young Turks</a></li></ul></li><li class=' dropdown'><a href='/contact-us/contact' target=''>Contact Us</a><ul class='dropdown-menu'><li><a href='/contact-us/contact' target=''>Write To Us</a></li><li><a href='/contact-us/location' target=''>Location</a></li></ul></li><li class=' '><a href='/love' target=''>Love<img src='/images/icon_new.png' class='new-icon'/></a></li>
+
+</ul>
+<ul class="nav social-icons pull-right">
+  <li id="facebook"> 
+    <a href="https://www.facebook.com/multunus" title="facebook" target="_blank">
+      <img src="/images/facebook_white_icon.png" alt="facebook" />
+    </a>
+  </li> 
+  <li id="twitter"> 
+    <a href="http://twitter.com/multunus" title="twitter" target="_blank">
+      <img src="/images/twitter_white_icon.png" alt="twitter" />
+    </a>
+  </li>   
+
+</ul>
+
+      </div>
+    </div>
+</div>
+</nav>
+  <div class="container-fluid main-content">
+    <div class="row-fluid">
+      <article class="hentry span9 blog-post" role="article">
+  <div class="row-fluid">
+  <div class="span2 date-container">
+    
+
+
+
+
+
+
+
+
+  
+
+
+<div datetime="2011-04-21T04:17:11+00:00" pubdate data-updated="true"><div class='day'>21</div><div class='month-year'><div class='month'>April</div><div class='year'>2011</div></div></div>
+  </div>
+  <div class="span10">
+    
+      <header>
+        <h2 class="entry-title">Venkat Subramaniam's Talk on Code Quality</h2>
+        <p class="meta">
+          
+  
+
+<strong>Posted by: </strong> 
+
+	<a class='author' href='/blog/author/shakeeb/'>Shakeeb</a>
+
+
+        </p>
+      </header>
+    
+  </div>
+
+  <div class="entry-content"><p><img class="alignright size-medium wp-image-1217" title="Venkat_at_yahoo" src="/images/Venkat_at_yahoo-300x224.jpg" alt="" width="300" height="224" />We attended <a href="http://http://www.agiledeveloper.com/presentations/caring_about_code_quality.pdf">Venkat Subramaniam&#8217;s talk on Code Quality</a> at Yahoo India a couple of days back.</p>
+
+<p>Venkat is the founder of Agile Developer and the author of several books. Consultant and Adjunct Professor are some of the other hats he wears. It was an inspiring experience. While we were reassured that our current practices are on the right track during most of the talk, there were a some things which caused us to rethink the way we do things.</p>
+
+<h3><strong>Why do we need Code Quality?</strong></h3>
+
+
+<p>One of the first things Venkat asked us to think about was why code quality was necessary in the first place. Most of the audience had reasons like &#8216;Easy Maintainence&#8217;, &#8216;To make a better product&#8217;, &#8216;Company&#8217;s image&#8217; etc. These were reasons which we had on the top of our mind as well. However his reasoning was quite different:</p>
+
+<p style="text-align: left;">&#8220;<em>We need Code Quality to be truly Agile</em>&#8221;</p>
+
+
+<p style="text-align: justify;">What this means is that rapidly adding new features or quickly changing existing features to incorporate feedback is not possible without clean code.</p>
+
+
+<p style="text-align: justify;">We have been focusing on writing cleaner code for quite some time as well. But our approach to improving in this area has been limited to reading books and online articles about better approaches to write clean code and internal discussions with our team. One essential ingredient that we were missing was using an existing sample, something near perfection which we could look at and learn from or at least be inspired by.</p>
+
+
+
+
+<h3><strong>Pair Programming Vs Code Review</strong></h3>
+
+
+<p style="text-align: justify;">Code Review aims to provide external feedback. But we already do pair programming which tries to achieve nearly the same. The danger lies in the navigator becoming so invloved that he is not externalized enough. So the solution is to switch pairs every half a day.</p>
+
+
+
+
+<h3 style="text-align: justify;">Additional Action Items</h3>
+
+
+<p style="text-align: justify;">After having a brainstroming session with the entire team here, we decided to include the following suggestions from Venkat&#8217;s talk to our existing practices:</p>
+
+
+<p style="text-align: justify;"><strong>Starting &#8220;Perspective&#8221; based Peer Reviews</strong>
+This is mandatory for  projects which have only one pair (and hence cannot switch pairs). The reviewer should have enough familiarity(perspective) with the project to be able to make a judgement on the design and quality. This is also useful for projects which can switch pairs - but not mandatory.</p>
+
+
+<p style="text-align: justify;"><strong>Dedicated time to pay off technical debt</strong>
+While our iterations always have time baked in, to clear technical debt, we often spend that time doing something else instead. More disclipine in paying down our technical debt is something we intend to work on.</p>
+
+
+<p style="text-align: justify;"><strong>Code Quality metrics in the Informative Workspace</strong>
+While &#8216;name and shame&#8217; is certainly not something we do, Venkat&#8217;s belief in publicising quality metrics as a way to encourage code quality [in our informative workspace] is something we will explore in the coming weeks.</p>
+
+
+<p style="text-align: justify;"></p>
+
+</div>
+  
+    <p class="meta">
+      
+
+<div class="categories">
+	<strong>Filed in: </strong> 
+  
+    <a class='category' href='/blog/categories/all-posts/'>All Posts</a>, <a class='category' href='/blog/categories/process/'>Process</a>
+  
+</div>
+
+
+      
+    </p>
+  
+</div>
+  <footer>
+    
+      <div class="sharing">
+	
+		<div class="fb-like" data-width="368" data-layout="button_count" data-href="" data-show-faces="false">
+		</div>
+	
+	
+		<div class="g-plusone" data-size="medium" data-href="http://www.multunus.com/2011/04/venkat-subramaniam-code-quality">
+		</div>
+	
+  	
+  		<a href="http://twitter.com/share" class="twitter-share-button" data-url="http://www.multunus.com/2011/04/venkat-subramaniam-code-quality" data-counturl="http://www.multunus.com/2011/04/venkat-subramaniam-code-quality" data-count="none" data-text="See the timelines of the young turks at Multunus">
+  		</a>
+  	
+  	<script src="//platform.linkedin.com/in.js" type="text/javascript"></script>
+  	<script type="IN/Share" data-counter="right"></script>
+</div>
+
+    
+    
+    <section>
+      <h1>Comments</h1>
+      <div id="disqus_thread" aria-live="polite"><noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+    </section>
+    
+  </footer>
+  
+
+<script type="text/javascript">
+      var disqus_shortname = 'multunus';
+      
+        
+        // var disqus_developer = 1;
+        var disqus_identifier = 'http://www.multunus.com/2011/04/venkat-subramaniam-code-quality/';
+        var disqus_url = 'http://www.multunus.com/2011/04/venkat-subramaniam-code-quality/';
+        var disqus_script = 'embed.js';
+      
+    (function () {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = 'http://' + disqus_shortname + '.disqus.com/' + disqus_script;
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    }());
+</script>
+
+
+
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) {return;}
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#appId=212934732101925&xfbml=1";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+
+
+  <script type="text/javascript">
+    (function() {
+      var script = document.createElement('script'); script.type = 'text/javascript'; script.async = true;
+      script.src = 'https://apis.google.com/js/plusone.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(script, s);
+    })();
+  </script>
+
+
+
+  <script type="text/javascript">
+    (function(){
+      var twitterWidgets = document.createElement('script');
+      twitterWidgets.type = 'text/javascript';
+      twitterWidgets.async = true;
+      twitterWidgets.src = 'http://platform.twitter.com/widgets.js';
+      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
+    })();
+  </script>
+
+
+
+
+
+</article>
+
+<aside class="sidebar-nav span3">
+  <h3>Categories</h3>
+<ul id="category-list">
+	<li  class="page_item"><a href="/blog/categories/all-posts">All Posts</a></li>
+	<li  class="page_item"><a href="/blog/categories/android">Android</a></li>
+	<li  class="page_item"><a href="/blog/categories/business">Business</a></li>
+	<li  class="page_item"><a href="/blog/categories/continuous-delivery">Continuous Delivery</a></li>
+	<li  class="page_item"><a href="/blog/categories/process">Process</a></li>
+	<li  class="page_item"><a href="/blog/categories/rails">Rails</a></li>
+	<li  class="page_item"><a href="/blog/categories/technology">Technology</a></li>
+</ul>
+
+</aside> 
+    </div>
+  </div>
+  <div class="container-fluid dark-background">
+      <div class="row-fluid">
+        <div class="span4 featured-posts">
+          <div class="header">Featured Posts</div>
+<ul id="featured-posts">
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+      <li class="post">
+        <a href="/2012/01/a-sneak-peak-into-mobile-app-opportunities-in-2012/">A sneak peek into Mobile App Opportunities in 2012</a>
+      </li>
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+      <li class="post">
+        <a href="/2011/09/continuous-delivery-for-android-apps-part-1/">Continuous Delivery for Android Apps - Part 1</a>
+      </li>
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+      <li class="post">
+        <a href="/2011/07/continuous-delivery-using-jenkins-build-pipeline/">Continuous Delivery - Part 1: Our Jenkins Build Pipeline setup</a>
+      </li>
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+      <li class="post">
+        <a href="/2011/02/software-development-as-a-balance/">A Macro Level Perspective of Software Development</a>
+      </li>
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+</ul>
+
+        </div>
+        <div class="span4 tumblr-feed">
+          <div class="header">Our Daily Voice</div>
+<ul id="tumblr_post">
+  <li class="loading">Fetching...</li>
+</ul>
+<div id="continue-reading"><a href="http://multunus.tumblr.com/">Continue reading at our tumblog</a></div>
+<script type="text/javascript">
+  $(document).ready(function(){
+    getTumblrPost("multunus", 1);
+  });
+</script>
+<script src="/javascripts/asides/tumblr.js" type="text/javascript"> </script>
+
+        </div>
+        <div class="span4 twitter-feed">
+          
+  <div class='header'>@multunus</div>
+  <ul id="tweets">
+    <li class="loading">Status updating...</li>
+  </ul>
+  <script type="text/javascript">
+    $(document).ready(function(){
+      getTwitterFeed("multunus", 5, false);
+    });
+  </script>
+  <script src="/javascripts/asides/twitter.js" type="text/javascript"> </script>
+
+
+        </div>         
+      </div>
+    </div>
+  <footer role="contentinfo" class="page-footer">
+<div class = "navbar footer-navbar">
+  <div class = "container-fluid">
+    <div class="nav-collapse footer-container">
+      <ul class="nav"><li class="copyright">&copy;2013 Copyright by Multunus Software Private Limited.</li>
+      </ul>
+    </div>
+  </div>
+</div>
+</footer>
+</body>
+</html>

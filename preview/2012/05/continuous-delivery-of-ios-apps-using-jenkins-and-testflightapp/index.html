@@ -1,0 +1,483 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>Continuous Delivery of iOS apps using Jenkins and TestFlightApp   | Multunus </title>
+  <meta name="author" content="">
+
+  
+  <meta name="description" content="As mentioned in earlier posts we&#8217;ve been doing Continuous Delivery for both Webapps and Android apps for quite sometime. This post is about &hellip;">
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://www.multunus.com/2012/05/continuous-delivery-of-ios-apps-using-jenkins-and-testflightapp">
+  <link href="/images/favicon.ico" rel="icon">
+  <link href="/stylesheets/bootstrap/bootstrap.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <link href="/stylesheets/bootstrap/responsive.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <link href="/stylesheets/syntax/syntax.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" type="text/css" href="/stylesheets/screen.css">
+
+  <style type="text/css">
+    body {
+        }
+    h1 {
+      margin-bottom: 15px;
+    }
+    img {
+      max-width: 100%;
+    }
+    .sharing, .meta, .pager {
+      margin: 20px 0px 20px 0px;
+    }
+    
+  </style>
+  <script src="/javascripts/libs/jquery.js"></script>
+  <script src="/javascripts/libs/modernizr-2.0.js"></script>
+  <script src="/javascripts/libs/bootstrap.js"></script>
+  <script src="/javascripts/octopress.js" type="text/javascript"></script>
+  <link href="/atom.xml" rel="alternate" title="Multunus" type="application/atom+xml">
+  <!-- jQuery Form Plugin -->
+<script src="http://malsup.github.com/jquery.form.js"></script>
+<!-- jQuery Form Validation Plugin -->
+<script src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.9/jquery.validate.min.js"></script> 
+<script src="/javascripts/google_form.js"></script>
+<script src="https://gdata-samples.googlecode.com/svn/trunk/ytplayer/ChapterMarkerPlayer/chapter_marker_player.js"></script>
+  <link href='http://fonts.googleapis.com/css?family=Bitter:400,700,400italic&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+<!-- jQuery -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+<script type="text/javascript">
+    // Avoid conflict with ender.js.
+    jQuery.noConflict();
+</script>
+<!-- jQuery Form Plugin -->
+<script src="http://malsup.github.com/jquery.form.js"></script>
+<!-- jQuery Form Validation Plugin -->
+<script src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.9/jquery.validate.min.js"></script> 
+<script src="/javascripts/google_form.js"></script>
+  
+  <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-5073218-1']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+  </script>
+
+
+</head>
+
+<body   >
+  <nav role="navigation"><div class="navbar subnav">
+  <div class="container-fluid">
+      <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </a>        
+
+      <div class="nav-collapse top-bar">
+        <ul class="nav">
+
+  
+  <li><a class="small-logo" href="/"><img src='/images/logo_small.png' /></a></li>  
+   
+
+  <li class=' '><a href='/what-we-do' target=''>What We Do</a></li><li class=' '><a href='/why-us' target=''>Why Us?</a></li><li class=' '><a href='/careers' target=''>Careers</a></li><li class=' '><a href='/blog' target=''>Blog</a></li><li class=' '><a href='/opensource' target=''>Open Source<img src='/images/icon_new.png' class='new-icon'/></a></li><li class=' dropdown'><a href='/about/history' target=''>About</a><ul class='dropdown-menu'><li><a href='/about/history' target=''>History</a></li><li><a href='/about/people' target=''>The Team</a></li><li><a href='/youngturks' target=''>Young Turks</a></li></ul></li><li class=' dropdown'><a href='/contact-us/contact' target=''>Contact Us</a><ul class='dropdown-menu'><li><a href='/contact-us/contact' target=''>Write To Us</a></li><li><a href='/contact-us/location' target=''>Location</a></li></ul></li><li class=' '><a href='/love' target=''>Love<img src='/images/icon_new.png' class='new-icon'/></a></li>
+
+</ul>
+<ul class="nav social-icons pull-right">
+  <li id="facebook"> 
+    <a href="https://www.facebook.com/multunus" title="facebook" target="_blank">
+      <img src="/images/facebook_white_icon.png" alt="facebook" />
+    </a>
+  </li> 
+  <li id="twitter"> 
+    <a href="http://twitter.com/multunus" title="twitter" target="_blank">
+      <img src="/images/twitter_white_icon.png" alt="twitter" />
+    </a>
+  </li>   
+
+</ul>
+
+      </div>
+    </div>
+</div>
+</nav>
+  <div class="container-fluid main-content">
+    <div class="row-fluid">
+      <article class="hentry span9 blog-post" role="article">
+  <div class="row-fluid">
+  <div class="span2 date-container">
+    
+
+
+
+
+
+
+
+
+  
+
+
+<div datetime="2012-05-21T05:33:21+00:00" pubdate data-updated="true"><div class='day'>21</div><div class='month-year'><div class='month'>May</div><div class='year'>2012</div></div></div>
+  </div>
+  <div class="span10">
+    
+      <header>
+        <h2 class="entry-title">Continuous Delivery of iOS Apps Using Jenkins and TestFlightApp</h2>
+        <p class="meta">
+          
+  
+
+<strong>Posted by: </strong> 
+
+	<a class='author' href='/blog/author/leena/'>Leena</a>
+
+
+        </p>
+      </header>
+    
+  </div>
+
+  <div class="entry-content"><p>As mentioned in <a href="/blog/categories/continuous-delivery/">earlier posts</a> we&#8217;ve been doing Continuous Delivery for both Webapps and Android apps for quite sometime. This post is about setting up Continuous Delivery for iOS apps using Jenkins and <a href="http://testflightapp.com" target="_blank">TestFlightApp</a>. TestFlightApp is a free service which helps to do closed beta testing without putting into AppStore. Using their APIs, the process of delivering new versions of the app can be automated.</p>
+
+<!-- more -->
+
+
+<p>Setting up Continuous Delivery mainly involves the following steps:</p>
+
+<ul>
+    <li>Setup Mac Machine as Jenkins Node</li>
+    <li>Setup Jenkins Xcode plugin</li>
+    <li>Configure Distribution profile</li>
+    <li>Integrate with TestFlightApp API</li>
+</ul>
+
+
+<p>Lets see those steps in detail.</p>
+
+<p><strong><span style="text-decoration: underline;">Setup Mac Machine as Jenkins Node</span></strong></p>
+
+<p>Setting up a node with Jenkins is very easy . You can either control the slave using SSH or using JWS. Each node will have a label name associated with it, which needs to be mentioned during setting up the job which needs to be run on this node. You can configure the nodes from the Manage Nodes under the Manage Jenkins option. The following screenshot shows how to configure a node using SSH.</p>
+
+<p><img style="border: none;" src="https://s3.amazonaws.com/multunus-cdimages/jenkins_node.png" alt="Configure Node using SSH" width="579" height="411" /></p>
+
+<p>This <a href="https://wiki.jenkins-ci.org/display/JENKINS/Step+by+step+guide+to+set+up+master+and+slave+machines">link</a> contains step by step instructions on how to configure a node using JavaWebStart.</p>
+
+<h3><strong><span style="text-decoration: underline;">Setup Jenkins Xcode plugin</span></strong></h3>
+
+
+<p>Jenkins XCode plugin abstracts the xcode commands to run for creating packages for distribution. <a href="https://wiki.jenkins-ci.org/display/JENKINS/Xcode+Plugin">Jenkins Wiki</a> has details about how to configure the same. I encountered one <a href="https://issues.jenkins-ci.org/browse/JENKINQS-12635?focusedCommentId=161518#comment-161518">issue</a> while configuring the same, i.e. ipa generation was failing when the &#8220;Build output directory&#8221; was configured with relative path. It got resolved by giving the full path as <strong>${WORKSPACE}/build</strong>.</p>
+
+<h3><strong><span style="text-decoration: underline;">Configure Distribution profile</span></strong></h3>
+
+
+<p>For distributing applications, an ad-hoc distribution profile needs to be created using the this <a href="https://developer.apple.com/ios/manage/provisioningprofiles/create.action?type=2">link</a>. The Development Provisioning Profile will not work with TestFlightApp. It took me sometime to figure out the same. The following video gives detailed instructions on how to create the same.</p>
+
+<p><a href="http://www.youtube.com/watch?v=XVO0tIHmQTg&amp;feature=relmfu">http://www.youtube.com/watch?v=XVO0tIHmQTg&amp;feature=relmfu</a></p>
+
+<h3><strong><span style="text-decoration: underline;">Integrate with TestFlightApp API</span></strong></h3>
+
+
+<p>TestFlightApp provides <a href="https://testflightapp.com/api/doc/">API</a> which can be integrated with Jenkins to upload the IPA after successful build. I used curl command, as given as sample in the document, to upload the IPA. You can create support groups to be notified on each new upload of the app, and installation of the app is very simple i.e. just a click of link in the email. No iTunes and no sharing of IPA through emails.</p>
+
+<p>One issue I was stuck during the setup was the configuration of the profile with the Xcode plugin. The plugin has the option &#8220;Embed Profile&#8221;, but even if you give the path of the profile file, it was using the wrong profile for the IPA. The problem resolved when the profiles were refreshed in Xcode. You can get the Refresh option in the Organizer menu as shown below.
+<img src="https://s3.amazonaws.com/multunus-cdimages/refresh_profiles_xcode.jpg" alt="Refresh profiles - Xcode" width="600" style="border: none;" /></p>
+
+<p><strong><span style="text-decoration: underline;">Note:</span></strong> This post is mainly about integrating Jenkins with TestflightApp, hence not talking about testing tools. I am planning to cover about the same in my upcoming posts.</p>
+</div>
+  
+    <p class="meta">
+      
+
+<div class="categories">
+	<strong>Filed in: </strong> 
+  
+    <a class='category' href='/blog/categories/all-posts/'>All Posts</a>, <a class='category' href='/blog/categories/continuous-delivery/'>Continuous Delivery</a>
+  
+</div>
+
+
+      
+    </p>
+  
+</div>
+  <footer>
+    
+      <div class="sharing">
+	
+		<div class="fb-like" data-width="368" data-layout="button_count" data-href="" data-show-faces="false">
+		</div>
+	
+	
+		<div class="g-plusone" data-size="medium" data-href="http://www.multunus.com/2012/05/continuous-delivery-of-ios-apps-using-jenkins-and-testflightapp">
+		</div>
+	
+  	
+  		<a href="http://twitter.com/share" class="twitter-share-button" data-url="http://www.multunus.com/2012/05/continuous-delivery-of-ios-apps-using-jenkins-and-testflightapp" data-counturl="http://www.multunus.com/2012/05/continuous-delivery-of-ios-apps-using-jenkins-and-testflightapp" data-count="none" data-text="See the timelines of the young turks at Multunus">
+  		</a>
+  	
+  	<script src="//platform.linkedin.com/in.js" type="text/javascript"></script>
+  	<script type="IN/Share" data-counter="right"></script>
+</div>
+
+    
+    
+    <section>
+      <h1>Comments</h1>
+      <div id="disqus_thread" aria-live="polite"><noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+    </section>
+    
+  </footer>
+  
+
+<script type="text/javascript">
+      var disqus_shortname = 'multunus';
+      
+        
+        // var disqus_developer = 1;
+        var disqus_identifier = 'http://www.multunus.com/2012/05/continuous-delivery-of-ios-apps-using-jenkins-and-testflightapp/';
+        var disqus_url = 'http://www.multunus.com/2012/05/continuous-delivery-of-ios-apps-using-jenkins-and-testflightapp/';
+        var disqus_script = 'embed.js';
+      
+    (function () {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = 'http://' + disqus_shortname + '.disqus.com/' + disqus_script;
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    }());
+</script>
+
+
+
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) {return;}
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#appId=212934732101925&xfbml=1";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+
+
+  <script type="text/javascript">
+    (function() {
+      var script = document.createElement('script'); script.type = 'text/javascript'; script.async = true;
+      script.src = 'https://apis.google.com/js/plusone.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(script, s);
+    })();
+  </script>
+
+
+
+  <script type="text/javascript">
+    (function(){
+      var twitterWidgets = document.createElement('script');
+      twitterWidgets.type = 'text/javascript';
+      twitterWidgets.async = true;
+      twitterWidgets.src = 'http://platform.twitter.com/widgets.js';
+      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
+    })();
+  </script>
+
+
+
+
+
+</article>
+
+<aside class="sidebar-nav span3">
+  <h3>Categories</h3>
+<ul id="category-list">
+	<li  class="page_item"><a href="/blog/categories/all-posts">All Posts</a></li>
+	<li  class="page_item"><a href="/blog/categories/android">Android</a></li>
+	<li  class="page_item"><a href="/blog/categories/business">Business</a></li>
+	<li  class="page_item"><a href="/blog/categories/continuous-delivery">Continuous Delivery</a></li>
+	<li  class="page_item"><a href="/blog/categories/process">Process</a></li>
+	<li  class="page_item"><a href="/blog/categories/rails">Rails</a></li>
+	<li  class="page_item"><a href="/blog/categories/technology">Technology</a></li>
+</ul>
+
+</aside> 
+    </div>
+  </div>
+  <div class="container-fluid dark-background">
+      <div class="row-fluid">
+        <div class="span4 featured-posts">
+          <div class="header">Featured Posts</div>
+<ul id="featured-posts">
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+      <li class="post">
+        <a href="/2012/01/a-sneak-peak-into-mobile-app-opportunities-in-2012/">A sneak peek into Mobile App Opportunities in 2012</a>
+      </li>
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+      <li class="post">
+        <a href="/2011/09/continuous-delivery-for-android-apps-part-1/">Continuous Delivery for Android Apps - Part 1</a>
+      </li>
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+      <li class="post">
+        <a href="/2011/07/continuous-delivery-using-jenkins-build-pipeline/">Continuous Delivery - Part 1: Our Jenkins Build Pipeline setup</a>
+      </li>
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+      <li class="post">
+        <a href="/2011/02/software-development-as-a-balance/">A Macro Level Perspective of Software Development</a>
+      </li>
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+</ul>
+
+        </div>
+        <div class="span4 tumblr-feed">
+          <div class="header">Our Daily Voice</div>
+<ul id="tumblr_post">
+  <li class="loading">Fetching...</li>
+</ul>
+<div id="continue-reading"><a href="http://multunus.tumblr.com/">Continue reading at our tumblog</a></div>
+<script type="text/javascript">
+  $(document).ready(function(){
+    getTumblrPost("multunus", 1);
+  });
+</script>
+<script src="/javascripts/asides/tumblr.js" type="text/javascript"> </script>
+
+        </div>
+        <div class="span4 twitter-feed">
+          
+  <div class='header'>@multunus</div>
+  <ul id="tweets">
+    <li class="loading">Status updating...</li>
+  </ul>
+  <script type="text/javascript">
+    $(document).ready(function(){
+      getTwitterFeed("multunus", 5, false);
+    });
+  </script>
+  <script src="/javascripts/asides/twitter.js" type="text/javascript"> </script>
+
+
+        </div>         
+      </div>
+    </div>
+  <footer role="contentinfo" class="page-footer">
+<div class = "navbar footer-navbar">
+  <div class = "container-fluid">
+    <div class="nav-collapse footer-container">
+      <ul class="nav"><li class="copyright">&copy;2013 Copyright by Multunus Software Private Limited.</li>
+      </ul>
+    </div>
+  </div>
+</div>
+</footer>
+</body>
+</html>

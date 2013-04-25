@@ -1,0 +1,735 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: Technology | Multunus]]></title>
+  <link href="http://www.multunus.com/blog/categories/technology/atom.xml" rel="self"/>
+  <link href="http://www.multunus.com/"/>
+  <updated>2013-04-25T06:25:24+00:00</updated>
+  <id>http://www.multunus.com/</id>
+  <author>
+    <name><![CDATA[]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Our experience with Jekyll and Octopress]]></title>
+    <link href="http://www.multunus.com/2012/10/our-experience-with-jekyll-and-octopress/"/>
+    <updated>2012-10-25T03:00:05+00:00</updated>
+    <id>http://www.multunus.com/2012/10/our-experience-with-jekyll-and-octopress</id>
+    <content type="html"><![CDATA[<div>
+<p>
+  We recently moved from Wordpress to Jekyll for our website because we found it harder to maintain our site with Wordpress. We also hit performance   bottlenecks with Wordpress and were clueless on how to fix those. Jekyll made a lot more sense as it uses Ruby, which we are very comfortable with as compared to PHP. And hardly any performance bottlenecks because the entire site is static, and so no DB tuning required :)
+</p>
+
+<h2>What is Jekyll?</h2>
+
+<p>Jekyll is a simple, blog aware, static site generator created by <a href="http://tom.preston-werner.com/">Tom Preston-Werner</a>, founder of GitHub. It takes a template directory (representing the raw form of a website), runs it through Textile or Markdown and Liquid converters, and spits out a complete, static website suitable for serving with any of your favorite web server. This is also the engine behind GitHub Pages, which you can use to host your website from GitHub source.</p>
+<p>We chose to use <a href="http://octopress.org/">Octopress</a>, a framework built on top of Jekyll. It comes with lot of features such as:
+  <ul>
+    <li>A semantic HTML5 template</li>
+    <li>A Mobile first responsive layout (rotate, or resize your browser and see)</li>
+    <li>Built in 3rd party support for Twitter, Google Plus One, Disqus Comments, Pinboard, Delicious, and Google Analytics</li>
+    <li>An easy deployment strategy using Github pages or Rsync</li>
+    <li>Built in support for Rack servers</li>
+  </ul>
+</p>
+<p>There are lot of <a href="https://github.com/imathis/octopress/wiki/3rd-Party-Octopress-Themes">3rd party themes</a> available with Octopress which you can chose. This helped us to convert the existing Wordpress site to Jekyll. </p>
+
+<h2>How does it work?</h2>
+
+<p>Every page that you create in Jekyll will have the following sections:
+  <ul>
+    <li><a href="https://github.com/mojombo/jekyll/wiki/YAML-Front-Matter">YAML frontmatter</a> on top of every file which will contain data in the YAML format which is processed by Jekyll. The mandatory ones are “title” and “layout” which decides the title and layout of the page respectively.</li>
+    <li><a href="https://github.com/Shopify/liquid">Liquid</a> markup for the templating with the in markdown format or HTML format.  There is support for <a href="https://github.com/plusjade/mustache-with-jekyll">Mustache</a> too.</li>
+    <li>Layouts for the pages.</li>
+    <li>Plugins - this is for customizing the content. You can see more details about how to write plugins <a href="https://github.com/mojombo/jekyll/wiki/Plugins">here</a>.</li>
+  </ul>
+</p>
+
+<h2>“Aha” Moments</h2>
+
+<p>There were many “Aha” moments throughout the migration, I am putting those top ones which came to my mind while writing.</p>
+
+<h3>Responsiveness </h3>
+
+Bootstrap makes it so much easier to do the regular stuff - modals, navigation bar, tooltips, etc. And with a little more effort you get responsiveness for free.
+
+<h3>Asides for Featured posts</h3>
+
+Asides are the way you can add sidebar to your pages in Octopress. So if you want something to be displayed on the navbar, add a new aside file and include it in your layout. We had the requirement to display certain posts as “featured” and needed to be shown them in all pages. The only thing to do was to add ‘featured: true’ in the YAML front matter of the corresponding posts and create an aside as follows and include it in your layout. 
+
+<h3>Integrating with comments</h3>
+
+It was as simple adding “comments: true” in the posts which you want the comments to be displayed for. 
+
+<h3>Keeping the blogs as unpublished</h3>
+
+Keep “published: false” in the YAML frontmatter of the post. It won’t show up in the post list.
+
+<h3>Permanent Links for Posts</h3>
+
+Need to change the way the URL for blogs are being displayed? Just change the permlink in _config.yml 
+
+<h2>Where things can take time</h2>
+
+<h3>Figuring out how Jekyll does the magic</h3>
+
+It took a while for us to figure out how Jekyll does the “magic”. Getting a hang of the layouts, YAML Front matter, Liquid Templating, Asides in Octopress can take time. If you need to customize, writing the plugins and what type of plugin to write can also take little time initially. 
+<h3>Learning curve for Sass and Twitter bootstrap</h3>
+
+
+As mentioned earlier, Octopress uses <a href="http://sass-lang.com/">Sass</a> and we chose a theme which uses <a href="http://twitter.github.com/bootstrap/">Bootstrap</a>. There would be a learning curve if you are new to both. 
+
+<h3>Migrating content from Wordpress</h3>
+
+There are quiet a few plugins written to <a href="https://github.com/mojombo/jekyll/wiki/Blog-Migrations">migrate</a> data from other blogging platforms including Wordpress. This worked well for blogs, but will not take care of downloading the related images and also the pages other than blogs. We used the tool <a href="https://github.com/thomasf/exitwp">exitwp</a>, which will try to migrate as much data as possible including downloading of images. But it does not take care of updating the posts with the new URL for the images, so that was a task that we had to take up manually. 
+
+<h3>Contact Us Form</h3>
+
+There are Wordpress plugins that can help you create a contact us form or a suggestion box. But how can you do that for a static website? You’ve two options: 
+
+<ul>
+    <li>Create an app with an API for saving the contact details</li>
+    <li>Use some existing services which can persist form data</li>
+</ul>
+
+We went with the second option and after a lot of shopping around, we finally settled for none other than <a href="http://www.google.com/google-d-s/forms/">Google Forms</a>. This automatically took care of getting an email notification for every form submission. Some of the issues that we fixed or workarounds we had done are: 
+
+<ul>
+    <li>We followed the instructions mentioned <a href="http://www.morningcopy.com.au/tutorials/how-to-style-google-forms/">here</a> to customize the look and feel of the form.</li>
+    <li>Added a hidden iframe to not to show the page from google form on submit</li>
+    <li>Added front end validations for mandatory fields, to ensure that if and when the form is submitted, the submission would be successful.</li>
+</ul>
+
+<h3>Team Page</h3>
+
+As any company’s website, we also needed a team page - A visual index of people and also separate pages of individual profiles. We found an excellent <a href="https://github.com/flatterline/jekyll-plugins#company-team">plugin</a>, that seemed to do just what we wanted. But since we had used Octopress, the directory structure was slightly different from what the plugin had expected. So we had to fiddle around with the plugin to understand how it worked and modify it to work for us. In the end, adding a new person to the team was as easy as adding a new yml file for that person.
+
+<h2>Our contribution back </h2>
+
+We’ve created couple of open source contributions as part of the migration process. You can see the details <a href="http://www.multunus.com/opensource">here</a>. 
+
+<h2>Things, I felt, missing</h2>
+
+<ul>
+  <li>Debugging - I found it extremely tough to debug Jekyll. Tried both <a href="http://bashdb.sourceforge.net/ruby-debug.html">ruby-debug</a> and <a href="http://pryrepl.org/">pry</a>, but somehow both does not seem to be working. The tough part I found was how it suppresses exceptions. If there is an error in any generator, it just continues without even logging it.</li>
+
+    <li>Live Editor for Octopress using which you can write the blog and automatically publish it. If you are using only Jekyll with GitHub pages, <a href="http://prose.io/">prose.io</a> would work for you.</li>
+</ul>
+
+<h2>Summary </h2>
+
+<p>I would highly recommend Jekyll and/or Octopress for creating a company website especially if you are a software development firm comfortable with Ruby. It combines the power of Ruby, Templating and YAML using which it generates a static web site for you. Octopress helps you to quickly layout the foundation for your website on top of which you can easily build. </p>
+<p>A huge thanks to the awesome Ruby community and GitHub community without whom the entire project might not have been possible. </p>
+
+<h2>References</h2>
+
+<a href="http://vitobotta.com/how-to-migrate-from-wordpress-to-jekyll/ ">http://vitobotta.com/how-to-migrate-from-wordpress-to-jekyll/ </a>
+</div>
+
+
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Web Application Security]]></title>
+    <link href="http://www.multunus.com/2012/10/web-application-security/"/>
+    <updated>2012-10-11T04:25:05+00:00</updated>
+    <id>http://www.multunus.com/2012/10/web-application-security</id>
+    <content type="html"><![CDATA[<p class="c0"><span>Now a days we, programmers are really obsessed
+    with test driving our application and automating. We automate our
+    unit tests and integration tests. We do continuous
+    integration. But what about security testing
+    ?</span></p>
+
+
+<p class="c0
+    c2"><span></span></p>
+
+
+<p class="c0"><span>Many organization hire
+    security professionals to test the web application security when
+    the complete product is built and most often to test production
+    environment. But most of the vulnerabilities that is present in
+    the system could have fixed very easily and cheaply when found
+    during the development phase. Also since the app is in the
+    production environment hired security consultants will not be able
+    to conduct an attack against the system and verify the
+    vulnerability.</span></p>
+
+
+<p class="c0
+    c2"><span></span></p>
+
+
+<p class="c0"><span>Hiring a security
+    consultant is very costly as well as :</span></p>
+
+
+<p class="c0
+    c2"><span></span></p>
+
+
+<ol class="c6" start="1"><li class="c4
+    c0"><span>We will not be supplied with a security test
+    suit.</span></li><li class="c4 c0"><span>We will not have list of
+    passing test cases and failing tests instead we get a list of
+    vulnerabilities</span></li><li class="c4 c0"><span>After fixing
+    the vulnerabilities we might have to hire them again to make sure
+    that all the vulnerabilities are
+    fixed.</span></li></ol>
+
+
+<p class="c0
+    c2"><span></span></p>
+
+
+<p class="c0"><span>The truth is developers
+    can identify and fix many of such vulnerabilities during the
+    development itself. Moreover we can write automated security
+    testing with the help of integration testing
+    tools.</span></p>
+
+
+<p class="c0
+    c2"><span></span></p>
+
+
+<p class="c0"><span>There are two approaches
+    for testing our web application security</span></p>
+
+
+<p class="c0
+    c2"><span></span></p>
+
+
+<ol class="c6" start="1"><li class="c4
+    c0"><span>Black box testing.</span></li><li class="c0
+    c4"><span>White box testing.</span></li></ol>
+
+
+<p class="c0
+    c2"><span></span></p>
+
+
+<p class="c0"><span>In black box testing we
+    analyse the security of our application through the web
+    &nbsp;front-end of our application. Vulnerability scanners is an
+    example for black box scanning. In white box testing we use static
+    code analysis to find the vulnerabilities in the
+    system.</span></p>
+
+
+<p class="c0
+    c2"><span></span></p>
+
+
+<p class="c0"><span>For automated security
+    analysis many tools are available. ROR developers can use any of
+    the following.</span></p>
+
+
+<p class="c0
+    c2"><span></span></p>
+
+
+<ol class="c6" start="1"><li class="c4
+    c0"><span class="c7"><a class="c10"
+    href="http://brakemanscanner.org/">Brakeman</a></span><span>&nbsp;for
+    White box testing.</span></li><li class="c4
+    c0"><span class="c7"><a class="c10"
+    href="https://www.owasp.org/index.php/OWASP_Zed_Attack_Proxy_Project">Zed
+    Attack Proxy</a></span><span>&nbsp;for Black box
+    testing.</span></li></ol>
+
+
+<p class="c0
+    c2"><span></span></p>
+
+
+<p class="c0
+    c2"><span></span></p>
+
+
+<p class="c0"><span>Brakeman is a static code
+    analyzer whereas ZAP is a vulnerability scanning tool. Both serves
+    different functionalities. Note that ZAP is not dependent on any
+    programming language.</span></p>
+
+
+<p class="c0
+    c2"><span></span></p>
+
+
+<p class="c0"><span>Now regarding which
+    method to follow for security testing I would like to quote the
+    following from this </span><span class="c7"><a class="c10"
+    href="http://jeremiahgrossman.blogspot.in/2009/10/black-box-vs-white-box-you-are-doing-it.html">blog</a></span><span>&nbsp;</span><span>:</span></p>
+
+
+<p class="c0
+    c2"><span></span></p>
+
+
+<p class="c0"><span class="c8">&ldquo;Black
+    box vulnerability assessments measure the hackability of a website
+    given an attacker with a certain amount of resources, skill, and
+    scope. We know that bad guys will attack essentially all publicly
+    facing websites at some point in time, so it makes sense for us to
+    learn about the defects before they do. As such, black box
+    vulnerability assessments are best defined as an outcome based
+    metric for measuring the security of a system with all security
+    safeguards in place.</span></p>
+
+
+<p class="c0
+    c2"><span class="c8"></span></p>
+
+
+<p class="c0"><span class="c8">White
+    box source code reviews, on the other hand, measure and/or help
+    reduce the number of security defects in an application resulting
+    from the current software development life-cycle. In the immortal
+    words of Michael Howard regarding Microsoft&rsquo;s SDL mantra,
+    &ldquo;Reduce the number of vulnerabilities and reduce the
+    severity of the bugs you miss.&rdquo; Software has bugs, and that
+    will continue to be the case. Therefore it is best to minimize
+    them to the extent we can in effort to increase software
+    assurance.&rdquo;</span></p>
+
+
+<p class="c0
+    c2"><span class="c13"></span></p>
+
+
+<p class="c0"><span>We can run
+    Brakeman against our application and after assessing the written
+    code Brakeman will report the possible vulnerabilities. It will
+    help us improve our code. But the downside is, it &nbsp;may not be
+    zen percentage in finding the possible vulnerabilities because it
+    checks for typical coding errors which opens the doors for
+    security breaches. </span></p>
+
+
+<p class="c0
+    c2"><span></span></p>
+
+
+<p class="c0"><span>ZAP is a really good web
+    app security analysis tool. It is a proxy which sits between the
+    web application and the web browser constantly analysing all the
+    HTTP traffic. But for the same reason, we need to walk through all
+    the web features so that ZAP can analyse the
+    traffic. </span></p>
+
+
+<p class="c0"><span>We were thinking we
+    &nbsp;should try to &nbsp;automate this process and once we find
+    any issue, write a test to reproduce the same issue and go ahead
+    and fix the problem. This will help us in making sure that the
+    problem got fixed.</span></p>
+
+
+<p class="c0
+    c2"><span></span></p>
+
+
+<p class="c0"><span>If you want to automate
+    the security testing using ZAP, it can be used done by integrating
+    it with Web application testing tools such
+    as </span><span class="c7"><a class="c10"
+    href="http://seleniumhq.org/">Selenium</a></span><span>.</span></p>
+
+
+<p class="c0
+    c2"><span></span></p>
+
+
+<p class="c0"><span>Regarding how to
+    configure ZAP and analyze the security vulnerabilities, I will
+    cover it in a separate blog post. I also will be writing about how
+    to integrate it with Selenium for creating automated security
+    testing suite.</span></p>
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Setting up Development Environment using Vagrant]]></title>
+    <link href="http://www.multunus.com/2012/10/setting-up-development-environment-using-vagrant/"/>
+    <updated>2012-10-03T05:25:05+00:00</updated>
+    <id>http://www.multunus.com/2012/10/setting-up-development-environment-using-vagrant</id>
+    <content type="html"><![CDATA[<p><strong><span style="text-decoration: underline;">Problem</span></strong></p>
+
+<p>
+  We have some projects which takes lot of effort to set up. As with every projects setting up development environment includes installing git, curl, apache, mysql-server, ruby, rvm, ruby-gems for the app, etc. and also the project specific configurations.
+</p>
+
+
+<p>
+  Doing all these every time when you need to setup the development environment will be time consuming and takes a lot of effort.
+</p>
+
+
+<p><strong><span style= "text-decoration: underline;">Solution</span></strong></p>
+
+<p>
+  Setting up the development environment in VM using Vagrant. 
+</p>
+
+
+<p>
+  Vagrant helps to build development environment for projects and rebuild them when needed. And this environment can be shared among the team easily.
+</p>
+
+
+<p><strong><span style= "text-decoration: underline;">How?</span></strong></p>
+
+<p>
+  Vagrant is primarily a driver for Oracle VirtualBox virtual machines. You can download and install Vagrant from <a href="http://downloads.vagrantup.com/" target="_NEW">here</a> or you can install it as a ruby gem for the rails projects. Vagrant uses a "base box" which is a base install (an OS) for the system you are going to use.
+</p>
+
+
+<p>
+  Different flavours of base boxes can be downloaded from <a href="http://www.vagrantbox.es/" target="_NEW">http://www.vagrantbox.es/</a>.
+</p>
+
+
+<p>
+  First step is to mark the root directory and setup the basic required files using the following command:
+  <pre>vagrant init</pre>
+</p>
+
+
+<p>
+  This will create a file called <em><strong>Vagrantfile</strong></em> this will contain the configuration details for the VM.
+</p>
+
+
+<p>
+  After the project initailization you can download Vagrant boxes from <a href="http://www.vagrantbox.es/" target="_NEW">http://www.vagrantbox.es/</a> and add it to your project:
+  <pre>vagrant box add lucid64 lucid64.box </pre>
+</p>
+
+
+<p>
+  You can also add the box from a remote server using:
+  <pre>vagrant box add lucid64 http://files.vagrantup.com/lucid64.box</pre>
+</p>
+
+
+<p>
+  To list the boxes that you added you can use:
+  <pre>vagrant box list</pre>
+</p>
+
+
+<p>
+  Now you have to edit the Vagrantfile to use the base box that you have added.
+  <pre>Vagrant::Config.run do |config|
+        config.vm.box = "lucid64" 
+end</pre>
+</p>
+
+
+<p>
+  Now we can start our new VM:
+  <pre>vagrant up</pre>
+  This will start a fully functional VM. 
+</p>
+
+
+<p>
+  To access the VM you have to do ssh:
+  <pre>vagrant ssh</pre>
+  This will log you into the virtual machine.
+</p>
+
+
+<p>
+  Now you can start setting up the development environment. Once everything is ready we can package this VM to a box. This will help us to share the virtual environment that we created with the other team members.
+  <pre>vagrant package</pre>
+  This will create a vagrant box with the entire dev environment setup. 
+</p>
+
+
+<p>
+  Now to use this any machine, you have to install Virtualbox and Vagrant. Then add this box using:
+  <pre>vagrant box add lucid64_with_dev_setup package.box</pre>
+</p>
+
+
+<p>
+  You can create a VM with this box and all the dev environment setup will be available with this VM.
+</p>
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[CSS3 animations versus Javascript animations]]></title>
+    <link href="http://www.multunus.com/2012/09/css3-animations-versus-javascript-animations/"/>
+    <updated>2012-09-27T05:25:05+00:00</updated>
+    <id>http://www.multunus.com/2012/09/css3-animations-versus-javascript-animations</id>
+    <content type="html"><![CDATA[<p><strong><span style="text-decoration: underline;">tl; dr;</span></strong></p>
+
+<p>
+  Layout
+  engines in major browsers, like gecko, webkit or trident now have many optimization
+  functions for animations. But these will simply cease to function if you're using
+  jQuery animations because in reality jQuery is not "animating" anything. However, in
+  the case of CSS3, the browser optimizes animations using the GPU's resources to give a
+  much more polished effect. Go in for CSS3 whenever possible.
+</p>
+
+
+<p>
+  <strong><span style=
+  "text-decoration: underline;">The long version:</span></strong> jQuery is an excellent
+  js framework to do a lot of things, but is it what you need for blazing fast
+  performance with animations for your website? Lets dig a little bit deeper into the
+  actual implementations, by considering these two examples,
+</p>
+
+
+<p>
+<strong>(a) jQuery animation</strong>
+<pre>
+  $(".onclick").toggle(
+      function(){
+        $(".children").animate({height:'50'});
+      },
+      function(){
+        $(".children").animate({height:'0'});
+      }
+  );
+</pre>
+<iframe style="width: 100%; height: 300px;" src=
+"http://jsfiddle.net/midhun_k/aq9gq/embedded/" frameborder="0" width="320" height=
+"240"></iframe> 
+In this case the drop down menu is implemented using jquery animate method.
+</p>
+
+
+<p>
+ <strong>(b) CSS3 animation</strong>
+  <pre>
+.children{
+           height: 0px;
+           border-bottom: 1px solid grey;
+           -webkit-transition: height .3s ease-in-out;
+}
+
+.children-onhover{
+           height: 50px;
+}
+</pre>
+  <pre>
+$(".onclick").click(function(){
+    $(".children").toggleClass("children-onhover");
+});
+</pre><iframe style="width: 100%; height: 300px;" src=
+"http://jsfiddle.net/midhun_k/kANVs/embedded/" frameborder="0" width="320" height=
+"240"></iframe> In this case the drop down menu is done using css3 transitions using
+ease-in-out transition effect. 
+</p>
+
+
+<p>
+Lets analyze what's going on with the css3 animation for
+sliding down the menus. Both of these menus progressively increase the height of each of
+the containing submenus, but in case of css3, the height is progressively updated from
+the old value to the new value over time, which is done by the layout engine of the
+browser internally, as it is described in the <a title="surfin' safari" href=
+"http://www.webkit.org/blog/138/css-animation/">surfin' safari</a> blog.
+</p>
+
+
+<p>
+ In case of
+jQuery, inside the animate of each property, an fx Object is created.
+  <pre>
+jQuery.each( prop, function( name, val ) {
+  var e = new jQuery.fx( self, opt, name );
+}
+</pre>This return a javascript object instance,
+  <pre>
+fx: function( elem, options, prop ) {
+  this.options = options;
+  this.elem = elem;
+  this.prop = prop;
+
+  if ( !options.orig ) {
+      options.orig = {};
+  }
+}
+</pre>After that, the start and end values is set. In our case:
+  <pre>
+   start = 0;
+   end = 50;
+   unit = 'px';
+   e.custom( start, end, unit );
+</pre>The above snippet calls the custom function:
+  <pre>
+custom: function( from, to, unit ) {
+  this.startTime = now();
+  this.start = from;
+  this.end = to;
+  this.unit = unit || this.unit || "px";
+  this.now = this.start;
+  this.pos = this.state = 0;
+
+  var self = this;
+  function t( gotoEnd ) {
+      return self.step(gotoEnd);
+  }
+
+  t.elem = this.elem;
+
+  if ( t() &amp;&amp; jQuery.timers.push(t) &amp;&amp; !timerId ) {
+      timerId = setInterval(jQuery.fx.tick, 13);
+  }
+}
+</pre>As you can see above, a call to step method is made every every 13 milliseconds. As
+of jQuery 1.8 this interval is called JQuery.fx.interval. 
+</p>
+
+
+<p>That is, for a height increase of 50px over a time period of 400ms (default JQuery animation interval), it does 31 steps of 13 ms each.
+  <pre>
+jQuery.fx.speeds = {</p>
+
+<pre><code>    slow: 600,
+    fast: 200,
+    // Default speed
+    _default: 400
+</code></pre>
+
+<p>};
+</pre></p>
+
+<p>
+As of jQuery 1.8 the step function is replaced, but the same logic is applied:
+  <pre>
+step: function( gotoEnd ) {
+  var t = now();
+  var n = t - this.startTime;
+  this.state = n / this.options.duration;
+  pos = jQuery.easing['swing'](this.state, n, 0, 1, this.options.duration);
+  this.now = this.start + ((this.end - this.start) * this.pos);
+  this.update();
+}
+</pre>
+</p>
+
+
+<p>You can dig deeper into jQuery effects at: <a title=
+"https://github.com/jquery/jquery/blob/master/src/effects.js#L124" href=
+"https://github.com/jquery/jquery/blob/master/src/effects.js#L124">https://github.com/jquery/jquery/blob/master/src/effects.js#L124</a>
+Also make sure to check out the relevant webkit source: <a title=
+"https://github.com/WebKit/webkit/tree/master/Source/WebCore" href=
+"https://github.com/WebKit/webkit/tree/master/Source/WebCore">https://github.com/WebKit/webkit/tree/master/Source/WebCore</a>
+</p>
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Introduction to Continuous Delivery]]></title>
+    <link href="http://www.multunus.com/2012/05/introduction-to-continuous-delivery/"/>
+    <updated>2012-05-15T09:19:16+00:00</updated>
+    <id>http://www.multunus.com/2012/05/introduction-to-continuous-delivery</id>
+    <content type="html"><![CDATA[<p>We've been doing Continuous Delivery for sometime and also been writing about how to implement the same. This post is about why Continuous Delivery is required and what problems does it solve.</p>
+
+<h3><strong><span style="text-decoration: underline;">What is Continuous Delivery</span></strong></h3>
+
+
+<p>Continuous Delivery is the process of being able to continuously deliver new versions of a software product to create a tight feedback loop between users and the project team—including the customer or product owner.</p>
+
+<!-- more -->
+
+
+<p>This helps to test new ideas and changes in the product and also measure the effect of changes in the revenue. Continuous Delivery means releasing software very frequently, i.e. multiple times a day, rather than once in months.</p>
+
+<h3><strong>Bottlenecks for Continuous Delivery</strong></h3>
+
+
+<div>Lets see the usual challenges for releases. The following are the challenges that we faced before moving to Continuous Delivery. Let me put it in this way i.e. the following are the challenges which got us thinking on how to make releases more predictable and pain free. We already had a Continuous Integration setup at our end, but that was not enough to ease the process.</div>
+
+
+<ul>
+    <li>No tracking on which version was deployed, when and to which environment</li>
+    <li>Different people working on different branches, code merge hell when its ready for deployment.</li>
+    <li>When an urgent bug needs to be fixed, the fix need to be replicated in multiple branches along with the mainline branch</li>
+    <li>No easy way to revert back to the previous stable version</li>
+</ul>
+
+
+<p>We've seen even more challenges in teams which do not have a Continuous Integration setup yet. They are:</p>
+
+<ul>
+    <li>Adhoc build processes</li>
+    <li>Too much time spent on manual testing</li>
+    <li>Integration of code happens only during deployment</li>
+    <li>Complexity of build and deployment increases, depending on the complexity of the app.</li>
+    <li>For clustered environments, the deployment needs to be updated to all slaves</li>
+</ul>
+
+
+<div>
+
+Thats when we stumbled upon "<a href="http://www.informit.com/store/product.aspx?isbn=0321601912&amp;WT.DCSext.w_ptgrevartcl=Continuous+Delivery%3a+Reliable+Software+Releases+through+Build%2c+Test%2c+and+Deployment+Automation_1641923_ISBNTopCover">Continuous Delivery</a>" book by Jez Humble and Dave Farley and extended our Continuous Integration setup to Continuous Delivery.
+
+</div>
+
+
+<div>
+<h3>Continuous Delivery to the rescue</h3>
+One of the key principle of Continuous Delivery is <strong>To </strong><strong>create a <em>repeatable</em> and <em>reliable</em> process for releasing software.</strong> It solves problems by providing fast automated feedback on the <strong>production readiness</strong> of the application - every time there is a change to the code, infrastructure or the configuration.  So in Continuous Delivery, <strong><em>Done </em>means <em>Released.</em></strong>
+
+</div>
+
+
+<div>A central pattern of Continuous Delivery is called the <em><strong>Deployment pipeline - </strong></em>an automated implementation of the application's build, deploy, test and release process. The following shows a sample deployment pipeline:</div>
+
+
+<p style="text-align: center;"><img class="aligncenter" style="border: none;" src="https://s3.amazonaws.com/multunus-cdimages/pipeline.png" alt="Deployment Pipeline" width="549" height="189" /></p>
+
+
+
+
+<div>The deployment pipeline includes the following build and deployment process:</div>
+
+
+<ul>
+    <li>Creates executable code to verify that the syntax of the source code is valid.</li>
+    <li>Runs the unit tests to check that the code behaves as expected.</li>
+    <li>Runs the acceptance tests to check that the application conforms to its business acceptance criteria—that it delivers the business value that was intended.</li>
+    <li>Run nonfunctional tests which checks that the application performs sufficiently well in terms of capacity, availability, security, and so on to meet its users’ needs.</li>
+    <li>Runs tools which check that the expected code quality criteria such as test coverage and other technology-specific metrics are met.</li>
+    <li>Then in the manual testing environment, exploratory testing is done. In parallel a demonstration to the customer and a selection of users can also be done. This helps the product owner to decide whether there are missing features, or find bugs that require fixing.</li>
+    <li>If any of the above fails, the deployment should be stopped because it is a clear indication that the application is not production ready.</li>
+</ul>
+
+
+<div>I will write about the Benefits of Continuous Delivery in the next post.</div>
+
+
+<h4><span style="text-decoration: underline;">References</span></h4>
+
+
+<div><a href="https://docs.google.com/a/multunus.com/present/edit?id=0AQj1177vtu0MZHRoM2dmN180NzRneGp2bXRndw">https://docs.google.com/a/multunus.com/present/edit?id=0AQj1177vtu0MZHRoM2dmN180NzRneGp2bXRndw</a></div>
+
+
+<div><a href="http://www.informit.com/articles/article.aspx?p=1829417" target="_blank">http://www.informit.com/articles/article.aspx?p=1829417</a></div>
+
+
+<div><a href="http://continousdelivery.com" target="_blank">http://continousdelivery.com</a></div>
+
+]]></content>
+  </entry>
+  
+</feed>

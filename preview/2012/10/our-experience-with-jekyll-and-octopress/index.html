@@ -1,0 +1,549 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>Our experience with Jekyll and Octopress  | Multunus </title>
+  <meta name="author" content="">
+
+  
+  <meta name="description" content="We recently moved from Wordpress to Jekyll for our website because we found it harder to maintain our site with Wordpress. We also hit performance &hellip;">
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://www.multunus.com/2012/10/our-experience-with-jekyll-and-octopress">
+  <link href="/images/favicon.ico" rel="icon">
+  <link href="/stylesheets/bootstrap/bootstrap.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <link href="/stylesheets/bootstrap/responsive.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <link href="/stylesheets/syntax/syntax.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" type="text/css" href="/stylesheets/screen.css">
+
+  <style type="text/css">
+    body {
+        }
+    h1 {
+      margin-bottom: 15px;
+    }
+    img {
+      max-width: 100%;
+    }
+    .sharing, .meta, .pager {
+      margin: 20px 0px 20px 0px;
+    }
+    
+  </style>
+  <script src="/javascripts/libs/jquery.js"></script>
+  <script src="/javascripts/libs/modernizr-2.0.js"></script>
+  <script src="/javascripts/libs/bootstrap.js"></script>
+  <script src="/javascripts/octopress.js" type="text/javascript"></script>
+  <link href="/atom.xml" rel="alternate" title="Multunus" type="application/atom+xml">
+  <!-- jQuery Form Plugin -->
+<script src="http://malsup.github.com/jquery.form.js"></script>
+<!-- jQuery Form Validation Plugin -->
+<script src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.9/jquery.validate.min.js"></script> 
+<script src="/javascripts/google_form.js"></script>
+<script src="https://gdata-samples.googlecode.com/svn/trunk/ytplayer/ChapterMarkerPlayer/chapter_marker_player.js"></script>
+  <link href='http://fonts.googleapis.com/css?family=Bitter:400,700,400italic&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+<!-- jQuery -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+<script type="text/javascript">
+    // Avoid conflict with ender.js.
+    jQuery.noConflict();
+</script>
+<!-- jQuery Form Plugin -->
+<script src="http://malsup.github.com/jquery.form.js"></script>
+<!-- jQuery Form Validation Plugin -->
+<script src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.9/jquery.validate.min.js"></script> 
+<script src="/javascripts/google_form.js"></script>
+  
+  <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-5073218-1']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+  </script>
+
+
+</head>
+
+<body   >
+  <nav role="navigation"><div class="navbar subnav">
+  <div class="container-fluid">
+      <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </a>        
+
+      <div class="nav-collapse top-bar">
+        <ul class="nav">
+
+  
+  <li><a class="small-logo" href="/"><img src='/images/logo_small.png' /></a></li>  
+   
+
+  <li class=' '><a href='/what-we-do' target=''>What We Do</a></li><li class=' '><a href='/why-us' target=''>Why Us?</a></li><li class=' '><a href='/careers' target=''>Careers</a></li><li class=' '><a href='/blog' target=''>Blog</a></li><li class=' '><a href='/opensource' target=''>Open Source<img src='/images/icon_new.png' class='new-icon'/></a></li><li class=' dropdown'><a href='/about/history' target=''>About</a><ul class='dropdown-menu'><li><a href='/about/history' target=''>History</a></li><li><a href='/about/people' target=''>The Team</a></li><li><a href='/youngturks' target=''>Young Turks</a></li></ul></li><li class=' dropdown'><a href='/contact-us/contact' target=''>Contact Us</a><ul class='dropdown-menu'><li><a href='/contact-us/contact' target=''>Write To Us</a></li><li><a href='/contact-us/location' target=''>Location</a></li></ul></li><li class=' '><a href='/love' target=''>Love<img src='/images/icon_new.png' class='new-icon'/></a></li>
+
+</ul>
+<ul class="nav social-icons pull-right">
+  <li id="facebook"> 
+    <a href="https://www.facebook.com/multunus" title="facebook" target="_blank">
+      <img src="/images/facebook_white_icon.png" alt="facebook" />
+    </a>
+  </li> 
+  <li id="twitter"> 
+    <a href="http://twitter.com/multunus" title="twitter" target="_blank">
+      <img src="/images/twitter_white_icon.png" alt="twitter" />
+    </a>
+  </li>   
+
+</ul>
+
+      </div>
+    </div>
+</div>
+</nav>
+  <div class="container-fluid main-content">
+    <div class="row-fluid">
+      <article class="hentry span9 blog-post" role="article">
+  <div class="row-fluid">
+  <div class="span2 date-container">
+    
+
+
+
+
+
+
+
+
+  
+
+
+<div datetime="2012-10-25T03:00:05+00:00" pubdate data-updated="true"><div class='day'>25</div><div class='month-year'><div class='month'>October</div><div class='year'>2012</div></div></div>
+  </div>
+  <div class="span10">
+    
+      <header>
+        <h2 class="entry-title">Our Experience With Jekyll and Octopress</h2>
+        <p class="meta">
+          
+  
+
+<strong>Posted by: </strong> 
+
+	<a class='author' href='/blog/author/leena/'>Leena</a>
+
+
+        </p>
+      </header>
+    
+  </div>
+
+  <div class="entry-content"><div>
+<p>
+  We recently moved from Wordpress to Jekyll for our website because we found it harder to maintain our site with Wordpress. We also hit performance   bottlenecks with Wordpress and were clueless on how to fix those. Jekyll made a lot more sense as it uses Ruby, which we are very comfortable with as compared to PHP. And hardly any performance bottlenecks because the entire site is static, and so no DB tuning required :)
+</p>
+
+<h2>What is Jekyll?</h2>
+
+<p>Jekyll is a simple, blog aware, static site generator created by <a href="http://tom.preston-werner.com/">Tom Preston-Werner</a>, founder of GitHub. It takes a template directory (representing the raw form of a website), runs it through Textile or Markdown and Liquid converters, and spits out a complete, static website suitable for serving with any of your favorite web server. This is also the engine behind GitHub Pages, which you can use to host your website from GitHub source.</p>
+<p>We chose to use <a href="http://octopress.org/">Octopress</a>, a framework built on top of Jekyll. It comes with lot of features such as:
+  <ul>
+    <li>A semantic HTML5 template</li>
+    <li>A Mobile first responsive layout (rotate, or resize your browser and see)</li>
+    <li>Built in 3rd party support for Twitter, Google Plus One, Disqus Comments, Pinboard, Delicious, and Google Analytics</li>
+    <li>An easy deployment strategy using Github pages or Rsync</li>
+    <li>Built in support for Rack servers</li>
+  </ul>
+</p>
+<p>There are lot of <a href="https://github.com/imathis/octopress/wiki/3rd-Party-Octopress-Themes">3rd party themes</a> available with Octopress which you can chose. This helped us to convert the existing Wordpress site to Jekyll. </p>
+
+<h2>How does it work?</h2>
+
+<p>Every page that you create in Jekyll will have the following sections:
+  <ul>
+    <li><a href="https://github.com/mojombo/jekyll/wiki/YAML-Front-Matter">YAML frontmatter</a> on top of every file which will contain data in the YAML format which is processed by Jekyll. The mandatory ones are “title” and “layout” which decides the title and layout of the page respectively.</li>
+    <li><a href="https://github.com/Shopify/liquid">Liquid</a> markup for the templating with the in markdown format or HTML format.  There is support for <a href="https://github.com/plusjade/mustache-with-jekyll">Mustache</a> too.</li>
+    <li>Layouts for the pages.</li>
+    <li>Plugins - this is for customizing the content. You can see more details about how to write plugins <a href="https://github.com/mojombo/jekyll/wiki/Plugins">here</a>.</li>
+  </ul>
+</p>
+
+<h2>“Aha” Moments</h2>
+
+<p>There were many “Aha” moments throughout the migration, I am putting those top ones which came to my mind while writing.</p>
+
+<h3>Responsiveness </h3>
+
+Bootstrap makes it so much easier to do the regular stuff - modals, navigation bar, tooltips, etc. And with a little more effort you get responsiveness for free.
+
+<h3>Asides for Featured posts</h3>
+
+Asides are the way you can add sidebar to your pages in Octopress. So if you want something to be displayed on the navbar, add a new aside file and include it in your layout. We had the requirement to display certain posts as “featured” and needed to be shown them in all pages. The only thing to do was to add ‘featured: true’ in the YAML front matter of the corresponding posts and create an aside as follows and include it in your layout. 
+
+<h3>Integrating with comments</h3>
+
+It was as simple adding “comments: true” in the posts which you want the comments to be displayed for. 
+
+<h3>Keeping the blogs as unpublished</h3>
+
+Keep “published: false” in the YAML frontmatter of the post. It won’t show up in the post list.
+
+<h3>Permanent Links for Posts</h3>
+
+Need to change the way the URL for blogs are being displayed? Just change the permlink in _config.yml 
+
+<h2>Where things can take time</h2>
+
+<h3>Figuring out how Jekyll does the magic</h3>
+
+It took a while for us to figure out how Jekyll does the “magic”. Getting a hang of the layouts, YAML Front matter, Liquid Templating, Asides in Octopress can take time. If you need to customize, writing the plugins and what type of plugin to write can also take little time initially. 
+<h3>Learning curve for Sass and Twitter bootstrap</h3>
+
+
+As mentioned earlier, Octopress uses <a href="http://sass-lang.com/">Sass</a> and we chose a theme which uses <a href="http://twitter.github.com/bootstrap/">Bootstrap</a>. There would be a learning curve if you are new to both. 
+
+<h3>Migrating content from Wordpress</h3>
+
+There are quiet a few plugins written to <a href="https://github.com/mojombo/jekyll/wiki/Blog-Migrations">migrate</a> data from other blogging platforms including Wordpress. This worked well for blogs, but will not take care of downloading the related images and also the pages other than blogs. We used the tool <a href="https://github.com/thomasf/exitwp">exitwp</a>, which will try to migrate as much data as possible including downloading of images. But it does not take care of updating the posts with the new URL for the images, so that was a task that we had to take up manually. 
+
+<h3>Contact Us Form</h3>
+
+There are Wordpress plugins that can help you create a contact us form or a suggestion box. But how can you do that for a static website? You’ve two options: 
+
+<ul>
+	<li>Create an app with an API for saving the contact details</li>
+	<li>Use some existing services which can persist form data</li>
+</ul>
+
+We went with the second option and after a lot of shopping around, we finally settled for none other than <a href="http://www.google.com/google-d-s/forms/">Google Forms</a>. This automatically took care of getting an email notification for every form submission. Some of the issues that we fixed or workarounds we had done are: 
+
+<ul>
+	<li>We followed the instructions mentioned <a href="http://www.morningcopy.com.au/tutorials/how-to-style-google-forms/">here</a> to customize the look and feel of the form.</li>
+	<li>Added a hidden iframe to not to show the page from google form on submit</li>
+	<li>Added front end validations for mandatory fields, to ensure that if and when the form is submitted, the submission would be successful.</li>
+</ul>
+
+<h3>Team Page</h3>
+
+As any company’s website, we also needed a team page - A visual index of people and also separate pages of individual profiles. We found an excellent <a href="https://github.com/flatterline/jekyll-plugins#company-team">plugin</a>, that seemed to do just what we wanted. But since we had used Octopress, the directory structure was slightly different from what the plugin had expected. So we had to fiddle around with the plugin to understand how it worked and modify it to work for us. In the end, adding a new person to the team was as easy as adding a new yml file for that person.
+
+<h2>Our contribution back </h2>
+
+We’ve created couple of open source contributions as part of the migration process. You can see the details <a href="http://www.multunus.com/opensource">here</a>. 
+
+<h2>Things, I felt, missing</h2>
+
+<ul>
+  <li>Debugging - I found it extremely tough to debug Jekyll. Tried both <a href="http://bashdb.sourceforge.net/ruby-debug.html">ruby-debug</a> and <a href="http://pryrepl.org/">pry</a>, but somehow both does not seem to be working. The tough part I found was how it suppresses exceptions. If there is an error in any generator, it just continues without even logging it.</li>
+
+	<li>Live Editor for Octopress using which you can write the blog and automatically publish it. If you are using only Jekyll with GitHub pages, <a href="http://prose.io/">prose.io</a> would work for you.</li>
+</ul>
+
+<h2>Summary </h2>
+
+<p>I would highly recommend Jekyll and/or Octopress for creating a company website especially if you are a software development firm comfortable with Ruby. It combines the power of Ruby, Templating and YAML using which it generates a static web site for you. Octopress helps you to quickly layout the foundation for your website on top of which you can easily build. </p>
+<p>A huge thanks to the awesome Ruby community and GitHub community without whom the entire project might not have been possible. </p>
+
+<h2>References</h2>
+
+<a href="http://vitobotta.com/how-to-migrate-from-wordpress-to-jekyll/ ">http://vitobotta.com/how-to-migrate-from-wordpress-to-jekyll/ </a>
+</div>
+
+
+</div>
+  
+    <p class="meta">
+      
+
+<div class="categories">
+	<strong>Filed in: </strong> 
+  
+    <a class='category' href='/blog/categories/technology/'>Technology</a>
+  
+</div>
+
+
+      
+    </p>
+  
+</div>
+  <footer>
+    
+      <div class="sharing">
+	
+		<div class="fb-like" data-width="368" data-layout="button_count" data-href="" data-show-faces="false">
+		</div>
+	
+	
+		<div class="g-plusone" data-size="medium" data-href="http://www.multunus.com/2012/10/our-experience-with-jekyll-and-octopress">
+		</div>
+	
+  	
+  		<a href="http://twitter.com/share" class="twitter-share-button" data-url="http://www.multunus.com/2012/10/our-experience-with-jekyll-and-octopress" data-counturl="http://www.multunus.com/2012/10/our-experience-with-jekyll-and-octopress" data-count="none" data-text="See the timelines of the young turks at Multunus">
+  		</a>
+  	
+  	<script src="//platform.linkedin.com/in.js" type="text/javascript"></script>
+  	<script type="IN/Share" data-counter="right"></script>
+</div>
+
+    
+    
+    <section>
+      <h1>Comments</h1>
+      <div id="disqus_thread" aria-live="polite"><noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+    </section>
+    
+  </footer>
+  
+
+<script type="text/javascript">
+      var disqus_shortname = 'multunus';
+      
+        
+        // var disqus_developer = 1;
+        var disqus_identifier = 'http://www.multunus.com/2012/10/our-experience-with-jekyll-and-octopress/';
+        var disqus_url = 'http://www.multunus.com/2012/10/our-experience-with-jekyll-and-octopress/';
+        var disqus_script = 'embed.js';
+      
+    (function () {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = 'http://' + disqus_shortname + '.disqus.com/' + disqus_script;
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    }());
+</script>
+
+
+
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) {return;}
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#appId=212934732101925&xfbml=1";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+
+
+  <script type="text/javascript">
+    (function() {
+      var script = document.createElement('script'); script.type = 'text/javascript'; script.async = true;
+      script.src = 'https://apis.google.com/js/plusone.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(script, s);
+    })();
+  </script>
+
+
+
+  <script type="text/javascript">
+    (function(){
+      var twitterWidgets = document.createElement('script');
+      twitterWidgets.type = 'text/javascript';
+      twitterWidgets.async = true;
+      twitterWidgets.src = 'http://platform.twitter.com/widgets.js';
+      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
+    })();
+  </script>
+
+
+
+
+
+</article>
+
+<aside class="sidebar-nav span3">
+  <h3>Categories</h3>
+<ul id="category-list">
+	<li  class="page_item"><a href="/blog/categories/all-posts">All Posts</a></li>
+	<li  class="page_item"><a href="/blog/categories/android">Android</a></li>
+	<li  class="page_item"><a href="/blog/categories/business">Business</a></li>
+	<li  class="page_item"><a href="/blog/categories/continuous-delivery">Continuous Delivery</a></li>
+	<li  class="page_item"><a href="/blog/categories/process">Process</a></li>
+	<li  class="page_item"><a href="/blog/categories/rails">Rails</a></li>
+	<li  class="page_item"><a href="/blog/categories/technology">Technology</a></li>
+</ul>
+
+</aside> 
+    </div>
+  </div>
+  <div class="container-fluid dark-background">
+      <div class="row-fluid">
+        <div class="span4 featured-posts">
+          <div class="header">Featured Posts</div>
+<ul id="featured-posts">
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+      <li class="post">
+        <a href="/2012/01/a-sneak-peak-into-mobile-app-opportunities-in-2012/">A sneak peek into Mobile App Opportunities in 2012</a>
+      </li>
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+      <li class="post">
+        <a href="/2011/09/continuous-delivery-for-android-apps-part-1/">Continuous Delivery for Android Apps - Part 1</a>
+      </li>
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+      <li class="post">
+        <a href="/2011/07/continuous-delivery-using-jenkins-build-pipeline/">Continuous Delivery - Part 1: Our Jenkins Build Pipeline setup</a>
+      </li>
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+      <li class="post">
+        <a href="/2011/02/software-development-as-a-balance/">A Macro Level Perspective of Software Development</a>
+      </li>
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+</ul>
+
+        </div>
+        <div class="span4 tumblr-feed">
+          <div class="header">Our Daily Voice</div>
+<ul id="tumblr_post">
+  <li class="loading">Fetching...</li>
+</ul>
+<div id="continue-reading"><a href="http://multunus.tumblr.com/">Continue reading at our tumblog</a></div>
+<script type="text/javascript">
+  $(document).ready(function(){
+    getTumblrPost("multunus", 1);
+  });
+</script>
+<script src="/javascripts/asides/tumblr.js" type="text/javascript"> </script>
+
+        </div>
+        <div class="span4 twitter-feed">
+          
+  <div class='header'>@multunus</div>
+  <ul id="tweets">
+    <li class="loading">Status updating...</li>
+  </ul>
+  <script type="text/javascript">
+    $(document).ready(function(){
+      getTwitterFeed("multunus", 5, false);
+    });
+  </script>
+  <script src="/javascripts/asides/twitter.js" type="text/javascript"> </script>
+
+
+        </div>         
+      </div>
+    </div>
+  <footer role="contentinfo" class="page-footer">
+<div class = "navbar footer-navbar">
+  <div class = "container-fluid">
+    <div class="nav-collapse footer-container">
+      <ul class="nav"><li class="copyright">&copy;2013 Copyright by Multunus Software Private Limited.</li>
+      </ul>
+    </div>
+  </div>
+</div>
+</footer>
+</body>
+</html>

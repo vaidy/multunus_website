@@ -1,0 +1,377 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: Android | Multunus]]></title>
+  <link href="http://www.multunus.com/blog/categories/android/atom.xml" rel="self"/>
+  <link href="http://www.multunus.com/"/>
+  <updated>2013-04-25T06:25:24+00:00</updated>
+  <id>http://www.multunus.com/</id>
+  <author>
+    <name><![CDATA[]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[A round up of our presentations and writings]]></title>
+    <link href="http://www.multunus.com/2012/02/a-round-up-of-our-presentations-and-writings/"/>
+    <updated>2012-02-27T18:29:30+00:00</updated>
+    <id>http://www.multunus.com/2012/02/a-round-up-of-our-presentations-and-writings</id>
+    <content type="html"><![CDATA[<p>We started speaking at conferences last year. We've also been doing a fair bit of writing. This post rounds up what we've up to - along with links to our presentations and some of what we've written.</p>
+
+<!-- more -->
+
+
+<p><strong><span style="text-decoration: underline;">Presentations [in Chronological Order]</span></strong></p>
+
+<p><strong>DevOpsDays 2011: </strong>Leena gave a lightning talk on "Push Button Deployment with Jenkins". <a href="http://sliwww.slideshare.net/leenasn/push-button-deployment-using-jenkins">Here's the presentation</a>.</p>
+
+<p><strong>DroidCon India 2011: </strong>We gave two talks at this conference:</p>
+
+<ul>
+    <li>Leena and I co-presented on "Continuous Delivery for an Android application". Here's the <a href="http://funnel.hasgeek.com/droidcon/83-continuous-delivery-for-an-android-application">original proposal</a> and <a href="http://prezi.com/56ueprf0mkql/continuous-delivery-on-android/">here's the link to the prezi</a>. Here's a <a href="http://www.youtube.com/watch?feature=player_embedded&amp;v=uNvjNIK1EEU">short video</a> where Leena and I describe the talk.</li>
+    <li>Tamil and KP gave an intro to OpenGL on Android. Here's the <a href="http://funnel.hasgeek.com/droidcon/94-introduction-to-opengl-in-android">original proposal</a> and here's the <a href="http://www.slideshare.net/tamillarasan/introduction-to-openglinandroid?from=ss_embed">link to the presentation</a>.</li>
+</ul>
+
+
+<p><strong>Agile India 2012</strong>: Leena and I spoke there on "Continuous Delivery for a Song". Here's the link to the <a href="http://submit2012india.agilealliance.org/node/8894">original proposal</a>. And here's the <a href="https://docs.google.com/a/multunus.com/present/view?id=0AQj1177vtu0MZHRoM2dmN180NzRneGp2bXRndw">link to the presentation</a>. It was a live demo - and by the comments we got from our audience, we think it went off fairly well.</p>
+
+<p><img class="aligncenter size-medium" title="Agile India 2012 Talk" src="http://www.multunus.com/images/DSC_7209-300x201.jpg" alt="" width="300" height="201" /></p>
+
+<p><strong>Recent Writing: </strong>An article I wrote for YourStory.in was published late last year. It was titled "<a href="http://yourstory.in/2011/12/a-sneak-peek-into-mobile-app-opportunities-in-2012/">Mobile App Opportunities in 2012</a>".</p>
+
+<p><strong>Blogging:</strong> Leena has written a lot of articles on Continuous Delivery <a href="http://www.multunus.com/blog/categories/continuous-delivery/">on this blog itself</a>. And Akshay <a href="http://akshayatmultunus.wordpress.com/">has been writing regularly</a> since he joined us last year.</p>
+
+<p>I hope you found this round up useful. I expect the Agile India organizers to upload videos of the all the talks soon. Once that happens, I'll update this post with the link to the video of our talk there.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[A sneak peek into Mobile App Opportunities in 2012]]></title>
+    <link href="http://www.multunus.com/2012/01/a-sneak-peak-into-mobile-app-opportunities-in-2012/"/>
+    <updated>2012-01-27T11:15:13+00:00</updated>
+    <id>http://www.multunus.com/2012/01/a-sneak-peak-into-mobile-app-opportunities-in-2012</id>
+    <content type="html"><![CDATA[<div style="text-align: center;"><em>This article was originally written by me for <a href="http://yourstory.in/2011/12/a-sneak-peek-into-mobile-app-opportunities-in-2012/" target="_blank">yourstory.in</a>. But this version is more "complete" with all of the original links in place.</em></div>
+
+
+<div style="text-align: center;"><strong><img src="https://lh5.googleusercontent.com/fPMHVSttl3ew1PBhQoR8pWlEYnnwJNFroicMocnz8FO9kA0w6M2Om7T6BGDLKEZuGthb84bCI54sDOzRviRFJFiG0w8P8ihB7SpaUfLM_EwY0kyqefI" alt="" width="421px;" height="315px;" /></strong></div>
+
+
+<p><span id="internal-source-marker_0.3345638057217002">This was originally supposed to be a post on predictions. But as the founder of a mobile app development company myself, my focus is more on specific opportunities that exist for a boutique company such as ourselves in this space.</span></p>
+
+<!-- more -->
+
+
+<div><span id="internal-source-marker_0.3345638057217002">We all know that almost no opportunity is exactly what it seems like, but it pays to have good starting points of exploration. And that is what I hope you will leave with, after reading this article.</span></div>
+
+
+<h2><strong>First let’s look at some <span style="color: #ff0000;">facts</span>:</strong></h2>
+
+
+<div><span id="internal-source-marker_0.3345638057217002">
+<ul>
+    <li>About 40 per cent of Internet users in India <a href="http://www.medianama.com/2011/03/223-google-india-has-100m-internet-40m-mobile-internet-users-india-search-trends/">access it on their mobile phones</a></li>
+    <li><a href="http://googlemobileads.blogspot.com/2011/06/mobile-ize-your-business-with-google.html">61% users are unlikely</a> to return to a site that they found were not mobile optimized. What’s worse, 40% of them are likely to go to a competitor’s website.</li>
+    <li>The middle class in the BRIC (Brazil, Russia, India and China) countries together have the  <a href="http://blog.flurry.com/bid/79595/Kaboom-iOS-and-Android-International-Installed-Base-Expansion">largest untapped populations</a> that can now afford a smart phone but are yet to get one.</li>
+</ul>
+</span></div>
+
+
+<div style="text-align: center;"><strong><img src="https://lh3.googleusercontent.com/f5jZLsYQqwhgkCMk5NM1PDHChINvrZ-B4Q7Pedgsjwl6mhTTLKMV5eHavPoMD9sUAYrbdLjmVhxojTr_kCbYOWe2H3QBnbTehSd6z9MtvDgJCHtr41I" alt="" width="572px;" height="390px;" /></strong></div>
+
+
+<p><strong> </strong></p>
+
+<p><strong> </strong></p>
+
+<p><strong> </strong></p>
+
+<p style="font-weight: bold;"></p>
+
+
+<p style="font-weight: bold;"></p>
+
+
+<p style="font-weight: bold;"></p>
+
+
+<p style="font-weight: bold;"></p>
+
+
+
+
+<h2 style="font-weight: bold;"><strong>Now take a look at some major <span style="color: #ff0000;">trends</span>:</strong></h2>
+
+
+<div style="font-weight: bold;">
+<ul>
+    <li><strong>More Platforms: </strong><span style="font-weight: normal;">We have Apple to thank - for creating the app economy with the iOS platform, Google for democratizing the smart phone with Android and<a href="http://www.engadget.com/2011/12/28/windows-phone-marketplace-hits-50-000-app-submission-milestone/"> now Microsoft</a> for making the life of the “I support all platforms” developer more difficult with Windows Phone 7. If you still want to include Blackberry, despite all of the<a href="http://www.theaustralian.com.au/business/wall-street-journal/pressure-mounts-on-blackberrys-rim/story-fnay3ubk-1226223581617"> recent gloom</a>, then that would make it 4 platforms that you’d at least want to consider.</span></li>
+</ul>
+</div>
+
+
+<div style="padding-left: 30px;"><span id="internal-source-marker_0.3345638057217002">There are now more a million active apps now available across the major app stores. Apple’s app store and the Android Market currently lead by a large margin. However 2012 will probably bring in at least one more serious contender in the Windows Phone 7 marketplace - it has grown by more than 400% this year alone.</span></div>
+
+
+<div style="padding-left: 30px;"><span>
+</span></div>
+
+
+<div style="padding-left: 30px;"><span id="internal-source-marker_0.3345638057217002">The following chart shows the distribution of apps across various marketplaces as of Nov 2011 [Sources: <a href="http://www.distimo.com/2011_12_distimo-releases-full-year-2011-publication/">Distimo</a>, <a href="http://www.pcmag.com/article2/0,2817,2395188,00.asp">PCMag</a>]</span></div>
+
+
+<p><strong> </strong></p>
+
+<p><strong> </strong><strong> </strong></p>
+
+<div style="text-align: center;"><strong><img class="aligncenter" src="https://lh5.googleusercontent.com/gcF8VLupDmQ0-M3h7gX_XmhxzeIem7pjhJt__EP6UvxwNB56rPHvADUJyKetOruGlR2978HzFpG_RhtIuQ6T6sceC57OmuMco-NiGUqaSxp3RmccOb0" alt="" width="500" height="230" /></strong></div>
+
+
+<div><span id="internal-source-marker_0.3345638057217002">
+<ul>
+    <li><strong>Mobile Optimization Services: </strong>There are now multiple services available that make it easy for small business owners to “mobili”-ze their websites. Here are 3 such services:</li>
+</ul>
+</span></div>
+
+
+<div style="text-align: center;"><strong><img src="http://yourstory.in/wp-content/uploads/2011/12/Mobile-Optimization-Services.jpg" alt="Mobile-Optimization-Services.jpg (419×52)" /></strong></div>
+
+
+<div style="text-align: left;">
+<div><span id="internal-source-marker_0.3345638057217002">
+<ul>
+    <li><strong>HTML5 Mobile:<span style="font-weight: normal;"> The browsers from</span></strong><a href="http://www.infoworld.com/d/html5/ios-5s-safari-beats-all-mobile-browsers-in-html5-compatibility-175371"> every</a> <a href="http://www.winrumors.com/microsoft-benchmarks-windows-phone-browser-against-iphone-4-and-android-wins/"> big</a> <a href="http://www.sencha.com/blog/galaxy-nexus-the-html5-developer-scorecard/"> player</a> are getting more powerful. The open source tools are<a href="http://html5boilerplate.com/mobile"> getting</a> <a href="http://www.sencha.com/products/touch/"> better</a> and<a href="http://jquerymobile.com/"> better</a>. And with the Flash war finally having ended, Adobe is finally <a href="http://mashable.com/2011/11/11/flash-mobile-dead-adobe/">getting on board</a> as well.</li>
+</ul>
+</span></div>
+<div style="text-align: center;"><strong><img src="https://lh5.googleusercontent.com/hTW2K0tBVW0aRKezNkI3jOkMcPjIiiqBUUA_GjEsz4RzJasJRNwjeXPnT8u7527IV09hk9RfPuOqfAOr8ipPixskPjUwQohmM8F_trXh_kZOf_WCXBY" alt="" width="433px;" height="460px;" /></strong></div>
+<div><span id="internal-source-marker_0.3345638057217002">
+<ul>
+    <li><strong>Cross Platform Tools: </strong>These tools make it possible for the app developer to write-once-and-run-on-multiple-platforms. Or at least they try to make that possible.<a href="http://www.adobe.com/aboutadobe/pressroom/pressreleases/201110/AdobeAcquiresNitobi.html"> Multiple</a> <a href="http://rhomobile.com/blog/motorola-acquires-rhomobile-and-rhoelements-version-1-launched/">acquisitions</a> and fairly large<a href="http://techcrunch.com/2011/11/01/appcelerator-raises-15-million-series-c-round/"> VC investments</a> have happened in this space.</li>
+</ul>
+</span></div>
+<div style="text-align: center;"><strong><img src="https://lh5.googleusercontent.com/i-qWEO80aZSQqdT1KscQlyi52RZqLFwpuflccTQRXAqlQAI0nx661xJxcBzZWjLDrE31PfmF9Odt2pfz5YgFwN65nfbbgqkrh_wazy-LfzWsBeG8-DM" alt="" width="377px;" height="118px;" /></strong></div>
+<div style="text-align: left;">
+<div><span id="internal-source-marker_0.3345638057217002">
+<ul>
+    <li><strong>Hyper-Local-Mobile:<span style="font-weight: normal;"> The early movers in this space are</span></strong><a href="http://searchenginewatch.com/article/2081107/Foursquare-Hits-10-Million-Users-Yeah-Thats-1000-Annual-Growth"> continuing to grow</a> or have been<a href="http://www.guardian.co.uk/technology/2011/dec/05/facebook-buys-gowalla-location-sharing"> acquired</a>. But the<a href="http://socialcommercetoday.com/social-commerce-platform-overview-shopkick-mobile-commerce-on-steroids/"> new players</a> are doing well as well.</li>
+</ul>
+</span></div>
+</div>
+<div style="text-align: center;"><strong><img src="https://lh6.googleusercontent.com/-b4IZffxNy08thOITpu51-QB3Da2GhopjubrfZ7DYzHrUwFEQboJNVCfgZl2OHeEUvVsZA2_ClNVEK7Q8aJJlJTeYr4EUDzntcuaWTBVNZHPTfgYcjw" alt="" width="333px;" height="104px;" /></strong></div>
+<div style="text-align: left;">
+<div><span id="internal-source-marker_0.3345638057217002">
+<ul>
+    <li><strong>Cross Device Testing as a Service: <span style="font-weight: normal;">With more than 300 Android handsets now available from various manufacturers, it is next to impossible to manually test an application across all these devices. There are now </span></strong><a href="http://testdroid.com/">multiple</a> <a href="http://www.perfectomobile.com/portal/cms/android.html">services</a> on the cloud that aim to solve this problem for you by automatically testing your Android applications across a wide array of devices.</li>
+</ul>
+</span></div>
+<p style="text-align: center;"><img class="aligncenter" src="http://yourstory.in/wp-content/uploads/2011/12/Mobile-Cross-Device-Testing-as-a-Service.jpg" alt="Mobile-Cross-Device-Testing-as-a-Service.jpg (327×90)" /></p>
+<p style="text-align: left;"></p>
+
+<h2><strong>Keeping the above in mind, here are a few <span style="color: #ff0000;">opportunities </span>for 2012:</strong></h2>
+<div><span id="internal-source-marker_0.3345638057217002">
+<ul>
+    <li><strong>"Hybrid" Cross Platform Apps: </strong>The cross platform tools I've referred to above, allow for native platform API [Application Programming Interface] calls as well. These are useful when you have an application that has a combination of native components and other "content" components which most likely consume web services [and can be built with HTML5 and CSS3].</li>
+</ul>
+</span></div>
+<div><span id="internal-source-marker_0.3345638057217002">
+<p style="padding-left: 30px;" dir="ltr">An example of such an application is the <a href="http://bits.blogs.nytimes.com/2011/04/01/the-onion-releases-free-html5-ipad-app/">Onion iPad</a> app. The application is written in HTML5 for the most part - but uses falls back on native API to play video. This is probably because of <a href="http://blog.millermedeiros.com/2011/03/html5-video-issues-on-the-ipad-and-how-to-solve-them/">some of the issues</a> related to HTML5 video tag support on iOS. The Onion plans to roll out the app quickly on the Android platform as well - and <a href="http://sndstl.com/wp-content/uploads/2011/09/snd-app.pdf">with mostly the same code</a> [pdf].</p>
+
+<div style="padding-left: 30px;"><span id="internal-source-marker_0.3345638057217002"><em>Main Challenges:</em></span></div>
+<div style="padding-left: 30px;">
+<ul>
+    <li><strong>Cross Platform Tools are not mature yet: </strong>The API documentation is sparse, support is patchy and the community is still nascent. So which platform should you bet on? Unfortunately, the answer is, "it depends" - on multiple factors such as whether you need a native look and feel (which Appcelerator and Rhodes provide - but PhoneGap does not), the number of platforms you need to support, the technical skills of your dev team etc.</li>
+    <li><strong>The Mobile Web is Slow(er):</strong> Performance optimization is key if you want your site to look pretty and be snappy on mobile devices. There are<a href="http://www.google.co.in/search?q=html5+performance+mobile"> many good resources</a> available to get you started in the right direction.</li>
+</ul>
+<em> </em>
+
+</div>
+<div style="padding-left: 30px;"><span id="internal-source-marker_0.3345638057217002"> </span></div>
+</span></div>
+</div>
+<div><span id="internal-source-marker_0.3345638057217002">
+<ul>
+    <li><strong>Low Cost Solutions for Mobile Optimization: </strong>While purely content based sites can choose to rely on the Mobile Optimization Services I've mentioned above, there are a lot of other verticals that don't have such an option - yet. For example, there are a lot of E-Commerce sites out there that are not mobile optimized. Especially those being run by small business owners or startups.</li>
+</ul>
+</span></div>
+<div style="padding-left: 30px;"><span id="internal-source-marker_0.3345638057217002"><em>Main Challenges:</em></span></div>
+<div style="padding-left: 30px;">
+<ul>
+    <li>The data has to kept in sync with the original systems - in a seamless fashion</li>
+    <li>Mobile payment gateways are still far from mature - <a href="http://www.venturewoods.org/index.php/2011/01/19/mobile-payments-shifting-opportunities-for-startups/">especially in a country like India</a>.</li>
+    <li>Oh, and the Mobile Web is Slow - but I said that already.</li>
+</ul>
+</div>
+</div>
+
+
+<div><span id="internal-source-marker_0.3345638057217002">
+<ul>
+    <li><strong>Mobile presence for non-Internet-Savvy retailers: </strong>I'm going on a limb here - but most small retailers in India don't have an Internet presence - and what that means is, a certain  high quality trouser shop with very reasonable price tags - is now invisible on your phone.</li>
+</ul>
+</span></div>
+
+
+<p style="padding-left: 30px;"><em> Main Challenge:</em></p>
+
+
+<p style="padding-left: 30px;"><em> </em></p>
+
+
+
+
+<div><span id="internal-source-marker_0.3345638057217002"> </span></div>
+
+
+<div><span id="internal-source-marker_0.3345638057217002">
+<ul>
+    <li>
+<ul>
+    <li>With even companies like Google<a href="http://articles.timesofindia.indiatimes.com/2011-06-20/internet/29679379_1_google-street-view-google-s-street-view-privacy-concerns"> facing stiff resistance</a> while trying to map our streets, you're left with the only other option - User Generated Content. And that in turn means, the classic chicken and egg conundrum.</li>
+</ul>
+</li>
+</ul>
+</span></div>
+
+
+<div><span id="internal-source-marker_0.3345638057217002">
+<ul>
+    <li><strong>Cross Platform Testing as Service: </strong>While there are cloud testing services now available for specific platforms, services that take care of automated cross-platform testing are still not available.</li>
+</ul>
+</span></div>
+
+
+<div style="padding-left: 30px;"><span id="internal-source-marker_0.3345638057217002"><em> Main Challenge:</em></span></div>
+
+
+<div style="padding-left: 30px;">
+<ul>
+    <li>You've got SDK installations, developer &amp; signing certificates, build chains, and custom project layouts to worry about with each platform. <a href="http://savagelook.com/blog/portfolio/8-things-to-know-about-phonegap">PhoneGap solves this problem</a> for you from a deployment perspective, but running automated tests on multiple platforms is a different challenge.</li>
+</ul>
+</div>
+
+
+<div><span id="internal-source-marker_0.3345638057217002"> </span></div>
+
+
+<div><span id="internal-source-marker_0.3345638057217002">This list of opportunities is admittedly short. But I hope you are now motivated to brainstorm more ideas, distill the most interesting opportunities and finally implement a winner in 2012. Happy New Year! </span></div>
+
+
+<div><strong>
+<p dir="ltr">So what are you waiting for? Start <span style="color: #ff0000;">exploring </span>:)</p>
+
+</strong><strong> </strong><strong> </strong><strong> </strong><strong> </strong><strong> </strong><strong> </strong><strong> </strong><strong> </strong><strong> </strong><strong> </strong>
+
+</div>
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Our talks at Droidcon 2011, Bangalore]]></title>
+    <link href="http://www.multunus.com/2011/12/droidcon-two-talks-we-gave/"/>
+    <updated>2011-12-02T10:07:00+00:00</updated>
+    <id>http://www.multunus.com/2011/12/droidcon-two-talks-we-gave</id>
+    <content type="html"><![CDATA[<p>We spoke at Droidcon, Bangalore that happened on Nov 18th and 19th. We had two interesting talks on both days.</p>
+
+<div style="float: left;">
+<h3><a href="http://funnel.hasgeek.com/droidcon/83-continuous-delivery-for-an-android-application" target="_new">1. Continuous Delivery for an Android application</a></h3>
+<!-- more -->
+
+<img style="margin: 0px 12px;" src="http://www.multunus.com/images/vaidy-leena.png" alt="" align="left" /><span>This talk was on First day of the Droidcon conference given by Vaidy and Leena. In this talk, we spoke on what the first step towards moving to a CD setup is. Specifically demonstrated setting up a Push Button deployment system using Ant and Jenkins. <a href="http://funnel.hasgeek.com/droidcon/83-continuous-delivery-for-an-android-application">More details here</a>. </span>
+
+</div>
+
+
+<div style="float: left; margin-top: 24px;">
+<h3><a href="http://funnel.hasgeek.com/droidcon/94-introduction-to-opengl-in-android" target="_new">2. Introduction to OpenGL in Android</a></h3>
+<img style="margin: 0px 12px;" src="http://www.multunus.com/images/tamil-and-kp.png" alt="" align="left" />This talk was on Second day of the Droidcon given by Tamil KP. The objective of talk was to have people get started with OpenGL programming which can seem to be a little heavy but it need not be. The talk started with a brief introduction to OpenGL and then had quick step-by-step tutorial demonstration. <a href="http://funnel.hasgeek.com/droidcon/94-introduction-to-opengl-in-android">More details here</a>.
+
+</div>
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Continuous Delivery: Building Android Library project]]></title>
+    <link href="http://www.multunus.com/2011/11/continuous-delivery-building-android-library-project/"/>
+    <updated>2011-11-04T09:25:20+00:00</updated>
+    <id>http://www.multunus.com/2011/11/continuous-delivery-building-android-library-project</id>
+    <content type="html"><![CDATA[<p>This post talks about how to build an Android Project using ant which depends on an Android Library project.</p>
+
+<ul>
+    <li>Add default.properties in the library project and add <span style="font-family: Consolas, Monaco, 'Courier New', Courier, monospace; line-height: 18px;">android.library=true </span>in the same</li>
+    <li>Run the command in the main Android Project <span style="font-family: Consolas, Monaco, 'Courier New', Courier, monospace; line-height: 18px;">android update project --path . --library ../path-to-the-library/</span><strong>Note: This always has to be relative path.</strong></li>
+    <li>Now running <span style="font-family: Consolas, Monaco, 'Courier New', Courier, monospace; line-height: 18px;">ant release</span> should build the library project too.</li>
+</ul>
+
+
+<p><strong>Note:</strong> The android command mentioned in the second step adds an entry in the <span style="font-family: Consolas, Monaco, 'Courier New', Courier, monospace; line-height: 18px;">default.properties</span> file. If you need to override that in different environments, override that in the <span style="font-family: Consolas, Monaco, 'Courier New', Courier, monospace; line-height: 18px;">local.properties</span>. Even there, it has to be relative path, the absolute path will not work.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Simple Image Filter using OpenGL ES in Android]]></title>
+    <link href="http://www.multunus.com/2011/10/simple-image-filter-using-opengl-es-in-android/"/>
+    <updated>2011-10-07T10:05:45+00:00</updated>
+    <id>http://www.multunus.com/2011/10/simple-image-filter-using-opengl-es-in-android</id>
+    <content type="html"><![CDATA[<p><em><strong>Note</strong>: This post assumes some basic knowledge in setting up an OpenGL app in Android. A basic example for rendering a texture on to a surface can be found <a href="http://developer.android.com/resources/samples/ApiDemos/src/com/example/android/apis/graphics/GLES20TriangleRenderer.html">here.</a> You can use this as the initial setup for trying out Shader language program listed in this post.</em></p>
+
+<p>OpenGL is widely adopted as the graphics API of choice for real-time interactive 3D graphics applications. OpenGL is easy to understand, but its simplicity and orthogonality enable many interesting possibilities. One such possibility is image processing.</p>
+
+<!-- more -->
+
+
+<p>Using "OpenGL" for Image Processing enables us to completely utilize the power of Graphics Processing Unit (GPU) hence the image processing will be faster also it reduces the load on CPU. This can be crucial for Image processing applications, especially in mobile environment where the resources available are relatively lesser.</p>
+
+<p>In this post we will be discussing how to use OpenGL Shader Language to manipulate pixels and create Image filter effects.</p>
+
+<p><img class="aligncenter size-medium wp-image-1851" src="http://www.multunus.com/images/combined-300x250.png" alt="" width="300" height="250" /></p>
+
+<p>As with any OpenGL app, we will start with setting up the view.</p>
+
+<p>The next step is to load an image into the texture, This texture can be mapped on to the surface of a square, which will then be drawn on to the screen.For Image processing, we will require only 2 dimensions so we will set up the view in orthographic projection and will also discard z axis by keeping it to 0.0 most of the times.</p>
+
+<p>But before drawing to the screen, there are many intermediate operations that are done by the graphics hardware, which are now directly programmable in OpenGL ES 2.0 using Shader Language (GLSL).
+We will be concentrating on Vertex and Fragment processing phases in OpenGL pipeline. We will go through a simple fragment shader program and will explain how it works. Both of these programs are written in GLSL. GLSL is a ‘C’ like language which gives direct control over the  graphics pipeline without having to use assembly language or hardware-specific languages.</p>
+
+<p><strong>Vertex shader</strong></p>
+
+<p><code>
+uniform mat4 uMVPMatrix;
+attribute vec4 aPosition;
+attribute vec2 aTextureCoord;
+varying vec2 vTextureCoord;
+void main() {
+  gl_Position = uMVPMatrix * aPosition
+  vTextureCoord = aTextureCoord
+}
+</code></p>
+
+<p dir="ltr">The Vertex shader is executed for each vertex that is to be drawn. Here, we are drawing a square and mapping the texture on to that.</p>
+
+
+<p>This calculates the transformed coordinates of the square by multiplying the given coordinates with <a href="http://en.wikibooks.org/wiki/OpenGL_Programming/3D/Matrices" target="_blank">MVPMatrix</a> [ MVP -  Model * View * Projection ]. Other than this we are also storing corresponding texture co-ordinates in variable '<em>vTextureCoords'</em> so that it is available in the fragment shader.</p>
+
+<p><strong>Fragment Shader</strong>
+<code>
+precision mediump float;
+varying vec2 vTextureCoord;
+uniform sampler2D sTexture;
+void main() {
+   vec2 cen = vec2(0.5,0.5) - vTextureCoord.xy;
+   vec2 mcen = -0.07*log(length(cen))*normalize(cen);
+   gl_FragColor = texture2D(sTexture, vTextureCoord.xy-mcen);
+}
+</code></p>
+
+<p dir="ltr"></p>
+
+
+<p>Fragment shaders are executed to calculate the color of individual pixels. This is where the actual image transformation happens. Instead of mapping the corresponding texture coordinates to corresponding pixels, we can map different coordinates of the texture to different pixels which will distort the image in some way. In the above example the texture co-ordinate to fill each pixel is chosen based on the calculation in line no 6. The actual movement depends on the distance of the texture coordinate from the center. This creates an effect which is similar to what is shown in the below picture.</p>
+
+<p>Although this is a very simple effect, the intention here is to just show potential applications of OpenGL in Android apps.</p>
+]]></content>
+  </entry>
+  
+</feed>
