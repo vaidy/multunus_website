@@ -1,11 +1,13 @@
 ---
 layout: post
-title: "Testing :)"
+title: "Testing 1"
+date: 2013-04-29 13:00
 comments: true
-categories: 
-  --All Posts
+author:
+  - Leena
+categories:
+  - All Posts
 published: true
-
 ---
 
 # How does it work?
