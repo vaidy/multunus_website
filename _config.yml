@@ -116,9 +116,11 @@ prose:
   rooturl: "source"
   metadata:
     "source/_posts": |
-      layout: post
-      title: "Title"
-      comments: true
-      categories: 
-        --All Posts
-      published: true
+        layout: post
+        title: "Estimating to Timeboxing - Our Journey"
+        date: 2013-04-11 02:33
+        comments: true
+        author:
+          - Leena
+        categories:
+          - All Posts
