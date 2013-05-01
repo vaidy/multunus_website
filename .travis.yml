@@ -1,0 +1,17 @@
+env:
+  global:
+    - secure: Wj82SNB486JQIMmmSCvfGsubhJRsirKh6dWslS20n25ER4EZiHTpgm/yfAyQ\n+hRyDcq3ek9rdFn08lDPUFM7OHiXbgjo6yfUO2tkDj1gddIbKx8BUYd+8n1k\nIeAJk+i7Ds+v1ocJa8qM5OeAQrslJNkuXcgSujuqt+aR4K+6kQk=
+script:
+   # Generate site
+   - rake generate
+after_success:
+  # wget -qO- https://toolbelt.heroku.com/install-ubuntu.sh | sh
+  - gem install heroku --no-ri --no-rdoc
+  - git remote add heroku git@heroku.com:multunus.git
+  - echo "Host heroku.com" >> ~/.ssh/config
+  - echo "   StrictHostKeyChecking no" >> ~/.ssh/config
+  - echo "   CheckHostIP no" >> ~/.ssh/config
+  - echo "   UserKnownHostsFile=/dev/null" >> ~/.ssh/config
+  - heroku keys:clear
+  - yes | heroku keys:add
+  - yes | git push heroku master
