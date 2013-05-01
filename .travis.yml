@@ -4,7 +4,7 @@ env:
 script:
    # Generate site
    - rake generate
-after_success:
+after_script:
   # wget -qO- https://toolbelt.heroku.com/install-ubuntu.sh | sh
   - gem install heroku --no-ri --no-rdoc
   - git remote add heroku git@heroku.com:multunus.git
@@ -14,4 +14,5 @@ after_success:
   - echo "   UserKnownHostsFile=/dev/null" >> ~/.ssh/config
   - heroku keys:clear
   - yes | heroku keys:add
-  - ./push_to_all_remotes.sh "committing the generated files [ci skip]"
+  - yes | git push heroku master
+  #- ./push_to_all_remotes.sh "committing the generated files [ci skip]"
