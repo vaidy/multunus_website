@@ -14,4 +14,4 @@ after_success:
   - echo "   UserKnownHostsFile=/dev/null" >> ~/.ssh/config
   - heroku keys:clear
   - yes | heroku keys:add
-  - yes | git push heroku master
+  - ./push_to_all_remotes.sh "committing the generated files [ci skip]"
