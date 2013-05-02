@@ -12,8 +12,8 @@ after_script:
   - echo "   StrictHostKeyChecking no" >> ~/.ssh/config
   - echo "   CheckHostIP no" >> ~/.ssh/config
   - echo "   UserKnownHostsFile=/dev/null" >> ~/.ssh/config
-  - heroku keys:clear
-  #- yes | heroku keys:add
+  #- heroku keys:clear
+  - yes | heroku keys:add
   - yes | git commit -am "committing the generated files [ci skip]"
   - yes | git push heroku master
   #- ./push_to_all_remotes.sh "committing the generated files [ci skip]"
