@@ -9,11 +9,13 @@ categories:
 - All Posts
 - Technology
 ---
+
 We had a very simple requirement, to invoke my DLLs using Java code for couple of reasons:
 <ol>
 	<li> We want to reuse application code built for a .NET application</li>
 	<li> We want to integrate the DLLs with a Java based sever technology</li>
 	<li> Should be simple enough to maintain the code by .NET professionals</li>
+    
 </ol>
 There are couple of Java-COM bridging solutions I came across.
 <ul>
