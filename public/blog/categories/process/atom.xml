@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Process | Multunus]]></title>
   <link href="http://www.multunus.com/blog/categories/process/atom.xml" rel="self"/>
   <link href="http://www.multunus.com/"/>
-  <updated>2013-05-03T23:47:14+05:30</updated>
+  <updated>2013-05-03T23:51:10+05:30</updated>
   <id>http://www.multunus.com/</id>
   <author>
     <name><![CDATA[]]></name>
@@ -153,7 +153,7 @@ Of course, tracking the original project plan is still necessary - and allows fo
     <link href="http://www.multunus.com/2013/03/how-we-chose-our-kanban-tool/"/>
     <updated>2013-03-09T22:39:00+05:30</updated>
     <id>http://www.multunus.com/2013/03/how-we-chose-our-kanban-tool</id>
-    <content type="html"><![CDATA[<p>We've been using <a href="http://www.pivotaltracker.com/">Pivotal Tracker</a>[PT] as our Collaborative Project Management Tool for over 2 years now.</p>
+    <content type="html"><![CDATA[<p>We've been using <a href="http://www.pivotaltracker.com/">Pivotal Tracker </a>[PT] as our Collaborative Project Management Tool for over 2 years now.</p>
 
 <p>
 Recently though, we chose to move toward a Kanban style of workflow. PT is however heavily geared toward an iterative form of development - but we’ve now chosen to eschew iterations altogether. We’ve been doing continuous deployment for a while now, and we found the whole process of estimations and sizing of stories a largely wasteful exercise. 
