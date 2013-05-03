@@ -1,5 +1,5 @@
 #!/bin/bash
-git commit -am %1
+git commit -am "Committing the generated files"
 echo "Pushing to GitHub..."
 git push origin master
 echo ""
