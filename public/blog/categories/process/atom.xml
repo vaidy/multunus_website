@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Process | Multunus]]></title>
   <link href="http://www.multunus.com/blog/categories/process/atom.xml" rel="self"/>
   <link href="http://www.multunus.com/"/>
-  <updated>2013-05-03T14:10:37+00:00</updated>
+  <updated>2013-05-03T20:44:53+05:30</updated>
   <id>http://www.multunus.com/</id>
   <author>
     <name><![CDATA[]]></name>
@@ -16,7 +16,7 @@
   <entry>
     <title type="html"><![CDATA[Estimating to Timeboxing - Our Journey]]></title>
     <link href="http://www.multunus.com/2013/04/estimating-to-timeboxing-our-journey/"/>
-    <updated>2013-04-11T02:33:00+00:00</updated>
+    <updated>2013-04-11T02:33:00+05:30</updated>
     <id>http://www.multunus.com/2013/04/estimating-to-timeboxing-our-journey</id>
     <content type="html"><![CDATA[<p>Estimations are predictions. Unfortunately though, they end up being perceived as <em>commitments</em>. And the team in question starts getting unduly pressured when the estimates go wrong. At Multunus this has happened many times in the past.</p>
 
@@ -151,7 +151,7 @@ Of course, tracking the original project plan is still necessary - and allows fo
   <entry>
     <title type="html"><![CDATA[How we chose our Kanban Tool]]></title>
     <link href="http://www.multunus.com/2013/03/how-we-chose-our-kanban-tool/"/>
-    <updated>2013-03-09T22:39:00+00:00</updated>
+    <updated>2013-03-09T22:39:00+05:30</updated>
     <id>http://www.multunus.com/2013/03/how-we-chose-our-kanban-tool</id>
     <content type="html"><![CDATA[<p>We've been using <a href="http://www.pivotaltracker.com/">Pivotal Tracker</a>[PT] as our Collaborative Project Management Tool for over 2 years now.</p>
 
@@ -219,7 +219,7 @@ The different tools we evaluated were:
   <entry>
     <title type="html"><![CDATA[AgileIndia 2013 Summary]]></title>
     <link href="http://www.multunus.com/2013/03/agileindia-2013-summary/"/>
-    <updated>2013-03-08T17:07:00+00:00</updated>
+    <updated>2013-03-08T17:07:00+05:30</updated>
     <id>http://www.multunus.com/2013/03/agileindia-2013-summary</id>
     <content type="html"><![CDATA[<p>This is the summary about the  recently concluded <a href="http://2013.agileindia.org/">Agile India Conference 2013</a>.
 This gave me a chance to interact with great legends and leaders of software industry such as
@@ -255,7 +255,7 @@ Aslam Khan, Karl Scotland, Kenji Hiranabe, Laurent Bossavit, Rebecca Parsons etc
   <entry>
     <title type="html"><![CDATA[Introduction to Continuous Delivery]]></title>
     <link href="http://www.multunus.com/2012/05/introduction-to-continuous-delivery/"/>
-    <updated>2012-05-15T09:19:16+00:00</updated>
+    <updated>2012-05-15T14:49:16+05:30</updated>
     <id>http://www.multunus.com/2012/05/introduction-to-continuous-delivery</id>
     <content type="html"><![CDATA[<p>We've been doing Continuous Delivery for sometime and also been writing about how to implement the same. This post is about why Continuous Delivery is required and what problems does it solve.</p>
 
@@ -350,7 +350,7 @@ One of the key principle of Continuous Delivery is <strong>To </strong><strong>
   <entry>
     <title type="html"><![CDATA[Continuous Delivery for Android Apps – Part 2]]></title>
     <link href="http://www.multunus.com/2011/10/continuous-delivery-for-android-apps-part-2/"/>
-    <updated>2011-10-06T01:21:57+00:00</updated>
+    <updated>2011-10-06T06:51:57+05:30</updated>
     <id>http://www.multunus.com/2011/10/continuous-delivery-for-android-apps-part-2</id>
     <content type="html"><![CDATA[<p>This post talks about how to run tests for the build setup as mentioned in <a href="http://www.multunus.com/2011/09/continuous-delivery-for-android-apps-part-1/">Part 1</a>.</p>
 
