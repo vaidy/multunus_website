@@ -21,5 +21,9 @@ after_script:
 - git config --global user.name "Auto Deploy by Travis"
 - cd public
 - git status
-- yes | git commit -am "committing the generated files [ci skip]"
+- git checkout master
+- git add .
+- git add -u .
+- yes | git commit -m "committing the generated files [ci skip]"
+- git status
 - yes | git push heroku master
