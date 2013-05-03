@@ -7,8 +7,9 @@ sharing: true
 footer: true
 nav: About
 ---
+
 <div class="span9">
-	<h1>History</h1>
+	<h1>History </h1>
 	<p>
 		Multunus started its operations from scratch in April ‘08. Our goal was to build a top quality, high integrity, customer focused and a very employee friendly organization. Our progress since then:
 		<ul>
@@ -33,4 +34,4 @@ nav: About
 
 <div class="sidebar-nav span3">
   {% include_array about_asides %}
-</div> 
+</div>
