@@ -16,10 +16,9 @@ after_script:
 - echo "   StrictHostKeyChecking no" >> ~/.ssh/config
 - echo "   CheckHostIP no" >> ~/.ssh/config
 - echo "   UserKnownHostsFile=/dev/null" >> ~/.ssh/config
-- ls -ltr public/
 - yes | heroku keys:add
 - git config --global user.email "leena.sn@multunus.com"
 - git config --global user.name "Auto Deploy by Travis"
 - yes | git commit -am "committing the generated files [ci skip]"
+- yes | git pull heroku master
 - yes | git push heroku master
-- yes | git push origin master
