@@ -19,6 +19,7 @@ after_script:
 - yes | heroku keys:add
 - git config --global user.email "leena.sn@multunus.com"
 - git config --global user.name "Auto Deploy by Travis"
+- cd public
+- git status
 - yes | git commit -am "committing the generated files [ci skip]"
-- yes | git pull heroku master
 - yes | git push heroku master
