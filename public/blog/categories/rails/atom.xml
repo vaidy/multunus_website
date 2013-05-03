@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Rails | Multunus]]></title>
   <link href="http://www.multunus.com/blog/categories/rails/atom.xml" rel="self"/>
   <link href="http://www.multunus.com/"/>
-  <updated>2013-05-03T14:10:37+00:00</updated>
+  <updated>2013-05-04T01:36:50+05:30</updated>
   <id>http://www.multunus.com/</id>
   <author>
     <name><![CDATA[]]></name>
@@ -16,7 +16,7 @@
   <entry>
     <title type="html"><![CDATA[Productivity Enhancement Tools - MailCatcher, Vogue, SpriteCow and RailsWizard]]></title>
     <link href="http://www.multunus.com/2011/07/productivity-enhancement-tools-mailcatcher-vogue-spritecow-and-railswizard/"/>
-    <updated>2011-07-31T09:33:40+00:00</updated>
+    <updated>2011-07-31T15:03:40+05:30</updated>
     <id>http://www.multunus.com/2011/07/productivity-enhancement-tools-mailcatcher-vogue-spritecow-and-railswizard</id>
     <content type="html"><![CDATA[<h2><a href="https://github.com/sj26/mailcatcher">MailCatcher</a></h2>
 
@@ -77,7 +77,7 @@
   <entry>
     <title type="html"><![CDATA[Running tests in parallel using parallel_tests]]></title>
     <link href="http://www.multunus.com/2011/06/running-tests-in-parallel-using-parallel_tests/"/>
-    <updated>2011-06-27T05:18:01+00:00</updated>
+    <updated>2011-06-27T10:48:01+05:30</updated>
     <id>http://www.multunus.com/2011/06/running-tests-in-parallel-using-parallel_tests</id>
     <content type="html"><![CDATA[<p>One of the action items I had mentioned in <a href="http://www.multunus.com/2011/06/takeaways-from-ruby-conf-india-2011/">an earlier post</a>, was to setup the  infrastructure for running tests in parallel.</p>
 
@@ -125,7 +125,7 @@ sys 0m14.269s</pre>
   <entry>
     <title type="html"><![CDATA[CoffeeScript and Rails 3.0 - Quick setup]]></title>
     <link href="http://www.multunus.com/2011/06/coffeescript-and-rails-3-0-quick-setup-2/"/>
-    <updated>2011-06-23T08:40:58+00:00</updated>
+    <updated>2011-06-23T14:10:58+05:30</updated>
     <id>http://www.multunus.com/2011/06/coffeescript-and-rails-3-0-quick-setup-2</id>
     <content type="html"><![CDATA[<p>I have been hearing a lot about CoffeeScript nowadays as you must have as well. Yes, it is built into Rails 3.1 by default. However I'm still working on a Rails 3.0 project, where I'm thinking of starting to use CoffeeScript. So, this blog post concentrates on how to quickly setup CoffeeScript into your existing Rails 3.0 project. For more details refer to the links at the bottom of this post.</p>
 
@@ -210,7 +210,7 @@ jQuery -&amp;gt;
   <entry>
     <title type="html"><![CDATA[Takeaways from Ruby Conf India 2011]]></title>
     <link href="http://www.multunus.com/2011/06/takeaways-from-ruby-conf-india-2011/"/>
-    <updated>2011-06-14T08:28:56+00:00</updated>
+    <updated>2011-06-14T13:58:56+05:30</updated>
     <id>http://www.multunus.com/2011/06/takeaways-from-ruby-conf-india-2011</id>
     <content type="html"><![CDATA[<p>I know its been almost two weeks since its all over, things may not be fresh in mind. And all of us were very busy with "go live" for one of our client projects. But as its "better later than never", I am putting my thoughts about the recently concluded RubyConf held in Bangalore on 28th and 29th of May 2011.</p>
 
@@ -240,9 +240,9 @@ jQuery -&amp;gt;
   
   <entry>
     <title type="html"><![CDATA[Disabling callbacks in Rails 3]]></title>
-    <link href="http://www.multunus.com/2011/04/disabling-callbacks-in-rails-3/"/>
-    <updated>2011-04-30T20:40:17+00:00</updated>
-    <id>http://www.multunus.com/2011/04/disabling-callbacks-in-rails-3</id>
+    <link href="http://www.multunus.com/2011/05/disabling-callbacks-in-rails-3/"/>
+    <updated>2011-05-01T02:10:17+05:30</updated>
+    <id>http://www.multunus.com/2011/05/disabling-callbacks-in-rails-3</id>
     <content type="html"><![CDATA[<p>It is common requirement to disable the callbacks like <code>after_save</code>, <code>after_create </code>etc while importing/migrating data. One way to avoid this is by directly importing the data into DB using a command like <code>mysqlimport</code>. But by doing that, the Rails validations etc will not work. We can disable the callbacks using the <code>skip_callback</code> method.  For eg:</p>
 
 <p><code>User.skip_callback("create",:after,:send_confirmation_email)</code></p>

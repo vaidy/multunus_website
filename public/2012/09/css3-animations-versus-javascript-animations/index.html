@@ -132,7 +132,7 @@
   
 
 
-<div datetime="2012-09-27T05:25:05+00:00" pubdate data-updated="true"><div class='day'>27</div><div class='month-year'><div class='month'>September</div><div class='year'>2012</div></div></div>
+<div datetime="2012-09-27T10:55:05+05:30" pubdate data-updated="true"><div class='day'>27</div><div class='month-year'><div class='month'>September</div><div class='year'>2012</div></div></div>
   </div>
   <div class="span10">
     
@@ -152,7 +152,8 @@
     
   </div>
 
-  <div class="entry-content"><strong><span style="text-decoration: underline;">tl; dr;</span></strong> 
+  <div class="entry-content"><p><strong><span style="text-decoration: underline;">tl; dr;</span></strong></p>
+
 <p>
   Layout
   engines in major browsers, like gecko, webkit or trident now have many optimization
@@ -161,6 +162,8 @@
   the case of CSS3, the browser optimizes animations using the GPU&#8217;s resources to give a
   much more polished effect. Go in for CSS3 whenever possible.
 </p>
+
+
 <p>
   <strong><span style=
   "text-decoration: underline;">The long version:</span></strong> jQuery is an excellent
@@ -168,6 +171,8 @@
   performance with animations for your website? Lets dig a little bit deeper into the
   actual implementations, by considering these two examples,
 </p>
+
+
 <p>
 <strong>(a) jQuery animation</strong>
 <pre>
@@ -185,6 +190,8 @@
 "240"></iframe> 
 In this case the drop down menu is implemented using jquery animate method.
 </p>
+
+
 <p>
  <strong>(b) CSS3 animation</strong>
   <pre>
@@ -207,6 +214,8 @@ $(".onclick").click(function(){
 "240"></iframe> In this case the drop down menu is done using css3 transitions using
 ease-in-out transition effect. 
 </p>
+
+
 <p>
 Lets analyze what&#8217;s going on with the css3 animation for
 sliding down the menus. Both of these menus progressively increase the height of each of
@@ -215,6 +224,8 @@ the old value to the new value over time, which is done by the layout engine of 
 browser internally, as it is described in the <a title="surfin' safari" href=
 "http://www.webkit.org/blog/138/css-animation/">surfin&#8217; safari</a> blog.
 </p>
+
+
 <p>
  In case of
 jQuery, inside the animate of each property, an fx Object is created.
@@ -263,15 +274,21 @@ custom: function( from, to, unit ) {
 </pre>As you can see above, a call to step method is made every every 13 milliseconds. As
 of jQuery 1.8 this interval is called JQuery.fx.interval. 
 </p>
-That is, for a height increase of 50px over a time period of 400ms (default JQuery animation interval), it does 31 steps of 13 ms each.
+
+
+<p>That is, for a height increase of 50px over a time period of 400ms (default JQuery animation interval), it does 31 steps of 13 ms each.
   <pre>
-jQuery.fx.speeds = {
-        slow: 600,
-        fast: 200,
-        // Default speed
-        _default: 400
-};
-</pre>
+jQuery.fx.speeds = {</p>
+
+<pre><code>    slow: 600,
+    fast: 200,
+    // Default speed
+    _default: 400
+</code></pre>
+
+<p>};
+</pre></p>
+
 <p>
 As of jQuery 1.8 the step function is replaced, but the same logic is applied:
   <pre>
@@ -285,6 +302,8 @@ step: function( gotoEnd ) {
 }
 </pre>
 </p>
+
+
 <p>You can dig deeper into jQuery effects at: <a title=
 "https://github.com/jquery/jquery/blob/master/src/effects.js#L124" href=
 "https://github.com/jquery/jquery/blob/master/src/effects.js#L124">https://github.com/jquery/jquery/blob/master/src/effects.js#L124</a>
@@ -292,6 +311,7 @@ Also make sure to check out the relevant webkit source: <a title=
 "https://github.com/WebKit/webkit/tree/master/Source/WebCore" href=
 "https://github.com/WebKit/webkit/tree/master/Source/WebCore">https://github.com/WebKit/webkit/tree/master/Source/WebCore</a>
 </p>
+
 </div>
   
     <p class="meta">

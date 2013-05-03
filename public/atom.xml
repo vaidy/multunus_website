@@ -4,7 +4,7 @@
   <title><![CDATA[Multunus]]></title>
   <link href="http://www.multunus.com/atom.xml" rel="self"/>
   <link href="http://www.multunus.com/"/>
-  <updated>2013-05-03T14:10:37+00:00</updated>
+  <updated>2013-05-04T01:36:50+05:30</updated>
   <id>http://www.multunus.com/</id>
   <author>
     <name><![CDATA[]]></name>
@@ -16,87 +16,144 @@
   <entry>
     <title type="html"><![CDATA[Estimating to Timeboxing - Our Journey]]></title>
     <link href="http://www.multunus.com/2013/04/estimating-to-timeboxing-our-journey/"/>
-    <updated>2013-04-11T02:33:00+00:00</updated>
+    <updated>2013-04-11T02:33:00+05:30</updated>
     <id>http://www.multunus.com/2013/04/estimating-to-timeboxing-our-journey</id>
-    <content type="html"><![CDATA[Estimations are predictions. Unfortunately though, they end up being perceived as <em>commitments</em>. And the team in question starts getting unduly pressured when the estimates go wrong. At Multunus this has happened many times in the past.
+    <content type="html"><![CDATA[<p>Estimations are predictions. Unfortunately though, they end up being perceived as <em>commitments</em>. And the team in question starts getting unduly pressured when the estimates go wrong. At Multunus this has happened many times in the past.</p>
 
 <p>Sometime last year we realized there was no point in trying any harder to come up with better estimates - just by relying on our past experience and gut instincts. It was time to look at things from a different perspective. </p>
+
+
+
 
 <p>
 We learnt a lot of things from <a href="http://www.jamesshore.com/Agile-Book/">Art of Agile Development [by James Shore]</a>. We found it tremendously useful for learning how to get started with Extreme Programming - and making the “prevention rather than cure” mental shift. This in turn resulted in much less <em>waste</em> - and higher efficiency across the team.
 </p>
 
+
+
+
 <p>
 But we were still struggling with estimating. We tried the story points and velocity approach suggested by XP. But we were still unable to deliver things at a predictable pace.
 </p>
+
+
 <p>It was time to look beyond XP’s default practices. </p>
 
+
+
+
 <h2>First set of changes</h2>
+
+
 <br/>
+
+
 <ul>
     <li>Keep both <a href="http://www.jamesshore.com/Agile-Book/release_planning.html">MMFs and Stories</a> as small as possible. </li>
     <li>Slice down all stories to the same size. This reduces the margin of error that creeps in during story size estimation. </li>
     <li>The velocity, then, is simply the number of stories delivered in an iteration.</li>
 </ul>
+
+
 <p>
 The above changes worked well on projects which already had some kind of rhythm. We’d been working with these customer for at least 3 months - so, our knowledge of the system and the customer’s requirements were good. 
 </p>
+
+
 <p>
 However, things still fell apart for new projects and customers. The level of uncertainty is obviously much higher in these cases - and the above modified approach was not sufficient for us to remain predictable enough.
 </p>
+
+
 <h2>Second set of changes</h2>
+
+
 <br/>
+
+
 <p>
 During our search for alternative approaches [see references below], we discovered multiple presentations and blog posts - all suggesting the same thing: Estimating can never be accurate <em>enough</em>. 
 </p>
+
+
 <p>
 We watched the <a href="http://www.infoq.com/presentations/Embracing-Uncertainty">Deliberate Discovery video [by Dan North]</a> - and that hit us. We might be more successful if we flipped things around - and <strong>timeboxed</strong> the stories and MMF’s. 
 </p>
+
+
 <p>
 Instead of asking the question “How long will it take to build this Feature?”, we instead ask the question “What is the maximum time that should allocate for this feature?”. In addition, we’re also documenting what it is that we’re trying to discover/learn by building that particular feature. 
 </p>
+
+
 <p>
 <strong>NOTE:</strong> This is subtly different from the “validated learning” approach in the Lean Startup world - because at this stage, we’re only speaking of engineering related risks.
 </p>
+
+
 <p>
 This is useful to overcome <a href="http://en.wikipedia.org/wiki/Parkinson's_law">Parkinson’s Law</a> [“Work expands so as to fill the time available for its completion”]. There’s an additional sense of urgency that prevails on the team. This sense of urgency in turn results in reacting faster when we find ourselves going down “inevitable” rabbit holes. 
 </p>
+
+
 <p>
 We’re also noticing a more ready acceptance of the “fail early” mantra - after shifting to the timeboxing mode. 
 
 We’ve tried the timeboxing approach on two different projects - and in both cases, have found remarkably better results. We were close enough to the original estimates that we’d provided - in terms of both cost and time. 
 </p>
+
+
 <h2>Kanban</h2>
+
+
 <br/>
+
+
 <p>
 As mentioned in my <a href="http://www.multunus.com/2013/03/how-we-chose-our-kanban-tool/">earlier post</a>, we’ve moved to Kanban, so we’re no longer doing fixed weekly iterations. And hence no calculations of velocity either.
 </p>
+
+
 <p>
 Instead the focus is on reducing the cycle time for stories - by constantly identifying and eliminating waste in the workflow. 
 </p>
+
+
 <p>
 Of course, tracking the original project plan is still necessary - and allows for an additional level of feedback on how well the team is progressing. 
 </p>
-<h3>References</h3>
-</br/>
-<a href="http://neilkillick.com/2012/04/12/do-not-estimate-software-projects-at-all">http://neilkillick.com/2012/04/12/do-not-estimate-software-projects-at-all/</a>
-<br/>
-<a href="http://softwaredevelopmenttoday.blogspot.com.au/2012/01/story-points-considered-harmful-or-why.html">http://softwaredevelopmenttoday.blogspot.com.au/2012/01/story-points-considered-harmful-or-why.html</a>
-<br/>
-<a href="http://www.infoq.com/presentations/Want-Better-Estimates-Stop-Estimating">http://www.infoq.com/presentations/Want-Better-Estimates-Stop-Estimating</a>
-<br/>
-<a href="http://www.industriallogic.com/blog/stop-using-story-points/">http://www.industriallogic.com/blog/stop-using-story-points/</a>
-<a href="http://dannorth.net/2009/07/01/the-perils-of-estimation/">http://dannorth.net/2009/07/01/the-perils-of-estimation/</a>
 
+
+<h3>References</h3>
+
+
+<p></br/>
+<a href="http://neilkillick.com/2012/04/12/do-not-estimate-software-projects-at-all">http://neilkillick.com/2012/04/12/do-not-estimate-software-projects-at-all/</a></p>
+
+<br/>
+
+
+<p><a href="http://softwaredevelopmenttoday.blogspot.com.au/2012/01/story-points-considered-harmful-or-why.html">http://softwaredevelopmenttoday.blogspot.com.au/2012/01/story-points-considered-harmful-or-why.html</a></p>
+
+<br/>
+
+
+<p><a href="http://www.infoq.com/presentations/Want-Better-Estimates-Stop-Estimating">http://www.infoq.com/presentations/Want-Better-Estimates-Stop-Estimating</a></p>
+
+<br/>
+
+
+<p><a href="http://www.industriallogic.com/blog/stop-using-story-points/">http://www.industriallogic.com/blog/stop-using-story-points/</a>
+<a href="http://dannorth.net/2009/07/01/the-perils-of-estimation/">http://dannorth.net/2009/07/01/the-perils-of-estimation/</a></p>
 ]]></content>
   </entry>
   
   <entry>
     <title type="html"><![CDATA[How we chose our Kanban Tool]]></title>
     <link href="http://www.multunus.com/2013/03/how-we-chose-our-kanban-tool/"/>
-    <updated>2013-03-09T22:39:00+00:00</updated>
+    <updated>2013-03-09T22:39:00+05:30</updated>
     <id>http://www.multunus.com/2013/03/how-we-chose-our-kanban-tool</id>
-    <content type="html"><![CDATA[<p>We&#8217;ve been using <a href="http://www.pivotaltracker.com/">Pivotal Tracker</a>[PT] as our Collaborative Project Management Tool for over 2 years now.</p>
+    <content type="html"><![CDATA[<p>We&#8217;ve been using <a href="http://www.pivotaltracker.com/">Pivotal Tracker </a>[PT] as our Collaborative Project Management Tool for over 2 years now.</p>
 
 <p>
 Recently though, we chose to move toward a Kanban style of workflow. PT is however heavily geared toward an iterative form of development - but we’ve now chosen to eschew iterations altogether. We’ve been doing continuous deployment for a while now, and we found the whole process of estimations and sizing of stories a largely wasteful exercise. 
@@ -162,37 +219,43 @@ The different tools we evaluated were:
   <entry>
     <title type="html"><![CDATA[AgileIndia 2013 Summary]]></title>
     <link href="http://www.multunus.com/2013/03/agileindia-2013-summary/"/>
-    <updated>2013-03-08T17:07:00+00:00</updated>
+    <updated>2013-03-08T17:07:00+05:30</updated>
     <id>http://www.multunus.com/2013/03/agileindia-2013-summary</id>
-    <content type="html"><![CDATA[This is the summary about the  recently concluded <a href="http://2013.agileindia.org/">Agile India Conference 2013</a>. 
-This gave me a chance to interact with great legends and leaders of software industry such as 
-Linda Rising, Mary Poppendieck, Henrik Kniberg, Jez Humble, Jeff Patton, Fred George, Craig Larman, Neil Ford, Venkat Subramaniam, 
-Aslam Khan, Karl Scotland, Kenji Hiranabe, Laurent Bossavit, Rebecca Parsons etc. and listen to them multiple times in the span of 4 days.  Amazing.
+    <content type="html"><![CDATA[<p>This is the summary about the  recently concluded <a href="http://2013.agileindia.org/">Agile India Conference 2013</a>.
+This gave me a chance to interact with great legends and leaders of software industry such as
+Linda Rising, Mary Poppendieck, Henrik Kniberg, Jez Humble, Jeff Patton, Fred George, Craig Larman, Neil Ford, Venkat Subramaniam,
+Aslam Khan, Karl Scotland, Kenji Hiranabe, Laurent Bossavit, Rebecca Parsons etc. and listen to them multiple times in the span of 4 days.  Amazing.</p>
+
 <p>
   I am not going to write about each session I attended, am instead summarizing what I learned during those 4 days both by attending the sessions and by interacting with the speakers during those 4 days:
 </p>
+
+
 <ul>
-	<li> Never stop learning. Experiment continuously. </li>
-	<li> Experiments may fail, but learn from it and move on.</li>
+    <li> Never stop learning. Experiment continuously. </li>
+    <li> Experiments may fail, but learn from it and move on.</li>
   <li> Analyse why am I <i>doing</i> (whatever it is), and be innovative. If you delay innovation, it becomes worse.
   </li>
- 	<li>Great software can be created only with collaboration. So work as a team and share the responsibilities.</li>
- 	<li>Be a good coach rather being authoritative. This will help to implement changes effectively.</li>
+    <li>Great software can be created only with collaboration. So work as a team and share the responsibilities.</li>
+    <li>Be a good coach rather being authoritative. This will help to implement changes effectively.</li>
   <li>Optimise the entire delivery process instead of just optimising the development process. Kanban helps to <i>optimise the whole</i> while Scrum helps to optimise only the development. </li>
- 	<li>Have tight feedback cycles by applying timeboxing mercilessly. This will help for continuous learning and improvement. Eg: 15 minutes TDD cycles which result in simple design with refactorings, Frequent Retrospectives etc.</li>
+    <li>Have tight feedback cycles by applying timeboxing mercilessly. This will help for continuous learning and improvement. Eg: 15 minutes TDD cycles which result in simple design with refactorings, Frequent Retrospectives etc.</li>
   <li>Apply Last Responsible Moment across, eg: Use practices such as <strong>Emergent Design</strong> and <strong>Evolutionary Architecture</strong> instead of doing <i>Big Design UpFront</i>. The Code complexity reports should help to identify the coding smells which helps to implement these practices.</li>
- 	<li>You can defer writing tests until the validation of feature is done. Adding acceptance tests for stability can deferred when you feel that it&#8217;s time to have more stability</li>
+    <li>You can defer writing tests until the validation of feature is done. Adding acceptance tests for stability can deferred when you feel that it&#8217;s time to have more stability</li>
 </ul>
+
+
 <p>
   Thanks a ton to Naresh Jain and team for organising such a wonderful event. Curious to know what&#8217;s coming for Agile India 2014. :)
 </p>
+
 ]]></content>
   </entry>
   
   <entry>
     <title type="html"><![CDATA[Our experience with Jekyll and Octopress]]></title>
     <link href="http://www.multunus.com/2012/10/our-experience-with-jekyll-and-octopress/"/>
-    <updated>2012-10-25T03:00:05+00:00</updated>
+    <updated>2012-10-25T08:30:05+05:30</updated>
     <id>http://www.multunus.com/2012/10/our-experience-with-jekyll-and-octopress</id>
     <content type="html"><![CDATA[<div>
 <p>
@@ -267,16 +330,16 @@ There are quiet a few plugins written to <a href="https://github.com/mojombo/jek
 There are Wordpress plugins that can help you create a contact us form or a suggestion box. But how can you do that for a static website? You’ve two options: 
 
 <ul>
-	<li>Create an app with an API for saving the contact details</li>
-	<li>Use some existing services which can persist form data</li>
+    <li>Create an app with an API for saving the contact details</li>
+    <li>Use some existing services which can persist form data</li>
 </ul>
 
 We went with the second option and after a lot of shopping around, we finally settled for none other than <a href="http://www.google.com/google-d-s/forms/">Google Forms</a>. This automatically took care of getting an email notification for every form submission. Some of the issues that we fixed or workarounds we had done are: 
 
 <ul>
-	<li>We followed the instructions mentioned <a href="http://www.morningcopy.com.au/tutorials/how-to-style-google-forms/">here</a> to customize the look and feel of the form.</li>
-	<li>Added a hidden iframe to not to show the page from google form on submit</li>
-	<li>Added front end validations for mandatory fields, to ensure that if and when the form is submitted, the submission would be successful.</li>
+    <li>We followed the instructions mentioned <a href="http://www.morningcopy.com.au/tutorials/how-to-style-google-forms/">here</a> to customize the look and feel of the form.</li>
+    <li>Added a hidden iframe to not to show the page from google form on submit</li>
+    <li>Added front end validations for mandatory fields, to ensure that if and when the form is submitted, the submission would be successful.</li>
 </ul>
 
 <h3>Team Page</h3>
@@ -292,7 +355,7 @@ We’ve created couple of open source contributions as part of the migration pro
 <ul>
   <li>Debugging - I found it extremely tough to debug Jekyll. Tried both <a href="http://bashdb.sourceforge.net/ruby-debug.html">ruby-debug</a> and <a href="http://pryrepl.org/">pry</a>, but somehow both does not seem to be working. The tough part I found was how it suppresses exceptions. If there is an error in any generator, it just continues without even logging it.</li>
 
-	<li>Live Editor for Octopress using which you can write the blog and automatically publish it. If you are using only Jekyll with GitHub pages, <a href="http://prose.io/">prose.io</a> would work for you.</li>
+    <li>Live Editor for Octopress using which you can write the blog and automatically publish it. If you are using only Jekyll with GitHub pages, <a href="http://prose.io/">prose.io</a> would work for you.</li>
 </ul>
 
 <h2>Summary </h2>
@@ -306,20 +369,27 @@ We’ve created couple of open source contributions as part of the migration pro
 </div>
 
 
+
 ]]></content>
   </entry>
   
   <entry>
     <title type="html"><![CDATA[Web Application Security]]></title>
     <link href="http://www.multunus.com/2012/10/web-application-security/"/>
-    <updated>2012-10-11T04:25:05+00:00</updated>
+    <updated>2012-10-11T09:55:05+05:30</updated>
     <id>http://www.multunus.com/2012/10/web-application-security</id>
     <content type="html"><![CDATA[<p class="c0"><span>Now a days we, programmers are really obsessed
     with test driving our application and automating. We automate our
     unit tests and integration tests. We do continuous
     integration. But what about security testing
-    ?</span></p><p class="c0
-    c2"><span></span></p><p class="c0"><span>Many organization hire
+    ?</span></p>
+
+
+<p class="c0
+    c2"><span></span></p>
+
+
+<p class="c0"><span>Many organization hire
     security professionals to test the web application security when
     the complete product is built and most often to test production
     environment. But most of the vulnerabilities that is present in
@@ -327,54 +397,123 @@ We’ve created couple of open source contributions as part of the migration pro
     during the development phase. Also since the app is in the
     production environment hired security consultants will not be able
     to conduct an attack against the system and verify the
-    vulnerability.</span></p><p class="c0
-    c2"><span></span></p><p class="c0"><span>Hiring a security
-    consultant is very costly as well as :</span></p><p class="c0
-    c2"><span></span></p><ol class="c6" start="1"><li class="c4
+    vulnerability.</span></p>
+
+
+<p class="c0
+    c2"><span></span></p>
+
+
+<p class="c0"><span>Hiring a security
+    consultant is very costly as well as :</span></p>
+
+
+<p class="c0
+    c2"><span></span></p>
+
+
+<ol class="c6" start="1"><li class="c4
     c0"><span>We will not be supplied with a security test
     suit.</span></li><li class="c4 c0"><span>We will not have list of
     passing test cases and failing tests instead we get a list of
     vulnerabilities</span></li><li class="c4 c0"><span>After fixing
     the vulnerabilities we might have to hire them again to make sure
     that all the vulnerabilities are
-    fixed.</span></li></ol><p class="c0
-    c2"><span></span></p><p class="c0"><span>The truth is developers
+    fixed.</span></li></ol>
+
+
+<p class="c0
+    c2"><span></span></p>
+
+
+<p class="c0"><span>The truth is developers
     can identify and fix many of such vulnerabilities during the
     development itself. Moreover we can write automated security
     testing with the help of integration testing
-    tools.</span></p><p class="c0
-    c2"><span></span></p><p class="c0"><span>There are two approaches
-    for testing our web application security</span></p><p class="c0
-    c2"><span></span></p><ol class="c6" start="1"><li class="c4
+    tools.</span></p>
+
+
+<p class="c0
+    c2"><span></span></p>
+
+
+<p class="c0"><span>There are two approaches
+    for testing our web application security</span></p>
+
+
+<p class="c0
+    c2"><span></span></p>
+
+
+<ol class="c6" start="1"><li class="c4
     c0"><span>Black box testing.</span></li><li class="c0
-    c4"><span>White box testing.</span></li></ol><p class="c0
-    c2"><span></span></p><p class="c0"><span>In black box testing we
+    c4"><span>White box testing.</span></li></ol>
+
+
+<p class="c0
+    c2"><span></span></p>
+
+
+<p class="c0"><span>In black box testing we
     analyse the security of our application through the web
     &nbsp;front-end of our application. Vulnerability scanners is an
     example for black box scanning. In white box testing we use static
     code analysis to find the vulnerabilities in the
-    system.</span></p><p class="c0
-    c2"><span></span></p><p class="c0"><span>For automated security
+    system.</span></p>
+
+
+<p class="c0
+    c2"><span></span></p>
+
+
+<p class="c0"><span>For automated security
     analysis many tools are available. ROR developers can use any of
-    the following.</span></p><p class="c0
-    c2"><span></span></p><ol class="c6" start="1"><li class="c4
+    the following.</span></p>
+
+
+<p class="c0
+    c2"><span></span></p>
+
+
+<ol class="c6" start="1"><li class="c4
     c0"><span class="c7"><a class="c10"
     href="http://brakemanscanner.org/">Brakeman</a></span><span>&nbsp;for
     White box testing.</span></li><li class="c4
     c0"><span class="c7"><a class="c10"
     href="https://www.owasp.org/index.php/OWASP_Zed_Attack_Proxy_Project">Zed
     Attack Proxy</a></span><span>&nbsp;for Black box
-    testing.</span></li></ol><p class="c0
-    c2"><span></span></p><p class="c0
-    c2"><span></span></p><p class="c0"><span>Brakeman is a static code
+    testing.</span></li></ol>
+
+
+<p class="c0
+    c2"><span></span></p>
+
+
+<p class="c0
+    c2"><span></span></p>
+
+
+<p class="c0"><span>Brakeman is a static code
     analyzer whereas ZAP is a vulnerability scanning tool. Both serves
     different functionalities. Note that ZAP is not dependent on any
-    programming language.</span></p><p class="c0
-    c2"><span></span></p><p class="c0"><span>Now regarding which
+    programming language.</span></p>
+
+
+<p class="c0
+    c2"><span></span></p>
+
+
+<p class="c0"><span>Now regarding which
     method to follow for security testing I would like to quote the
     following from this </span><span class="c7"><a class="c10"
-    href="http://jeremiahgrossman.blogspot.in/2009/10/black-box-vs-white-box-you-are-doing-it.html">blog</a></span><span>&nbsp;</span><span>:</span></p><p class="c0
-    c2"><span></span></p><p class="c0"><span class="c8">&ldquo;Black
+    href="http://jeremiahgrossman.blogspot.in/2009/10/black-box-vs-white-box-you-are-doing-it.html">blog</a></span><span>&nbsp;</span><span>:</span></p>
+
+
+<p class="c0
+    c2"><span></span></p>
+
+
+<p class="c0"><span class="c8">&ldquo;Black
     box vulnerability assessments measure the hackability of a website
     given an attacker with a certain amount of resources, skill, and
     scope. We know that bad guys will attack essentially all publicly
@@ -382,8 +521,14 @@ We’ve created couple of open source contributions as part of the migration pro
     learn about the defects before they do. As such, black box
     vulnerability assessments are best defined as an outcome based
     metric for measuring the security of a system with all security
-    safeguards in place.</span></p><p class="c0
-    c2"><span class="c8"></span></p><p class="c0"><span class="c8">White
+    safeguards in place.</span></p>
+
+
+<p class="c0
+    c2"><span class="c8"></span></p>
+
+
+<p class="c0"><span class="c8">White
     box source code reviews, on the other hand, measure and/or help
     reduce the number of security defects in an application resulting
     from the current software development life-cycle. In the immortal
@@ -392,119 +537,184 @@ We’ve created couple of open source contributions as part of the migration pro
     severity of the bugs you miss.&rdquo; Software has bugs, and that
     will continue to be the case. Therefore it is best to minimize
     them to the extent we can in effort to increase software
-    assurance.&rdquo;</span></p><p class="c0
-    c2"><span class="c13"></span></p><p class="c0"><span>We can run
+    assurance.&rdquo;</span></p>
+
+
+<p class="c0
+    c2"><span class="c13"></span></p>
+
+
+<p class="c0"><span>We can run
     Brakeman against our application and after assessing the written
     code Brakeman will report the possible vulnerabilities. It will
     help us improve our code. But the downside is, it &nbsp;may not be
     zen percentage in finding the possible vulnerabilities because it
     checks for typical coding errors which opens the doors for
-    security breaches. </span></p><p class="c0
-    c2"><span></span></p><p class="c0"><span>ZAP is a really good web
+    security breaches. </span></p>
+
+
+<p class="c0
+    c2"><span></span></p>
+
+
+<p class="c0"><span>ZAP is a really good web
     app security analysis tool. It is a proxy which sits between the
     web application and the web browser constantly analysing all the
     HTTP traffic. But for the same reason, we need to walk through all
     the web features so that ZAP can analyse the
-    traffic. </span></p><p class="c0"><span>We were thinking we
+    traffic. </span></p>
+
+
+<p class="c0"><span>We were thinking we
     &nbsp;should try to &nbsp;automate this process and once we find
     any issue, write a test to reproduce the same issue and go ahead
     and fix the problem. This will help us in making sure that the
-    problem got fixed.</span></p><p class="c0
-    c2"><span></span></p><p class="c0"><span>If you want to automate
+    problem got fixed.</span></p>
+
+
+<p class="c0
+    c2"><span></span></p>
+
+
+<p class="c0"><span>If you want to automate
     the security testing using ZAP, it can be used done by integrating
     it with Web application testing tools such
     as </span><span class="c7"><a class="c10"
-    href="http://seleniumhq.org/">Selenium</a></span><span>.</span></p><p class="c0
-    c2"><span></span></p><p class="c0"><span>Regarding how to
+    href="http://seleniumhq.org/">Selenium</a></span><span>.</span></p>
+
+
+<p class="c0
+    c2"><span></span></p>
+
+
+<p class="c0"><span>Regarding how to
     configure ZAP and analyze the security vulnerabilities, I will
     cover it in a separate blog post. I also will be writing about how
     to integrate it with Selenium for creating automated security
     testing suite.</span></p>
+
 ]]></content>
   </entry>
   
   <entry>
     <title type="html"><![CDATA[Setting up Development Environment using Vagrant]]></title>
     <link href="http://www.multunus.com/2012/10/setting-up-development-environment-using-vagrant/"/>
-    <updated>2012-10-03T05:25:05+00:00</updated>
+    <updated>2012-10-03T10:55:05+05:30</updated>
     <id>http://www.multunus.com/2012/10/setting-up-development-environment-using-vagrant</id>
-    <content type="html"><![CDATA[<strong><span style="text-decoration: underline;">Problem</span></strong> 
+    <content type="html"><![CDATA[<p><strong><span style="text-decoration: underline;">Problem</span></strong></p>
+
 <p>
   We have some projects which takes lot of effort to set up. As with every projects setting up development environment includes installing git, curl, apache, mysql-server, ruby, rvm, ruby-gems for the app, etc. and also the project specific configurations.
 </p>
+
+
 <p>
   Doing all these every time when you need to setup the development environment will be time consuming and takes a lot of effort.
 </p>
-<strong><span style= "text-decoration: underline;">Solution</span></strong>
+
+
+<p><strong><span style= "text-decoration: underline;">Solution</span></strong></p>
+
 <p>
   Setting up the development environment in VM using Vagrant. 
 </p>
+
+
 <p>
   Vagrant helps to build development environment for projects and rebuild them when needed. And this environment can be shared among the team easily.
 </p>
-<strong><span style= "text-decoration: underline;">How?</span></strong>
+
+
+<p><strong><span style= "text-decoration: underline;">How?</span></strong></p>
+
 <p>
   Vagrant is primarily a driver for Oracle VirtualBox virtual machines. You can download and install Vagrant from <a href="http://downloads.vagrantup.com/" target="_NEW">here</a> or you can install it as a ruby gem for the rails projects. Vagrant uses a &#8220;base box&#8221; which is a base install (an OS) for the system you are going to use.
 </p>
+
+
 <p>
   Different flavours of base boxes can be downloaded from <a href="http://www.vagrantbox.es/" target="_NEW">http://www.vagrantbox.es/</a>.
 </p>
+
+
 <p>
   First step is to mark the root directory and setup the basic required files using the following command:
   <pre>vagrant init</pre>
 </p>
+
+
 <p>
   This will create a file called <em><strong>Vagrantfile</strong></em> this will contain the configuration details for the VM.
 </p>
+
+
 <p>
   After the project initailization you can download Vagrant boxes from <a href="http://www.vagrantbox.es/" target="_NEW">http://www.vagrantbox.es/</a> and add it to your project:
   <pre>vagrant box add lucid64 lucid64.box </pre>
 </p>
+
+
 <p>
   You can also add the box from a remote server using:
   <pre>vagrant box add lucid64 http://files.vagrantup.com/lucid64.box</pre>
 </p>
+
+
 <p>
   To list the boxes that you added you can use:
   <pre>vagrant box list</pre>
 </p>
+
+
 <p>
   Now you have to edit the Vagrantfile to use the base box that you have added.
   <pre>Vagrant::Config.run do |config|
         config.vm.box = "lucid64" 
 end</pre>
 </p>
+
+
 <p>
   Now we can start our new VM:
   <pre>vagrant up</pre>
   This will start a fully functional VM. 
 </p>
+
+
 <p>
   To access the VM you have to do ssh:
   <pre>vagrant ssh</pre>
   This will log you into the virtual machine.
 </p>
+
+
 <p>
   Now you can start setting up the development environment. Once everything is ready we can package this VM to a box. This will help us to share the virtual environment that we created with the other team members.
   <pre>vagrant package</pre>
   This will create a vagrant box with the entire dev environment setup. 
 </p>
+
+
 <p>
   Now to use this any machine, you have to install Virtualbox and Vagrant. Then add this box using:
   <pre>vagrant box add lucid64_with_dev_setup package.box</pre>
 </p>
+
+
 <p>
   You can create a VM with this box and all the dev environment setup will be available with this VM.
 </p>
+
 ]]></content>
   </entry>
   
   <entry>
     <title type="html"><![CDATA[CSS3 animations versus Javascript animations]]></title>
     <link href="http://www.multunus.com/2012/09/css3-animations-versus-javascript-animations/"/>
-    <updated>2012-09-27T05:25:05+00:00</updated>
+    <updated>2012-09-27T10:55:05+05:30</updated>
     <id>http://www.multunus.com/2012/09/css3-animations-versus-javascript-animations</id>
-    <content type="html"><![CDATA[<strong><span style="text-decoration: underline;">tl; dr;</span></strong> 
+    <content type="html"><![CDATA[<p><strong><span style="text-decoration: underline;">tl; dr;</span></strong></p>
+
 <p>
   Layout
   engines in major browsers, like gecko, webkit or trident now have many optimization
@@ -513,6 +723,8 @@ end</pre>
   the case of CSS3, the browser optimizes animations using the GPU&#8217;s resources to give a
   much more polished effect. Go in for CSS3 whenever possible.
 </p>
+
+
 <p>
   <strong><span style=
   "text-decoration: underline;">The long version:</span></strong> jQuery is an excellent
@@ -520,6 +732,8 @@ end</pre>
   performance with animations for your website? Lets dig a little bit deeper into the
   actual implementations, by considering these two examples,
 </p>
+
+
 <p>
 <strong>(a) jQuery animation</strong>
 <pre>
@@ -537,6 +751,8 @@ end</pre>
 "240"></iframe> 
 In this case the drop down menu is implemented using jquery animate method.
 </p>
+
+
 <p>
  <strong>(b) CSS3 animation</strong>
   <pre>
@@ -559,6 +775,8 @@ $(".onclick").click(function(){
 "240"></iframe> In this case the drop down menu is done using css3 transitions using
 ease-in-out transition effect. 
 </p>
+
+
 <p>
 Lets analyze what&#8217;s going on with the css3 animation for
 sliding down the menus. Both of these menus progressively increase the height of each of
@@ -567,6 +785,8 @@ the old value to the new value over time, which is done by the layout engine of 
 browser internally, as it is described in the <a title="surfin' safari" href=
 "http://www.webkit.org/blog/138/css-animation/">surfin&#8217; safari</a> blog.
 </p>
+
+
 <p>
  In case of
 jQuery, inside the animate of each property, an fx Object is created.
@@ -615,15 +835,21 @@ custom: function( from, to, unit ) {
 </pre>As you can see above, a call to step method is made every every 13 milliseconds. As
 of jQuery 1.8 this interval is called JQuery.fx.interval. 
 </p>
-That is, for a height increase of 50px over a time period of 400ms (default JQuery animation interval), it does 31 steps of 13 ms each.
+
+
+<p>That is, for a height increase of 50px over a time period of 400ms (default JQuery animation interval), it does 31 steps of 13 ms each.
   <pre>
-jQuery.fx.speeds = {
-        slow: 600,
-        fast: 200,
-        // Default speed
-        _default: 400
-};
-</pre>
+jQuery.fx.speeds = {</p>
+
+<pre><code>    slow: 600,
+    fast: 200,
+    // Default speed
+    _default: 400
+</code></pre>
+
+<p>};
+</pre></p>
+
 <p>
 As of jQuery 1.8 the step function is replaced, but the same logic is applied:
   <pre>
@@ -637,6 +863,8 @@ step: function( gotoEnd ) {
 }
 </pre>
 </p>
+
+
 <p>You can dig deeper into jQuery effects at: <a title=
 "https://github.com/jquery/jquery/blob/master/src/effects.js#L124" href=
 "https://github.com/jquery/jquery/blob/master/src/effects.js#L124">https://github.com/jquery/jquery/blob/master/src/effects.js#L124</a>
@@ -644,13 +872,14 @@ Also make sure to check out the relevant webkit source: <a title=
 "https://github.com/WebKit/webkit/tree/master/Source/WebCore" href=
 "https://github.com/WebKit/webkit/tree/master/Source/WebCore">https://github.com/WebKit/webkit/tree/master/Source/WebCore</a>
 </p>
+
 ]]></content>
   </entry>
   
   <entry>
     <title type="html"><![CDATA[Continuous Delivery of iOS apps using Jenkins and TestFlightApp ]]></title>
     <link href="http://www.multunus.com/2012/05/continuous-delivery-of-ios-apps-using-jenkins-and-testflightapp/"/>
-    <updated>2012-05-21T05:33:21+00:00</updated>
+    <updated>2012-05-21T11:03:21+05:30</updated>
     <id>http://www.multunus.com/2012/05/continuous-delivery-of-ios-apps-using-jenkins-and-testflightapp</id>
     <content type="html"><![CDATA[<p>As mentioned in <a href="http://www.multunus.com/blog/categories/continuous-delivery/">earlier posts</a> we&#8217;ve been doing Continuous Delivery for both Webapps and Android apps for quite sometime. This post is about setting up Continuous Delivery for iOS apps using Jenkins and <a href="http://testflightapp.com" target="_blank">TestFlightApp</a>. TestFlightApp is a free service which helps to do closed beta testing without putting into AppStore. Using their APIs, the process of delivering new versions of the app can be automated.</p>
 
@@ -704,7 +933,7 @@ Also make sure to check out the relevant webkit source: <a title=
   <entry>
     <title type="html"><![CDATA[Introduction to Continuous Delivery]]></title>
     <link href="http://www.multunus.com/2012/05/introduction-to-continuous-delivery/"/>
-    <updated>2012-05-15T09:19:16+00:00</updated>
+    <updated>2012-05-15T14:49:16+05:30</updated>
     <id>http://www.multunus.com/2012/05/introduction-to-continuous-delivery</id>
     <content type="html"><![CDATA[<p>We&#8217;ve been doing Continuous Delivery for sometime and also been writing about how to implement the same. This post is about why Continuous Delivery is required and what problems does it solve.</p>
 
@@ -799,7 +1028,7 @@ One of the key principle of Continuous Delivery is <strong>To </strong><strong>
   <entry>
     <title type="html"><![CDATA[A round up of our presentations and writings]]></title>
     <link href="http://www.multunus.com/2012/02/a-round-up-of-our-presentations-and-writings/"/>
-    <updated>2012-02-27T18:29:30+00:00</updated>
+    <updated>2012-02-27T23:59:30+05:30</updated>
     <id>http://www.multunus.com/2012/02/a-round-up-of-our-presentations-and-writings</id>
     <content type="html"><![CDATA[<p>We started speaking at conferences last year. We&#8217;ve also been doing a fair bit of writing. This post rounds up what we&#8217;ve up to - along with links to our presentations and some of what we&#8217;ve written.</p>
 
@@ -833,7 +1062,7 @@ One of the key principle of Continuous Delivery is <strong>To </strong><strong>
   <entry>
     <title type="html"><![CDATA[A sneak peek into Mobile App Opportunities in 2012]]></title>
     <link href="http://www.multunus.com/2012/01/a-sneak-peak-into-mobile-app-opportunities-in-2012/"/>
-    <updated>2012-01-27T11:15:13+00:00</updated>
+    <updated>2012-01-27T16:45:13+05:30</updated>
     <id>http://www.multunus.com/2012/01/a-sneak-peak-into-mobile-app-opportunities-in-2012</id>
     <content type="html"><![CDATA[<div style="text-align: center;"><em>This article was originally written by me for <a href="http://yourstory.in/2011/12/a-sneak-peek-into-mobile-app-opportunities-in-2012/" target="_blank">yourstory.in</a>. But this version is more &#8220;complete&#8221; with all of the original links in place.</em></div>
 
@@ -1053,7 +1282,7 @@ One of the key principle of Continuous Delivery is <strong>To </strong><strong>
   <entry>
     <title type="html"><![CDATA[Our talks at Droidcon 2011, Bangalore]]></title>
     <link href="http://www.multunus.com/2011/12/droidcon-two-talks-we-gave/"/>
-    <updated>2011-12-02T10:07:00+00:00</updated>
+    <updated>2011-12-02T15:37:00+05:30</updated>
     <id>http://www.multunus.com/2011/12/droidcon-two-talks-we-gave</id>
     <content type="html"><![CDATA[<p>We spoke at Droidcon, Bangalore that happened on Nov 18th and 19th. We had two interesting talks on both days.</p>
 
@@ -1078,7 +1307,7 @@ One of the key principle of Continuous Delivery is <strong>To </strong><strong>
   <entry>
     <title type="html"><![CDATA[Continuous Delivery: Building Android Library project]]></title>
     <link href="http://www.multunus.com/2011/11/continuous-delivery-building-android-library-project/"/>
-    <updated>2011-11-04T09:25:20+00:00</updated>
+    <updated>2011-11-04T14:55:20+05:30</updated>
     <id>http://www.multunus.com/2011/11/continuous-delivery-building-android-library-project</id>
     <content type="html"><![CDATA[<p>This post talks about how to build an Android Project using ant which depends on an Android Library project.</p>
 
@@ -1096,7 +1325,7 @@ One of the key principle of Continuous Delivery is <strong>To </strong><strong>
   <entry>
     <title type="html"><![CDATA[Lessons from interview with Joel Spolsky]]></title>
     <link href="http://www.multunus.com/2011/10/lessons-from-interview-with-joel-spolsky/"/>
-    <updated>2011-10-16T19:00:36+00:00</updated>
+    <updated>2011-10-17T00:30:36+05:30</updated>
     <id>http://www.multunus.com/2011/10/lessons-from-interview-with-joel-spolsky</id>
     <content type="html"><![CDATA[<p><a href="http://commons.wikipedia.org/wiki/File:PivotLaunching3S.jpg"><img title="USS Pivot launched at the Gulf Shipbuilding Co..." src="http://upload.wikimedia.org/wikipedia/commons/thumb/9/9d/PivotLaunching3S.jpg/300px-PivotLaunching3S.jpg" alt="USS Pivot launched at the Gulf Shipbuilding Co..." width="300" height="241" /></a></p>
 
@@ -1214,7 +1443,7 @@ One of the key principle of Continuous Delivery is <strong>To </strong><strong>
   <entry>
     <title type="html"><![CDATA[Simple Image Filter using OpenGL ES in Android]]></title>
     <link href="http://www.multunus.com/2011/10/simple-image-filter-using-opengl-es-in-android/"/>
-    <updated>2011-10-07T10:05:45+00:00</updated>
+    <updated>2011-10-07T15:35:45+05:30</updated>
     <id>http://www.multunus.com/2011/10/simple-image-filter-using-opengl-es-in-android</id>
     <content type="html"><![CDATA[<p><em><strong>Note</strong>: This post assumes some basic knowledge in setting up an OpenGL app in Android. A basic example for rendering a texture on to a surface can be found <a href="http://developer.android.com/resources/samples/ApiDemos/src/com/example/android/apis/graphics/GLES20TriangleRenderer.html">here.</a> You can use this as the initial setup for trying out Shader language program listed in this post.</em></p>
 
@@ -1295,7 +1524,7 @@ We will be concentrating on Vertex and Fragment processing phases in OpenGL pipe
   <entry>
     <title type="html"><![CDATA[Continuous Delivery for Android Apps – Part 2]]></title>
     <link href="http://www.multunus.com/2011/10/continuous-delivery-for-android-apps-part-2/"/>
-    <updated>2011-10-06T01:21:57+00:00</updated>
+    <updated>2011-10-06T06:51:57+05:30</updated>
     <id>http://www.multunus.com/2011/10/continuous-delivery-for-android-apps-part-2</id>
     <content type="html"><![CDATA[<p>This post talks about how to run tests for the build setup as mentioned in <a href="http://www.multunus.com/2011/09/continuous-delivery-for-android-apps-part-1/">Part 1</a>.</p>
 
@@ -1349,7 +1578,7 @@ description="Runs tests from the package defined in test.package property"&gt;
   <entry>
     <title type="html"><![CDATA[Confident Estimates]]></title>
     <link href="http://www.multunus.com/2011/09/confident-estimates/"/>
-    <updated>2011-09-29T03:28:51+00:00</updated>
+    <updated>2011-09-29T08:58:51+05:30</updated>
     <id>http://www.multunus.com/2011/09/confident-estimates</id>
     <content type="html"><![CDATA[<div class="zemanta-img" style="margin: 1em; display: block;">
 
@@ -1398,7 +1627,7 @@ description="Runs tests from the package defined in test.package property"&gt;
   <entry>
     <title type="html"><![CDATA[Continuous Delivery for Android Apps - Part 1]]></title>
     <link href="http://www.multunus.com/2011/09/continuous-delivery-for-android-apps-part-1/"/>
-    <updated>2011-09-23T05:45:50+00:00</updated>
+    <updated>2011-09-23T11:15:50+05:30</updated>
     <id>http://www.multunus.com/2011/09/continuous-delivery-for-android-apps-part-1</id>
     <content type="html"><![CDATA[<div>
 
@@ -1436,7 +1665,7 @@ References: <a href="http://skaug.no/ingvald/2011/09/android-app-with-jenkins/"
   <entry>
     <title type="html"><![CDATA[Setup Test Load Balancer using Jenkins]]></title>
     <link href="http://www.multunus.com/2011/09/setup-test-load-balancer-using-jenkins/"/>
-    <updated>2011-09-23T04:10:07+00:00</updated>
+    <updated>2011-09-23T09:40:07+05:30</updated>
     <id>http://www.multunus.com/2011/09/setup-test-load-balancer-using-jenkins</id>
     <content type="html"><![CDATA[<p>The main purpose of a test suite is to give fast feedback about the changes being made to the developer. Ideally the test suite should be really fast and should take no more than 10 mins to complete. But there are times when you end up with a test suit that takes 30 - 40 mins to complete. This can be really frustrating for the developers because they have to wait for 40 mins after checking in his changes to know if he broke something.</p>
 
@@ -1480,7 +1709,7 @@ References: <a href="http://skaug.no/ingvald/2011/09/android-app-with-jenkins/"
   <entry>
     <title type="html"><![CDATA[Rebuilding in Jenkins]]></title>
     <link href="http://www.multunus.com/2011/09/rebuilding-in-jenkins/"/>
-    <updated>2011-09-22T09:02:49+00:00</updated>
+    <updated>2011-09-22T14:32:49+05:30</updated>
     <id>http://www.multunus.com/2011/09/rebuilding-in-jenkins</id>
     <content type="html"><![CDATA[<div>
 
