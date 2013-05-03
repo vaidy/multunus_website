@@ -1,0 +1,51 @@
+---
+layout: default
+title: "Love"
+date: 2012-10-18 13:32
+footer: true
+nav: Love
+---
+<div class='span9'>
+	<h1>With Love...</h1>
+	<p>
+          Almost everything on this site are our own opinions. But
+          we've also been very fortunate to have some nice things
+          written about us elsewhere on the Internet. Read on...   
+	</p>
+	<p><h1 id='dustin'>Dustin Curzon - Chief Story
+	Teller, <a href="http://narrable.com" target="_new">Narrable.com</a></h1></p>
+	<p>
+	I love our developers. When I say that, I'm not just saying that I love what they do for me. I love them - as coworkers and as people. They're some of the hardest workers that I have ever known and they're pretty fun too. If you don't know the story behind our dev team, allow me to catch you up:	
+	</p>
+	<p>
+	When I met Gavin and Anil last year, they also introduced me to Multunus - a boutique development shop in Bengaluru, India. They're a relatively small group (<20 people) of developers, data architects and business analysts. They partner with companies like Narrable to build beautiful web apps. It's really like working with your friends - they just happen to live on the other side of the world.
+	</p>	
+        <p class="right-text">
+          <a href="http://blog.narrable.com/post/37655327074/our-development-team"
+          target="_new">Continue Reading...</a>
+        </p>
+	<p><h1 id='pradeep'>Pradeep Soundararajan - Chief
+	Consultant, <a href="http://moolya.com/" target="_new">Moolya Testing</a></h1></p>
+        <p>
+           The experience I had in their office was so cool that I
+           guess its not wrong to say that there are lots of inspiring
+           things about Multunus. Their people are constant learners,
+           so, you can find people up to date on things. I did my bit
+           of research before writing this post. I am convinced
+           looking at their tweets and their activities online that
+           they are constant learners. They love and practice being
+           the small "a" agile.
+        </p>
+        <p>
+          Their work environment is not the cubicle style and it appeared like a
+           joint family sitting together and working. I guess a lot of
+           bugs get squashed because people talk to each other face to face.
+        </p>
+        <p class="right-text">
+          <a href="http://moolya.com/blog/2011/05/18/visit-to-multunus-and-other-neighbors/"
+          target="_new">Continue Reading...</a>
+        </p>
+</div>
+<div class="sidebar-nav span3">
+  {% include_array love_asides %}
+</div> 

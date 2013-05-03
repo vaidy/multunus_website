@@ -1,0 +1,11 @@
+<div class="header">Our Daily Voice</div>
+<ul id="tumblr_post">
+  <li class="loading">Fetching...</li>
+</ul>
+<div id="continue-reading"><a href="http://multunus.tumblr.com/">Continue reading at our tumblog</a></div>
+<script type="text/javascript">
+  $(document).ready(function(){
+    getTumblrPost("{{site.tumblr_user}}", {{site.tumblr_post_count}});
+  });
+</script>
+<script src="/javascripts/asides/tumblr.js" type="text/javascript"> </script>

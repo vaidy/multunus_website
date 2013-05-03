@@ -1,0 +1,25 @@
+<div class="row-fluid">
+  <div class="span2 date-container">
+    {% include post/date.html %}{{ time }}
+  </div>
+  <div class="span10">
+    {% unless page.no_header %}
+      <header>
+        <h2 class="entry-title">{% if site.titlecase %}{{ page.title | titlecase }}{% else %}{{ page.title }}{% endif %}</h2>
+        <p class="meta">
+          {% include post/author.html %}
+        </p>
+      </header>
+    {% endunless %}
+  </div>
+
+  <div class="entry-content">{{ content }}</div>
+  {% unless page.meta == false %}
+    <p class="meta">
+      {% include post/categories.html %}
+      {% if site.disqus_short_name and page.comments != false and site.disqus_show_comment_count == true %}
+        | <a href="{% if index %}{{ root_url }}{{ post.url }}{% endif %}#disqus_thread">Comments</a>
+      {% endif %}
+    </p>
+  {% endunless %}
+</div>

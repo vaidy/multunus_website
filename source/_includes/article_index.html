@@ -1,0 +1,24 @@
+<div class="row-fluid">
+  <div class="span2 date-container">
+    {% include post/date.html %}{{ time }}
+  </div>
+  <div class="span10">
+    {% unless page.no_header %}
+      <header>
+          <h2 class="entry-title"><a href="{{ root_url }}{{ post.url }}">{% if site.titlecase %}{{ post.title | titlecase }}{% else %}{{ post.title }}{% endif %}</a></h2>
+      </header>
+    {% endunless %}
+
+  <div class="entry-content">{{ content | strip_html | truncatewords: 30 }}</div>
+    {% capture excerpted %}{{ content | has_excerpt }}{% endcapture %}
+    {% unless page.meta == false %}
+    <p class="meta">
+      {% include post/author.html %}
+      {% include post/categories.html %}
+      {% if site.disqus_short_name and page.comments != false and site.disqus_show_comment_count == true %}
+        | <a href="{% if index %}{{ root_url }}{{ post.url }}{% endif %}#disqus_thread">Comments</a>
+      {% endif %}
+    </p>
+    {% endunless %}
+  </div>
+</div>

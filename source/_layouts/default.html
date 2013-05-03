@@ -1,0 +1,25 @@
+{% capture root_url %}{{ site.root | strip_slash }}{% endcapture %}
+{% include head.html %}
+<body {% if page.body_id %} id="{{ page.body_id }}" {% endif %} {% if page.sidebar == false %} class="no-sidebar" {% endif %} {% if page.sidebar == 'collapse' or site.sidebar == 'collapse' %} class="collapse-sidebar sidebar-footer" {% endif %}>
+  <nav role="navigation">{% include navigation.html %}</nav>
+  <div class="container-fluid main-content">
+    <div class="row-fluid">
+      {{content}}
+    </div>
+  </div>
+  <div class="container-fluid dark-background">
+      <div class="row-fluid">
+        <div class="span4 featured-posts">
+          {% include asides/featured_posts.html %}
+        </div>
+        <div class="span4 tumblr-feed">
+          {% include asides/tumblr.html %}
+        </div>
+        <div class="span4 twitter-feed">
+          {% include asides/twitter.html %}
+        </div>         
+      </div>
+    </div>
+  <footer role="contentinfo" class="page-footer">{% include footer.html %}</footer>
+</body>
+</html>

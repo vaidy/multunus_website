@@ -1,0 +1,48 @@
+---
+id: "/404"
+---
+
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <title>404 - Multunus</title>
+    <link rel="icon" type="image/png" href="/images/favicon.ico">
+    <link href='http://fonts.googleapis.com/css?family=Orbitron:900,700' rel='stylesheet' type='text/css'>
+    <style type="text/css">
+      body {
+        background: #282828;
+      }
+
+      .header {
+        text-align: center;
+      }
+
+      .title-line {
+        font-family: Orbitron, sans-serif; 
+        font-size: 2em; 
+        color: white; 
+        text-align: center; 
+        margin-top: 10%;
+      }
+      a {
+        color: white;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="row-fluid header">
+      <a href="http://www.multunus.com">
+        <img src="/images/g36891.png" alt="multunus" />   
+      </a>
+    </div>
+
+    <div class="row-fluid title-line">
+      <p>404 - This is not the page you are looking for.</p>
+      <p>Go to <a href="/">www.multunus.com</a> instead.</p>
+    </div>
+
+  </body>
+
+</html>

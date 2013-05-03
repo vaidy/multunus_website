@@ -9,7 +9,8 @@ categories:
 - All Posts
 - Process
 ---
-We've been using <a href="http://www.pivotaltracker.com/">Pivotal Tracker</a>[PT] as our Collaborative Project Management Tool for over 2 years now. 
+
+We've been using <a href="http://www.pivotaltracker.com/">Pivotal Tracker </a>[PT] as our Collaborative Project Management Tool for over 2 years now. 
 <p>
 Recently though, we chose to move toward a Kanban style of workflow. PT is however heavily geared toward an iterative form of development - but we’ve now chosen to eschew iterations altogether. We’ve been doing continuous deployment for a while now, and we found the whole process of estimations and sizing of stories a largely wasteful exercise. 
 </p>

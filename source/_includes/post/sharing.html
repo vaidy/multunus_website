@@ -1,0 +1,16 @@
+<div class="sharing">
+	{% if site.facebook_like %}
+		<div class="fb-like" data-width="368" data-layout="button_count" data-href="{{ share_url }}" data-show-faces="false">
+		</div>
+	{% endif %}
+	{% if site.google_plus_one %}
+		<div class="g-plusone" data-size="{{ site.google_plus_one_size }}" data-href="{{ site.url }}{{ page.id }}">
+		</div>
+	{% endif %}
+  	{% if site.twitter_tweet_button %}
+  		<a href="http://twitter.com/share" class="twitter-share-button" data-url="{{ site.url }}{{ page.id }}" data-counturl="{{ site.url }}{{ page.id }}" data-count="none" data-text="See the timelines of the young turks at Multunus">
+  		</a>
+  	{% endif %}
+  	<script src="//platform.linkedin.com/in.js" type="text/javascript"></script>
+  	<script type="IN/Share" data-counter="right"></script>
+</div>
