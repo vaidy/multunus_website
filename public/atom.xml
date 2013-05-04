@@ -4,7 +4,7 @@
   <title><![CDATA[Multunus]]></title>
   <link href="http://www.multunus.com/atom.xml" rel="self"/>
   <link href="http://www.multunus.com/"/>
-  <updated>2013-05-04T20:17:59+05:30</updated>
+  <updated>2013-05-04T20:23:19+05:30</updated>
   <id>http://www.multunus.com/</id>
   <author>
     <name><![CDATA[]]></name>
@@ -12,6 +12,96 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Continuous Deployment of Octopress Website with Prose.io and Jenkins]]></title>
+    <link href="http://www.multunus.com/2013/05/proseio_jenkins_heroku/"/>
+    <updated>2013-05-04T18:33:00+05:30</updated>
+    <id>http://www.multunus.com/2013/05/proseio_jenkins_heroku</id>
+    <content type="html"><![CDATA[<p>As mentioned <a href="http://www.multunus.com/2012/10/our-experience-with-jekyll-and-octopress/">in this blog post</a>, out website multunus.com is hosted with Octopress. And as mentioned there, we were looking for a simple solution for Live Editing and Deployment of the website. This post is about how to edit Website with Prose.io and deploy it using Jenkins to heroku.</p>
+
+<p>With <a href="http://prose.io/about.html">Prose.io</a>, you can edit any Github files, but you need to run <code>rake generate</code> command for generating the HTML files and then need to deploy them. So you will need a development setup to deploy, even if the editing can be done online.</p>
+
+<p>The solution is simple i.e. use <a href="http://jenkins-ci.org/">Jenkins</a> or any <a href="http://en.wikipedia.org/wiki/Continuous_integration">Continuous Integration</a> server for deployment.</p>
+
+<p>So the steps are as follows:</p>
+
+<ul>
+<li>Add the following in <code>_config.yml</code>:</li>
+</ul>
+
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>#prose.io settings
+</span><span class='line'>prose:
+</span><span class='line'>  rooturl: "source"
+</span><span class='line'>  metadata:
+</span><span class='line'>    "source/_posts": |
+</span><span class='line'>        layout: post
+</span><span class='line'>        title: "Change Title"
+</span><span class='line'>        date: 2013-04-11 02:33
+</span><span class='line'>        comments: true
+</span><span class='line'>        author:
+</span><span class='line'>          - author
+</span><span class='line'>        categories:
+</span><span class='line'>          - All Posts
+</span><span class='line'>          </span></code></pre></td></tr></table></div></figure>
+
+
+<p>`</p>
+
+<ul>
+<li>Setup Prose.io - just login with your Github Handle</li>
+<li>Create a script with as follows:</li>
+</ul>
+
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>bundle install
+</span><span class='line'>bundle exec rake generate
+</span><span class='line'>git add public/
+</span><span class='line'>git commit -m "Deploying Generated files"
+</span></code></pre></td></tr></table></div></figure>
+
+
+<ul>
+<li><p>Install the Heroku gem and setup the git remote and keys for deployment as mentioned <a href="https://devcenter.heroku.com/articles/git">here</a></p></li>
+<li><p>Setup Git Publisher to push the generated files to heroku as shown below.</p></li>
+</ul>
+
+
+<p><img src="https://s3.amazonaws.com/multunus-images/Git+Publisher.png" alt="Git Publisher" /></p>
+
+<p>Thats it. You are done. Just &#8220;Build&#8221; of a button, the changes gets deployed. With this setup anyone who has access to the Github Repo can make changes and deploy without any setup.</p>
+
+<p>This post is written using Prose.io and published through Jenkins.</p>
+
+<p>Yes, the setup was not as easy I had written above. I got stuck mainly with the following.</p>
+
+<ul>
+<li>I got stuck as the command <code>rake generate</code> was watching the file changes. It was not getting stopped for me. The culprit was <code>auto: true</code> in _config.yml file.</li>
+<li>If the file extension is .html, Prose.io will not show preview or metadata information. The markdown or md extension would work.</li>
+<li>Thought of using Travis.io as mentioned <a href="http://www.harimenon.com/blog/2013/01/27/auto-deploying-to-my-octopress-blog/">here</a> for the deployment. But had issues with setting up git push for Heroku. Didn&#8217;t continue on that as we&#8217;ve been using Jenkins as our CI server for long.</li>
+</ul>
+
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Estimating to Timeboxing - Our Journey]]></title>
@@ -1703,28 +1793,6 @@ References: <a href="http://skaug.no/ingvald/2011/09/android-app-with-jenkins/"
 <p>The setup for the jobs which run in different partitions are exactly same, only difference between the partitions are only the subset of test executed in each partition.</p>
 
 <p>Create as many copies of the existing job as the number of partitions that you want to run. Additionally you can name each of these jobs as &lt;job-name-n&gt; where n refers to the partition which this job is going to run. Create an dummy job and configure the post build task so that all the partitioned jobs will be triggered simultaneously.</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Rebuilding in Jenkins]]></title>
-    <link href="http://www.multunus.com/2011/09/rebuilding-in-jenkins/"/>
-    <updated>2011-09-22T14:32:49+05:30</updated>
-    <id>http://www.multunus.com/2011/09/rebuilding-in-jenkins</id>
-    <content type="html"><![CDATA[<div>
-
-One option that might be required after setting up a <a href="http://www.multunus.com/2011/07/continuous-delivery-using-jenkins-build-pipeline/">build pipeline</a> is the provision to redeploy an earlier version by click of a button. This can become handy when we find a bug in the production and want to see when the bug got introduced. For that we will have to redeploy the earlier version to the staging/UAT environment and test the same.
-
-Jenkins by default does not allow to rerun any of the earlier jobs. But you can achieve this by the <a href="https://wiki.jenkins-ci.org/display/JENKINS/Rebuild+Plugin">Rebuild</a> plugin. It allows you to rebuild any job provided its parameterized build. It also allows you override the parameters. It will show the &#8220;Rebuild&#8221; button at the left side as shown below when you go to a specific build page:
-
-<img src="http://www.multunus.com/images/rebuild.png" alt="" width="156" height="247" />
-
-This is not a replacement for revert build, because it does not take care of reverting DB. But this can be extended to do the same.
-
-Note: It will show the Rebuild button only for those builds which occurred after installing the plugin. I took some time to realize this and it is not very clear in the documentation.
-
-</div>
-
 ]]></content>
   </entry>
   

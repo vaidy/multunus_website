@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Continuous Delivery | Multunus]]></title>
   <link href="http://www.multunus.com/blog/categories/continuous-delivery/atom.xml" rel="self"/>
   <link href="http://www.multunus.com/"/>
-  <updated>2013-05-04T20:17:59+05:30</updated>
+  <updated>2013-05-04T20:23:19+05:30</updated>
   <id>http://www.multunus.com/</id>
   <author>
     <name><![CDATA[]]></name>
@@ -12,6 +12,82 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Continuous Deployment of Octopress Website with Prose.io and Jenkins]]></title>
+    <link href="http://www.multunus.com/2013/05/proseio_jenkins_heroku/"/>
+    <updated>2013-05-04T18:33:00+05:30</updated>
+    <id>http://www.multunus.com/2013/05/proseio_jenkins_heroku</id>
+    <content type="html"><![CDATA[<p>As mentioned <a href="http://www.multunus.com/2012/10/our-experience-with-jekyll-and-octopress/">in this blog post</a>, out website multunus.com is hosted with Octopress. And as mentioned there, we were looking for a simple solution for Live Editing and Deployment of the website. This post is about how to edit Website with Prose.io and deploy it using Jenkins to heroku.</p>
+
+<p>With <a href="http://prose.io/about.html">Prose.io</a>, you can edit any Github files, but you need to run <code>rake generate</code> command for generating the HTML files and then need to deploy them. So you will need a development setup to deploy, even if the editing can be done online.</p>
+
+<p>The solution is simple i.e. use <a href="http://jenkins-ci.org/">Jenkins</a> or any <a href="http://en.wikipedia.org/wiki/Continuous_integration">Continuous Integration</a> server for deployment.</p>
+
+<p>So the steps are as follows:</p>
+
+<ul>
+<li>Add the following in <code>_config.yml</code>:</li>
+</ul>
+
+
+<p>```</p>
+
+<h1>prose.io settings</h1>
+
+<p>prose:
+  rooturl: "source"
+  metadata:</p>
+
+<pre><code>"source/_posts": |
+    layout: post
+    title: "Change Title"
+    date: 2013-04-11 02:33
+    comments: true
+    author:
+      - author
+    categories:
+      - All Posts
+</code></pre>
+
+<p>````</p>
+
+<ul>
+<li>Setup Prose.io - just login with your Github Handle</li>
+<li>Create a script with as follows:</li>
+</ul>
+
+
+<p>```
+bundle install
+bundle exec rake generate
+git add public/
+git commit -m "Deploying Generated files"</p>
+
+<p>```
+* Install the Heroku gem and setup the git remote and keys for deployment as mentioned <a href="https://devcenter.heroku.com/articles/git">here</a></p>
+
+<ul>
+<li>Setup Git Publisher to push the generated files to heroku as shown below.</li>
+</ul>
+
+
+<p><img src="https://s3.amazonaws.com/multunus-images/Git+Publisher.png" alt="Git Publisher" /></p>
+
+<p>Thats it. You are done. Just "Build" of a button, the changes gets deployed. With this setup anyone who has access to the Github Repo can make changes and deploy without any setup.</p>
+
+<p>This post is written using Prose.io and published through Jenkins.</p>
+
+<p>Yes, the setup was not as easy I had written above. I got stuck mainly with the following.</p>
+
+<ul>
+<li>I got stuck as the command <code>rake generate</code> was watching the file changes. It was not getting stopped for me. The culprit was <code>auto: true</code> in _config.yml file.</li>
+<li>If the file extension is .html, Prose.io will not show preview or metadata information. The markdown or md extension would work.</li>
+<li>Thought of using Travis.io as mentioned <a href="http://www.harimenon.com/blog/2013/01/27/auto-deploying-to-my-octopress-blog/">here</a> for the deployment. But had issues with setting up git push for Heroku. Didn't continue on that as we've been using Jenkins as our CI server for long.</li>
+</ul>
+
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Estimating to Timeboxing - Our Journey]]></title>
@@ -328,24 +404,6 @@ One of the key principle of Continuous Delivery is <strong>To </strong><strong>
 <p><strong>Blogging:</strong> Leena has written a lot of articles on Continuous Delivery <a href="http://www.multunus.com/blog/categories/continuous-delivery/">on this blog itself</a>. And Akshay <a href="http://akshayatmultunus.wordpress.com/">has been writing regularly</a> since he joined us last year.</p>
 
 <p>I hope you found this round up useful. I expect the Agile India organizers to upload videos of the all the talks soon. Once that happens, I'll update this post with the link to the video of our talk there.</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Continuous Delivery: Building Android Library project]]></title>
-    <link href="http://www.multunus.com/2011/11/continuous-delivery-building-android-library-project/"/>
-    <updated>2011-11-04T14:55:20+05:30</updated>
-    <id>http://www.multunus.com/2011/11/continuous-delivery-building-android-library-project</id>
-    <content type="html"><![CDATA[<p>This post talks about how to build an Android Project using ant which depends on an Android Library project.</p>
-
-<ul>
-    <li>Add default.properties in the library project and add <span style="font-family: Consolas, Monaco, 'Courier New', Courier, monospace; line-height: 18px;">android.library=true </span>in the same</li>
-    <li>Run the command in the main Android Project <span style="font-family: Consolas, Monaco, 'Courier New', Courier, monospace; line-height: 18px;">android update project --path . --library ../path-to-the-library/</span><strong>Note: This always has to be relative path.</strong></li>
-    <li>Now running <span style="font-family: Consolas, Monaco, 'Courier New', Courier, monospace; line-height: 18px;">ant release</span> should build the library project too.</li>
-</ul>
-
-
-<p><strong>Note:</strong> The android command mentioned in the second step adds an entry in the <span style="font-family: Consolas, Monaco, 'Courier New', Courier, monospace; line-height: 18px;">default.properties</span> file. If you need to override that in different environments, override that in the <span style="font-family: Consolas, Monaco, 'Courier New', Courier, monospace; line-height: 18px;">local.properties</span>. Even there, it has to be relative path, the absolute path will not work.</p>
 ]]></content>
   </entry>
   
