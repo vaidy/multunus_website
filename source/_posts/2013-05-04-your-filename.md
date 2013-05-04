@@ -7,6 +7,7 @@ author:
   - Leena
 categories:
   - All Posts
+  - Continuous Delivery
 
 ---
 
@@ -62,10 +63,3 @@ Yes, the setup was not as easy I had written above. I got stuck mainly with the 
 * I got stuck as the command `rake generate` was watching the file changes. It was not getting stopped for me. The culprit was `auto: true` in _config.yml file.
 * If the file extension is .html, Prose.io will not show preview or metadata information. The markdown or md extension would work.
 * Thought of using Travis.io as mentioned [here](http://www.harimenon.com/blog/2013/01/27/auto-deploying-to-my-octopress-blog/) for the deployment. But had issues with setting up git push for Heroku. Didn't continue on that as we've been using Jenkins as our CI server for long.
-
-
-
-
-
-
-
