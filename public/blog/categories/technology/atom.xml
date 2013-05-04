@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Technology | Multunus]]></title>
   <link href="http://www.multunus.com/blog/categories/technology/atom.xml" rel="self"/>
   <link href="http://www.multunus.com/"/>
-  <updated>2013-05-04T20:23:19+05:30</updated>
+  <updated>2013-05-04T20:28:58+05:30</updated>
   <id>http://www.multunus.com/</id>
   <author>
     <name><![CDATA[]]></name>
@@ -130,7 +130,7 @@ We’ve created couple of open source contributions as part of the migration pro
 </div>
 
 
-
+<p><strong>Update:</strong> I've written <a href="http://www.multunus.com/2013/05/proseio_jenkins_heroku/">another post</a> about how to use Prose.io and Jenkins for Live Editing and Continuous Deployment.</p>
 ]]></content>
   </entry>
   
