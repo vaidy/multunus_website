@@ -5,11 +5,11 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>Working with DLLs, the Java way  | Multunus </title>
+  <title>Editing Octopress Website with Prose.io and Continuous Deployment with Jenkins to Heroku  | Multunus </title>
   <meta name="author" content="">
 
   
-  <meta name="description" content="We had a very simple requirement, to invoke my DLLs using Java code for couple of reasons: We want to reuse application code built for a .NET &hellip;">
+  <meta name="description" content="As mentioned in this blog post, out website multunus.com is hosted with Octopress. And as mentioned there, we were looking for a simple solution for &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -18,7 +18,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://www.multunus.com/2010/01/working-with-dlls-the-java-way">
+  <link rel="canonical" href="http://www.multunus.com/2013/05/your-filename">
   <link href="/images/favicon.ico" rel="icon">
   <link href="/stylesheets/bootstrap/bootstrap.css" media="screen, projection" rel="stylesheet" type="text/css">
   <link href="/stylesheets/bootstrap/responsive.css" media="screen, projection" rel="stylesheet" type="text/css">
@@ -132,19 +132,19 @@
   
 
 
-<div datetime="2010-01-29T12:20:51+05:30" pubdate data-updated="true"><div class='day'>29</div><div class='month-year'><div class='month'>January</div><div class='year'>2010</div></div></div>
+<div datetime="2013-05-04T18:33:00+05:30" pubdate data-updated="true"><div class='day'>04</div><div class='month-year'><div class='month'>May</div><div class='year'>2013</div></div></div>
   </div>
   <div class="span10">
     
       <header>
-        <h2 class="entry-title">Working With DLLs, the Java Way</h2>
+        <h2 class="entry-title">Editing Octopress Website With Prose.io and Continuous Deployment With Jenkins to Heroku</h2>
         <p class="meta">
           
   
 
 <strong>Posted by: </strong> 
 
-	<a class='author' href='/blog/author/jeevan/'>Jeevan</a>
+	<a class='author' href='/blog/author/leena/'>Leena</a>
 
 
         </p>
@@ -152,37 +152,19 @@
     
   </div>
 
-  <div class="entry-content"><p>We had a very simple requirement, to invoke my DLLs using Java code for couple of reasons:</p>
+  <div class="entry-content"><p>As mentioned <a href="http://www.multunus.com/2012/10/our-experience-with-jekyll-and-octopress/">in this blog post</a>, out website multunus.com is hosted with Octopress. And as mentioned there, we were looking for a simple solution for Live Editing and Deployment of the website. This post is about how to edit Website with Prose.io and deploy it using Jenkins to heroku.</p>
 
-<ol>
-    <li> We want to reuse application code built for a .NET application</li>
-    <li> We want to integrate the DLLs with a Java based sever technology</li>
-    <li> Should be simple enough to maintain the code by .NET professionals</li>
-    
-</ol>
+<p>With <a href="http://prose.io/about.html">Prose.io</a>, you can edit any Github files, but you need to run <code>rake generate</code> command for generating the HTML files and then need to deploy them. So you will need a development setup to deploy, even if the editing can be done online.</p>
 
+<p>The solution is simple i.e. use <a href="http://jenkins-ci.org/">Jenkins</a> or any <a href="http://en.wikipedia.org/wiki/Continuous_integration">Continuous Integration</a> server for deployment.</p>
 
-<p>There are couple of Java-COM bridging solutions I came across.</p>
+<p>So the steps are as follows:</p>
 
 <ul>
-    <li> <a id="o-ek" title="Java Native Interface (JNI)" href="http://en.wikipedia.org/wiki/Java_Native_Interface">Java Native Interface (JNI)</a></li>
-    <li> <a id="m-.." title="JACOB" href="http://sourceforge.net/projects/jacob-project/">JACOB</a></li>
-    <li> <a id="r0rf" title="Scriptom (Groovy - COM Scripting)" href="http://groovy.codehaus.org/COM+Scripting">Scriptom (Groovy - COM Scripting)</a></li>
-    <li> <a id="h:uh" title="Java Native Access (JNA)" href="https://jna.dev.java.net/">Java Native Access (JNA)</a></li>
-    <li> <a id="ck4a" title="JNBridge" href="http://www.jnbridge.com/">JNBridge</a></li>
+<li>Add the following in <code>_config.yml</code>:</li>
 </ul>
 
 
-<p>In this post, we&#8217;ll see how Scriptom can be used to access DLLs.</p>
-
-<p>Scriptom is a module in Groovy (A Java VM based scripting language) which wraps the JACOB classes to make it more usable. Scriptom&#8217;s syntax looks like VB.NET code.</p>
-
-<p>Lets jump in to the sample application.</p>
-
-<p>Assume that we have a VB class named TimerState in the TestDLL VB.NET project, exposes the COM, signed and generates the DLLs.</p>
-
-<p>Following is the TimerState VB class. In this class, we have an event <em>UpdateTime</em> which raises an event when to notify updated time.</p>
-
 <figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
 <span class='line-number'>3</span>
@@ -197,116 +179,60 @@
 <span class='line-number'>12</span>
 <span class='line-number'>13</span>
 <span class='line-number'>14</span>
-<span class='line-number'>15</span>
-<span class='line-number'>16</span>
-<span class='line-number'>17</span>
-<span class='line-number'>18</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>
-</span><span class='line'>    Public Event UpdateTime(ByVal Jump As Double)
-</span><span class='line'>
-</span><span class='line'>    Public Sub TimerTask(ByVal Duration As Double)
-</span><span class='line'>        Dim Start As Double
-</span><span class='line'>        Dim Second As Double
-</span><span class='line'>        Dim SoFar As Double
-</span><span class='line'>
-</span><span class='line'>        Start = Timer
-</span><span class='line'>        SoFar = Start
-</span><span class='line'>        Do While Timer &lt; Start + Duration
-</span><span class='line'>            If Timer - SoFar &gt;= 0.1 Then
-</span><span class='line'>                SoFar = SoFar + 0.1
-</span><span class='line'>                RaiseEvent UpdateTime(Timer - Start)
-</span><span class='line'>            End If
-</span><span class='line'>        Loop
-</span><span class='line'>    End Sub
-</span><span class='line'>End Class
+</pre></td><td class='code'><pre><code class=''><span class='line'>#prose.io settings
+</span><span class='line'>prose:
+</span><span class='line'>  rooturl: "source"
+</span><span class='line'>  metadata:
+</span><span class='line'>    "source/_posts": |
+</span><span class='line'>        layout: post
+</span><span class='line'>        title: "Change Title"
+</span><span class='line'>        date: 2013-04-11 02:33
+</span><span class='line'>        comments: true
+</span><span class='line'>        author:
+</span><span class='line'>          - author
+</span><span class='line'>        categories:
+</span><span class='line'>          - All Posts
+</span><span class='line'>          </span></code></pre></td></tr></table></div></figure>
+
+
+<p>`</p>
+
+<ul>
+<li>Setup Prose.io - just login with your Github Handle</li>
+<li>Create a script with as follows:</li>
+</ul>
+
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>bundle install
+</span><span class='line'>bundle exec rake generate
+</span><span class='line'>git add public/
+</span><span class='line'>git commit -m "Deploying Generated files"
 </span></code></pre></td></tr></table></div></figure>
 
 
-<p>We want to use this logic in the Scriptom code and do something whenever a UpdateTime event is raised. Here are the steps:</p>
-
-<ol>
-    <li> Register the DLLs (this is required step for the Java Virtual Machine to get meta data about the DLLs)</li>
-    <li> Download Scriptom</li>
-    <li> Copy the jacob-*.dll to any system PATH</li>
-    <li> Have all the JARS from Scriptom jar folder available in the CLASSPATH</li>
-</ol>
+<ul>
+<li><p>Install the Heroku gem and setup the git remote and keys for deployment as mentioned <a href="https://devcenter.heroku.com/articles/git">here</a></p></li>
+<li><p>Setup Git Publisher to push the generated files to heroku as shown below.</p></li>
+</ul>
 
 
-<p>Following is the sample code for invoking</p>
+<p><img src="https://s3.amazonaws.com/multunus-images/Git+Publisher.png" alt="Git Publisher" /></p>
 
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-<span class='line-number'>10</span>
-<span class='line-number'>11</span>
-<span class='line-number'>12</span>
-<span class='line-number'>13</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>import org.codehaus.groovy.scriptom.ActiveXObject // Imports the ActiveX object class which holds the reference to the class in DLL
-</span><span class='line'>
-</span><span class='line'>def timer = new ActiveXObject(&quot;TestDLL.TimerState&quot;) // Looks for the meta data in the registry with &quot;TestDLL.TimerState&quot; name and creates a reference to that class
-</span><span class='line'>
-</span><span class='line'>def time = 1.00
-</span><span class='line'>
-</span><span class='line'>timer.events.UpdateTime = { variants -&gt; // event registration for UpdateTime event in the VB class. Variants holds the data passed from the event. In this case, it is Jump value.
-</span><span class='line'>    println &quot;UpdateTime: &quot; + variants[0] // We're just printing the upated time
-</span><span class='line'>}
-</span><span class='line'>
-</span><span class='line'>timer.TimerTask(time) // starting the timer task in TimerState class
-</span><span class='line'>while(true) { // keeping itself alive to respond when timer events are raised
-</span><span class='line'>}</span></code></pre></td></tr></table></div></figure>
+<p>Thats it. You are done. Just &#8220;Build&#8221; of a button, the changes gets deployed. With this setup anyone who has access to the Github Repo can make changes and deploy without any setup.</p>
 
+<p>This post is written using Prose.io and published through Jenkins.</p>
 
+<p>Yes, the setup was not as easy I had written above. I got stuck mainly with the following.</p>
 
-
-<div style="text-align: left;">Please refer <a id="hzki" title="COM Data Types in Scriptom" href="http://groovy.codehaus.org/COM+Data+Types+in+Scriptom">COM Data Types in Scriptom</a> for the .NET data types supported in Scriptom.</div>
-
-
-<p><strong><span style="font-weight: normal;">
-In the next post, we&#8217;ll discuss about JNBridge, a comercial solution.</span></strong></p>
-
-<div id="_mcePaste" style="overflow: hidden; position: absolute; left: -10000px; top: 694px; width: 1px; height: 1px;">
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-<span class='line-number'>10</span>
-<span class='line-number'>11</span>
-<span class='line-number'>12</span>
-<span class='line-number'>13</span>
-<span class='line-number'>14</span>
-<span class='line-number'>15</span>
-<span class='line-number'>16</span>
-<span class='line-number'>17</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>Public Event UpdateTime(ByVal Jump As Double)
-</span><span class='line'>
-</span><span class='line'>Public Sub TimerTask(ByVal Duration As Double)
-</span><span class='line'>Dim Start As Double
-</span><span class='line'>Dim Second As Double
-</span><span class='line'>Dim SoFar As Double
-</span><span class='line'>
-</span><span class='line'>Start = Timer
-</span><span class='line'>SoFar = Start
-</span><span class='line'>Do While Timer &lt; Start + Duration
-</span><span class='line'>If Timer - SoFar &gt;= 0.1 Then
-</span><span class='line'>SoFar = SoFar + 0.1
-</span><span class='line'>RaiseEvent UpdateTime(Timer - Start)
-</span><span class='line'>End If
-</span><span class='line'>Loop
-</span><span class='line'>End Sub
-</span><span class='line'>End Class</span></code></pre></td></tr></table></div></figure>
-</div>
+<ul>
+<li>I got stuck as the command <code>rake generate</code> was watching the file changes. It was not getting stopped for me. The culprit was <code>auto: true</code> in _config.yml file.</li>
+<li>If the file extension is .html, Prose.io will not show preview or metadata information. The markdown or md extension would work.</li>
+<li>Thought of using Travis.io as mentioned <a href="http://www.harimenon.com/blog/2013/01/27/auto-deploying-to-my-octopress-blog/">here</a> for the deployment. But had issues with setting up git push for Heroku. Didn&#8217;t continue on that as we&#8217;ve been using Jenkins as our CI server for long.</li>
+</ul>
 
 </div>
   
@@ -316,7 +242,7 @@ In the next post, we&#8217;ll discuss about JNBridge, a comercial solution.</spa
 <div class="categories">
 	<strong>Filed in: </strong> 
   
-    <a class='category' href='/blog/categories/all-posts/'>All Posts</a>, <a class='category' href='/blog/categories/technology/'>Technology</a>
+    <a class='category' href='/blog/categories/all-posts/'>All Posts</a>
   
 </div>
 
@@ -333,11 +259,11 @@ In the next post, we&#8217;ll discuss about JNBridge, a comercial solution.</spa
 		</div>
 	
 	
-		<div class="g-plusone" data-size="medium" data-href="http://www.multunus.com/2010/01/working-with-dlls-the-java-way">
+		<div class="g-plusone" data-size="medium" data-href="http://www.multunus.com/2013/05/your-filename">
 		</div>
 	
   	
-  		<a href="http://twitter.com/share" class="twitter-share-button" data-url="http://www.multunus.com/2010/01/working-with-dlls-the-java-way" data-counturl="http://www.multunus.com/2010/01/working-with-dlls-the-java-way" data-count="none" data-text="See the timelines of the young turks at Multunus">
+  		<a href="http://twitter.com/share" class="twitter-share-button" data-url="http://www.multunus.com/2013/05/your-filename" data-counturl="http://www.multunus.com/2013/05/your-filename" data-count="none" data-text="See the timelines of the young turks at Multunus">
   		</a>
   	
   	<script src="//platform.linkedin.com/in.js" type="text/javascript"></script>
@@ -360,8 +286,8 @@ In the next post, we&#8217;ll discuss about JNBridge, a comercial solution.</spa
       
         
         // var disqus_developer = 1;
-        var disqus_identifier = 'http://www.multunus.com/2010/01/working-with-dlls-the-java-way/';
-        var disqus_url = 'http://www.multunus.com/2010/01/working-with-dlls-the-java-way/';
+        var disqus_identifier = 'http://www.multunus.com/2013/05/your-filename/';
+        var disqus_url = 'http://www.multunus.com/2013/05/your-filename/';
         var disqus_script = 'embed.js';
       
     (function () {
