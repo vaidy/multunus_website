@@ -6,8 +6,10 @@ date: 2012-10-25 08:30:05.000000000 +05:30
 author: 
 - Leena
 categories:
+- All Posts
 - Technology
 ---
+
 <div>
 <p>
   We recently moved from Wordpress to Jekyll for our website because we found it harder to maintain our site with Wordpress. We also hit performance   bottlenecks with Wordpress and were clueless on how to fix those. Jekyll made a lot more sense as it uses Ruby, which we are very comfortable with as compared to PHP. And hardly any performance bottlenecks because the entire site is static, and so no DB tuning required :)
@@ -119,4 +121,4 @@ We’ve created couple of open source contributions as part of the migration pro
 <a href="http://vitobotta.com/how-to-migrate-from-wordpress-to-jekyll/ ">http://vitobotta.com/how-to-migrate-from-wordpress-to-jekyll/ </a>
 </div>
 
-
+**Update:** I've written [another post](http://www.multunus.com/2013/05/proseio_jenkins_heroku/) about how to use Prose.io and Jenkins for Live Editing and Continuous Deployment.
