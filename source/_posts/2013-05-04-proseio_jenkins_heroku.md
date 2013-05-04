@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Editing Octopress Website with Prose.io and Continuous Deployment with Jenkins to Heroku"
+title:  "Continuous Deployment of Octopress Website with Prose.io and Jenkins"
 date: 2013-05-04 18:33
 comments: true
 author:
